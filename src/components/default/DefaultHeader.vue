@@ -13,10 +13,10 @@ import { RouterLink } from 'vue-router';
         </div>
         <div class="header-rightSide">
             <div class="icons">
-                <img src="../../assets/images/search-icon.png" alt="">
-                <img id="chat-icon" src="../../assets/images/chat-icon.webp" alt="">
-                <img src="../../assets/images/crown-icon.webp" alt="">
-                <img src="../../assets/images/usuario-de-perfil.png" alt="">
+               <RouterLink to="/"><img src="../../assets/images/search-icon.png" alt=""></RouterLink>
+               <RouterLink to="/"><img src="../../assets/images/chat-icon.webp" alt=""></RouterLink>
+               <RouterLink to="/"><img src="../../assets/images/crown-icon.webp" alt=""></RouterLink>
+               <RouterLink to="/"><img src="../../assets/images/usuario-de-perfil.png" alt=""></RouterLink>
             </div>
         </div>
     </header>

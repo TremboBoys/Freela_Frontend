@@ -1,0 +1,41 @@
+*{
+    font-family: Poppins;
+}
+footer{
+    box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    .links-container{
+        display: flex;
+        gap: 32px;
+        .ul-links{
+            text-decoration: none;
+
+            .routerlink{
+                color: black;
+                text-decoration: none;
+                font-weight: 275;
+            }
+        }
+
+    }
+
+    .logo-icon{
+        .top-div{
+        display: flex;
+        gap: 48px;
+        align-items: center;
+            #logo{
+                width: 200px;
+                height: 36px;
+                }
+
+            .socialmedia-icons{
+                display: flex;
+                gap: 16px;
+            }
+        }
+
+}
+}
