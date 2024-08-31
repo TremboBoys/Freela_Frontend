@@ -27,7 +27,7 @@ const infoLinks = [
   <footer>
     <div class="logo-icon">
       <div class="top-div">
-        <img id="logo" src="../../assets/images/workana-logo.png" alt="" />
+        <RouterLink to=""><img id="logo" src="../../assets/images/workana-logo.png" alt=""></RouterLink>
         <div class="socialmedia-icons">
             <img src="../../assets/images/instagram.png" alt="" />
             <img src="../../assets/images/github.png" alt="" />

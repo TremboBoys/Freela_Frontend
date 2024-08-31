@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router';
 <template>
     <header>
         <div class="header-leftSide">
-            <img src="../../assets/images/workana-logo.png" alt="">
+            <RouterLink to=""><img id="logo" src="../../assets/images/workana-logo.png" alt=""></RouterLink>
             <ul class="links">
                 <li><RouterLink to="/">Encontre trabalho</RouterLink></li>
                 <li><RouterLink to="/">Meus projetos</RouterLink></li>
