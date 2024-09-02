@@ -35,7 +35,7 @@ const router = createRouter({
         {
           path: '/register-project',
           name: 'registerProject',
-          component: () => import('@;views/project/RegisterProjectView.vue')
+          component: () => import('@/views/project/RegisterProjectView.vue')
         },
         {
           path: '/subscription-plan',
