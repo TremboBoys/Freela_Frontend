@@ -50,7 +50,7 @@ const router = createRouter({
         {
           path: '/chat',
           name: 'chat',
-          component: () => import('@/views/chat/ChatView.view')
+          component: () => import('@/views/chat/ChatView.vue')
         },
         {
           path: '/payment/:project',
