@@ -1,0 +1,36 @@
+header {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px 80px 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        img {
+            width: 200px;
+            height: 36px;
+        }
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        .router {
+            text-decoration: none;
+            .button {
+                display: flex;
+                align-items: center;
+                background-color: #0B2F34;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 40px;
+                margin-left: 20px;
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                    background-color: #0d4247;
+                }
+            }
+        }
+    }
+}
