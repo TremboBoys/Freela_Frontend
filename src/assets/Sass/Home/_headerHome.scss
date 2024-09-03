@@ -5,6 +5,8 @@ header {
     padding: 20px 80px 20px 80px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 9999;
     .logo {
         img {
             width: 200px;
