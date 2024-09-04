@@ -1,13 +1,25 @@
 .container {
+    font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 80px 0 80px;
     margin-top: 50px;
     .programation {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         .header-topic {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            align-items: center;
             .logo {
+                display: flex;
+                border: 1px solid #6C63FF;
+                border-radius: 50%;
+                background-color: none;
+                padding: 10px;
+                margin-right: 16px;
                 img {
                     width: 48px;
                     height: 48px;
@@ -18,6 +30,147 @@
                     font-size: 30px;
                     font-weight: bold;
                     color: #6C63FF;
+                }
+            }
+        }
+        .topics {
+            display: flex;
+            flex-direction: column;
+            .topic {
+                display: flex;
+                margin-bottom: 2rem;
+                .text-topic {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 10px;
+                    p {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #6C63FF;
+                    }
+                }
+                .img {
+                    display: flex;
+                    margin-left: 1.2rem;
+                    img {
+                        width: 36px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+    }
+    .design {
+        display: flex;
+        flex-direction: column;
+        .header-topic {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            align-items: center;
+            .logo {
+                display: flex;
+                border: 1px solid #ED8318;
+                border-radius: 50%;
+                background-color: none;
+                padding: 10px;
+                margin-right: 16px;
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+            .title {
+                h1 {
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: #ED8318;
+                }
+            }
+        }
+        .topics {
+            display: flex;
+            flex-direction: column;
+            .topic {
+                display: flex;
+                margin-bottom: 2rem;
+                .text-topic {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 10px;
+                    p {
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: #ED8318;
+                    }
+                }
+                .img {
+                    display: flex;
+                    margin-left: 1.2rem;
+                    img {
+                        width: 36px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+    }
+    .marketing {
+        display: flex;
+        flex-direction: column;
+        .header-topic {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            align-items: center;
+            .logo {
+                display: flex;
+                border: 1px solid #34A853;
+                border-radius: 50%;
+                background-color: none;
+                padding: 10px;
+                margin-right: 16px;
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+            .title {
+                h1 {
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: #34A853;
+                }
+            }
+        }
+        .topics {
+            display: flex;
+            flex-direction: column;
+            .topic {
+                display: flex;
+                margin-bottom: 2rem;
+                .text-topic {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 10px;
+                    p {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #34A853;
+                    }
+                }
+                .img {
+                    display: flex;
+                    margin-left: 1.2rem;
+                    img {
+                        width: 36px;
+                        height: 32px;
+                    }
                 }
             }
         }
