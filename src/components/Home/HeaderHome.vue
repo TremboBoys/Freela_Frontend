@@ -1,7 +1,9 @@
 <template>
   <header>
     <div class="logo">
-      <img src="@/assets/images/workana-logo.png" alt="Logo" />
+      <router-link to="/home">
+        <img src="@/assets/images/workana-logo.png" alt="Logo" />
+      </router-link>
     </div>
     <nav>
       <p>Já tem uma conta?</p>

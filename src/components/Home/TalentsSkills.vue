@@ -1,6 +1,6 @@
 <template>
     <div class="top">
-        
+        <h1>Descubra talentos com habilidades que você precisa</h1>
     </div>
     <div class="container">
         <div class="programation">
