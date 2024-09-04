@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import SignInButton from '../../components/SignIn/SignInButton.vue';
+import SignInIcons from '../../components/SignIn/SignInIcons.vue';
+
+</script>
 
 <template>
   <div class="signIn-container">
@@ -29,7 +33,9 @@
             />
             <label class="email labelInput" for="email">Senha</label>
           </div>
-          <p>Não possui uma conta? Cadastre-se</p>
+          <p>Não possui uma conta? <RouterLink id="signIn-rl" to="/">Cadastre-se</RouterLink></p>
+          <SignInButton />
+          <SignInIcons/>
         </div>
       </div>
     </div>

@@ -1,0 +1,14 @@
+.button-container {
+  .signIn-button {
+    width: 278px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 35px;
+    border: 1px solid #7a7a7a;
+    background: #0b2f34;
+    color: #FFF;
+    font-size: 16px;
+    margin: 45px 0;
+    cursor: pointer;
+  }
+}
