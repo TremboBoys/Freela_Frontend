@@ -6,5 +6,5 @@
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/dashboard/_aboutMe.scss';
+@import '@/assets/Sass/dashboard/profile/_aboutMe.scss';
 </style>

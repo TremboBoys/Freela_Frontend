@@ -17,5 +17,5 @@
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/dashboard/_mainSkills.scss';
+@import '@/assets/Sass/dashboard/profile/_mainSkills.scss';
 </style>

@@ -19,5 +19,5 @@
 
 </template>
 <style scoped>
-@import '@/assets/Sass/dashboard/_infoProfile.scss';
+@import '@/assets/Sass/dashboard/profile/_infoProfile.scss';
 </style>

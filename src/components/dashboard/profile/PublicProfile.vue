@@ -18,5 +18,5 @@ const toggle = () => {
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/dashboard/_publicProfile.scss';
+@import '@/assets/Sass/dashboard/profile/_publicProfile.scss';
 </style>

@@ -21,5 +21,5 @@
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/dashboard/_logoName.scss';
+@import '@/assets/Sass/dashboard/profile/_logoName.scss';
 </style>

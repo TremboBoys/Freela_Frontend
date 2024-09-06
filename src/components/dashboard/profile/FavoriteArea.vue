@@ -6,5 +6,5 @@
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/dashboard/_favoriteArea.scss';
+@import '@/assets/Sass/dashboard/profile/_favoriteArea.scss';
 </style>
