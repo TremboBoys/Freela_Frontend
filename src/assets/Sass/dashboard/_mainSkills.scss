@@ -1,0 +1,27 @@
+.container {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 80px 0 80px;
+    .text {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .skills {
+        display: flex;
+        flex-direction: row;
+        
+        .skill {
+            display: flex;
+            justify-content: center;
+            background-color: #f0f0f0;
+            border-radius: 40px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 16px 10px 16px 0;
+            padding: 5px 10px;
+        }
+    }
+}
