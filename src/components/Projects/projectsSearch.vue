@@ -27,6 +27,9 @@ const categories = ref([
                     </label>
                 </div>
             </div>
+            <div class="bottom-search">
+                <p> Ative a localização para uma melhor expêriencia: <router-link>Ative aqui!</router-link> </p>
+            </div>
     </div>
 </template>
 <style scoped>
