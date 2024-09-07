@@ -125,7 +125,7 @@
       width: 100%;
 
       .select-header {
-        flex-grow: 1; /* Faz o título ocupar o máximo de espaço disponível */
+        flex-grow: 1;
         p {
           color: #000;
           font-family: Poppins;
@@ -137,7 +137,7 @@
       }
       
       .select-header2 {
-        flex-shrink: 0; /* Evita que o valor "5000" diminua */
+        flex-shrink: 0;
         width: auto;
         min-width: 128px;
         color: #1B75BF;
@@ -146,6 +146,69 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+      }
+    }
+
+    .select-main-container {
+
+        .select-subTitle {
+          padding: 16px;
+          display: flex;
+          gap: 20px;
+          color: #000;
+          font-family: Poppins;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 275;
+          line-height: normal;
+        }
+        .select-text {
+          color: #000;
+          font-family: Poppins;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+        }
+    }
+
+    .select-bottom-container {
+        padding: 16px;
+        display: flex;
+        gap: 16px;
+        .select-bottom {
+          padding: 16px;
+          width: 87px;
+          height: 20px;
+          flex-shrink: 0;
+          border-radius: 35px;
+          background: #E6E6E6;
+          display: flex;
+          justify-content: center; 
+          align-items: center; 
+            
+          p {
+              width: 65px;
+              height: 14px;
+              flex-shrink: 0;
+              color: #777;
+              font-family: Poppins;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 275;
+              line-height: 1; 
+              margin: 0; 
+              text-align: center; 
+            }
+        } 
+    }
+    .select-footer-container {
+
+      .select-footer-img {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 500px;
       }
     }
 
