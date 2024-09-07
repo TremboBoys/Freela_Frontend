@@ -6,6 +6,7 @@ import MainSkills from '@/components/dashboard/profile/MainSkills.vue';
 import FavoriteArea from '@/components/dashboard/profile/FavoriteArea.vue';
 import AboutMe from '@/components/dashboard/profile/AboutMe.vue';
 import ProjectProgress from '@/components/dashboard/projects/projectProgress/ProjectProgress.vue';
+import CompletedProject from '@/components/dashboard/projects/completedProject/CompletedProject.vue';
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import ProjectProgress from '@/components/dashboard/projects/projectProgress/Pro
         </div>
         <div class="projects">
             <ProjectProgress />
+            <CompletedProject />
         </div>
     </div>
 </template>

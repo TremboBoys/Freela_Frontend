@@ -4,7 +4,7 @@ import CardProject from './CardProject.vue';
 <template>
     <div class="container">
         <div class="title">
-            <h1>Projetos em execução</h1>
+            <h1>Projetos em Destaque</h1>
         </div>
         <div class="cards">
             <CardProject />
@@ -12,5 +12,5 @@ import CardProject from './CardProject.vue';
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/dashboard/projects/projectProgress/_container.scss';
+@import '@/assets/Sass/dashboard/projects/completedProject/_container.scss';
 </style>
