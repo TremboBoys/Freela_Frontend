@@ -7,9 +7,19 @@ import projectsSelect from '../../components/Projects/projectsSelect.vue'
 <template>
     <div class="project">
         <div class="main-project">
-            <projectsSearch />
-            <div class="selectProject">
-                <projectsSelect />
+            <div class="main-search">
+                <div class="searchProject">
+                    <projectsSearch />
+                </div>
+            </div>
+            
+            <div class="main-select">
+                <div class="selectProject">
+                    <projectsSelect />   
+                </div>
+                <div class="selectProject">
+                    <projectsSelect />   
+                </div>
             </div>
         </div>
     </div>
@@ -21,4 +31,9 @@ import projectsSelect from '../../components/Projects/projectsSelect.vue'
 <style scoped>
 @import '../../assets/Sass/project/_project.scss';
 
+.main-select {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
 </style>
