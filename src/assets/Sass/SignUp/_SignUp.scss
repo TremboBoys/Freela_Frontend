@@ -20,14 +20,12 @@
     color: #fff;
     margin: 0 0 2xrem;
 }
-
 form {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 35vw;
     margin: 10vh 0 0;
-    
     .form-control {
         width: 30vw;
         height: 6.7vh;
@@ -45,7 +43,6 @@ form {
     }
     .inputBox {
         position: relative;
-
         .labelInput {
             position: absolute;
             top: 0.9rem;
@@ -58,7 +55,6 @@ form {
             background-color:#0B2F34;
             margin: 0.6rem 0 1rem;
             padding: 0.2rem;
-
         }
         .labelInput::before {
             content: "";
@@ -78,7 +74,6 @@ form {
             margin-left: 1vw;
             color: #ffffff;
         }
-    
         input {
             margin-bottom: 0.5rem;
         }
@@ -89,5 +84,3 @@ form {
         margin: 1rem 0;
     }
 }
-
-
