@@ -1,7 +1,9 @@
 <script setup>
-import SignInButton from '../../components/SignIn/SignInButton.vue';
-import SignInIcons from '../../components/SignIn/SignInIcons.vue';
-
+import SignInButton from '../../components/signIn/SignInButton.vue'
+import SignInIcons from '../../components/signIn/SignInIcons.vue'
+import SignInInputs from '@/components/signIn/SignInInputs.vue'
+import SignInIntro from '@/components/signIn/SignInIntro.vue'
+import SignCreateAccount from '@/components/signIn/SignCreateAccount.vue'
 </script>
 
 <template>
@@ -9,33 +11,12 @@ import SignInIcons from '../../components/SignIn/SignInIcons.vue';
     <div class="left-side">
       <img src="../../assets/images/workana-white-logo.png" alt="" />
       <div class="login-container">
-        <h1>Login</h1>
-        <p>Seja bem vindo novamente!</p>
-
+        <SignInIntro />
         <div class="inputs-container">
-          <div class="form-group inputBox">
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              aria-describedby="emailHelp"
-              placeholder=" "
-            />
-            <label class="email labelInput" for="email">Email</label>
-          </div>
-          <div class="form-group inputBox">
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              aria-describedby="emailHelp"
-              placeholder=" "
-            />
-            <label class="email labelInput" for="email">Senha</label>
-          </div>
-          <p>Não possui uma conta? <RouterLink id="signIn-rl" to="/">Cadastre-se</RouterLink></p>
+          <SignInInputs />
+          <SignCreateAccount/>
           <SignInButton />
-          <SignInIcons/>
+          <SignInIcons />
         </div>
       </div>
     </div>
