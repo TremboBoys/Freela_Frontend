@@ -19,5 +19,5 @@
   </div>
 </template>
 <style scoped>
-@import '../../assets/Sass/signUp/_signUp-icons.scss';
+@import '../../assets/Sass/SignUp/_signUp-icons.scss';
 </style>
