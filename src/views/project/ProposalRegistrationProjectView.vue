@@ -1,8 +1,11 @@
 <script setup>
+import ProposalPage from '@/components/proposal/ProposalPage.vue'
 </script>
 
 <template>
-    <div></div>
+    <div>
+        <ProposalPage />
+    </div>
 </template>
 
 <style scoped>
