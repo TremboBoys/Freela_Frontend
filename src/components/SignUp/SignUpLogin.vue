@@ -1,0 +1,9 @@
+<script setup></script>
+<template>
+    <div class="login">
+        <p>Já possui uma conta? <router-link class="router" to="/login">Entrar</router-link></p>
+    </div>
+</template>
+<style scoped>
+@import '../../assets/Sass/SignUp/_SignUp-login.scss';
+</style>
