@@ -1,35 +1,13 @@
 <script setup>
-    import { ref } from 'vue';
-
-const categories = ref([
-  'TI e Programação',
-  'Web Design',
-  'Design',
-  'Administração',
-  'Tradução',
-  'Minha área favorita',
-  'Maiores avaliações'
-]);
+    import inputSearch from '../Search/inputSearch.vue'
+    import categoriesSearch from '../Search/categoriesSearch.vue'
+    import bottomSearch from '../Search/bottomSearch.vue'
 </script>
 <template>
     <div class="search">
-            <div class="inputSearch">
-                <div class="form-group inputBox">
-                    <input type="text" class="form-control" id="search" aria-describedby="searchHelp" placeholder=" ">
-                    <label class="searchlabelInput" for="search">Pesquisar</label>
-                </div>
-            </div>
-            <div class="categories">
-                <div class="category" v-for="(category, index) in categories" :key="index">
-                    <label>
-                        <input type="checkbox">
-                            {{ category }}
-                    </label>
-                </div>
-            </div>
-            <div class="bottom-search">
-                <p> Ative a localização para uma melhor expêriencia: <router-link>Ative aqui!</router-link> </p>
-            </div>
+            <input-search />
+            <categories-search />
+            <bottom-search />
     </div>
 </template>
 <style scoped>
