@@ -1,6 +1,6 @@
 <script setup>
-import projectsSearch from '../../components/Projects/projectsSearch.vue'
-import projectsSelect from '../../components/Projects/projectsSelect.vue'
+import projectsSearch from '../../components/Projects/Search/projectsSearch.vue'
+import projectsSelect from '../../components/Projects/Select/projectsSelect.vue'
 
 </script>
 
@@ -29,7 +29,7 @@ import projectsSelect from '../../components/Projects/projectsSelect.vue'
 </template>
 
 <style scoped>
-@import '../../assets/Sass/project/_project.scss';
+@import '@/assets/Sass/project/_project.scss';
 
 .main-select {
     display: flex;
