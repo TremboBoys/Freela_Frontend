@@ -1,9 +1,9 @@
 <script setup>
-import SignInButton from '../../components/signIn/SignInButton.vue'
-import SignInIcons from '../../components/signIn/SignInIcons.vue'
-import SignInInputs from '@/components/signIn/SignInInputs.vue'
-import SignInIntro from '@/components/signIn/SignInIntro.vue'
-import SignCreateAccount from '@/components/signIn/SignCreateAccount.vue'
+import SignInButton from '../../components/signIn/button.vue'
+import Icons from '../../components/signIn/icons.vue'
+import Inputs from '@/components/signIn/inputs.vue'
+import Intro from '@/components/signIn/intro.vue'
+import CreateAccount from '@/components/signIn/createAccount.vue'
 </script>
 
 <template>
@@ -13,10 +13,11 @@ import SignCreateAccount from '@/components/signIn/SignCreateAccount.vue'
       <div class="login-container">
         <SignInIntro />
         <div class="inputs-container">
-          <SignInInputs />
-          <SignCreateAccount/>
-          <SignInButton />
-          <SignInIcons />
+          <Intro/>
+          <Inputs />
+          <CreateAccount/>
+          <SignInButton/>
+          <Icons />
         </div>
       </div>
     </div>

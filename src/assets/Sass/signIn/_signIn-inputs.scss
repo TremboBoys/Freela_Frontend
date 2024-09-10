@@ -16,7 +16,7 @@
   }
   .labelInput {
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 10px;
     pointer-events: none;
     transition: 0.4s;
@@ -40,7 +40,7 @@
 
   .form-control:focus ~ .labelInput,
   .form-control:not(:placeholder-shown) ~ .labelInput {
-    top: -9%;
+    top: -15%;
     font-size: 16px;
     color: #bfbfbf;
   }
