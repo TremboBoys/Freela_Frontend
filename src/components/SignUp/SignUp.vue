@@ -5,23 +5,26 @@ import SignUpLogin from './SignUpLogin.vue';
 import SignUpInputs from './SignUpInputs.vue';
 </script>
 <template>
-    <main>
-        <div class="containerForm">
-            <header>
-                <RouterLink to="/">
-                    <img src="@/assets/images/workana-logo.png" alt="">
-                </RouterLink>
-            </header>
-            <div class="signUp">
-                <form>
-                <SignUpInputs />
-                <SignUpLogin />
-                <SignUpButton />
-            </form>
-            <SignUpIcons />
+    <div class="containerForm">    
+        <header>
+            <RouterLink to="/">
+                <img src="@/assets/images/workana-logo.png" alt="">
+            </RouterLink>
+        </header>
+        <main>
+            <div >
+                
+                <div class="signUp">
+                    <form>
+                        <SignUpInputs />
+                        <SignUpLogin />
+                        <SignUpButton />
+                    </form>
+                    <SignUpIcons />
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 </template>
 <style scoped>
 @import '../../assets/Sass/SignUp/_SignUp.scss';
