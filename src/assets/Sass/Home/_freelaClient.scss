@@ -1,0 +1,96 @@
+.top {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    margin-bottom: 4rem;
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #6f6f6f;
+        margin-bottom: 1rem;
+    }
+}
+.container {
+    font-family: 'Poppins', sans-serif;
+    padding: 0 80px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 16px;
+        align-items: center;
+        .card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            .header-card {
+                padding: 16px 16px 6px 16px;
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+            }
+            .main-card {
+                padding: 0px 16px 0px 16px;
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    color: #1B75BF;
+                    margin-bottom: .3rem;
+                }
+                p {
+                    font-size: 1rem;
+                    font-weight: 200;
+                    color: #6f6f6f;
+                    margin-bottom: .3rem;
+                }
+            }
+            .footer-card {
+                margin-top: 16px;
+            }
+        }
+    }
+    .right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            .header-card {
+                padding: 16px 16px 6px 16px;
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+            }
+            .main-card {
+                padding: 0px 16px 0px 16px;
+                h1 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    color: #1B75BF;
+                    margin-bottom: .3rem;
+                }
+                p {
+                    font-size: 1rem;
+                    font-weight: 200;
+                    color: #6f6f6f;
+                    margin-bottom: .3rem;
+                }
+            }
+            .footer-card {
+                margin-top: 16px;
+            }
+        }
+    }
+}
