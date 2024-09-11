@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 80px 0 80px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 16px;
+    width: 35vw;
+    .text {
+        padding: 6px;
+        font-size: 18px;
+        font-weight: 400;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        .aboutMe {
+            font-size: 20px;
+            font-weight: 500;
+            background-color: #f5f5f5;
+        }
+    }
+}
