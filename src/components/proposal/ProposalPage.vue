@@ -20,6 +20,7 @@ import SendProposal from './send/SendProposal.vue';
         </div>
     </div>
 </template>
+
 <style scoped>
 @import '@/assets/Sass/proposal/_proposalLayout.scss';
 </style>
