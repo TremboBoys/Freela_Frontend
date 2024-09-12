@@ -1,16 +1,9 @@
 <script setup>
-import loginContainer from '../../components/signIn/loginContainer.vue'
+import signInContainer from '../../components/signIn/signInContainer.vue'
 </script>
 
 <template>
-  <div class="signIn-container">
-    <div class="left-side">
-      <img src="../../assets/images/workana-white-logo.png" alt="" />
-      <loginContainer/>
-    </div>
-
-    <div class="right-side"></div>
-  </div>
+  <signInContainer/>
 </template>
 
 <style scoped>
