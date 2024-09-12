@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="form-group inputBox">
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder=" ">
-            <label class="email labelInput" for="email">Email</label>
+            <input type="nome" class="form-control" id="nome" aria-describedby="nomeHelp" placeholder=" ">
+            <label class="email labelInput" for="nome">Nome</label>
         </div>
     </div>
 </template>
