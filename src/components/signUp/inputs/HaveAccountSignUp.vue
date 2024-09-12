@@ -5,5 +5,5 @@
     </div>
 </template>
 <style scoped>
-@import '../../assets/Sass/SignUp/_SignUp-login.scss';
+@import '@/assets/Sass/signUp/_SignUp-login.scss';
 </style>

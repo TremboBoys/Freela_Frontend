@@ -1,15 +1,12 @@
 <script setup>
-    defineProps(['password', 'confirmPassword']);
-    const passwordId = 'password';
+    defineProps({
+        infos: Object
+    });
 </script>
 <template>
     <div class="inputBox">
-        <input type="password" class="form-control" :id=passwordId aria-describedby="namedHelp" placeholder=" " />
-        <label class="labelInput" :for=passwordId> {{ password }}</label>
-    </div>
-    <div class="inputBox">
-        <input type="password" class="form-control" :id=passwordId aria-describedby="nameHelp" placeholder=" " />
-        <label class="labelInput" :for=passwordId> {{ confirmPassword }}</label>
+        <input type="password" class="form-control" :id="infos.id" aria-describedby="namedHelp" placeholder=" " />
+        <label class="labelInput" :for="infos.id"> {{ infos.label }}</label>
     </div>
 </template>
 <style scoped></style>
