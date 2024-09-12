@@ -1,0 +1,21 @@
+.header-leftSide{
+    display: flex;
+    align-items: center;
+    color: gray;
+    gap: 30px;
+
+    .links{
+        display: flex;
+        gap: 16px;
+
+        *{
+            font-size: 14px;
+            font-weight: 100;
+            color: gray;
+            text-decoration: none;
+        }
+    }
+    #logo{
+        width: 140px;
+}
+}

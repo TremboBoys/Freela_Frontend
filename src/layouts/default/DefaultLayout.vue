@@ -1,6 +1,6 @@
 <script setup>
-import DefaultFooter from '@/components/default/DefaultFooter.vue';
-import DefaultHeader from '@/components/default/DefaultHeader.vue';
+import DefaultFooter from '@/components/default/footer/DefaultFooter.vue';
+import DefaultHeader from '@/components/default/header/DefaultHeader.vue';
 import { RouterView } from 'vue-router';
 </script>
 <template>

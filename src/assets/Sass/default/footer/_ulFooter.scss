@@ -1,0 +1,14 @@
+.links-container{
+    display: flex;
+    gap: 32px;
+    .ul-links{
+        text-decoration: none;
+
+        .routerlink{
+            color: black;
+            text-decoration: none;
+            font-weight: 275;
+        }
+    }
+
+}
