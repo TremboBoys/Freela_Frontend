@@ -1,8 +1,8 @@
 <script setup>
-import HeaderHome from '@/components/Home/HeaderHome.vue';
-import MainHome from '@/components/Home/MainHome.vue';
-import FreelaClient from '@/components/Home/FreelaClient.vue';
-import TalentsSkills from '@/components/Home/TalentsSkills.vue';
+import HeaderHome from '@/components/home/HeaderHome.vue';
+import MainHome from '@/components/home/MainHome.vue';
+import FreelaClient from '@/components/home/FreelaClient.vue';
+import TalentsSkills from '@/components/home/TalentsSkills.vue';
 import DefaultFooter from '@/components/default/footer/DefaultFooter.vue'
 </script>
 

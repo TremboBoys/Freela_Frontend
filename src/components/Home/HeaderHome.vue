@@ -14,5 +14,5 @@
   </header>
 </template>
 <style scoped>
-@import "@/assets/Sass/Home/_headerHome.scss";
+@import "@/assets/Sass/home/_headerHome.scss";
 </style>

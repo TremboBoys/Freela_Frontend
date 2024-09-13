@@ -17,5 +17,5 @@
     </main>
 </template>
 <style scoped>
-@import "@/assets/Sass/Home/_mainHome.scss";
+@import "@/assets/Sass/home/_mainHome.scss";
 </style>

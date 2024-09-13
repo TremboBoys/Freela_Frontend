@@ -6,7 +6,7 @@
         <div class="left">
             <div class="card">
                 <div class="header-card">
-                    <img src="@/assets/images/chat-icon.webp" class="img-card" alt="">
+                    <img src="@/assets/images/chat-icon.png" class="img-card" alt="">
                 </div>
                 <div class="main-card">
                     <p>Eu quero ser contratado por</p>
@@ -21,7 +21,7 @@
         <div class="right">
             <div class="card">
                 <div class="header-card">
-                    <img src="@/assets/images/chat-icon.webp" class="img-card" alt="">
+                    <img src="@/assets/images/chat-icon.png" class="img-card" alt="">
                 </div>
                 <div class="main-card">
                     <p>Eu quero contratar</p>
@@ -34,5 +34,5 @@
     </div>
 </template>
 <style scoped>
-@import "@/assets/Sass/Home/_freelaClient.scss";
+@import "@/assets/Sass/home/_freelaClient.scss";
 </style>
