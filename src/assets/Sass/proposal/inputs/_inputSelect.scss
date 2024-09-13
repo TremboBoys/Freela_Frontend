@@ -1,0 +1,41 @@
+.dropdown {
+    font-family: 'Poppins', sans-serif;
+    padding-left: 16px;
+    margin-top: 16px;
+    label {
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: block;
+    }
+  
+    .select-container {
+      position: relative;
+      display: inline-block;
+  
+      select {
+        background-color: #fff;
+        appearance: none;
+        padding: 10px 40px 10px 12px;
+        font-size: 16px;
+        border: 1px solid #9b9b9b;
+        border-radius: 10px;
+        width: 300px;
+        height: 48px;
+        cursor: pointer;
+  
+        &:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+      }
+  
+      .arrow {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        font-size: 12px;
+      }
+    }
+  }
