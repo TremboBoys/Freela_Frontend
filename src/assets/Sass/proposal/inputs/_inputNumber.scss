@@ -4,6 +4,7 @@
     .form-group {
         display: flex;
         flex-direction: column;
+        margin-top: 5px;
     }
     .form-control {
         width: 300px;
@@ -14,6 +15,7 @@
         background: #fff;
         margin: 15px;
         border: 1px solid #9b9b9b;
+        margin-bottom: -5px;
     }
     .form-control:focus {
         outline: none;
@@ -27,7 +29,7 @@
         position: relative;
         .labelInput {
             position: absolute;
-            top: 10px;
+            top: 33px;
             left: 16px;
             pointer-events: none;
             transition: 0.4s;
@@ -51,7 +53,7 @@
         }   
         .form-control:focus~.labelInput,
         .form-control:not(:placeholder-shown)~.labelInput {
-            top: -18%;
+            top: 10%;
             font-size: 16px;
             color: #000000;
         }
