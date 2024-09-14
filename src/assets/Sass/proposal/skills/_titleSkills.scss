@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 60vw;
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .edit-button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
