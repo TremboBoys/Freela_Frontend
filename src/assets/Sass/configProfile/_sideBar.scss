@@ -1,0 +1,30 @@
+*{
+    font-family: Poppins;
+}
+.sideBar{
+    width: 310px;
+    height: 100%;
+
+    .tabs-area{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+
+        &:first-child{
+            background-color: rgba(27, 117, 191, 0.16);
+
+        }
+        .tab{
+        padding: 16px;
+        height: 64px;
+        display: flex;
+        gap: 13px;
+            img{
+                width: 32px;
+                height: 32px;
+            }
+
+        }
+    }
+}
