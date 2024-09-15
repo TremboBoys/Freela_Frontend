@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    padding: 0 20px;
+    padding: 16px 80px;
+    .row {
+        .col-12 {
+            .logo {
+                width: 140px;
+                margin-bottom: 20px;
+                border-radius: 50%;
+            }
+            .about {
+                margin: 32px 0 32px 0;
+                width: 300px;
+            }
+            .text {
+                font-family: 'Prata', serif;
+                margin: 10px;
+                font-size: 3rem;
+                font-weight: 700;
+                .emphasis {
+                    color: #1B75BF;
+                }
+            }
+            .description {
+                font-weight: 600;
+                font-size: 1.4rem;
+                margin: 10px;
+            }
+        }
+    }
+}
