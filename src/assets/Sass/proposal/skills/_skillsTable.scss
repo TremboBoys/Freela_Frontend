@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    .skills-table {
+        background-color: none;
+        border-radius: 40px;
+        table {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid #313131;
+
+            thead {
+                tr {
+                    th {
+                        padding: 12px;
+                        text-align: left;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        padding: 12px;
+                        text-align: center;
+                    }
+
+                    &.odd {
+                        background-color: #f4f4f4;
+                    }
+
+                    &.even {
+                        background-color: #fff;
+                    }
+
+                    .skill-name {
+                        background-color: #e0e0e0;
+                        padding: 5px 12px;
+                        border-radius: 15px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,5 @@
 .header {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
@@ -11,9 +10,15 @@
     }
 
     .edit-button {
+        display: flex;
         background: none;
         border: none;
         font-size: 20px;
         cursor: pointer;
+        margin-left: 32px;
+        img {
+            width: 24px;
+            height: 24px;
+        }
     }
 }
