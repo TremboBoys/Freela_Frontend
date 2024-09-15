@@ -2,13 +2,13 @@
 import { defineProps } from 'vue';
 
 const props = defineProps({
-  dropdownOpen: Boolean
+    dropdownOpen: Boolean
 });
 
 const skills = [
-  { name: 'CSS', experience: '1 ano', rowClass: 'odd' },
-  { name: 'Javascript', experience: '1 a 3 anos', rowClass: 'even' },
-  { name: 'Web Design', experience: '1 a 3 anos', rowClass: 'odd' }
+    { name: 'CSS', experience: '1 ano', rowClass: 'odd' },
+    { name: 'Javascript', experience: '1 a 3 anos', rowClass: 'even' },
+    { name: 'Web Design', experience: '1 a 3 anos', rowClass: 'odd' }
 ];
 </script>
 <template>
@@ -45,7 +45,7 @@ const skills = [
                         <option value="5">10 anos ou mais</option>
                     </select>
                     <button class="button">Adicionar</button>
-                </div>  
+                </div>
             </div>
         </div>
     </div>
