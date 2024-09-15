@@ -4,12 +4,15 @@
     justify-content: center;
     align-items: center;
     background-color: none;
+
     .skills-table {
         background-color: none;
-        border-radius: 40px;
+
         table {
             width: 100%;
-            border-radius: 8px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom: none;
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
             border: 1px solid #313131;
@@ -26,6 +29,8 @@
 
             tbody {
                 tr {
+                    border: 1px solid #313131;
+
                     td {
                         padding: 12px;
                         text-align: center;
@@ -37,6 +42,7 @@
 
                     &.even {
                         background-color: #fff;
+
                     }
 
                     .skill-name {
@@ -44,6 +50,67 @@
                         padding: 5px 12px;
                         border-radius: 15px;
                         font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .dropdown {
+            border: 1px solid #313131;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            .dropdown-content {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0 10px 10px;
+
+                .input {
+                    width: 22vw;
+                    height: 40px;
+                    padding: 10px;
+                    border: 1px solid #313131;
+                    border-radius: 8px;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 14px;
+                    background-color: #fff;
+                    color: #313131;
+                }
+
+                .select {
+                    width: 16vw;
+                    height: 40px;
+                    padding: 10px;
+                    border: 1px solid #313131;
+                    border-radius: 8px;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 14px;
+                    background-color: #fff;
+                    color: #313131;
+                    cursor: pointer;
+
+                    option {
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 14px;
+                        background-color: #fff;
+                        color: #313131;
+                    }
+                }
+                .button {
+                    width: 8vw;
+                    height: 40px;
+                    padding: 10px;
+                    margin-right: 10px;
+                    border: none;
+                    border-radius: 32px;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 14px;
+                    background-color: #1B75BF;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: #0b5a9b;
                     }
                 }
             }

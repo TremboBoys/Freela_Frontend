@@ -1,13 +1,17 @@
 <script setup>
-import { ref } from 'vue';
+import { defineEmits } from 'vue';
+const emit = defineEmits(['toggleDropdown']);
+
 const editInfo = () => {
-  console.log('Edit info');
+  emit('toggleDropdown');
 };
 </script>
 <template>
   <div class="header">
     <h1>Adicione suas competências</h1>
-    <button @click="editInfo" class="edit-button"><img src="@/assets/images/proposal/pen.png" alt=""></button>
+    <button @click="editInfo" class="edit-button">
+      <img src="@/assets/images/proposal/pen.png" alt="">
+    </button>
   </div>
 </template>
 <style scoped>
