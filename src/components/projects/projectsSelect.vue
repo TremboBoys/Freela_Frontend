@@ -1,5 +1,9 @@
 <script setup>
-
+import { ref } from 'vue';
+const isPopUpOpen = ref(false);
+const popUp = () => {
+    isPopUpOpen.value = !isPopUpOpen.value;
+}
 </script>
 <template>
     <div class="select">
