@@ -20,9 +20,20 @@
         gap: 13px;
         text-decoration: none;
         color: #000;
+
+            &:hover{
+                text-decoration: wavy;
+                
+            }
+
+
             img{
                 width: 32px;
                 height: 32px;
+            }
+
+            #email-icon{
+                height: 25px;
             }
 
         }
