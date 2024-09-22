@@ -13,7 +13,7 @@
                 <p>Senha</p>
             </RouterLink>
             <RouterLink to="/"  class="tab">
-                <img src="../../assets/images/configProfile/email-icon.png" alt="">
+                <img id="email-icon" src="../../assets/images/configProfile/email-icon.png" alt="">
                 <p>Email</p>
             </RouterLink>
             <RouterLink to="/"  class="tab">

@@ -24,6 +24,13 @@ const countries = ref([
   { value: 'argentina', label: 'Argentina' },
   { value: 'mexico', label: 'México' }
 ])
+
+const paymentMethods = ref([
+  { value: 'Pix', label: 'Pix' },
+  { value: 'Débito', label: 'Débito' },
+  { value: 'Boleto', label: 'Boleto' }
+])
+
 </script>
 
 <template>
@@ -50,8 +57,12 @@ const countries = ref([
           {{ country.label }}
         </option>
       </select>
-      <label for="">Pix</label>
-      <input type="text" />
+      <label for="">Forma de pagamento</label>
+      <select>
+        <option v-for="(method, index) in paymentMethods" :key="index" :value="method.value">
+          {{ method.label }}
+        </option>
+      </select>
     </div>
   </div>
 </template>
