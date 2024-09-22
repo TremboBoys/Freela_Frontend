@@ -1,12 +1,15 @@
 <script setup>
+import ConfigInputs  from './ConfigInputs.vue';
+import SkillsTable from './SkillsTable.vue';
 </script>
 
 <template>
     <div class="personal-container">
-        <h1>Informações pessoais</h1>
+        <ConfigInputs/>
+        <SkillsTable/>
     </div>
 </template>
 
 <style scoped>
-    @import "../../assets/Sass/configProfile/_personalInformation.scss";
+    @import "../../../assets/Sass/configProfile/_personalInformation.scss";
 </style>
