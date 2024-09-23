@@ -8,7 +8,7 @@
                 <img src="../../assets/images/configProfile/person-icon.png" alt="">
                 <p>Informações pessoais</p>
             </RouterLink>
-            <RouterLink to="/"  class="tab">
+            <RouterLink to="/configurations/password"  class="tab">
                 <img src="../../assets/images/configProfile/padlock-icon.png" alt="">
                 <p>Senha</p>
             </RouterLink>
