@@ -2,7 +2,7 @@
   <header>
     <div class="logo">
       <router-link to="/home">
-        <img src="@/assets/images/workana-logo.png" alt="Logo" />
+        <img src="@/assets/images/logo/tasker-logo.png" alt="Logo" />
       </router-link>
     </div>
     <nav>
@@ -14,5 +14,5 @@
   </header>
 </template>
 <style scoped>
-@import "@/assets/Sass/Home/_headerHome.scss";
+@import "@/assets/Sass/home/_headerHome.scss";
 </style>

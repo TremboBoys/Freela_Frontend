@@ -6,6 +6,8 @@ import HaveAccountSignUp from '@/components/signUp/inputs/HaveAccountSignUp.vue'
 import SignUp from '@/components/signUp/SignUp.vue';
 import SubmitSignUp from '@/components/signUp/inputs/SubmitSignUp.vue';
 import IconsSignUp from '@/components/signUp/icons/IconsSignUp.vue';
+import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
+import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 
 export {
     InputEmailSignUp,
@@ -15,5 +17,7 @@ export {
     HaveAccountSignUp,
     SignUp,
     SubmitSignUp,
-    IconsSignUp
+    IconsSignUp,
+    DefaultHeader,
+    DefaultFooter
 };

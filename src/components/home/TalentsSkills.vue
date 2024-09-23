@@ -114,5 +114,5 @@
     </div>
 </template>
 <style scoped>
-@import "@/assets/Sass/Home/_talentsSkills.scss";
+@import "@/assets/Sass/home/_talentsSkills.scss";
 </style>
