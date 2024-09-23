@@ -1,0 +1,170 @@
+.card-container{
+   width: 860px;
+    min-height: 400px;
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    background-color: #F9F9F9;
+    display: flex;
+
+    .price-container{
+        padding: 20px 0 25px 0;
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        justify-content: space-between;
+
+        .price-content{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        #seeMore{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .project-info{
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .profile-button{
+
+            width: 150px;
+            height: 50px;
+            padding: 12px 40px;
+            border-radius: 40px;
+            border: none;
+            background-color: #1B75BF;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 100;
+        }
+    }    
+
+    .bottom-side{
+
+        .types-container{
+            display: flex;
+            gap: 16px;
+
+            .type{
+                background-color: #E6E6E6;
+                border-radius: 35px;
+                padding: 12px 28px;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+
+        .left-side{
+            width: 2vw;
+            background-color: #EFB810;
+            border-radius: 12px 0px 0px 12px;
+        }
+
+        .card-content{
+            padding: 16px 22px;
+            width: 78vw;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .top-side{
+                display: flex;
+                gap: 16px;
+
+                .profile-img{
+                    img{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+        
+                .informations{
+                    text-align: justify;
+                    display: flex;
+                    flex-direction: column;
+                    .name{
+                        display: flex;  
+                        align-items: center;
+                        gap: 10px;
+                        p{
+                            font-weight: 500;
+                        }
+                        .pro-verified{
+                            background-color: #EFB810;
+                            padding: 6px 12px;
+                            border-radius: 7px;
+                            width: 48px;
+                            height: 22px;
+                            align-items: center;
+                            display: flex;
+                            justify-content: center;
+                            padding: 11px;
+                            
+                             p{font-weight: 400;}
+                        }
+                    
+        
+                    }
+        
+                    .specifications{
+                         display: flex;
+                        gap: 10px;
+                        align-items: center;
+        
+                        .stars{
+                            display: flex;
+                            gap: 2px;
+                            align-items: center;
+                            img{
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+                        
+                        .country{
+                            display: flex;
+                            gap: 2px;
+                            align-items: center;
+                            img{
+                                width: 14px;
+                                height: 14px;
+                                border-radius: 50px;
+                            }
+                        }
+                    }
+                }
+        
+                .country{
+                    
+                    img{
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50px;
+        
+                    }
+                }
+        
+        .middle-side{
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+            .description{
+                width: 100%;
+                text-align: start;
+                font-weight: 200;
+            }
+        }
+    
+    }
+            }
+        }
+
+    
