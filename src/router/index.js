@@ -161,7 +161,7 @@ const router = createRouter({
           component: () => import('@/views/project/FinishedProjectView.vue')
         },
         {
-          path: '/make-payment',
+          path: 'make-payment',
           name: 'makePayment',
           component: () => import('@/views/payment/PaymentView.vue')
         },
@@ -177,7 +177,16 @@ const router = createRouter({
         }
       ]
     },
-    
+    {
+      path: 'report',
+      name: 'report',
+      component: () => import('@/views/report/ReportView.vue')
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: () => import('@/views/global/HomeView.vue')
+    },
     {
       path: '/sign-up',
       name: 'signUp',
