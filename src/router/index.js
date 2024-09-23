@@ -178,16 +178,6 @@ const router = createRouter({
       ]
     },
     {
-      path: 'report',
-      name: 'report',
-      component: () => import('@/views/report/ReportView.vue')
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: () => import('@/views/global/HomeView.vue')
-    },
-    {
       path: '/sign-up',
       name: 'signUp',
       component: () => import('@/views/user/SignUpUserView.vue')
