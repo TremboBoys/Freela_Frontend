@@ -44,8 +44,8 @@ const router = createRouter({
               component: EmailConfig
             },
             {
-              path: 'subscription',
-              name: 'subscription',
+              path: 'subscription-plan',
+              name: 'subscriptionPlan',
               component: SubscriptionPlan
             },
             {
