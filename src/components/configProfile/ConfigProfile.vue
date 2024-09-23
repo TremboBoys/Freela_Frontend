@@ -1,12 +1,12 @@
 <script setup>
 import SideBar from './SideBar.vue';
-import PersonalInformation from './personalInformation/PersonalInformation.vue';
+// import PersonalInformation from './personalInformation/PersonalInformation.vue';
 </script>
 
 <template>
     <div class="configProfile-container">
         <SideBar/>
-        <PersonalInformation/>
+        <RouterView/>
     </div>
 </template>
 
