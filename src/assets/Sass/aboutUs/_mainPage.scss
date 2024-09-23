@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    padding: 0 20px;
+    padding: 16px 80px;
+    .row {
+        .col-12 {
+            .title {
+                color: #000;
+                margin-bottom: 10px;
+            }
+            .description {
+                font-weight: 500;
+                font-size: 1.4rem;
+                margin-top: 10px;
+            }
+        }
+    }
+}
