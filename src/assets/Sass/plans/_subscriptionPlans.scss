@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+.plan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 22rem;
+    height: 35rem;
+    margin: 0 3rem 4rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.7rem;
+    box-shadow: -6px -6px 20.3px 0px rgba(27, 117, 191, 0.50), 6px 6px 20.3px 0px rgba(27, 117, 191, 0.50);
+    border: 1px solid rgb(6, 60, 209);
+}

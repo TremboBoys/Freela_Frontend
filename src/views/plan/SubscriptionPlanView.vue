@@ -1,8 +1,10 @@
 <script setup>
+
+    import subscriptionsPlans from '../../components/plans/subscriptionsPlans.vue';
 </script>
 
 <template>
-    <div></div>
+        <subscriptionsPlans />
 </template>
 
 <style scoped>
