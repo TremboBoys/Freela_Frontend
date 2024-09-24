@@ -1,6 +1,6 @@
 <script setup>
-import projectsSearch from '../../components/Projects/projectsSearch.vue'
-import projectsSelect from '../../components/Projects/projectsSelect.vue'
+import projectsSearch from '../../components/projects/projectsSearch.vue'
+import projectsSelect from '../../components/projects/projectsSelect.vue'
 
 </script>
 

@@ -5,6 +5,10 @@
     <div class="main-container">
         <div class="design">
             <input type="text" class="input">
+            <div class="text-option">
+                <p>Design de logo</p>
+                <p>Design de app mobile</p>
+            </div>
         </div>
         <div class="resgister">
             <h1>Cadastre seu projeto</h1>

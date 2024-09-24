@@ -10,6 +10,16 @@
     border-radius: 11px;
     border: 1px solid #D9D9D9;
     background: #FFF;
+
+        .text-option{
+            color: #000;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin-left: 26px;
+        }
 }
 
 .input {
@@ -93,7 +103,7 @@
 
     .continue {
         position: absolute;
-        margin: 28px 0px 0px 261px;
+        margin: 28px 0px 0px 900px;
         width: 176px;
         height: 46px;
         flex-shrink: 0;
