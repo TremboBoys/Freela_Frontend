@@ -1,20 +1,75 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+.plan1 {
+  width: 22rem;
+  height: 35rem;
+  margin: 0 3rem 10rem;
+  border-radius: 0.6875rem;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  box-shadow:
+    -6px -6px 20.3px 0px rgba(77, 77, 77, 0.5),
+    6px 6px 20.3px 0px rgba(77, 77, 77, 0.5);
+  .image-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #ffffff;
-}
-.plan{
+    margin: 1rem 0 0 0;
+    .title {
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .text-title {
+        color: #000;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0 0 0 0.6rem;
+      }
+    }
+  }
+  .benefits{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 0 0;
+    }
+  }
+  .plan2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 22rem;
     height: 35rem;
-    margin: 0 3rem 4rem;
+    margin: 0 3rem 10rem;
     background-color: rgb(255, 255, 255);
     border-radius: 0.7rem;
-    box-shadow: -6px -6px 20.3px 0px rgba(27, 117, 191, 0.50), 6px 6px 20.3px 0px rgba(27, 117, 191, 0.50);
-    border: 1px solid rgb(6, 60, 209);
-}
+    box-shadow:
+      -6px -6px 20.3px 0px rgba(27, 117, 191, 0.5),
+      6px 6px 20.3px 0px rgba(27, 117, 191, 0.5);
+    border: 1px solid #1b75bf;
+  }
+  .plan3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 22rem;
+    height: 35rem;
+    margin: 0 3rem 10rem;
+    border-radius: 0.6875rem;
+    border: 2px solid #EFB810;
+    background: #FFF;
+    box-shadow: -6px -6px 20.3px 0px rgba(239, 184, 16, 0.50), 6px 6px 20.3px 0px rgba(239, 184, 16, 0.50);
+  }
