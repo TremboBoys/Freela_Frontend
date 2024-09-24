@@ -1,13 +1,8 @@
 <script setup>
-    import registerDesign from "@/components/registerProject/registerDesign.vue";
-    import registerText from "@/components/registerProject/registerText.vue";
+
 </script>
 <template>
-    <div class="main-container">
-        <div class="design">
-            <input type="text" class="input">
-        </div>
-        <div class="resgister">
+   <div class="register">
             <h1>Cadastre seu projeto</h1>
             <div class="project">
                 <p class="text-register">Qual é o tema do seu projeto?</p>
@@ -120,12 +115,8 @@
                     <p>Continuar</p>
                 </button>
             </div>
-            <registerDesign />
-            <registerText />
         </div>
-    </div>
 </template>
-
 <style scoped>
 @import '../../assets/Sass/project-registration/_project-registration.scss';
 </style>
