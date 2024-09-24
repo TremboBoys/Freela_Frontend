@@ -1,11 +1,11 @@
 <script setup>
-    import registerDesign from "@/components/registerProject/registerDesign.vue";
-    import registerText from "@/components/registerProject/registerText/registerText.vue";
+    import RegisterDesign from "@/components/registerProject/registerDesign.vue";
+    import RegisterText from "@/components/registerProject/registerText/registerText.vue";
 </script>
 <template>
     <div class="main-container">
-        <register-design />
-        <register-text />
+        <Register-design />
+        <RegisterText />
     </div>
 </template>
 
