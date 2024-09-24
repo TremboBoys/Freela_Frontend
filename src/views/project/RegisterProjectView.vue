@@ -1,10 +1,14 @@
 <script setup>
-
-    import { RouterView } from 'vue-router';
+    import registerDesign from "@/components/registerProject/registerDesign.vue";
+    import registerText from "@/components/registerProject/registerText.vue";
 </script>
 <template>
-    <RouterView />
+    <div class="main-container">
+        <register-design />
+        <register-text />
+    </div>
 </template>
 
 <style scoped>
+@import '../../assets/Sass/project-registration/_project-registration.scss';
 </style>

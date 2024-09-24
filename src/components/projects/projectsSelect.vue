@@ -1,6 +1,10 @@
 <script setup>
+import { ref } from 'vue';
+const isPopUpOpen = ref(false);
+const popUp = () => {
+    isPopUpOpen.value = !isPopUpOpen.value;
+}
 </script>
-
 <template>
     <div class="select">
         <div class="select-header-container">
@@ -52,7 +56,6 @@
         </div>
     </div>
 </template>
-
 <style scoped>
 @import '../../assets/Sass/project/_project.scss';
 </style>
