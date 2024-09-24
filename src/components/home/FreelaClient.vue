@@ -1,8 +1,14 @@
+<script setup>
+import { useScreen } from '@/composables/screen';
+
+const { browserWidth, deviceWidth, isMobile } = useScreen();
+</script>
+
 <template>
     <div class="top">
         <h1>Encontre habilidades que atendam às suas necessidades</h1>
     </div>
-    <div class="container">
+    <div v-if="isMobile" class="container">
         <div class="left">
             <div class="card">
                 <div class="header-card">
@@ -11,7 +17,7 @@
                 <div class="main-card">
                     <p>Eu quero ser contratado por</p>
                     <h1>Cliente</h1>
-                    <p>Contrate talentos pré-selecionados e certificados    para trabalhar nas tecnologias que o seu negócio precisa</p>
+                    <p>Contrate talentos pré-selecionados e certificados para trabalhar nas tecnologias que o seu negócio precisa</p>
                 </div>
                 <div class="footer-card">
 
