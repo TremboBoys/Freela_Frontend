@@ -1,9 +1,10 @@
 <script setup>
+
 </script>
 
 <template>
     <div class="button-container">
-        <RouterLink to="/"><button class="signIn-button">Fazer Login</button></RouterLink>
+        <RouterLink to="/dashboard"><button class="signIn-button">Fazer Login</button></RouterLink>
     </div>
 </template>
 
