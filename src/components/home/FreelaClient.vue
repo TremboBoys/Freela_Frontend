@@ -1,9 +1,3 @@
-<script setup>
-import { useScreen } from '@/composables/screen';
-
-const { browserWidth, deviceWidth, isMobile } = useScreen();
-</script>
-
 <template>
     <div class="top">
         <h1>Encontre habilidades que atendam às suas necessidades</h1>

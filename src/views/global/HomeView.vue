@@ -15,6 +15,3 @@ import DefaultFooter from '@/components/default/footer/DefaultFooter.vue'
         <DefaultFooter/>
     </div>
 </template>
-
-<style scoped>
-</style>
