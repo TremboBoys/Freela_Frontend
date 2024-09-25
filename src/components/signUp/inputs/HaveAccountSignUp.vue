@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
     <div class="login">
-        <p>Já possui uma conta? <router-link class="router" to="/login">Entrar</router-link></p>
+        <p>Já possui uma conta? <router-link class="router" to="/sign-in">Entrar</router-link></p>
     </div>
 </template>
 <style scoped>

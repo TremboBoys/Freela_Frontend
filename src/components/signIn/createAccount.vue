@@ -3,7 +3,7 @@
 
 <template>
     <div class="button-container">
-        <p>Não possui uma conta? <RouterLink id="signIn-rl" to="/">Cadastre-se</RouterLink></p>    </div>
+        <p>Não possui uma conta? <RouterLink id="signIn-rl" to="/sign-up">Cadastre-se</RouterLink></p>    </div>
 </template>
 
 <style>
