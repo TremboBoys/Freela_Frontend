@@ -1,32 +1,31 @@
 <script setup>
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
+
+const tabs = [
+  { route: '/configurations', icon: ('imagens/person-icon.png'), text: 'Informações pessoais' },
+  { route: '/configurations/password', icon: ('imagens/padlock-icon.png'), text: 'Senha' },
+  { route: '/configurations/email', icon: ('imagens/email.png'), text: 'Email' },
+  { route: '/configurations/subscription', icon: ('imagens/medal-icon.png'), text: 'Plano de assinatura' },
+  { route: '/configurations/security', icon: ('imagens/security-icon.png'), text: 'Segurança' }
+]
 </script>
 <template>
     <div class="sideBar">
-        <div class="tabs-area">
-            <RouterLink to="/"  class="tab">
-                <img src="../../assets/images/configProfile/person-icon.png" alt="">
-                <p>Informações pessoais</p>
-            </RouterLink>
-            <RouterLink to="/configurations/password"  class="tab">
-                <img src="../../assets/images/configProfile/padlock-icon.png" alt="">
-                <p>Senha</p>
-            </RouterLink>
-            <RouterLink to="/"  class="tab">
-                <img id="email-icon" src="../../assets/images/configProfile/email-icon.png" alt="">
-                <p>Email</p>
-            </RouterLink>
-            <RouterLink to="/"  class="tab">
-                <img src="../../assets/images/configProfile/medal-icon.png" alt="">
-                <p>Plano de assinatura</p>
-            </RouterLink>
-            <RouterLink to="/"  class="tab">
-                <img src="../../assets/images/configProfile/security-icon.png" alt="">
-                <p>Segurança</p>
-            </RouterLink>
-        </div>
+      <div class="tabs-area">
+        <RouterLink 
+          v-for="(tab, index) in tabs" 
+          :key="index" 
+          :to="tab.route" 
+          class="tab"
+          :class="{ active: route.path === tab.route }">
+          <img :src="tab.icon" :alt="tab.text">
+          <p>{{ tab.text }}</p>
+        </RouterLink>
+      </div>
     </div>
-</template>
+  </template>
 
 <style scoped>
 @import "../../assets/Sass/configProfile/_sideBar.scss";

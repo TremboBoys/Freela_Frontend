@@ -37,10 +37,8 @@
             }
 
         }
-        .tab:first-child{
+        .tab.active {
             background-color: rgba(27, 117, 191, 0.16);
-            border-radius: 9px 0 0 10px;
-            width: 100%;
-        }
+          }
     }
 }
