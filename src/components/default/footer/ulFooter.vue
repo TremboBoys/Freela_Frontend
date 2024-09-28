@@ -16,7 +16,7 @@ const freelancerLinks = [
 ]
 
 const infoLinks = [
-  { name: 'Sobre nós', path: '/' },
+  { name: 'Sobre nós', path: '/contact/about' },
   { name: 'Contato', path: '/' },
   { name: 'Ajuda', path: '/' },
   { name: 'Política de privacidade', path: '/' },

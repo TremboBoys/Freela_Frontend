@@ -1,9 +1,6 @@
 <script setup>
+    import paymentError from '../../components/payment/paymentError.vue';
 </script>
-
 <template>
-    <div></div>
+    <paymentError />
 </template>
-
-<style scoped>
-</style>
