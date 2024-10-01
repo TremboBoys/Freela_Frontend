@@ -8,10 +8,11 @@
   align-items: center;
   height: 100vh;
   background-color: #ffffff;
+  margin: 10rem 0 0;
 }
 .plan1 {
-  width: 22rem;
-  height: 35rem;
+  width: 25rem;
+  height: 50rem;
   margin: 0 3rem 10rem;
   border-radius: 0.6875rem;
   border: 1px solid #d9d9d9;
@@ -21,9 +22,8 @@
     6px 6px 20.3px 0px rgba(77, 77, 77, 0.5);
   .image-title {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0 4rem;
     .title {
       color: black;
       display: flex;
@@ -31,27 +31,41 @@
       align-items: center;
       .text-title {
         color: #000;
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight: 700;
         margin: 0 0 0 0.6rem;
       }
     }
   }
-  .benefits{
+  .benefits-list{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 0 2rem;
+    width: 20rem;
     }
+   img{
+    width: 4rem;
+    height: 4rem;
+    margin: 0 0.5rem 0 0;
+   }
+   .benefit{
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 0 0 ;
+   }
+   .decoration{
+    margin: 0 0.5rem 0 0 ;
+    font-size: 1.7rem;
+   }
   }
   .plan2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 22rem;
-    height: 35rem;
+    width: 25rem;
+    height: 50rem;
     margin: 0 3rem 10rem;
     background-color: rgb(255, 255, 255);
     border-radius: 0.7rem;
@@ -65,8 +79,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 22rem;
-    height: 35rem;
+    width: 25rem;
+    height: 50rem;
     margin: 0 3rem 10rem;
     border-radius: 0.6875rem;
     border: 2px solid #EFB810;
