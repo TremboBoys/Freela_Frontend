@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security } from '@/components';
+import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security, SignUp, VerificationCode } from '@/components';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -154,8 +154,19 @@ const router = createRouter({
     
     {
       path: '/sign-up',
-      name: 'signUp',
-      component: () => import('@/views/user/SignUpUserView.vue')
+      component: () => import('@/views/user/SignUpUserView.vue'),
+      children: [
+        {
+          path: '/',
+          name: 'signUp',
+          component: SignUp
+        },
+        {
+          path: '/verificationCode',
+          name: 'verificationCode',
+          component: VerificationCode
+        }
+      ]
     },
     {
       path: '/sign-in',
