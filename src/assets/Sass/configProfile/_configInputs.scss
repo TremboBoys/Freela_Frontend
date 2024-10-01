@@ -1,0 +1,42 @@
+h1{
+font-weight: 700;
+}
+
+.inputs-container{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 220px;
+
+    .left, .right{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+
+        .label{
+            font-size: 14px;
+            font-weight: 500;
+            color: #575757;
+            margin-bottom: 5px;
+        }
+
+        input, select{
+            height: 43px;
+            width: 250px;
+            border: 2px solid #575757;
+            border-radius: 10px;
+            margin-bottom: 13px;
+            font-size: 1rem;
+            padding: 3px;
+ 
+                
+            
+
+        }
+    }
+        option:hover{
+        background-color: #d30303;
+    }
+}
+

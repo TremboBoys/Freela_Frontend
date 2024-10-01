@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security } from '@/components';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,9 +24,36 @@ const router = createRouter({
           component: () => import('@/views/user/ProfileUserView.vue')
         },
         {
-          path: '/configurations',
+          path: '/configurations/',
           name: 'configurations',
-          component: () => import('@/views/user/ConfigurationUserView.vue')
+          component: () => import('@/views/user/ConfigurationUserView.vue'),
+          children: [
+            {
+              path: '',
+              name: 'personalInformation',
+              component: PersonalInformation
+            },
+            {
+              path: 'password',
+              name: 'password',
+              component: PasswordConfig
+            },
+            {
+              path: 'email',
+              name: 'email',
+              component: EmailConfig
+            },
+            {
+              path: 'subscription',
+              name: 'subscription',
+              component: SubscriptionPlan
+            },
+            {
+              path: 'security',
+              name: 'security',
+              component: Security
+            }
+          ]
         },
         {
           path: '/projects',
@@ -86,7 +114,7 @@ const router = createRouter({
           path: '/contact/privacy-policy',
           name: 'privacyPolicy',
           component: () => import('@/views/help/PrivacyPolicyContactView.vue')
-        }
+        },
       ]
     },
     
