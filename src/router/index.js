@@ -57,13 +57,13 @@ const router = createRouter({
         },
 
         {
-          path: 'ConfirmationEmail',
+          path: 'confirmationEmail',
           name: 'ConfirmationEmail',
           component: () => import('@/views/user/ConfirmationEmailUserView.vue')
         },
 
         {
-          path: 'ConfirmationPassword',
+          path: 'confirmationPassword',
           name: 'ConfirmationPassword',
           component: () => import('@/views/user/ConfirmationPasswordUserView.vue')
         },
@@ -153,16 +153,16 @@ const router = createRouter({
     },
     
     {
-      path: '/sign-up',
+      path: '/sign-up/',
       component: () => import('@/views/user/SignUpUserView.vue'),
       children: [
         {
-          path: '/',
+          path: '',
           name: 'signUp',
           component: SignUp
         },
         {
-          path: '/verificationCode',
+          path: 'verification-code',
           name: 'verificationCode',
           component: VerificationCode
         }
