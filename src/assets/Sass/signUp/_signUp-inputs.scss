@@ -35,13 +35,14 @@ form {
         background: #0B2F34;
         margin: 1rem 0 10rem 0;
         color: #fff;
-        font-size: 0.8rem;
+        font-size: 1rem;
+        padding: 10px;
     }
     .inputBox {
         position: relative;
         .labelInput {
             position: absolute;
-            top: 1.1rem;
+            top: 0.85rem;
             left: 0.7rem;
             pointer-events: none;
             transition: 0.4s;
