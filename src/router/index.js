@@ -115,6 +115,11 @@ const router = createRouter({
           name: 'privacyPolicy',
           component: () => import('@/views/help/PrivacyPolicyContactView.vue')
         },
+        {
+          path: '/report',
+          name: 'report',
+          component: () => import('@/views/report/ReportView.vue')
+        }
       ]
     },
     
