@@ -6,7 +6,6 @@ import HaveAccountSignUp from '@/components/signUp/inputs/HaveAccountSignUp.vue'
 import SignUp from '@/components/signUp/SignUp.vue';
 import SubmitSignUp from '@/components/signUp/inputs/SubmitSignUp.vue';
 import IconsSignUp from '@/components/signUp/icons/IconsSignUp.vue';
-
 import PersonalInformation from './configProfile/personalInformation/PersonalInformationConfig.vue';
 import ConfigInputs from './configProfile/personalInformation/ConfigInputs.vue';
 import SkillsTable from './configProfile/personalInformation/SkillsTable.vue';
@@ -16,7 +15,6 @@ import SubscriptionPlan from './configProfile/subscriptionPlan/SubscriptionPlanC
 import Security from './configProfile/security/SecurityConfig.vue';
 import ConfigProfile from './configProfile/ConfigProfile.vue';
 import SideBar from './configProfile/SideBar.vue';
-
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
 import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 
@@ -29,7 +27,6 @@ export {
     SignUp,
     SubmitSignUp,
     IconsSignUp,
-
     PersonalInformation,
     ConfigInputs,
     SkillsTable,
@@ -39,8 +36,6 @@ export {
     SubscriptionPlan,
     Security,
     SideBar,
-
     DefaultHeader,
     DefaultFooter
-
 };
