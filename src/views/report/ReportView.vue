@@ -6,3 +6,11 @@ import ReportFreela from '@/components/report/ReportFreela.vue'
         <ReportFreela />
     </div>
 </template>
+<style scoped>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+</style>

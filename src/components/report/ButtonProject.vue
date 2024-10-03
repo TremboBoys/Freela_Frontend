@@ -1,5 +1,15 @@
+<script setup>
+const emit = defineEmits(['click']);
+
+const handleClick = () => {
+  emit('click');
+};
+</script>
 <template>
-    <div class="container">
-        <button class="btn btn-primary" @click="showFreela">Freela</button>
-    </div>
+    <button class="btn" @click="handleClick">
+        <slot></slot>
+    </button>
 </template>
+<style scoped>
+@import '@/assets/Sass/report/_buttonFreela.scss';
+</style>
