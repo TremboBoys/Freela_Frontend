@@ -6,9 +6,11 @@ const handleClick = () => {
 };
 </script>
 <template>
+  <div class="container">
     <button class="btn" @click="handleClick">
-        <slot></slot>
+      Enviar relatório
     </button>
+  </div>
 </template>
 <style scoped>
 @import '@/assets/Sass/report/_buttonFreela.scss';

@@ -9,8 +9,7 @@ const emit = defineEmits(['update:modelValue']);
 <template>
     <div class="container">
         <div class="input-field">
-            <label>{{ label }}</label>
-            <input type="text" :placeholder="placeholder" />
+            <h1>Relatório</h1>
         </div>
     </div>
 </template>
