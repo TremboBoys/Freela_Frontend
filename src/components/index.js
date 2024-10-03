@@ -17,15 +17,6 @@ import ConfigProfile from './configProfile/ConfigProfile.vue';
 import SideBar from './configProfile/SideBar.vue';
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
 import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
-import PersonalInformation from './configProfile/personalInformation/PersonalInformationConfig.vue';
-import ConfigInputs from './configProfile/personalInformation/ConfigInputs.vue';
-import SkillsTable from './configProfile/personalInformation/SkillsTable.vue';
-import PasswordConfig from './configProfile/password/PasswordConfig.vue';
-import EmailConfig from './configProfile/email/EmailConfig.vue';
-import SubscriptionPlan from './configProfile/subscriptionPlan/SubscriptionPlanConfig.vue';
-import Security from './configProfile/security/SecurityConfig.vue';
-import ConfigProfile from './configProfile/ConfigProfile.vue';
-import SideBar from './configProfile/SideBar.vue';
 
 export {
     InputEmailSignUp,
@@ -47,13 +38,4 @@ export {
     SideBar,
     DefaultHeader,
     DefaultFooter,
-    PersonalInformation,
-    ConfigInputs,
-    SkillsTable,
-    ConfigProfile,
-    PasswordConfig,
-    EmailConfig,
-    SubscriptionPlan,
-    Security,
-    SideBar,
 };
