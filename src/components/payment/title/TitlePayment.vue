@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Enviar o projeto</h1>
+        <h1>Realizar o pagamento</h1>
     </div>
 </template>
 <style scoped>

@@ -18,5 +18,5 @@ const editInfo = () => {
 </template>
 
 <style scoped>
-@import '@/assets/Sass/proposal/skills/_titleSkills.scss';
+@import '@/assets/Sass/payment/skills/_titleSkills.scss';
 </style>

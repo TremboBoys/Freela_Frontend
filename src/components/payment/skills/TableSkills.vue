@@ -41,7 +41,7 @@ const ratingCriteria = [
 </template>
 
 <style scoped lang="scss">
-@import '@/assets/Sass/proposal/skills/_tableSkills.scss';
+@import '@/assets/Sass/payment/skills/_tableSkills.scss';
 .rating-table {
   table {
     width: 100%;

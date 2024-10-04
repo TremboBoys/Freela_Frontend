@@ -25,5 +25,5 @@ const selectRating = () => {
 </template>
 
 <style scoped>
-@import '@/assets/Sass/finishedProject/_starRating.scss';
+@import '@/assets/Sass/payment/skills/_starRating.scss';
 </style>

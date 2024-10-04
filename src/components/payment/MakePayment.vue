@@ -1,8 +1,8 @@
 <script setup>
-import Title from '@/components/finishedProject/title/TitleProject.vue'
-import InputsProject from './inputs/InputsProject.vue';
+import Title from './title/TitlePayment.vue'
+import InputsPayment from './inputs/InputsPayment.vue';
 import TableSkills from './skills/TableSkills.vue';
-import SendProject from './send/SendProject.vue';
+import SendProject from './send/SendPayment.vue';
 </script>
 <template>
     <div class="container">
@@ -10,7 +10,7 @@ import SendProject from './send/SendProject.vue';
             <Title />
         </div>
         <div class="inputs">
-            <InputsProject />
+            <InputsPayment />
         </div>
         <div class="table">
             <TableSkills />
@@ -21,5 +21,5 @@ import SendProject from './send/SendProject.vue';
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/proposal/_proposalLayout.scss';
+@import '@/assets/Sass/payment/_paymentLayout.scss';
 </style>
