@@ -1,6 +1,6 @@
 <script setup>
     import registerDesign from "@/components/registerProject/registerDesign.vue";
-    import registerText from "@/components/registerProject/registerText.vue";
+    import registerText from "@/components/registerProject/registerText/registerText.vue";
 </script>
 <template>
     <div class="main-container">
@@ -127,5 +127,5 @@
 </template>
 
 <style scoped>
-@import '../../assets/Sass/project-registration/_project-registration.scss';
+@import '@/assets/Sass/project-registration/_project-registration.scss';
 </style>
