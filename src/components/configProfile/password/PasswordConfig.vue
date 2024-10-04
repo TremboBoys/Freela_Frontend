@@ -1,8 +1,9 @@
 <script setup>
+import passwordInputs from './passwordInputs.vue';
 </script>
 
 <template>
-    <div></div>
+    <passwordInputs/>
 </template>
 
 <style scoped>
