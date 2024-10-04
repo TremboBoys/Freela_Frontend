@@ -1,6 +1,6 @@
 <script setup>
-    import RegisterDesign from "@/components/registerProject/registerDesign.vue";
-    import RegisterText from "@/components/registerProject/registerText/registerText.vue";
+
+    import { RouterView } from 'vue-router';
 </script>
 <template>
     <div class="main-container">
@@ -127,5 +127,4 @@
 </template>
 
 <style scoped>
-@import '@/assets/Sass/project-registration/_project-registration.scss';
 </style>
