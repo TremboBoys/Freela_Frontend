@@ -115,6 +115,11 @@ const router = createRouter({
           name: 'privacyPolicy',
           component: () => import('@/views/help/PrivacyPolicyContactView.vue')
         },
+        {
+          path: '/finished-project',
+          name: 'finishedProject',
+          component: () => import('@/views/project/FinishedProjectView.vue')
+        }
       ]
     },
     
