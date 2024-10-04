@@ -11,5 +11,5 @@
     </div>
 </template>
 <style scoped>
-@import '../../assets/Sass/project-registration/_project-registration.scss';
+@import '@/assets/Sass/project-registration/_project-registration.scss';
 </style>
