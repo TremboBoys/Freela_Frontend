@@ -2,9 +2,7 @@
 </script>
 
 <template>
-    <div>
-        <p>oi</p>
-    </div>
+    <div></div>
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security } from '@/components';
+import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security, ProjectRegistration, DescriptionProject, TypeProject, SizeProject, CompleteProject } from '@/components';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -66,31 +66,31 @@ const router = createRouter({
           component: () => import('@/views/project/DetailProjectView.vue')
         },
         {
-          path: '/register-project',
+          path: '/register-project/',
           name: 'registerProject',
-          component: () => import('@/views/project/RegisterProject/RegisterProjectView.vue'),
+          component: () => import('@/views/project/RegisterProjectView.vue'),
           children: [
             {
-              path: '/',
+              path: '',
               component: ProjectRegistration
             },
             {
-              path: '/description',
+              path: 'description',
               name: 'description',
               component: DescriptionProject
             },
             {
-              path: '/types',
+              path: 'types',
               name: 'types',
               component: TypeProject
             },
             {
-              path: '/size',
+              path: 'size',
               name: 'size',
               component: SizeProject
             },
             {
-              path: '/complete',
+              path: 'complete',
               name: 'complete',
               component: CompleteProject
             }
