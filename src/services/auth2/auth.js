@@ -9,20 +9,8 @@ await passage.app.info().then(data => {
     console.error(error);
 });
 
-async function createUser() {
-    try {
-        // const newUser = await passage.createUser({
-        //     email: 'test@example.com',
-        //     password: 'your_password'
-        // });
-        const newUser = await passageApp.createUser({
-            email: 'test@example.com',
-            password: 'your_password'
-        });
-        console.log('Usuário criado com sucesso', newUser);
-    } catch(error) {
-        console.error('Erro ao criar o usuário:', error);
-    };
-};
+export function getToken(){
+    const token = localStorage.getItem('psg_auth_token')
+    return token
+} 
 
-createUser();
