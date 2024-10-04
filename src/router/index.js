@@ -115,6 +115,11 @@ const router = createRouter({
           name: 'privacyPolicy',
           component: () => import('@/views/help/PrivacyPolicyContactView.vue')
         },
+        {
+          path: '/make-payment',
+          name: 'makePayment',
+          component: () => import('@/views/payment/PaymentView.vue')
+        }
       ]
     },
     
