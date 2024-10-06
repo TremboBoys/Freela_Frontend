@@ -1,11 +1,23 @@
-<script setup></script>
+<script setup>
+import SendButton from './SendButton.vue';
+</script>
 
 <template>
   <div class="passwordInputs">
     <h1>Configuração de Senha</h1>
     <div class="inputs">
-      <input type="password" value="teste" disabled />
-      <input type="password" />
+      <div class="form-group inputBox">
+        <input
+          type="password"
+          disabled
+          class="form-control"
+          id="email"
+          aria-describedby="emailHelp"
+          placeholder=" "
+          value="teste"
+        />
+        <label class="email labelInput" for="email">Sua senha</label>
+      </div>
       <div class="form-group inputBox">
         <input
           type="email"
@@ -14,13 +26,24 @@
           aria-describedby="emailHelp"
           placeholder=" "
         />
-        <label class="email labelInput" for="email">Email</label>
+        <label class="email labelInput" for="email">Sua nova senha</label>
+      </div>
+      <div class="form-group inputBox">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          aria-describedby="emailHelp"
+          placeholder=" "
+        />
+        <label class="email labelInput" for="email">Confirmar senha</label>
       </div>
     </div>
-    <button></button>
+    <SendButton/>
   </div>
 </template>
 
 <style scoped>
+
 @import '../../../assets/Sass/configProfile/_passwordInputs.scss';
 </style>
