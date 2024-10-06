@@ -1,6 +1,17 @@
 <template>
     <div class="container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure odio illum laborum cum, maxime alias sapiente eaque ad sint odit voluptate velit accusantium? Ab non minus ex sequi, inventore est.
+        <div class="contact">
+            <div class="contact-avatar">
+                <img src="@/assets/images/dashboard/luiz.jpg" alt="">
+            </div>
+            <div class="contact-info">
+                <h3>Luiz Fernando</h3>
+                <p>New message</p>
+            </div>
+            <div class="contact-notification">
+                <p>2</p>
+            </div>
+        </div>
     </div>
 </template>
 <style scoped>
