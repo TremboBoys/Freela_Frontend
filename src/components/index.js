@@ -37,5 +37,5 @@ export {
     Security,
     SideBar,
     DefaultHeader,
-    DefaultFooter
+    DefaultFooter,
 };

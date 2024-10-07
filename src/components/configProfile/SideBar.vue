@@ -4,11 +4,11 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const tabs = [
-  { route: '/configurations', icon: ('imagens/person-icon.png'), text: 'Informações pessoais' },
-  { route: '/configurations/password', icon: ('imagens/padlock-icon.png'), text: 'Senha' },
-  { route: '/configurations/email', icon: ('imagens/email.png'), text: 'Email' },
-  { route: '/configurations/subscription', icon: ('imagens/medal-icon.png'), text: 'Plano de assinatura' },
-  { route: '/configurations/security', icon: ('imagens/security-icon.png'), text: 'Segurança' }
+  { route: '/configurations', icon: ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSSQ54cez5FfmC1SwY94-WNqM_-RkzorKmkg&s'), text: 'Informações pessoais' },
+  { route: '/configurations/password', icon: ('https://cdn-icons-png.flaticon.com/512/61/61457.png'), text: 'Senha' },
+  { route: '/configurations/email', icon: ('https://cdn-icons-png.flaticon.com/512/561/561188.png'), text: 'Email' },
+  { route: '/configurations/subscription', icon: ('https://www.shareicon.net/download/2016/01/05/698562_award_512x512.png'), text: 'Plano de assinatura' },
+  { route: '/configurations/security', icon: ('https://cdn-icons-png.flaticon.com/512/95/95454.png'), text: 'Segurança' }
 ]
 </script>
 <template>
