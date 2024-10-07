@@ -1,5 +1,6 @@
 <script setup>
-import { DefaultFooter, DefaultHeader } from '@/components';
+import { DefaultFooter, DefaultHeader } from '@/components'
+import { RouterView } from 'vue-router';
 </script>
 
 <template>

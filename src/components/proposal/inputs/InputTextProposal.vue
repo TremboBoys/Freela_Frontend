@@ -7,6 +7,7 @@
         </div>
     </div>
 </template>
+
 <style scoped>
 @import '@/assets/Sass/proposal/inputs/_inputText.scss';
 </style>
