@@ -7,13 +7,13 @@
     <div class="inputs">
       <div class="form-group inputBox">
         <input
-          type="password"
+          type="email"
           disabled
           class="form-control"
           id="email"
           aria-describedby="emailHelp"
           placeholder=" "
-          value="teste"
+          value="luizblume@gmail.com"
         />
         <label class="email labelInput" for="email">Seu email</label>
       </div>
