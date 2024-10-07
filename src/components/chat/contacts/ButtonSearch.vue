@@ -8,7 +8,7 @@
             </div>
             <input type="text" placeholder="Search" />
             <div class="search-icon">
-                🔍
+                <i class="fa fa-search"></i>
             </div>
         </div>
     </div>

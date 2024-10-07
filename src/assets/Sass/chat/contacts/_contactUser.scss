@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    
+    z-index: -9999;
     .contact {
         display: flex;
         flex-direction: row;
@@ -9,7 +9,7 @@
         padding: 10px;
         background-color: #f8f8f8;
         cursor: pointer;
-        width: 320px;
+        width: 350px;
         transition: background-color 0.2s;
         
         &:hover {
