@@ -20,7 +20,7 @@
             <div class="image-title">
                 <div class="image"><img src="@/assets/images/Queen-Crown.png" alt=""></div>
                 <div class="title"><p class="text-title-month">Mensal</p></div>
-            </div>
+        </div>
             <div class="benefits-list">
                 <ul>
                     <li class="benefit"><span class="decoration">●</span>Propostas a qualquer momento</li>
@@ -49,6 +49,6 @@
         </div>
     </div>
 </template>
-<style scoped>   
+<style scoped lang="scss">   
 @import '../../assets/Sass/plans/_subscriptionPlans.scss';
 </style>
