@@ -116,6 +116,11 @@ const router = createRouter({
           component: () => import('@/views/help/PrivacyPolicyContactView.vue')
         },
         {
+          path: 'received-proposals',
+          name: 'receivedProposals',
+          component: () => import('@/views/proposal/ReceivedProposalView.vue')
+        },
+        {
           path: 'report',
           name: 'report',
           component: () => import('@/views/report/ReportView.vue')
