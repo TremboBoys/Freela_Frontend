@@ -116,6 +116,11 @@ const router = createRouter({
           component: () => import('@/views/help/PrivacyPolicyContactView.vue')
         },
         {
+          path: 'finished-project',
+          name: 'finishedProject',
+          component: () => import('@/views/project/FinishedProjectView.vue')
+        },
+        {
           path: '/make-payment',
           name: 'makePayment',
           component: () => import('@/views/payment/PaymentView.vue')
