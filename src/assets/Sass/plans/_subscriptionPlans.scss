@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 10rem 0 0;
+  height: 60rem;
+  margin: 0 0;
 
 }
 .plan1 {
   width: 25rem;
   height: 50rem;
-  margin: 0 3rem 10rem;
+  margin: 0 3rem;
   border-radius: 0.6875rem;
   background-color: rgb(255, 255, 255);
   border: 1px solid #4f5255;
@@ -89,12 +89,39 @@ img {
     background-position: 0 0;
   }
 }
+.sign{
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  height: 30rem;
+
+  button {
+    width: 13rem;
+    height: 3.5rem;
+    background-color: #0B2F34;
+    color: #fff;
+    border: 1px solid #7A7A7A;
+    border-radius: 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #3d4545;
+      transform: scale(1.05);
+    }
+  }
+}
 }
 
 .plan2 {
   width: 25rem;
   height: 50rem;
-  margin: 0 3rem 10rem;
+  margin: 0 3rem;
   border-radius: 0.6875rem;
   background-color: rgb(255, 255, 255);
   border: 1px solid #1b75bf;
@@ -124,13 +151,12 @@ img {
   margin: 1rem 0 0 4rem;
   
   .title {
-    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .text-title,
-    .text-title-month {
+    .text-title{
+      color: #1B75BF;
       font-size: 1.7rem;
       font-weight: 700;
       margin-left: 0.6rem;
@@ -159,6 +185,7 @@ img {
 }
 
 .decoration {
+  color: #1B75BF;
   margin: 0 0.5rem 0 0;
   font-size: 1.7rem;
 }
@@ -174,12 +201,40 @@ img {
     background-position: 0 0;
   }
 }
+.sign{
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  height: 39.79%;
+  button {
+    width: 13rem;
+    height: 3.5rem;
+    background-color: #1B75BF;
+    color: #fff;
+    border: 1px solid #095492;
+    border-radius: 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #082664;
+      border: 1px solid #1B75BF;
+      transform: scale(1.05);
+    }
+  }
+
+}
 }
 
 .plan3 {
   width: 25rem;
   height: 50rem;
-  margin: 0 3rem 10rem;
+  margin: 0 3rem;
   border-radius: 0.6875rem;
   border: 2px solid #EFB810;
   background: #ffffff;
@@ -209,13 +264,12 @@ img {
   margin: 1rem 0 0 4rem;
   
   .title {
-    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .text-title,
-    .text-title-month {
+    .text-title{
+      color: #EFB810;
       font-size: 1.7rem;
       font-weight: 700;
       margin-left: 0.6rem;
@@ -237,13 +291,12 @@ img {
 }
 
 .benefit {
-  color: #000;
   font-size: 1rem;
   font-weight: 400;
-  
 }
 
 .decoration {
+  color: #EFB810;
   margin: 0 0.5rem 0 0;
   font-size: 1.7rem;
 }
@@ -258,5 +311,33 @@ img {
   100% {
     background-position: 0 0;
   }
+}
+
+.sign{
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  height: 34.7%;
+  button {
+    width: 13rem;
+    height: 3.5rem;
+    background-color: #EFB810;
+    color: #000000;
+    border: 1px solid #AA8309;
+    border-radius: 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #c1940f;
+      transform: scale(1.05);
+    }
+  }
+
 }
 }
