@@ -1,5 +1,4 @@
 <script setup>
-
     import subscriptionsPlans from '../../components/plans/subscriptionsPlans.vue';
 </script>
 
