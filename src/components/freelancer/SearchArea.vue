@@ -17,7 +17,7 @@ const categories = ['Nacionalidade', 'TI & Programação', 'Design', 'Administra
       </div>
       <ul>
         <li v-for="category in categories" :key="category">
-          <input type="checkbox" name="" class="porra" />
+          <input type="checkbox" name="" />
           {{ category }}
         </li>
       </ul>
@@ -27,5 +27,6 @@ const categories = ['Nacionalidade', 'TI & Programação', 'Design', 'Administra
 </template>
 
 <style scoped>
+
 @import '../../assets/Sass/freelancer/_searchArea.scss';
 </style>
