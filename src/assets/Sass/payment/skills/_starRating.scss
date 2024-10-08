@@ -1,0 +1,19 @@
+.star {
+    cursor: pointer;
+    font-size: 32px;
+    color: #cccccc;
+    transition: color 0.3s;
+
+    &.active {
+        color: #007bff; // Cor da estrela ativa (azul)
+    }
+
+    &:hover,
+    &:hover~.star {
+        color: #0056b3; // Cor da estrela ao passar o mouse
+    }
+
+    i {
+        transition: color 0.3s;
+    }
+}
