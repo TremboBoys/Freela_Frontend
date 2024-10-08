@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    justify-content: space-between;
+    .submit {
+        display: flex;
+        justify-content: space-between;
+        .dateInput {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 30vw;
+            .label {
+                font-size: 1.5vw;
+                margin-bottom: 10px;
+            }
+            .date {
+                width: 20vw;
+                height: 5vh;
+                font-size: 1.5vw;
+                padding: 5px;
+                border-radius: 7px;
+            }
+        }
+        .buttonSubmit {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20vw;
+                height: 6vh;
+                background-color: #1B75BF;
+                color: white;
+                font-size: 1.5vw;
+                border-radius: 32px;
+                cursor: pointer;
+                transition: 0.3s;
+                border: none;
+                &:hover {
+                    background-color: #0b5a9b;
+                    color: white;
+                }
+            }
+        }
+    }
+}
