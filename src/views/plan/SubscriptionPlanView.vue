@@ -1,9 +1,9 @@
 <script setup>
-import SideBar from "../../components/configProfile/SideBar.vue"
+    import subscriptionsPlans from '../../components/plans/subscriptionsPlans.vue';
 </script>
 
 <template>
-    <SideBar/>
+        <subscriptionsPlans />
 </template>
 
 <style scoped>

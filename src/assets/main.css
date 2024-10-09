@@ -1,6 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* * {
+} */
+
+:root {
+  --gradient-shadow-gold: linear-gradient(
+    30deg,
+    #FFFACD,
+    #FFD700,
+    #FFC300,
+    #FFB300,
+    #FFA000,
+    #FF8C00,
+    #FFB74D,
+    #FFD54F,
+    #FFF8DC
+  );
+  --gradient-shadow-blue: linear-gradient(
+    30deg,
+    #08425e,
+    #08477a,
+    #64B5F6,
+    #193852,
+    #2196F3,
+    #1E88E5,
+    #1976D2,
+    #1565C0,
+    #0D47A1
+  );
+  --gradient-shadow-gray: linear-gradient(
+    45deg,
+    #F5F5F5,
+    #E0E0E0,
+    #BDBDBD,
+    #9E9E9E,
+    #757575,
+    #616161,
+    #424242,
+    #212121,
+    #000000
+  );
 }
