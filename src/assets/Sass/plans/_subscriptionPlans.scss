@@ -95,26 +95,62 @@ img {
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  height: 30rem;
+  height: 29rem;
 
-  button {
+  #button {
     width: 13rem;
     height: 3.5rem;
     background-color: #0B2F34;
     color: #fff;
-    border: 1px solid #7A7A7A;
     border-radius: 3rem;
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0 0 2rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
 
-    &:hover {
-      background-color: #3d4545;
-      transform: scale(1.05);
-    }
-  }
+  //   .animate-border {
+  //   --borderWidth: 3px;
+  //   background: #1D1F20;
+  //   position: relative;
+  //   border-radius: var(--borderWidth);
+  //   &:hover {
+  //     background-color: #3d4545;
+  //     transform: scale(1.05);
+  //     .animate-border:after {
+  //       content: '';
+  //       position: absolute;
+  //       top: calc(-1 * var(--borderWidth));
+  //       left: calc(-1 * var(--borderWidth));
+  //       height: calc(100% + var(--borderWidth) * 2);
+  //       width: calc(100% + var(--borderWidth) * 2);
+  //       background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  //       border-radius: calc(2 * var(--borderWidth));
+  //       z-index: -1;
+  //       animation: animatedgradient 0.1s ease alternate infinite;
+  //       background-size: 300% 300%;
+  //     }
+      
+      
+  //     @keyframes animatedgradient {
+  //       0% {
+  //         background-position: 0% 50%;
+  //       }
+  //       50% {
+  //         background-position: 100% 50%;
+  //       }
+  //       100% {
+  //         background-position: 0% 50%;
+  //       }
+  //     }
+  
+  //   }
+  // }
+  
+  
+
+}
 }
 }
 

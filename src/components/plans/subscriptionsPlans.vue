@@ -16,7 +16,7 @@
                 </ul>
             </div>
             <div class="sign">
-                <button>Já incluso</button>
+                <button id="button" class="border-animate">Já incluso</button>
             </div>
         </div>
         <div class="plan2">
