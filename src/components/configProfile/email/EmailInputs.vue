@@ -1,4 +1,5 @@
 <script setup>
+import SendButton from '../password/SendButton.vue';
 </script>
 
 <template>
@@ -38,6 +39,7 @@
         <label class="email labelInput" for="email">Confirmar email</label>
       </div>
     </div>
+    <SendButton/>
   </div>
 </template>
 
