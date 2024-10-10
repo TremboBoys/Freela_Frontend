@@ -1,0 +1,16 @@
+.authMethods-container{
+    padding: 33px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    h1{
+        text-align: center;
+    }
+    ul{
+        margin-left: 20px ;
+
+        li{
+            list-style: outside;
+        }
+    }
+}

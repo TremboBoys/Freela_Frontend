@@ -1,8 +1,9 @@
 <script setup>
+import SecArea from './SecArea.vue'
 </script>
 
 <template>
-    <div>VAMOOOOOOOOOOO</div>
+    <SecArea/>
 </template>
 
 <style scoped>
