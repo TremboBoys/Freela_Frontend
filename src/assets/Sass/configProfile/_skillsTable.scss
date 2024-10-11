@@ -34,8 +34,17 @@ table{
 
     
     td{
-        padding: 15px;
+        padding: 27px;
         font-weight: 300;
+        .teste{
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        img{
+            width: 19px;
+            height: 19px;
+        }
     }
 
     tr td:first-child{
