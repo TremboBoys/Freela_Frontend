@@ -22,8 +22,9 @@ import ChatMessage from '@/components/chat/ChatMessage.vue'
 .aside-contacts {
     display: flex;
     flex-direction: column;
-    width: 35vw;
-}
+    width: 25vw;
+    overflow-y: auto;
+    overflow-x: hidden;}
 
 .chat-message {
     display: flex;
