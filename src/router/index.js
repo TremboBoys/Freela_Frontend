@@ -55,6 +55,20 @@ const router = createRouter({
             }
           ]
         },
+
+        {
+          path: 'ConfirmationEmail',
+          name: 'ConfirmationEmail',
+          component: () => import('@/views/user/ConfirmationEmailUserView.vue')
+        },
+
+        {
+          path: 'ConfirmationPassword',
+          name: 'ConfirmationPassword',
+          component: () => import('@/views/user/ConfirmationPasswordUserView.vue')
+        },
+        
+
         {
           path: 'projects',
           name: 'projects',
