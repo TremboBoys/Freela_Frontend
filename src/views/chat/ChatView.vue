@@ -15,16 +15,33 @@ import ChatMessage from '@/components/chat/ChatMessage.vue'
 </template>
 
 <style scoped>
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1B75BF;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1360a0;
+}
 .container-chat {
     display: flex;
-    height: 100vh;
+    height: 85vh;
 }
 .aside-contacts {
     display: flex;
     flex-direction: column;
-    width: 25vw;
-    overflow-y: auto;
-    overflow-x: hidden;}
+    width: 22vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
 .chat-message {
     display: flex;
