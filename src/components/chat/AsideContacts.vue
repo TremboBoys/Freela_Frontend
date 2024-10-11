@@ -13,5 +13,14 @@ import ContactUser from './contacts/ContactUser.vue'
         <ContactUser />
         <ContactUser />
         <ContactUser />
+        <ContactUser />
+        <ContactUser />
+        <ContactUser />
+        <ContactUser />
+        <ContactUser />
+        <ContactUser />
     </div>
 </template>
+<style scoped>
+@import '@/assets/Sass/chat/contacts/_asideContacts.scss';
+</style>
