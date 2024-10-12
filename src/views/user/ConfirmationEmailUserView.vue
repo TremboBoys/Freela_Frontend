@@ -1,8 +1,9 @@
 <script setup>
+    import ConfirmationEmail from '../../components/configProfile/confirmation/ConfirmationEmail.vue'
 </script>
 
 <template>
-    <p></p>
+    <ConfirmationEmail/>
 </template>
 
 <style scoped>
