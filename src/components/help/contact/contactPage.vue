@@ -1,3 +1,4 @@
+
 <script setup>
  import contactTitle from './contactTitle.vue';
  import questionsHelp from './questionsHelp.vue';
@@ -26,5 +27,5 @@
   </main>
 </template>
 <style scoped>
-  @import '@/assets/Sass/help/contact/_contactPage.scss'
+  @import '@/assets/Sass/help/contact/_contactPage.scss';
 </style>
