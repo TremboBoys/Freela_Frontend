@@ -1,8 +1,9 @@
 <script setup>
+    import contactPage from '@/components/help/contact/contactPage.vue';
 </script>
 
 <template>
-    <div></div>
+    <contactPage />
 </template>
 
 <style scoped>
