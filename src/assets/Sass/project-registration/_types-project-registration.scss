@@ -11,5 +11,37 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        margin-bottom: 32px;
+    }
+
+    .main-option {
+        width: 700px;
+        height: 900px;
+        
+        .options {
+            display: flex;
+            gap: 10px;
+
+            .option {
+                
+                width: 145px;
+                height: 40px;
+                flex-shrink: 0;
+                border-radius: 7px;
+                border: 1px solid #B4B4B4;
+                background: rgba(217, 217, 217, 0.00);
+
+                label {
+                    width: 145px;
+                    display: flex;
+                    text-align: center;
+
+                    input {
+                        margin: 12px 7px 12px 5px;
+                    }
+                }
+
+            }
+        }
     }
 }
