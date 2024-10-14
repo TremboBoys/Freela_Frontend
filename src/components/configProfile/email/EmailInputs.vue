@@ -4,7 +4,7 @@ import SendButton from '../password/SendButton.vue';
 
 <template>
   <div class="emailInputs">
-    <h1>Configuração de Senha</h1>
+    <h1>Configuração de Email</h1>
     <div class="inputs">
       <div class="form-group inputBox">
         <input
@@ -39,7 +39,7 @@ import SendButton from '../password/SendButton.vue';
         <label class="email labelInput" for="email">Confirmar email</label>
       </div>
     </div>
-    <SendButton/>
+    <RouterLink to="/ConfirmationEmail"><SendButton/></RouterLink>
   </div>
 </template>
 

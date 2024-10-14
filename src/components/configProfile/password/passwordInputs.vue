@@ -51,7 +51,8 @@ const togglePasswordVisibility = () => {
         <label class="email labelInput" for="email">Confirmar senha</label>
       </div>
     </div>
-    <SendButton/>
+    <RouterLink to="/ConfirmationPassword"><SendButton/></RouterLink>
+    
   </div>
 </template>
 

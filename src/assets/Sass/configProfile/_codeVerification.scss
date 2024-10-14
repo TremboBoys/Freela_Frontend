@@ -1,0 +1,29 @@
+.code-container{
+    border: 2px solid #575757;
+    border-radius: 10px;
+    padding: 12px;
+    position: relative;
+    display: flex;
+    input {
+        border-radius: 10px;
+        width: 50px;
+        height: 75px;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin: 0 10px;
+
+        &:focus{
+            outline: 1px solid black;
+        }
+    }
+
+    p{
+        font-weight: 500;
+        position: absolute;
+        top: -15%;
+        background-color: #FFF;
+    }
+}
