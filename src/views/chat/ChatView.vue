@@ -47,7 +47,6 @@ import ChatMessage from '@/components/chat/ChatMessage.vue'
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     flex: 1;
     width: 78vw;
 }
