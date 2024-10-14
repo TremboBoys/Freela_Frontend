@@ -1,0 +1,22 @@
+.sign{
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    height: 29rem;
+  
+    #button {
+      width: 13rem;
+      height: 3.5rem;
+      background-color: #0B2F34;
+      color: #fff;
+      border-radius: 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0 0 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      position: relative;
+  }
+  }

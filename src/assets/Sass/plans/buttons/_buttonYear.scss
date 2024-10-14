@@ -1,0 +1,33 @@
+
+.sign{
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    height: 34.7%;
+    button {
+      width: 13rem;
+      height: 3.5rem;
+      background-color: #EFB810;
+      color: #000000;
+      border: 1px solid #AA8309;
+      border-radius: 3rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  
+      &:hover {
+        background-color: #c1940f;
+        transform: scale(1.05);
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4);
+      }
+      &:active {
+        background-color: #EFB810;
+        box-shadow: 0 5px 8px rgba($color: #000000, $alpha: 0.3);
+        transform: translateY(4px);
+      }
+    }
+  }
