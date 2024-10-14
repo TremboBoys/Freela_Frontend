@@ -148,6 +148,11 @@ const router = createRouter({
           path: 'report',
           name: 'report',
           component: () => import('@/views/report/ReportView.vue')
+        },
+        {
+          path: 'adsense',
+          name: 'adsense',
+          component: () => import('@/views/adsense/AdsenseView.vue')
         }
       ]
     },
