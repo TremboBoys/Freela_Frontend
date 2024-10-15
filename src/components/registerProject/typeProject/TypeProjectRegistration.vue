@@ -99,7 +99,7 @@
                 <div class="footer-barra-description-verde">
 
                 </div>
-                <div class="footer-barra-description-verde">
+                <div class="footer-barra-description-verde2">
 
                 </div>
                 <div class="footer-barra-description">
