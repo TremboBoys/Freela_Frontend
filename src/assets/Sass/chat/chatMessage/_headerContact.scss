@@ -27,6 +27,9 @@
         .icons {
             display: flex;
             margin-right: 16px;
+            .icon {
+                margin-left: 16px;
+            }
         }
     }
 }

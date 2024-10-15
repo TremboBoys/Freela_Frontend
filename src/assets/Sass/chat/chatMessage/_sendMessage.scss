@@ -1,0 +1,78 @@
+@import 'font-awesome/css/font-awesome.min.css';
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    height: 7vh;
+    .left {
+        margin-left: 10px;
+        display: flex;
+        .upload-btn {
+            background-color: #1B75BF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            transition: .3s;
+            text-align: center;
+        }
+        
+        .upload-btn:hover {
+            background-color: #16619e;
+            color: #f6f6f6;
+        }
+        
+        p {
+            font-family: 'Poppins', sans-serif;
+            margin-top: 10px;
+            color: #333;
+        }
+    }
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        .input-text {
+            width: 80%;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: #333;
+            outline: none;
+            margin-right: 10px;
+        }
+        .send-btn {
+            background-color: #1B75BF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            transition: .3s;
+            text-align: center;
+            &:hover {
+                background-color: #16619e;
+                color: #f6f6f6;
+            }
+        }
+    }
+}
