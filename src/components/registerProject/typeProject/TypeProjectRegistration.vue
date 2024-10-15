@@ -8,31 +8,112 @@
             <p>Quais demandas o freelancer irá precisar desenvolver?</p>
             <div class="options">
                 <div class="option">
-                <label>
-                    <input type="checkbox" />
-                    <p>Web Design</p>
-                </label>
+                    <label>
+                        <input type="checkbox" />
+                        Web Design
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Design mobile
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Gerente
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Outro
+                    </label>
+                </div>
             </div>
-            <div class="option">
-                <label>
-                    <input type="checkbox" />
-                    Design mobile
-                </label>
+            <p>Qual o nível de desenvolvimento você se encontra?</p>
+            <div class="options">
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Você tem o design
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Você tem uma ideia
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Não tenho nada
+                    </label>
+                </div>
             </div>
-            <div class="option">
-                <label>
-                    <input type="checkbox" />
-                    Gerente
-                </label>
+            <p>Você precisa de uma integração com API?</p>
+            <div class="options">
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Midias Sociais
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        API de pagamento
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Outras APIs
+                    </label>
+                </div>
             </div>
-            <div class="option">
-                <label>
-                    <input type="checkbox" />
-                    Outro
-                </label>
+            <p>Você precisa de um recurso especial?</p>
+            <div class="options">
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Sim, bibliotecas
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Talvez
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" />
+                        Não
+                    </label>
+                </div>
             </div>
+            <div class="footer-types">
+                <div class="footer-barra-description-verde">
+
+                </div>
+                <div class="footer-barra-description-verde">
+
+                </div>
+                <div class="footer-barra-description">
+
+                </div>
+                <div class="footer-barra-description-final">
+                    
+                </div>
+            </div>
+            <div class="bottom">
+                <button>Continuar</button>
             </div>
         </div>
+        
     </div>
 </template>
 
