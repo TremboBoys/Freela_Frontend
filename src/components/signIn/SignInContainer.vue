@@ -1,5 +1,5 @@
 <script setup>
-import loginContent from '../../components/signIn/loginContent.vue'
+import LoginContent from '@/components/signIn/LoginContent.vue'
 
 </script>
 
@@ -8,7 +8,7 @@ import loginContent from '../../components/signIn/loginContent.vue'
 <div class="signIn-container">
     <div class="left-side">
       <img src="../../assets/images/workana-white-logo.png" alt="" />
-      <loginContent/>
+      <LoginContent/>
     </div>
 
     <div class="right-side"></div>
