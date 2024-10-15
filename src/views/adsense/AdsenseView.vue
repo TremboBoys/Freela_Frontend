@@ -4,8 +4,11 @@ import AdsenseArea from '@/components/adsense/AdsenseArea.vue'
 </script>
 
 <template>
-    <p>teste</p>
-    <AdsenseArea/>
+    <div class="adArea">
+        <AdsenseArea/>
+    </div>
 </template>
 
-<style></style>
+<style>
+@import '../../assets/Sass/adsense/_adArea.scss';
+</style>

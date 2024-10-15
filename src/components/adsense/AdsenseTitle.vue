@@ -1,10 +1,7 @@
 <script setup></script>
 
 <template>
-  <label class="fileUpload">
-    <input type="file" />
-    Escolher imagem
-  </label>
+<h1>Cadastrar anuncio</h1>
 </template>
 
 <style>
