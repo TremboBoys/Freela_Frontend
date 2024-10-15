@@ -1,3 +1,42 @@
 .container-sent {
     display: flex;
+    padding: 10px;
+    .message {
+        display: flex;
+        width: 100%;
+        .avatar {
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+        .messages {
+            display: block;
+            width: 100%;
+            .first-message {
+                border-radius: 0px 10px 10px 10px !important;
+                max-width: 100% !important;
+            }
+            .message-text {
+                background-color: #e9e9e9;
+                margin: 4px 0px 0px 10px;
+                border-radius: 10px;
+                padding: 5px;
+                width: auto;
+                max-width: 50vw;
+                .text {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 18px;
+                }
+    
+                .time {
+                    font-size: 10px;
+                    display: flex;
+                    justify-content: flex-end;
+                    color: dimgray;
+                }
+            }
+        }
+    }
 }
