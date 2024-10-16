@@ -1,0 +1,59 @@
+.container {
+    width: 600px;
+    margin-left: 400px;
+    flex-direction: column;
+
+
+    .header-size {
+        text-align: center; 
+
+
+        h1 {
+            margin: 32px 0px 12px 0px;
+            color: #000;
+            font-family: Poppins;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .sub-title {
+            color: #000;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 32px;
+        }
+    }
+
+    .main-size {
+
+        p {
+            margin-bottom: 32px;
+        }
+
+        .options-size {
+            display: flex;
+            gap: 16px;
+            
+            .option-size {
+                width: 146px;
+                height: 48px;
+                flex-shrink: 0;
+                border-radius: 8px;
+                border: 1px solid #D9D9D9;
+                color: #000;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                text-align: center;
+                padding: 12px 0px 12px 0px;
+            }
+        }
+    }
+}
