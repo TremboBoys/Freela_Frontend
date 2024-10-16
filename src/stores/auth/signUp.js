@@ -1,35 +1,57 @@
 import { defineStore } from 'pinia';
 import { ref, reactive } from 'vue';
+import { useRouter } from 'vue-router';
+import { validateEmail, validateConfirmPassword } from '@/utils/validations/validationsSignUp';
 import SignUpService from '@/services/auth/signUp';
 
-export const useSignUp = defineStore('signUp', () => {
+export const useSignUpStore = defineStore('signUp', () => {
+    const useSignUp = useSignUpStore();
     const user = reactive({
         name: '',
         username: '',
-        password: '',
         email: '',
+        password: '',
+        confirmPassword: '',
+        code: ['', '', '', '', '', '']
+    });
+    const showMessageError = reactive({
+        general: '',
+        name: '',
+        username: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
         code: ''
     });
-    const stepValidation = ref(false);
+    const stepCode = ref(false);
 
-    const validationEmail = async (email) => {
-        try {
-            await SignUpService.validationEmail(email);
-            stepValidation.value = true;
-        }
-        catch(error) {
-            console.error('Erro:', error);
+    const router = useRouter();
+
+    async function validationEmail(email) {
+        if (validateEmail(email), validateConfirmPassword(useSignUp.user.password, useSignUp.user.confirmPassword)) {
+            const response = await SignUpService.validationEmail(email);
+    
+            if(response === true) {
+                router.push('/sign-up/verification-code');
+            } else {
+                console.log(response);
+            };
+        } else {
+            showMessageError.general = 'Email, senha e/ou confirmar senha precisam ser preenchidos!';
         };
     };
 
-    const createUser = async (user) => {
-        try {
-            await SignUpService.createUser(user);
-        }
-        catch(error) {
-            console.error('Erro:', error);
-        };
-    }
+    async function createUser(userInfo = {}) {
+        delete userInfo.email;
 
-    return { user, stepValidation, validationEmail, createUser };
+        const response = await SignUpService.createUser(userInfo);
+
+        if (response === true) {
+            router.push('/sign-in');
+        } else {
+            user.code = ['', '', '', '', '', ''];
+        };
+    };
+
+    return { user, showMessageError, stepCode, validationEmail, createUser };
 });

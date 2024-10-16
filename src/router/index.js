@@ -57,13 +57,13 @@ const router = createRouter({
         },
 
         {
-          path: 'confirmationEmail',
+          path: 'confirmation-email',
           name: 'ConfirmationEmail',
           component: () => import('@/views/user/ConfirmationEmailUserView.vue')
         },
 
         {
-          path: 'confirmationPassword',
+          path: 'confirmation-password',
           name: 'ConfirmationPassword',
           component: () => import('@/views/user/ConfirmationPasswordUserView.vue')
         },

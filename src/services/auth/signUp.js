@@ -1,15 +1,26 @@
-import { api } from '@/plugins/axios';
+import { apiAuth } from "@/plugins/axios";
 
 class SignUpService {
     async validationEmail(email) {
-        const { data } = await api.post('/user/validationEmail', email);
-        return data;
-    }
+        try {
+            const { data } = await apiAuth.post('/code/', email);
+            console.log(data);
+            return true;
+        } catch(error) {
+            console.error(error);
+            return error;
+        };
+    };
 
-    async createUser(user) {
-        const { data } = await api.post('/user/user', user);
-        return data;
+    async createUser(userInfo = {}) {
+        try {
+            await apiAuth.post('/user/', userInfo);
+            return true;
+        } catch(error) {
+            console.error(error);
+            return error;
+        }
     }
-}
+};
 
 export default new SignUpService();
