@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from 'vue';
-import MessageSent from './MessageSent.vue'; // Importando o componente de exibição
+import { ref, defineEmits } from 'vue';
+
+const emit = defineEmits();
 
 const fileInput = ref(null);
 const file = ref(null);
 const message = ref('');
-const messages = ref([]); // Armazena todas as mensagens enviadas
 
 const triggerFileInput = () => {
     fileInput.value.click();
@@ -21,16 +21,15 @@ const sendMessage = () => {
         return;
     }
 
-    // Adiciona a mensagem e o arquivo ao array de mensagens
-    messages.value.push({
+    // Emite o evento "send-message" com a nova mensagem
+    emit('send-message', {
         text: message.value,
-        file: file.value ? file.value.name : null, // Se houver arquivo, adiciona o nome
+        file: file.value ? file.value.name : null,
     });
 
-    // Resetar os campos após o envio
     message.value = '';
     file.value = null;
-    fileInput.value.value = '';  
+    fileInput.value.value = '';
 };
 </script>
 
@@ -49,8 +48,6 @@ const sendMessage = () => {
                 <i class="fa fa-paper-plane"></i>
             </button>
         </div>
-
-        <MessageSent :messages="messages" />
     </div>
 </template>
 
