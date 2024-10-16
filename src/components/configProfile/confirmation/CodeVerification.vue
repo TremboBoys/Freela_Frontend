@@ -1,25 +1,34 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, defineEmits } from 'vue';
+import { useSignUpStore } from '@/stores/auth/signUp';
 
-const code1 = ref('');
-const code2 = ref('');
-const code3 = ref('');
-const code4 = ref('');
-const code5 = ref('');
-const code6 = ref('');
+const emit = defineEmits(['submitCode']);
+const useSignUp = useSignUpStore();
 
 const handleInput = (currentIndex, event) => {
   const inputValue = event.target.value;
   
   if (event.inputType === 'deleteContentBackward') {
+    useSignUp.user.code[currentIndex - 1] = ''
     const prevInput = document.querySelector(`input[data-index="${currentIndex - 1}"]`);
     if (prevInput) {
       prevInput.focus();
     }
   }
   else if (inputValue) {
-    const nextInput = document.querySelector(`input[data-index="${currentIndex + 1}"]`);
-    if (nextInput) {
+    if (useSignUp.user.code[currentIndex - 1] == '') {
+      useSignUp.user.code[currentIndex - 1] = inputValue;
+      console.log(useSignUp.user.code[currentIndex - 1]);
+      if (currentIndex < 6) {
+        const nextInput = document.querySelector(`input[data-index="${currentIndex + 1}"]`);
+        nextInput.focus();
+      } else {
+        emit('submitCode', useSignUp.user.code.join(''));
+      }
+    } else {
+      const currentInput = document.querySelector(`input[data-index="${currentIndex}"]`);
+      const nextInput = document.querySelector(`input[data-index="${currentIndex + 1}"]`);
+      currentInput.value = inputValue[0];
       nextInput.focus();
     }
   }
@@ -30,12 +39,12 @@ const handleInput = (currentIndex, event) => {
   <div class="code-container">
     <div class="code-input">
       <div class="inputs">
-        <input type="text" v-model="code1" @input="handleInput(1, $event)" maxlength="1" data-index="1" />
-        <input type="text" v-model="code2" @input="handleInput(2, $event)" maxlength="1" data-index="2" />
-        <input type="text" v-model="code3" @input="handleInput(3, $event)" maxlength="1" data-index="3" />
-        <input type="text" v-model="code4" @input="handleInput(4, $event)" maxlength="1" data-index="4" />
-        <input type="text" v-model="code5" @input="handleInput(5, $event)" maxlength="1" data-index="5" />
-        <input type="text" v-model="code6" @input="handleInput(6, $event)" maxlength="1" data-index="6" />
+        <input type="number" @input="handleInput(1, $event)" max="9" data-index="1" />
+        <input type="number" @input="handleInput(2, $event)" max="9" data-index="2" />
+        <input type="number" @input="handleInput(3, $event)" max="9" data-index="3" />
+        <input type="number" @input="handleInput(4, $event)" max="9" data-index="4" />
+        <input type="number" @input="handleInput(5, $event)" max="9" data-index="5" />
+        <input type="number" @input="handleInput(6, $event)" max="9" data-index="6" />
       </div>
       <p>Código</p>
     </div>

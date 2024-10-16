@@ -37,6 +37,7 @@ form {
         color: #fff;
         font-size: 1rem;
         padding: 10px;
+        outline: none;
     }
     .inputBox {
         position: relative;
@@ -50,7 +51,7 @@ form {
             font-size: 1rem;
             z-index: 9999;
             background-color:#0B2F34;
-            margin: 0.6rem 0 1rem;
+            margin: 0.8rem 0 1rem;
             padding: 0.2rem;
         }
         .labelInput::before {
