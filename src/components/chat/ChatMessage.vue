@@ -29,8 +29,21 @@ const handleSendMessage = (newMessage) => {
   display: flex;
   flex: 1;
 }
-.container .message {
-  display: flex;
-  flex-direction: column !important;
+.message {
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  min-height: 68vh;
+}
+.message::-webkit-scrollbar {
+  width: 8px;
+}
+.message::-webkit-scrollbar-thumb {
+  background: #1B75BF;
+  border-radius: 10px;
+} 
+.message::-webkit-scrollbar-thumb:hover {
+  background: #16619e;
 }
 </style>
