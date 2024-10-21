@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@passageidentity/passage-elements": "^2.0.2",
     "axios": "^1.7.4",
+    "font-awesome": "^4.7.0",
     "pinia": "^2.1.7",
     "sass": "^1.77.8",
     "vue": "^3.4.29",

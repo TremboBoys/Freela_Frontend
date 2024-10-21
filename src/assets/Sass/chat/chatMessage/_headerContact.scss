@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    background-color: #F6F6F6;    
+    width: 78vw;
+    max-height: 10vh;
+    flex-direction: row;
+    justify-content: space-between;
+    .left {
+        max-width: 20vw;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .name {
+            margin-left: 8px;
+        }
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        max-width: 20vw;
+        justify-content: flex-end;
+        .icons {
+            display: flex;
+            margin-right: 16px;
+            .icon {
+                margin-left: 16px;
+            }
+        }
+    }
+}

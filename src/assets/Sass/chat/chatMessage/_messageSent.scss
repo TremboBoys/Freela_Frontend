@@ -1,0 +1,55 @@
+.container-sent {
+    display: flex;
+    flex-direction: column; // Mantém as mensagens em coluna
+    padding: 10px;
+    justify-content: flex-end !important; // Garante que as mensagens sejam empurradas para o fundo
+    .messageSent {
+        display: flex;
+        align-items: flex-end; // Alinha os itens na parte inferior
+        justify-content: flex-end;
+        .message {
+            display: flex;
+            align-items: flex-end; // Alinha os itens na parte inferior
+            margin-bottom: 10px;
+    
+            .avatar {
+                margin-left: 10px;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+    
+            .messages {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+    
+                .message-text {
+                    background-color: #e9e9e9;
+                    margin: 4px 0 0; // Mantém o espaçamento entre mensagens
+                    border-radius: 10px 0px 10px 10px;
+                    padding: 5px;
+                    max-width: 40vw;
+                    word-wrap: break-word;
+                    display: inline-flex;
+                    align-self: flex-end; // Isso faz a mensagem ser empurrada para a direita
+                    // Para garantir que a mensagem ocupe toda a largura disponível, você pode usar:
+                    // flex: 1; // Isso fará com que a mensagem utilize o espaço restante
+                    .text {
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 18px;
+                    }
+    
+                    .time {
+                        font-size: 10px;
+                        display: flex;
+                        justify-content: flex-end;
+                        color: dimgray;
+                    }
+                }
+            }
+        }
+    }
+}
