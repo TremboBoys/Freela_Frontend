@@ -1,8 +1,9 @@
 <script setup>
+import SubsArea from './SubsArea.vue';
 </script>
 
 <template>
-    <div></div>
+    <SubsArea/>
 </template>
 
 <style scoped>
