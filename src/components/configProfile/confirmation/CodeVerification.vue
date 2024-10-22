@@ -19,10 +19,18 @@ const handleInput = (currentIndex, event) => {
     if (useSignUp.user.code[currentIndex - 1] == '') {
       useSignUp.user.code[currentIndex - 1] = inputValue;
       console.log(useSignUp.user.code[currentIndex - 1]);
-      if (currentIndex < 6) {
-        const nextInput = document.querySelector(`input[data-index="${currentIndex + 1}"]`);
+      if (currentIndex < 6 && useSignUp.user.code.includes('') === true) {
+        let nextInput = undefined;
+        if (currentIndex === 6) {
+          const index = useSignUp.user.code.findIndex((item) => {
+            return item === '';
+          });
+          nextInput = document.querySelector(`input[data-index="${index + 1}"]`);
+        } else {
+          nextInput = document.querySelector(`input[data-index="${currentIndex + 1}"]`);
+        }
         nextInput.focus();
-      } else {
+      } else if (!useSignUp.user.code.includes('')) {
         emit('submitCode', useSignUp.user.code.join(''));
       }
     } else {

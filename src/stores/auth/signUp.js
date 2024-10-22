@@ -32,7 +32,7 @@ export const useSignUpStore = defineStore('signUp', () => {
             const response = await SignUpService.validationEmail(email);
     
             if(response === true) {
-                router.push('/sign-up/verification-code');
+                router.push('/confirmation-email');
             } else {
                 console.log(response);
             };
@@ -50,6 +50,7 @@ export const useSignUpStore = defineStore('signUp', () => {
             router.push('/sign-in');
         } else {
             user.code = ['', '', '', '', '', ''];
+            showMessageError.code = 'Código de validação inválido ou expirado!';
         };
     };
 
