@@ -1,15 +1,9 @@
 <script setup>
-import { ref } from 'vue';
-import HeaderContact from './chatMessage/HeaderContact.vue'
-import MessageSentVue from './chatMessage/MessageSent.vue'
-import SelectedNone from './chatMessage/SelectedNone.vue'
-import MessageReceived from './chatMessage/MessageReceived.vue'
-import SendMessage from './chatMessage/SendMessage.vue'
-const messages = ref([]); // Armazena todas as mensagens enviadas
-
-const handleSendMessage = (newMessage) => {
-  messages.value.push(newMessage); // Adiciona a nova mensagem no array
-};
+import HeaderContact from './chatMessage/HeaderContact.vue';
+import MessageSentVue from './chatMessage/MessageSent.vue';
+import SelectedNone from './chatMessage/SelectedNone.vue';
+import MessageReceived from './chatMessage/MessageReceived.vue';
+import SendMessage from './chatMessage/SendMessage.vue';
 </script>
 <template>
   <div class="container">
@@ -17,11 +11,11 @@ const handleSendMessage = (newMessage) => {
     <HeaderContact />
   </div>
   <div class="message">
-    <MessageSentVue :messages="messages"/>
     <MessageReceived />
+    <MessageSentVue />
   </div>
   <div class="send">
-    <SendMessage @send-message="handleSendMessage"/>
+    <SendMessage/>
   </div>
 </template>
 <style scoped>
