@@ -7,7 +7,9 @@
             <div class="details">
                 <div class="name">
                     <h1>Luiz Fernando</h1>
-                    <img src="@/assets/images/dashboard/pencil-blue.png" alt="">
+                    <router-link to="/configurations/">
+                        <img src="@/assets/images/dashboard/pencil-blue.png" alt="">
+                    </router-link>
                 </div>
                 <div class="additional-info">
                     <p class="description">Front-end developer</p>

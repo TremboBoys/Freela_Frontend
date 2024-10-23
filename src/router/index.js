@@ -67,8 +67,6 @@ const router = createRouter({
           name: 'ConfirmationPassword',
           component: () => import('@/views/user/ConfirmationPasswordUserView.vue')
         },
-        
-
         {
           path: 'projects',
           name: 'projects',

@@ -1,26 +1,25 @@
 <script setup>
 const jobLinks = [
-  { name: 'TI & Programação', path: '/' },
-  { name: 'Design & Multimedia', path: '/' },
-  { name: 'Tradução', path: '/' },
-  { name: 'Administração', path: '/' },
-  { name: 'Marketing', path: '/' }
+  { name: 'TI & Programação', path: '/projects' },
+  { name: 'Design & Multimedia', path: '/projects' },
+  { name: 'Tradução', path: '/projects' },
+  { name: 'Administração', path: '/projects' },
+  { name: 'Marketing', path: '/projects' }
 ]
 
 const freelancerLinks = [
-  { name: 'Freelancers Brasil', path: '/' },
-  { name: 'Freelancers Colômbia', path: '/' },
-  { name: 'Freelancers Uruguai', path: '/' },
-  { name: 'Freelancers Argentina', path: '/' },
-  { name: 'Freelancer México', path: '/' }
+  { name: 'Freelancers Brasil', path: '/freelancers' },
+  { name: 'Freelancers Colômbia', path: '/freelancers' },
+  { name: 'Freelancers Uruguai', path: '/freelancers' },
+  { name: 'Freelancers Argentina', path: '/freelancers' },
+  { name: 'Freelancer México', path: '/freelancers' }
 ]
 
 const infoLinks = [
   { name: 'Sobre nós', path: '/contact/about' },
-  { name: 'Contato', path: '/' },
-  { name: 'Ajuda', path: '/' },
-  { name: 'Política de privacidade', path: '/' },
-  { name: 'Termos de serviço', path: '/' }
+  { name: 'Contato', path: '/contact' },
+  { name: 'Ajuda', path: '/contact/help' },
+  { name: 'Política de privacidade', path: '/privacy-policy' },
 ]
 </script>
 
