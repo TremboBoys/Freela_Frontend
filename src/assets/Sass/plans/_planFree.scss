@@ -1,0 +1,85 @@
+
+.plan1 {
+    width: 25rem;
+    height: 50rem;
+    margin: 0 3rem;
+    border-radius: 0.6875rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #4f5255;
+    box-shadow: 
+      -6px -6px 20.3px 0px rgba(92, 93, 94, 0.5),
+      6px 6px 20.3px 0px rgba(71, 72, 73, 0.5);
+      position: relative;
+  
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background: var(--gradient-shadow-gray);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -10;
+      animation: animate 15s linear infinite;
+      filter: blur(20px);
+    }
+  
+  .image-title {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0 4rem;
+    
+    .title {
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      .text-title,
+      .text-title-month {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-left: 0.6rem;
+      }
+    }
+  }
+  
+  .benefits-list {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0 2rem;
+    width: 20rem;
+  }
+  
+  img {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 0.5rem 0 0;
+  }
+  
+  .benefit {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    
+  }
+  
+  .decoration {
+    margin: 0 0.5rem 0 0;
+    font-size: 1.7rem;
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 300% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  }
