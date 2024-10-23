@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="logo">
-      <router-link to="/home">
+      <router-link to="/">
         <img src="@/assets/images/logo/tasker-logo.png" alt="Logo" />
       </router-link>
     </div>
