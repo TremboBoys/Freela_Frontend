@@ -1,6 +1,6 @@
 .container {
     width: 600px;
-    margin-left: 400px;
+    margin-left: 600px;
     flex-direction: column;
 
 
@@ -38,6 +38,7 @@
         .options-size {
             display: flex;
             gap: 16px;
+            margin-bottom: 32px;
             
             .option-size {
                 width: 146px;
@@ -55,5 +56,29 @@
                 padding: 12px 0px 12px 0px;
             }
         }
+    }
+
+    .entrega {
+        display: flex;
+        gap: 5px;
+        justify-content: space-between;
+
+        label {
+            
+            input {
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+            }
+
+        }
+
+        .date {
+            margin-left: 102px;
+            width: 278px;
+            height: 30px;
+
+        }
+            
     }
 }
