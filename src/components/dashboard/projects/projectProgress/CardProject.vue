@@ -15,9 +15,9 @@
                     <span>Status: Pendente</span>
                 </div>
                 <div class="right">
-                    <div class="toSend">
+                    <router-link to="finished-project" class="toSend">
                         <button class="toSendButton">Enviar</button>
-                    </div>
+                    </router-link>
                     <div class="help">
                         <img src="@/assets/images/dashboard/Help.png" class="helpImg" alt="">
                     </div>
@@ -40,9 +40,9 @@
                     <span>Status: Pendente</span>
                 </div>
                 <div class="right">
-                    <div class="toSend">
+                    <router-link to="finished-project" class="toSend">
                         <button class="toSendButton">Enviar</button>
-                    </div>
+                    </router-link>
                     <div class="help">
                         <img src="@/assets/images/dashboard/Help.png" class="helpImg" alt="">
                     </div>
