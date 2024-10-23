@@ -10,6 +10,20 @@
     <div class="subTitle">
       <p>Encontre aqui toda a ajuda da comunidade e respostas às Perguntas Frequentes</p>
     </div>
+    <section>
+      <div class="contact">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <img src="" alt="">
+            <p>Telefone: (11) 99999-9999</p>
+          </div>
+          <div class="contact-info-item">
+            <img src="" alt="">
+            <p>Email</p>
+          </div>
+      </div>
+    </div>
+    </section>
   </main>
 </template>
 <style scoped>
