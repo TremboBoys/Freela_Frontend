@@ -50,9 +50,9 @@ const popUp = () => {
                     <img src="@/assets/images/brasil-icon.png" alt="">
                 </div>
             </div>
-            <div class="select-footer-proposal">
+            <router-link to="/proposal-registration/:project" class="select-footer-proposal">
                 <p>Fazer Proposta</p>
-            </div>
+            </router-link>
         </div>
     </div>
 </template>
