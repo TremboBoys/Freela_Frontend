@@ -3,7 +3,7 @@
 <template>
     <div class="logo-icon">
       <div class="top-div">
-        <RouterLink to=""><img id="logo" src="../../../assets/images/logo/tasker-logo.png" alt=""></RouterLink>
+        <RouterLink to="/dashboard"><img id="logo" src="../../../assets/images/logo/tasker-logo.png" alt=""></RouterLink>
         <div class="socialmedia-icons">
             <img src="../../../assets/images/instagram.png" alt="" />
             <img src="../../../assets/images/github.png" alt="" />
