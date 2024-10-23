@@ -1,9 +1,9 @@
-<script setup></script>
+<script setup>
+</script>
 <template>
-    <router-link to="/dashboard">
-        <button class="register">Finalizar o cadastro</button>
-    </router-link>
-    
+    <div class="container-submit">
+        <button  type="submit" class="register">Finalizar o cadastro</button>
+    </div>
 </template>
 <style scoped>
 @import '@/assets/Sass/signUp/_signUp-button.scss';

@@ -5,7 +5,7 @@ import { FormSignUp } from '@/components/';
     <div class="containerForm">    
         <header>
             <RouterLink to="/">
-                <img src="@/assets/images/logo.png" alt="">
+                <img src="@/assets/images/logo/tasker-logo-white.png" alt="">
             </RouterLink>
         </header>
         <main>

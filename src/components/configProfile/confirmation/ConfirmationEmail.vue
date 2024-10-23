@@ -1,18 +1,27 @@
 <script setup>
-import ConfEmailTitles from './ConfEmailTitles.vue'
-import CodeVerification from './CodeVerification.vue'
-import SendButton from '../password/SendButton.vue'
+import { ref } from 'vue';
+import { useSignUpStore } from '@/stores/auth/signUp';
+import ConfEmailTitles from './ConfEmailTitles.vue';
+import CodeVerification from './CodeVerification.vue';
+import SendButton from '../password/SendButton.vue';
+
+const useSignUp = useSignUpStore();
+
+function submitCode(code) {
+    useSignUp.createUser(useSignUp.user);
+};
 </script>
 
 <template>
     <div class="confArea">
         <ConfEmailTitles/>
-        <CodeVerification/>
-        <RouterLink to="/configurations/email" ><SendButton/></RouterLink>
+        <form>
+            <CodeVerification @submit-code="submitCode"/>
+            <SendButton/>
+        </form>
     </div>
 </template>
 
 <style scoped>
 @import '../../../assets/Sass/configProfile/_confirmationArea.scss';
-
 </style>

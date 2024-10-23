@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security } from '@/components';
+import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security, SignUp, VerificationCode } from '@/components';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -57,13 +57,13 @@ const router = createRouter({
         },
 
         {
-          path: 'ConfirmationEmail',
+          path: 'confirmation-email',
           name: 'ConfirmationEmail',
           component: () => import('@/views/user/ConfirmationEmailUserView.vue')
         },
 
         {
-          path: 'ConfirmationPassword',
+          path: 'confirmation-password',
           name: 'ConfirmationPassword',
           component: () => import('@/views/user/ConfirmationPasswordUserView.vue')
         },
@@ -153,9 +153,20 @@ const router = createRouter({
     },
     
     {
-      path: '/sign-up',
-      name: 'signUp',
-      component: () => import('@/views/user/SignUpUserView.vue')
+      path: '/sign-up/',
+      component: () => import('@/views/user/SignUpUserView.vue'),
+      children: [
+        {
+          path: '',
+          name: 'signUp',
+          component: SignUp
+        },
+        {
+          path: 'verification-code',
+          name: 'verificationCode',
+          component: VerificationCode
+        }
+      ]
     },
     {
       path: '/sign-in',
