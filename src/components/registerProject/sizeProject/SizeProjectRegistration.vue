@@ -53,6 +53,7 @@
                     <p>Mais de R$10.000</p>
                 </div>
             </div>
+            <p>Você tem um prazo de entrega?</p>
             <div class="entrega">
                 <label class="custom-checkbox">
                     <span class="checkmark">
@@ -62,6 +63,23 @@
                 <p>Tenho um prazo de entrega</p>
                 <input class="date" type="date" name="" id="">
             </div>
+        </div>
+        <div class="footer-size">
+            <div class="footer-barra-description-verde">
+
+            </div>
+            <div class="footer-barra-description-verde2">
+
+            </div>
+            <div class="footer-barra-description-verde2">
+
+            </div>
+            <div class="footer-barra-description-final">
+                    
+            </div>
+        </div>
+        <div class="bottom">
+            <button>Continuar</button>
         </div>
     </div>
 </template>
