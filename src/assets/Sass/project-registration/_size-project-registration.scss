@@ -1,0 +1,145 @@
+.container {
+    width: 600px;
+    margin-left: 600px;
+    flex-direction: column;
+
+
+    .header-size {
+        text-align: center; 
+
+
+        h1 {
+            margin: 32px 0px 12px 0px;
+            color: #000;
+            font-family: Poppins;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .sub-title {
+            color: #000;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 32px;
+        }
+    }
+
+    .main-size {
+
+        p {
+            margin-bottom: 32px;
+        }
+
+        .options-size {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            
+            .option-size {
+                width: 146px;
+                height: 48px;
+                flex-shrink: 0;
+                border-radius: 8px;
+                border: 1px solid #D9D9D9;
+                color: #000;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                text-align: center;
+                padding: 12px 0px 12px 0px;
+            }
+        }
+    }
+
+    .entrega {
+        display: flex;
+        gap: 5px;
+        justify-content: space-between;
+
+        label {
+            
+            input {
+                width: 24px;
+                height: 24px;
+                flex-shrink: 0;
+            }
+
+        }
+
+        .date {
+            margin-left: 102px;
+            width: 278px;
+            height: 30px;
+
+        }
+            
+    }
+
+    .footer-size {
+        margin-top: 81px;
+        margin-bottom: 43px;
+        display: flex;
+        gap: 7px;
+            
+
+                .footer-barra-description-verde {
+                    width: 152px;
+                    height: 10px;
+                    flex-shrink: 0;
+                    border-radius: 6px 0px 0px 6px;
+                    background: #127369;
+                }
+
+                .footer-barra-description-verde2 {
+                    width: 152px;
+                    height: 10px;
+                    flex-shrink: 0;
+                    background: #127369;
+                }
+
+                .footer-barra-description {
+                    width: 152px;
+                    height: 10px;
+                    flex-shrink: 0;
+                    background: #D9D9D9;
+                }
+
+                .footer-barra-description-final {
+                    margin-bottom: 100px;
+                    width: 152px;
+                    height: 10px;
+                    flex-shrink: 0;
+                    border-radius: 0px 6px 6px 0px;
+                    background: #D9D9D9;
+                }
+    }
+
+    .bottom {
+        margin-bottom: 60px;
+        margin-left: 230px;
+        button {
+            border: none;
+            width: 176px;
+            height: 46px;
+            flex-shrink: 0;
+            background-color: #0B2F34;
+            stroke-width: 1px;
+            stroke: #7A7A7A;
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            border-radius: 35px;
+        }
+    }
+}
