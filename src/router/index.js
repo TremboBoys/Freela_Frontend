@@ -78,12 +78,12 @@ const router = createRouter({
           component: () => import('@/views/project/DetailProjectView.vue')
         },
         {
-          path: '/register-project',
+          path: '/register-project/',
+          name: 'registerProject',
           component: () => import('@/views/project/RegisterProjectView.vue'),
           children: [
             {
               path: '',
-              name: 'registerProject',
               component: ProjectRegistration
             },
             {
