@@ -90,10 +90,11 @@
                 }
     }
     
-    .bottom {
+    .router-link {
         margin-bottom: 40px;
         margin-left: 230px;
         button {
+            cursor: pointer;
             width: 176px;
             height: 46px;
             flex-shrink: 0;

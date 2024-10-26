@@ -118,4 +118,9 @@
         font-weight: 500;
         line-height: normal;
         border-radius: 35px;
+        cursor: pointer;
+    }
+    .router-link {
+        text-decoration: none;
+        cursor: pointer;
     }

@@ -27,10 +27,9 @@
                 <div class="footer-barra-description"></div>
                 <div class="footer-barra-description-final"></div>
             </div>
-            <div class="bottom">
-                <button>Continuar</button>
-            </div>
-            
+            <RouterLink to="/register-project/types" class="router-link">
+                <button class="continue">Continuar</button>
+            </RouterLink>
         </div>
         <div class="box-notice">
             <img src="../../../assets/images/alert-circle.png" alt="">

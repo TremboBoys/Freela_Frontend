@@ -109,9 +109,10 @@
                     
                 </div>
             </div>
-            <div class="bottom">
+            <RouterLink to="/register-project/size" class="router-link">
                 <button>Continuar</button>
-            </div>
+            </RouterLink>
+        
         </div>
         
     </div>

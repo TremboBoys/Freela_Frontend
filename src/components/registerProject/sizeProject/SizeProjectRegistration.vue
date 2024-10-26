@@ -78,9 +78,9 @@
                     
             </div>
         </div>
-        <div class="bottom">
+        <router-link to="/register-project/complete" class="bottom">
             <button>Continuar</button>
-        </div>
+        </router-link>
     </div>
 </template>
 
