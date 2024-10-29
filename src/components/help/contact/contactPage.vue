@@ -11,16 +11,15 @@
       <p>Encontre aqui toda a ajuda da comunidade e respostas às Perguntas Frequentes</p>
     </div>
     <section>
-      <div class="contact">
-        <div class="contact-info">
-          <div class="contact-info-item">
-            <img src="" alt="">
-            <p>Telefone: (11) 99999-9999</p>
+      <div class="questions">
+          <div class="questions-title">
+            <p class="title">Perguntas Frequentes</p>
           </div>
-          <div class="contact-info-item">
-            <img src="" alt="">
-            <p>Email</p>
-          </div>
+          <div class="questions-items">
+            <a class="question">oi?</a>
+            <a class="question">oi?</a>
+            <a class="question">oi?</a>
+            <a class="question">oi?</a>
       </div>
     </div>
     </section>
