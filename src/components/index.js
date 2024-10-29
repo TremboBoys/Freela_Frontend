@@ -21,6 +21,7 @@ import DescriptionProject from '@/components/registerProject/descriptionRegistra
 import TypeProject from '@/components/registerProject/typeProject/TypeProjectRegistration.vue';
 import SizeProject from '@/components/registerProject/sizeProject/SizeProjectRegistration.vue';
 import CompleteProject from '@/components/registerProject/completeProject/CompleteProjectRegistration.vue';
+import LoadSpinner from './global/LoadSpinner.vue';
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
 import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 
@@ -48,6 +49,7 @@ export {
     TypeProject,
     SizeProject,
     CompleteProject,
+    LoadSpinner,
     DefaultHeader,
     DefaultFooter,
 };

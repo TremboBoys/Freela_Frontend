@@ -15,6 +15,17 @@ const handleInput = (currentIndex, event) => {
       prevInput.focus();
     }
   }
+  else if (currentIndex == 1 && inputValue.length == 6) {
+      for (let c = 0; c < 6; c++) {
+        useSignUp.user.code[c] = inputValue[c];
+        document.querySelector(`input[data-index="${c + 1}"]`).value = inputValue[c];
+        if (c == 5) {
+          const currentIndex = document.querySelector(`input[data-index="${c + 1}"]`);
+          currentIndex.focus();
+        }
+      }
+      emit('submitCode', useSignUp.user.code.join(''));
+  }
   else if (inputValue) {
     if (useSignUp.user.code[currentIndex - 1] == '') {
       useSignUp.user.code[currentIndex - 1] = inputValue;
