@@ -14,4 +14,5 @@ const useSignUp = useSignUpStore();
     </div>
 </template>
 <style scoped>
+@import '@/assets/Sass/signIn/_signIn-inputs.scss';
 </style>

@@ -13,4 +13,6 @@ const useSignUp = useSignUpStore();
         <label class="labelInput" :for="infos.id"> {{ props.infos.label }}</label>
     </div>
 </template>
-<style scoped></style>
+<style scoped>
+@import '@/assets/Sass/signIn/_signIn-inputs.scss';
+</style>

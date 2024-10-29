@@ -154,19 +154,8 @@ const router = createRouter({
     
     {
       path: '/sign-up/',
+      name: 'signUp',
       component: () => import('@/views/user/SignUpUserView.vue'),
-      children: [
-        {
-          path: '',
-          name: 'signUp',
-          component: SignUp
-        },
-        {
-          path: 'verification-code',
-          name: 'verificationCode',
-          component: VerificationCode
-        }
-      ]
     },
     {
       path: '/sign-in',
