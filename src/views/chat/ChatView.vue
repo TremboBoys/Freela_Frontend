@@ -31,7 +31,7 @@ import ChatMessage from '@/components/chat/ChatMessage.vue'
   background-color: #1360a0;
 }
 .container-chat {
-    display: flex;
+    display: none;
     height: 85vh;
 }
 .aside-contacts {
