@@ -1,0 +1,32 @@
+.questions {
+    width: 62vw;
+    margin-top: 2rem;
+    border: #0b2f34 1px solid;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    .questions-title {
+      border-bottom: #0b2f34 1px solid;
+      .title{
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #0b2f34;
+        margin: 0 0 0.5rem 0;
+      }
+    }
+    .questions-items{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+            .question {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #0b2f34;
+            margin: 0.5rem 0;
+            .icon{
+              width: 0.7rem;
+              height: 0.7rem;
+              margin: 0 0 0 0.3rem;
+            }
+            }
+        }
+    }
