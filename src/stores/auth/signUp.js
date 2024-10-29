@@ -28,7 +28,11 @@ export const useSignUpStore = defineStore('signUp', () => {
     const router = useRouter();
 
     async function validationEmail(email) {
-        if (validateEmail(email), validateConfirmPassword(useSignUp.user.password, useSignUp.user.confirmPassword)) {
+        console.log(user);
+        const checkEmail = validateEmail(email);
+        const checkPassword = validateConfirmPassword(useSignUp.user.password, useSignUp.user.confirmPassword)
+        console.log(checkEmail, checkPassword);
+        if (checkEmail === true && checkPassword === true) {
             const response = await SignUpService.validationEmail(email);
     
             if(response === true) {
@@ -37,7 +41,13 @@ export const useSignUpStore = defineStore('signUp', () => {
                 console.log(response);
             };
         } else {
-            showMessageError.general = 'Email, senha e/ou confirmar senha precisam ser preenchidos!';
+            if (!checkEmail && checkPassword) {
+                showMessageError.email = 'Seu email está incorreto!';
+            } else if (checkEmail && !checkPassword) {
+                showMessageError.general = 'O campo "Confirmar senha" precisa estar igual ao campo "Senha"!';
+            } else {
+                showMessageError.general = 'Email, senha e/ou confirmar senha precisam ser preenchidos corretamente!';
+            }
         };
     };
 

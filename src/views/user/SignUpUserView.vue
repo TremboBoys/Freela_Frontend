@@ -1,9 +1,9 @@
 <script setup>
-import { RouterView } from 'vue-router';
+import { SignUp } from "@/components";
 </script>
 
 <template>
-    <RouterView />
+    <SignUp />
 </template>
 
 <style scoped>

@@ -8,6 +8,7 @@ import SendButton from '../password/SendButton.vue';
 const useSignUp = useSignUpStore();
 
 function submitCode(code) {
+    useSignUp.user.code = code;
     useSignUp.createUser(useSignUp.user);
 };
 </script>
