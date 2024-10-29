@@ -16,6 +16,7 @@ import SubscriptionPlan from '@/components/configProfile/subscriptionPlan/Subscr
 import Security from '@/components/configProfile/security/SecurityConfig.vue';
 import ConfigProfile from '@/components/configProfile/ConfigProfile.vue';
 import SideBar from '@/components/configProfile/SideBar.vue';
+import LoadSpinner from './global/LoadSpinner.vue';
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
 import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 
@@ -38,6 +39,7 @@ export {
     SubscriptionPlan,
     Security,
     SideBar,
+    LoadSpinner,
     DefaultHeader,
     DefaultFooter,
 };

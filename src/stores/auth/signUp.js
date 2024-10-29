@@ -6,6 +6,9 @@ import SignUpService from '@/services/auth/signUp';
 
 export const useSignUpStore = defineStore('signUp', () => {
     const useSignUp = useSignUpStore();
+    const state = reactive({
+        isLoading: false
+    });
     const user = reactive({
         name: '',
         username: '',
@@ -33,9 +36,11 @@ export const useSignUpStore = defineStore('signUp', () => {
         const checkPassword = validateConfirmPassword(useSignUp.user.password, useSignUp.user.confirmPassword)
         console.log(checkEmail, checkPassword);
         if (checkEmail === true && checkPassword === true) {
+            state.isLoading = true;
             const response = await SignUpService.validationEmail(email);
     
             if(response === true) {
+                state.isLoading = false;
                 router.push('/confirmation-email');
             } else {
                 console.log(response);
@@ -64,5 +69,5 @@ export const useSignUpStore = defineStore('signUp', () => {
         };
     };
 
-    return { user, showMessageError, stepCode, validationEmail, createUser };
+    return { user, state, showMessageError, stepCode, validationEmail, createUser };
 });

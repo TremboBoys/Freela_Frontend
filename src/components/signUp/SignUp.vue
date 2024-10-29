@@ -1,5 +1,8 @@
 <script setup>
-import { FormSignUp } from '@/components/';
+import { FormSignUp, LoadSpinner } from '@/components/';
+import { useSignUpStore } from '@/stores/auth/signUp';
+
+const useSignUp = useSignUpStore();
 </script>
 <template>
     <div class="containerForm">    
@@ -9,7 +12,8 @@ import { FormSignUp } from '@/components/';
             </RouterLink>
         </header>
         <main>
-            <FormSignUp />
+            <FormSignUp v-if="useSignUp.state.isLoading === false" />
+            <LoadSpinner v-else />
         </main>
     </div>
 </template>
