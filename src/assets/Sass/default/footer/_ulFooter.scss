@@ -1,7 +1,6 @@
 .links-container{
     display: flex;
     gap: 32px;
-    width: 100px;
     .ul-links{
         text-decoration: none;
 
@@ -13,14 +12,68 @@
     }
 
 }
-@media (max-width: 768px){
+@media (max-width: 1024px) {
     footer{
-        padding: 40px 40px;
+        width: 100vw;
+        justify-content: center;
         .links-container{
             gap: 24px;
+            
             .ul-links{
                 .routerlink{
-                    font-size: 0.9rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    footer{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-between;
+        .links-container{
+            width: 93vw;
+            gap: 8px;
+            display: flex;
+            justify-content: space-between;
+            .ul-links{
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                h2 {
+                    font-size: 28px;
+                }
+                .routerlink{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 550px) {
+    footer{
+        padding: 24px 24px;
+        display: flex;
+        flex-direction: column;
+        .links-container{
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            .ul-links{
+                width: 500px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                h2 {
+                    font-size: 28px;
+                }
+                .routerlink{
+                    font-size: 0.8rem;
                 }
             }
         }
@@ -40,6 +93,30 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+                text-align: center;
+                h2 {
+                    font-size: 28px;
+                }
+                .routerlink{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 375px){
+    footer{
+        padding: 24px 24px;
+        .links-container{
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            .ul-links{
+                width: 350px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
                 h2 {
                     font-size: 28px;
                 }
@@ -62,6 +139,7 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+                text-align: center;
                 h2 {
                     font-size: 28px;
                 }

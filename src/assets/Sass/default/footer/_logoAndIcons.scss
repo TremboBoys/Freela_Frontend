@@ -26,19 +26,40 @@
         padding: 8px;
         font-size: 0.9rem;
     }
-
-    // Responsividade
-    @media (max-width: 768px) {
+}
+@media (max-width: 1024px) {
+    .logo-icon {
         .top-div {
-            flex-direction: column;
-            gap: 24px;
+            gap: 40px;
 
             #logo {
-                width: 100px;
+                width: 120px;
             }
 
             .socialmedia-icons {
-                gap: 12px;
+                gap: 16px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .logo-icon {
+        .top-div {
+            gap: 8px;
+            display: flex;
+            align-items: flex-end;
+
+            #logo {
+                width: 200px;
+            }
+
+            .socialmedia-icons {
+                gap: 10px;
 
                 img {
                     width: 20px;
@@ -46,35 +67,65 @@
                 }
             }
         }
-    }
 
-    @media (max-width: 480px) {
-        .logo-icon {
-            .top-div {
-                gap: 8px;
-    
-                #logo {
-                    width: 160px;
-                }
-    
-                .socialmedia-icons {
-                    gap: 4px;
-    
-                    img {
-                        width: 16px;
-                        height: 16px;
-                    }
-                }
-            }
-    
-            .bottom-div {
-                font-size: 0.7rem;
-                padding: 2px;
-            }
+        .bottom-div {
+            font-size: 0.7rem;
+            padding: 2px;
         }
     }
 }
 
+@media (max-width: 425px) {
+    .logo-icon {
+        .top-div {
+            gap: 8px;
+            display: flex;
+
+            #logo {
+                width: 200px;
+            }
+
+            .socialmedia-icons {
+                gap: 4px;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .bottom-div {
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .logo-icon {
+        .top-div {
+            gap: 8px;
+
+            #logo {
+                width: 170px;
+            }
+
+            .socialmedia-icons {
+                gap: 4px;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .bottom-div {
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+    }
+}
 @media (max-width: 320px) {
     .logo-icon {
         .top-div {
