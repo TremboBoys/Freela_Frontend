@@ -1,8 +1,10 @@
 <script setup>
-import { FormSignUp, LoadSpinner } from '@/components/';
+import { FormSignUp, LoadSpinner, QuickWarnings } from '@/components/';
 import { useSignUpStore } from '@/stores/auth/signUp';
+import { useWarningStore } from '@/stores/warning/warning';
 
 const useSignUp = useSignUpStore();
+const useWarning = useWarningStore();
 </script>
 <template>
     <div class="container-main">    
@@ -16,6 +18,7 @@ const useSignUp = useSignUpStore();
                 <FormSignUp v-if="useSignUp.state.isLoading === false" />
                 <LoadSpinner v-else />
             </main>
+            <QuickWarnings v-if="useWarning.state.isActive === true" />
         </div>
     </div>
 </template>
