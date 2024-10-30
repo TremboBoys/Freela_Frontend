@@ -1,7 +1,7 @@
 <script setup>
 import SignInButton from '@/components/signIn/ButtonSignIn.vue'
 import Icons from '@/components/signIn/IconsSignIn.vue'
-import Inputs from '@/components/signIn/InputsSignIn.vue'
+import Inputs from '@/components/signIn/InputEmailSignIn.vue'
 import Intro from '@/components/signIn/IntroSignIn.vue'
 import CreateAccount from '@/components/signIn/CreateAccountSignUp.vue'
 import ForgetPassword from '@/components/signIn/ForgetPasswordSignIn.vue'
@@ -10,14 +10,14 @@ import ForgetPassword from '@/components/signIn/ForgetPasswordSignIn.vue'
 <template>
   <div class="login-container">
     <SignInIntro />
-    <div class="inputs-container">
+    <form class="inputs-container" @submit.prevent="">
       <Intro />
       <Inputs />
       <forgetPassword/>
       <CreateAccount />
       <SignInButton />
       <Icons />
-    </div>
+    </form>
   </div>
 </template>
 
