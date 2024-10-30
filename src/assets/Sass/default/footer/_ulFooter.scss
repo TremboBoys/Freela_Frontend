@@ -12,6 +12,38 @@
     }
 
 }
+@media (max-width: 1920px) {
+    footer{
+        padding: 40px 0px;
+        display: flex;
+        justify-content: space-between;
+        .links-container{
+            gap: 24px;
+            .ul-links{
+                padding: 0 10px;
+                .routerlink{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+    footer{
+        padding: 40px 0px;
+        display: flex;
+        justify-content: space-between;
+        .links-container{
+            gap: 24px;
+            .ul-links{
+                padding: 0 10px;
+                .routerlink{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 1024px) {
     footer{
         width: 100vw;
@@ -20,6 +52,7 @@
             gap: 24px;
             
             .ul-links{
+                padding: 0 10px;
                 .routerlink{
                     font-size: 1rem;
                 }
