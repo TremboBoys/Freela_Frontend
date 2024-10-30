@@ -2,11 +2,15 @@
 *{
     font-family: 'poppins';
 }
-.containerForm {
+.container-main {
     display: flex;
     height: 100vh;
+    width: 100vw; 
+}
+.container-form {
+    display: flex;
     background-color: #0B2F34;
-    width: 70vw; 
+    width: 70%;
 }
 header {
     display: flex;
