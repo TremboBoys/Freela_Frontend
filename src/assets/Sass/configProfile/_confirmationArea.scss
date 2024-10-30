@@ -6,6 +6,12 @@
     flex-direction: column;
     display: flex;
     gap: 64px;
+
+    .container-warning-position {
+        position: relative;
+        /* top: 33px; */
+        bottom: 160px;
+    }
 }
 
 form {

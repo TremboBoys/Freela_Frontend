@@ -12,6 +12,9 @@ import ConfigInputs from '@/components/configProfile/personalInformation/ConfigI
 import SkillsTable from '@/components/configProfile/personalInformation/SkillsTable.vue';
 import PasswordConfig from '@/components/configProfile/password/PasswordConfig.vue';
 import EmailConfig from '@/components/configProfile/email/EmailConfig.vue';
+import ConfEmailTitles from './configProfile/confirmation/ConfEmailTitles.vue';
+import CodeVerification from '@/components/configProfile/confirmation/CodeVerification.vue';
+import SendButton from './configProfile/password/SendButton.vue';
 import SubscriptionPlan from '@/components/configProfile/subscriptionPlan/SubscriptionPlanConfig.vue';
 import Security from '@/components/configProfile/security/SecurityConfig.vue';
 import ConfigProfile from '@/components/configProfile/ConfigProfile.vue';
@@ -22,6 +25,7 @@ import TypeProject from '@/components/registerProject/typeProject/TypeProjectReg
 import SizeProject from '@/components/registerProject/sizeProject/SizeProjectRegistration.vue';
 import CompleteProject from '@/components/registerProject/completeProject/CompleteProjectRegistration.vue';
 import LoadSpinner from './global/LoadSpinner.vue';
+import QuickWarnings from './global/QuickWarnings.vue';
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
 import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 
@@ -41,6 +45,9 @@ export {
     ConfigProfile,
     PasswordConfig,
     EmailConfig,
+    ConfEmailTitles,
+    CodeVerification,
+    SendButton,
     SubscriptionPlan,
     Security,
     SideBar,
@@ -50,6 +57,7 @@ export {
     SizeProject,
     CompleteProject,
     LoadSpinner,
+    QuickWarnings,
     DefaultHeader,
     DefaultFooter,
 };

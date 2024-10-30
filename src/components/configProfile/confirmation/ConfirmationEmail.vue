@@ -1,11 +1,11 @@
 <script setup>
 import { ref } from 'vue';
 import { useSignUpStore } from '@/stores/auth/signUp';
-import ConfEmailTitles from './ConfEmailTitles.vue';
-import CodeVerification from './CodeVerification.vue';
-import SendButton from '../password/SendButton.vue';
+import { useWarningStore } from '@/stores/warning/warning';
+import { ConfEmailTitles, CodeVerification, SendButton, QuickWarnings } from '@/components'
 
 const useSignUp = useSignUpStore();
+const useWarning = useWarningStore();
 
 function submitCode(code) {
     useSignUp.user.code = code;
@@ -15,6 +15,9 @@ function submitCode(code) {
 
 <template>
     <div class="confArea">
+        <div class="container-warning-position">
+            <QuickWarnings v-if="useWarning.state.isActive == true" />
+        </div>
         <ConfEmailTitles/>
         <form>
             <CodeVerification @submit-code="submitCode"/>
