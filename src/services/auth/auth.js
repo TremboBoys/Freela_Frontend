@@ -1,10 +1,4 @@
 import { api } from "@/plugins/axios";
+import { Passage } from "@passageidentity/passage-js";
 
-class AuthService {
-    async createAuth(user) {
-        const { data } = await api.post('/token/', user);
-        return data;
-    };
-};
-
-export default new AuthService();
+const passage = new Passage(import.meta.env.VITE_VUE_APP_PASSAGE_APP_ID);

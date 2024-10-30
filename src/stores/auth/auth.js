@@ -7,26 +7,8 @@ export const useAuthStore = defineStore('auth', () => {
     const router = useRouter();
     const isLogged = ref(false);
     const user = reactive({
-        username: '',
-        password: ''
+        email: '',
     });
-    const token = ref({});
 
-    const verifyAuth = () => {
-        console.log('Aaaa');
-    };
-
-    const createAuth = async(user) => {
-        try {
-            const data = await AuthService.createAuth(user);
-            token.value = data;
-            isLogged.value = true;
-            router.push('/dashboard');
-        }
-        catch(error) {
-            console.error('Erro', error);
-        }
-    }
-
-    return { user, createAuth, verifyAuth };
+    return { user, isLogged };
 });

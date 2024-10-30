@@ -4,10 +4,10 @@
 
 <template>
     <div class="button-container">
-        <RouterLink to="/dashboard"><button class="signIn-button">Fazer Login</button></RouterLink>
+        <button type="submit" class="signIn-button">Fazer Login</button>
     </div>
 </template>
 
-<style>
+<style scoped>
 @import '../../assets/Sass/signIn/_signIn-button.scss';
 </style>
