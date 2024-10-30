@@ -1,0 +1,84 @@
+.container-warning {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.warning {
+    position: fixed;
+    display: flex;
+    right: -300px;
+    flex-direction: column;
+    width: 300px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: green;
+    color: #FDFDFD;
+    font-size: 14px;
+    animation: appear 1s ease-out forwards, disappear 2s ease-in 7s forwards;
+
+    @keyframes appear {
+        0% {
+            right: -300px;
+        }
+        100% {
+            right: 5px;
+        }
+    }
+
+    @keyframes disappear {
+        0% {
+            right: 5px;
+        }
+        100% {
+            right: -300px;
+        }
+    }
+
+    .container-info {
+        display: flex;
+        height: 95%;
+
+        .container-check {
+            display: flex;
+            width: 10%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .container-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+        }
+    
+        p {
+            margin: 0;
+        }
+    }
+
+    .container-progress {
+        width: 0;
+        height: 2px;
+        background-color: #000;
+        border-radius: 3px;
+        animation-name: progress;
+        animation-duration: 7s;
+        animation-timing-function: ease-in;
+    }
+
+    @keyframes progress {
+        0% {
+            width: 300px;
+        };
+        100% {
+            width: 0%;
+        }
+    }
+
+}
