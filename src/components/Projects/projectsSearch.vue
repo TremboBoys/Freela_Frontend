@@ -73,4 +73,5 @@ const handleAllow = (position) => {
 
 <style scoped>
 @import '@/assets/Sass/project/_project.scss';
+@import '../../assets/Sass/project/_search.scss';
 </style>

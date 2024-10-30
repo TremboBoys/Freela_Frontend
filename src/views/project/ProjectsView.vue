@@ -30,7 +30,8 @@ import projectsSelect from '../../components/Projects/projectsSelect.vue'
 
 <style scoped>
 @import '../../assets/Sass/project/_project.scss';
-
+@import '../../assets/Sass/project/_search.scss';
+@import '../../assets/Sass/project/_select.scss';
 .main-select {
     display: flex;
     flex-direction: column;
