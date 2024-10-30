@@ -52,6 +52,7 @@ export const useSignUpStore = defineStore('signUp', () => {
                     useWarning.state.message = '';
                 }, 10000)
             } else {
+                state.isLoading = false;
                 console.log(response);
                 useWarning.state.isActive = true;
                 useWarning.state.failure = true;

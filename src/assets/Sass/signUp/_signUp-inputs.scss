@@ -1,31 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 *{
     font-family: 'poppins';
-}
-.containerForm {
-    display: flex;
-    height: 100vh;
-    background-color: #0B2F34;
-    width: 70vw;
-    header {
-        display: flex;
-        width: 8vw;
-        height: 4vh;
-        margin: 4vh 5vw;
-    }
-}
-.title{
-    font-size: 1.7rem;
-    font-weight: 500;
-    color: #fff;
-    margin: 0 0 2xrem;
 }
 form {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 35vw;
-    margin: 10vh 0 0;
+    margin-top: 40px;
+
+    .title{
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: #fff;
+        margin: 0 0 2xrem;
+    }
     .form-control {
         width: 30vw;
         height: 6vh;
