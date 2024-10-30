@@ -28,5 +28,24 @@ main {
   width: 100%;
   background-color: #f5f5f5;
   padding: 5rem;
+  .help-central{
+    height: 15vh;
+    width: 62vw;
+    display: flex;
+    align-items: center;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin: 1.5rem 0 1.8rem 0;
+    .help-title{
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 0 0 1rem;
+    }
+  }
+  .instructions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   }
 }
