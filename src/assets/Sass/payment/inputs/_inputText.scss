@@ -58,6 +58,26 @@
         }
     }
 }
+@media (max-width: 1920px) {
+    .container {
+        label {
+            font-size: 22px;
+        }
+        .form-control {
+            width: 40vw;
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .container {
+        label {
+            font-size: 16px;
+        }
+        .form-control {
+            width: 40vw;
+        }
+    }
+}
 @media (max-width: 1024px) {
     .container {
         .form-control {

@@ -41,6 +41,30 @@
     }
   }
 }
+@media (max-width: 1920px) {
+  .dropdown {
+    label {
+      font-size: 22px;
+    }
+    .select-container {
+      select {
+        width: 40vw;
+      }
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .dropdown {
+    label {
+      font-size: 16px;
+    }
+    .select-container {
+      select {
+        width: 40vw;
+      }
+    }
+  }
+}
 @media (max-width: 1024px) {
   .dropdown {
     .select-container {
