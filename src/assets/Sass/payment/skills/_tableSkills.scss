@@ -36,3 +36,38 @@
         background-color: #f3f3f3;
     }
 }
+@media (max-width: 320px) {
+    .container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;  
+        .rating-table {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            table {
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                th,
+                td {
+                    font-size: 0.8rem;
+                }
+    
+                .star-cell {
+                    padding: 3px 0;
+                }
+                tbody {
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 100vw;
+                    tr {
+                        display: flex;
+                        flex-direction: row;
+                        width: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

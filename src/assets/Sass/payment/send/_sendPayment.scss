@@ -2,11 +2,13 @@
     display: flex;
     font-family: 'Poppins', sans-serif;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     text-decoration: none;
+    align-items: center;
     .submit {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
+        align-items: flex-end;
         .dateInput {
             display: flex;
             flex-direction: column;
@@ -28,7 +30,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
             .button {
                 display: flex;
                 justify-content: center;
@@ -45,6 +46,134 @@
                 &:hover {
                     background-color: #0b5a9b;
                     color: white;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        .submit {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .dateInput {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 70vw;
+                .label {
+                    font-size: 1.5rem;
+                }
+                .date {
+                    width: 70vw;
+                    height: 8vh;
+                    font-size: 1.1rem;
+                }
+            }
+            .buttonSubmit {
+                margin-top: 32px;
+                .button {
+                    width: 70vw;
+                    height: 10vh;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .container {
+        .submit {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .dateInput {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 70vw;
+                .label {
+                    font-size: 1.5rem;
+                }
+                .date {
+                    width: 70vw;
+                    height: 8vh;
+                    font-size: 1.1rem;
+                }
+            }
+            .buttonSubmit {
+                margin-top: 32px;
+                .button {
+                    width: 70vw;
+                    height: 10vh;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        .submit {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            .dateInput {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 40vw;
+                .label {
+                    font-size: 1.5rem;
+                }
+                .date {
+                    width: 40vw;
+                    height: 8vh;
+                    font-size: 1.1rem;
+                }
+            }
+            .buttonSubmit {
+                margin-left: 40px;
+                .button {
+                    width: 40vw;
+                    height: 10vh;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        .submit {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            .dateInput {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 30vw;
+                .label {
+                    font-size: 1.5rem;
+                }
+                .date {
+                    width: 30vw;
+                    height: 6vh;
+                    font-size: 1.1rem;
+                }
+            }
+            .buttonSubmit {
+                margin-left: 40px;
+                .button {
+                    width: 30vw;
+                    height: 6vh;
+                    font-size: 1.2rem;
                 }
             }
         }
