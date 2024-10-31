@@ -41,22 +41,11 @@
     }
   }
 }
-
-@media (max-width: 320px) {
+@media (max-width: 1024px) {
   .dropdown {
     .select-container {
       select {
-        width: 90vw;
-      }
-    }
-  }
-}
-
-@media (max-width: 425px) {
-  .dropdown {
-    .select-container {
-      select {
-        width: 90vw;
+        width: 45vw;
       }
     }
   }
@@ -70,11 +59,20 @@
     }
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 425px) {
   .dropdown {
     .select-container {
       select {
-        width: 45vw;
+        width: 90vw;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .dropdown {
+    .select-container {
+      select {
+        width: 90vw;
       }
     }
   }

@@ -58,7 +58,14 @@
         }
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 1024px) {
+    .container {
+        .form-control {
+            width: 45vw;
+        }
+    }
+}
+@media (max-width: 768px) {
     .container {
         .form-control {
             width: 90vw;
@@ -72,17 +79,10 @@
         }
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 320px) {
     .container {
         .form-control {
             width: 90vw;
-        }
-    }
-}
-@media (max-width: 1024px) {
-    .container {
-        .form-control {
-            width: 45vw;
         }
     }
 }
