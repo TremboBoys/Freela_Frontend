@@ -24,32 +24,32 @@ const infoLinks = [
 </script>
 
 <template>
-<div class="links-container">
+  <div class="links-container">
     <div class="ul-links">
-    <h2>Encontre trabalho</h2>
-    <ul>
+      <h2>Encontre trabalho</h2>
+      <ul>
         <li v-for="(link, index) in jobLinks" :key="index">
-        <RouterLink class="routerlink" :to="link.path">{{ link.name }}</RouterLink>
+          <RouterLink class="routerlink" :to="link.path">{{ link.name }}</RouterLink>
         </li>
-    </ul>
+      </ul>
     </div>
     <div class="ul-links">
-    <h2>Freelancers</h2>
-    <ul>
+      <h2>Freelancers</h2>
+      <ul>
         <li v-for="(link, index) in freelancerLinks" :key="index">
-        <RouterLink class="routerlink" :to="link.path">{{ link.name }}</RouterLink>
+          <RouterLink class="routerlink" :to="link.path">{{ link.name }}</RouterLink>
         </li>
-    </ul>
+      </ul>
     </div>
     <div class="ul-links">
-    <h2>Quem somos?</h2>
-    <ul>
+      <h2>Quem somos?</h2>
+      <ul>
         <li v-for="(link, index) in infoLinks" :key="index">
-        <RouterLink class="routerlink" :to="link.path">{{ link.name }}</RouterLink>
+          <RouterLink class="routerlink" :to="link.path">{{ link.name }}</RouterLink>
         </li>
-        </ul>
-      </div>
+      </ul>
     </div>
+  </div>
 </template>
 
 <style scoped>

@@ -1,16 +1,211 @@
-.logo-icon{
-    .top-div{
-    display: flex;
-    gap: 48px;
-    align-items: center;
-        #logo{
-            width: 140px;
-            }
+.logo-icon {
+    .top-div {
+        display: flex;
+        gap: 48px;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
 
-        .socialmedia-icons{
+        #logo {
+            width: 140px;
+        }
+
+        .socialmedia-icons {
             display: flex;
             gap: 16px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 
+    .bottom-div {
+        text-align: center;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 1920px) {
+    .logo-icon {
+        .top-div {
+            gap: 40px;
+
+            #logo {
+                width: 180px;
+            }
+
+            .socialmedia-icons {
+                gap: 16px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .bottom-div {
+            p {
+                font-size: 1rem;
+                padding: 4px; 
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .logo-icon {
+        .top-div {
+            gap: 40px;
+
+            #logo {
+                width: 180px;
+            }
+
+            .socialmedia-icons {
+                gap: 16px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .bottom-div {
+            p {
+                font-size: 1rem;
+                padding: 4px; 
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .logo-icon {
+        .top-div {
+            gap: 40px;
+
+            #logo {
+                width: 120px;
+            }
+
+            .socialmedia-icons {
+                gap: 16px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        .bottom-div {
+            p {
+                font-size: .8rem;
+                padding: 4px; 
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .logo-icon {
+        .top-div {
+            gap: 8px;
+            display: flex;
+            align-items: flex-end;
+
+            #logo {
+                width: 200px;
+            }
+
+            .socialmedia-icons {
+                gap: 10px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        .bottom-div {
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .logo-icon {
+        .top-div {
+            gap: 8px;
+            display: flex;
+
+            #logo {
+                width: 200px;
+            }
+
+            .socialmedia-icons {
+                gap: 4px;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .bottom-div {
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .logo-icon {
+        .top-div {
+            gap: 8px;
+
+            #logo {
+                width: 170px;
+            }
+
+            .socialmedia-icons {
+                gap: 4px;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .bottom-div {
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+    }
+}
+@media (max-width: 320px) {
+    .logo-icon {
+        .top-div {
+            gap: 8px;
+
+            #logo {
+                width: 160px;
+            }
+
+            .socialmedia-icons {
+                gap: 4px;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .bottom-div {
+            font-size: 0.7rem;
+            padding: 2px;
+        }
+    }
 }

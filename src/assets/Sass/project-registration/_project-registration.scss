@@ -1,0 +1,126 @@
+.main-container {
+    display: flex;
+}
+
+.design {
+    margin: 67px 124px 40px 80px;
+    width: 308px;
+    height: 825px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+
+        .text-option{
+            color: #000;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin-left: 26px;
+        }
+}
+
+.input {
+    margin: 46px 16px 32px 16px;
+    width: 276px;
+    height: 50px;
+    flex-shrink: 0;
+    fill: #FFF;
+    stroke-width: 1px;
+    stroke: #D9D9D9;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    padding: 16px;
+    color: #000;
+    -webkit-text-stroke-width: 5;
+    -webkit-text-stroke-color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 275;
+    line-height: normal;
+}
+
+    h1{
+        color: #000;
+        font-family: Poppins;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: 40px;
+    }
+
+    .project {
+            padding: 62px 0px 30px 0px;
+            margin-right: 80px;
+
+
+            .text-register{
+                color: #000;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+
+            .text {
+                padding: 26px 0px 0px 0px;
+                color: #000;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .option {
+                background-color: #FFFFFF;
+                display: inline-block;
+                height: 48px;
+                border-radius: 8px;
+                border: 1px solid #D9D9D9;
+                padding: 12px 21px 12px 21px;
+                margin-top: 26px;
+                margin-left: 19px;
+                color: #000;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                cursor: pointer;
+                &:hover{
+                    border: 1.5px solid #447981;
+                    transition: 0.5s;
+                    background-color: #EBFBFD;
+                }
+            }
+        }
+
+    .continue {
+        position: absolute;
+        margin: 28px 0px 0px 200px;
+        width: 176px;
+        height: 46px;
+        flex-shrink: 0;
+        background-color: #0B2F34;
+        stroke-width: 1px;
+        border: 1px solid #7A7A7A;
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        border-radius: 35px;
+        cursor: pointer;
+    }
+    .router-link {
+        text-decoration: none;
+        cursor: pointer;
+    }
