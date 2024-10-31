@@ -1,7 +1,6 @@
 <script setup>
 import Title from './title/TitlePayment.vue'
 import InputsPayment from './inputs/InputsPayment.vue';
-import TableSkills from './skills/TableSkills.vue';
 import SendProject from './send/SendPayment.vue';
 </script>
 <template>
@@ -11,9 +10,6 @@ import SendProject from './send/SendPayment.vue';
         </div>
         <div class="inputs">
             <InputsPayment />
-        </div>
-        <div class="table">
-            <TableSkills />
         </div>
         <div class="submit">
             <SendProject />
