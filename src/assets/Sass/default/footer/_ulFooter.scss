@@ -12,3 +12,174 @@
     }
 
 }
+@media (max-width: 1920px) {
+    footer{
+        padding: 40px 0px;
+        display: flex;
+        justify-content: space-between;
+        .links-container{
+            gap: 24px;
+            .ul-links{
+                padding: 0 10px;
+                .routerlink{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+    footer{
+        padding: 40px 0px;
+        display: flex;
+        justify-content: space-between;
+        .links-container{
+            gap: 24px;
+            .ul-links{
+                padding: 0 10px;
+                .routerlink{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    footer{
+        width: 100vw;
+        justify-content: center;
+        .links-container{
+            gap: 24px;
+            
+            .ul-links{
+                padding: 0 10px;
+                .routerlink{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    footer{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-between;
+        .links-container{
+            width: 93vw;
+            gap: 8px;
+            display: flex;
+            justify-content: space-between;
+            .ul-links{
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                h2 {
+                    font-size: 28px;
+                }
+                .routerlink{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 550px) {
+    footer{
+        padding: 24px 24px;
+        display: flex;
+        flex-direction: column;
+        .links-container{
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            .ul-links{
+                width: 500px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                h2 {
+                    font-size: 28px;
+                }
+                .routerlink{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 425px){
+    footer{
+        padding: 24px 24px;
+        display: flex;
+        flex-direction: column;
+        .links-container{
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            .ul-links{
+                width: 400px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                h2 {
+                    font-size: 28px;
+                }
+                .routerlink{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 375px){
+    footer{
+        padding: 24px 24px;
+        .links-container{
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            .ul-links{
+                width: 350px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                h2 {
+                    font-size: 28px;
+                }
+                .routerlink{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 320px){
+    footer{
+        padding: 24px 24px;
+        .links-container{
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            .ul-links{
+                width: 300px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                h2 {
+                    font-size: 28px;
+                }
+                .routerlink{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

@@ -3,8 +3,48 @@
 }
 footer{
     box-shadow: 0px -1px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 40px 80px;
+    padding: 40px 0px;
     display: flex;
     justify-content: space-between;
-
+}
+@media (max-width: 1024px) {
+    footer{
+        width: 100vw;
+        padding: 40px 0px;
+        .links-container{
+            gap: 24px;
+            .ul-links{
+                .routerlink{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .logo-icon{
+            .top-div{
+                gap: 24px;
+                #logo{
+                    width: 100px;
+                }
+                .socialmedia-icons{
+                    gap: 8px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px){
+    footer{
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+@media (max-width: 425px){
+    footer{
+        padding: 40px 16px;
+    }
+}
+@media (max-width: 320px) {
+    footer{
+        padding: 40px 8px;
+    }
 }

@@ -19,6 +19,11 @@ import SubscriptionPlan from '@/components/configProfile/subscriptionPlan/Subscr
 import Security from '@/components/configProfile/security/SecurityConfig.vue';
 import ConfigProfile from '@/components/configProfile/ConfigProfile.vue';
 import SideBar from '@/components/configProfile/SideBar.vue';
+import ProjectRegistration from '@/components/registerProject/projectRegistration/ProjectRegistration.vue';
+import DescriptionProject from '@/components/registerProject/descriptionRegistration/DescriptionProjectRegistration.vue';
+import TypeProject from '@/components/registerProject/typeProject/TypeProjectRegistration.vue';
+import SizeProject from '@/components/registerProject/sizeProject/SizeProjectRegistration.vue';
+import CompleteProject from '@/components/registerProject/completeProject/CompleteProjectRegistration.vue';
 import LoadSpinner from './global/LoadSpinner.vue';
 import QuickWarnings from './global/QuickWarnings.vue';
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
@@ -46,6 +51,11 @@ export {
     SubscriptionPlan,
     Security,
     SideBar,
+    ProjectRegistration,
+    DescriptionProject,
+    TypeProject,
+    SizeProject,
+    CompleteProject,
     LoadSpinner,
     QuickWarnings,
     DefaultHeader,
