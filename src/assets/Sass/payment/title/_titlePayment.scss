@@ -5,8 +5,20 @@
     align-items: center;
 
 }
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
 
-@media (max-width: 320px) {
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
         display: flex;
@@ -33,20 +45,7 @@
         }
     }
 }
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        width: 100vw;
-
-        h1 {
-            font-size: 2.5rem;
-            text-align: center;
-        }
-    }
-}
-@media (max-width: 1024px) {
+@media (max-width: 320px) {
     .container {
         flex-direction: column;
         display: flex;
