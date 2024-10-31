@@ -15,6 +15,15 @@ import EmailConfig from '@/components/configProfile/email/EmailConfig.vue';
 import ConfEmailTitles from './configProfile/confirmation/ConfEmailTitles.vue';
 import CodeVerification from '@/components/configProfile/confirmation/CodeVerification.vue';
 import SendButton from './configProfile/password/SendButton.vue';
+import LogoName from '@/components/dashboard/profile/LogoName.vue';
+import InfoProfile from '@/components/dashboard/profile/InfoProfile.vue';
+import PublicProfile from '@/components/dashboard/profile/PublicProfile.vue';
+import MainSkills from '@/components/dashboard/profile/MainSkills.vue';
+import FavoriteArea from '@/components/dashboard/profile/FavoriteArea.vue';
+import AboutMe from '@/components/dashboard/profile/AboutMe.vue';
+import ProjectProgress from '@/components/dashboard/projects/projectProgress/ProjectProgress.vue';
+import CompletedProject from '@/components/dashboard/projects/completedProject/CompletedProject.vue';
+import SignInPassage from './signIn/SignInPassage.vue';
 import SubscriptionPlan from '@/components/configProfile/subscriptionPlan/SubscriptionPlanConfig.vue';
 import Security from '@/components/configProfile/security/SecurityConfig.vue';
 import ConfigProfile from '@/components/configProfile/ConfigProfile.vue';
@@ -48,6 +57,15 @@ export {
     ConfEmailTitles,
     CodeVerification,
     SendButton,
+    LogoName,
+    InfoProfile,
+    PublicProfile,
+    MainSkills,
+    FavoriteArea,
+    AboutMe,
+    ProjectProgress,
+    CompletedProject,
+    SignInPassage,
     SubscriptionPlan,
     Security,
     SideBar,

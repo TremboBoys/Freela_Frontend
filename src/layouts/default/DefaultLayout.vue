@@ -1,11 +1,15 @@
 <script setup>
-import { DefaultFooter, DefaultHeader } from '@/components';
+import { DefaultFooter, DefaultHeader,SignInPassage } from '@/components';
+import { useAuthStore } from '@/stores/auth/auth';
+
+const useAuth = useAuthStore();
 </script>
 
 <template>
     <main>
         <DefaultHeader />
-        <RouterView />
+        <RouterView :style="(useAuth.state.showLogin === true) ? useAuth.state.popUpEffect : ''" />
+        <SignInPassage v-if="useAuth.state.showLogin === true" />
         <DefaultFooter />
     </main>
 </template>

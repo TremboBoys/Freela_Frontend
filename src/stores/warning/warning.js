@@ -7,7 +7,7 @@ export const useWarningStore = defineStore('warning', () => {
         success: false,
         warning: false,
         failure: false,
-        message: 'Alguma coisa'
+        message: ''
     });
 
     return { state };
