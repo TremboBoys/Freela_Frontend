@@ -1,12 +1,5 @@
 <script setup>
-import LogoName from '@/components/dashboard/profile/LogoName.vue';
-import InfoProfile from '@/components/dashboard/profile/InfoProfile.vue';
-import PublicProfile from '@/components/dashboard/profile/PublicProfile.vue';
-import MainSkills from '@/components/dashboard/profile/MainSkills.vue';
-import FavoriteArea from '@/components/dashboard/profile/FavoriteArea.vue';
-import AboutMe from '@/components/dashboard/profile/AboutMe.vue';
-import ProjectProgress from '@/components/dashboard/projects/projectProgress/ProjectProgress.vue';
-import CompletedProject from '@/components/dashboard/projects/completedProject/CompletedProject.vue';
+import { LogoName, InfoProfile, PublicProfile, MainSkills, FavoriteArea, AboutMe, ProjectProgress, CompletedProject } from '@/components';
 </script>
 
 <template>
@@ -24,6 +17,7 @@ import CompletedProject from '@/components/dashboard/projects/completedProject/C
             <CompletedProject />
         </div>
     </div>
+    
 </template>
 
 <style scoped>
