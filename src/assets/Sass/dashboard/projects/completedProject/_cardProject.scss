@@ -56,19 +56,23 @@
 }
 @media (max-width: 320px) {
     .card {
-        width: 100vw;
-        height: 30vh;
+        width: 78vw;
+        height: 60vh;
+
         .title {
             h2 {
                 font-size: 1.2rem;
             }
         }
+
         .term {
             font-size: 12px;
         }
+
         .description {
             font-size: 12px;
         }
+
         .footer {
             .pending {
                 img {
@@ -76,11 +80,13 @@
                     height: 14px;
                 }
             }
+
             .right {
                 img {
                     width: 14px;
                     height: 14px;
                 }
+
                 .help {
                     img {
                         width: 16px;
