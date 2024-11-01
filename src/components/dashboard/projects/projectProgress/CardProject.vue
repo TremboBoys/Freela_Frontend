@@ -11,7 +11,7 @@
             </div>
             <div class="footer">
                 <div class="pending">
-                    <img src="@/assets/images/dashboard/Clock.png" class="clock" alt="">
+                    <img src="@/assets/images/dashboard/clock.png" class="clock" alt="">
                     <span>Status: Pendente</span>
                 </div>
                 <div class="right">
@@ -19,7 +19,7 @@
                         <button class="toSendButton">Enviar</button>
                     </router-link>
                     <div class="help">
-                        <img src="@/assets/images/dashboard/Help.png" class="helpImg" alt="">
+                        <img src="@/assets/images/dashboard/interrogacao.png" class="helpImg" alt="">
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="footer">
                 <div class="pending">
-                    <img src="@/assets/images/dashboard/Clock.png" class="clock" alt="">
+                    <img src="@/assets/images/dashboard/clock.png" class="clock" alt="">
                     <span>Status: Pendente</span>
                 </div>
                 <div class="right">
@@ -44,7 +44,7 @@
                         <button class="toSendButton">Enviar</button>
                     </router-link>
                     <div class="help">
-                        <img src="@/assets/images/dashboard/Help.png" class="helpImg" alt="">
+                        <img src="@/assets/images/dashboard/interrogacao.png" class="helpImg" alt="">
                     </div>
                 </div>
             </div>
