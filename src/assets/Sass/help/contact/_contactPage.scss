@@ -7,6 +7,7 @@ main {
     width: 62vw;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border: 1px solid #000000;
     border-radius: 10px;
     margin: 1.5rem 0 1.8rem 0;
@@ -17,23 +18,28 @@ main {
     }
   }
   .instructions{
-    margin: 0 0 0 3rem;
     display: flex;
+    width: 41vw;
+    .instruction{
+        display: flex;
+        width: 21vw;
+    }
     .number{
-      height: 3rem;
-      width: 3rem;
-      border: 1px solid black;
-      border-radius: 50%;
+      border-radius: 2rem;
       display: flex;
       justify-content: center;
       align-items: center;
       p{
         font-size: 1.3rem;
         font-weight: 700;
+        align-items: center;
       }
     }
     .text{
-      font-size: 0.5rem;
+      display: flex;
+      align-items: center;
+      font-size: 0.7rem;
+      margin: 0 0 0 0.5rem;
     }
   }
   }
