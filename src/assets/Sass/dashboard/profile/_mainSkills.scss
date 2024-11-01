@@ -25,3 +25,29 @@
         }
     }
 }
+@media (max-width: 320px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        padding: 0 20px 0 20px;
+        .text {
+            width: 100vw;
+            padding: 6px;
+            font-size: 18px;
+            font-weight: 400;
+            border-radius: 10px;
+            .aboutMe {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+        .skills {
+            display: flex;
+            flex-direction: row;
+            .skill {
+                margin: 10px 0;
+            }
+        }
+    }
+}
