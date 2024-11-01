@@ -3,7 +3,12 @@
 <template>
     <div class="publicoAlvo">
         <label for="publicoAlvo">Publico Alvo</label>
-        <input type="text" id="publicoAlvo" placeholder="Ex: Pessoas que gostam de esportes" />
+        <textarea type="text" id="publicoAlvo" placeholder="Ex: Pessoas que gostam de esportes" />
+    </div>
+    <div class="categories">
+        <select name="" id="">
+
+        </select>
     </div>
 </template>
 

@@ -1,11 +1,30 @@
-input{
+textarea{
+    resize: none;
     height: 100px;
     border: 1px solid #D9D9D9;
     border-radius: 7px;
+    padding: 0 20px;
+
+    &:focus{
+        outline: none;
+        }
 }
 
 .publicoAlvo{
     display: flex;
     flex-direction: column;
 
+}
+
+.categories{
+    select{
+        height: 43px;
+        width: 100%;
+        border: 1px solid #D9D9D9;
+        border-radius: 10px;
+        margin-bottom: 13px;
+        font-size: 1rem;
+        padding: 3px;
+        background-color: white;
+    }
 }
