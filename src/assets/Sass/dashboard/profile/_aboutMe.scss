@@ -18,6 +18,14 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 0 40px 0 40px;
+        .text {
+            font-size: 16px;
+        }
+    }
+}
 @media (max-width: 425px) {
     .container {
         display: flex;
