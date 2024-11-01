@@ -6,45 +6,53 @@
     background-color: #f5f5f5;
     border-radius: 8px;
     padding: 16px;
+
     .title {
-        
         h2 {
             color: #0c0c0c;
             font-size: 1.5rem;
         }
     }
+
     .term {
         margin-top: 5px;
         display: flex;
         font-weight: 300;
         font-size: 14px;
     }
+
     .description {
         margin-top: 5px;
         font-weight: 300;
         font-size: 14px;
     }
+
     .footer {
         margin-top: 10px;
         display: flex;
         justify-content: space-between;
+
         .pending {
             display: flex;
             justify-content: center;
+
             img {
                 margin: 4px 5px 0 0;
                 width: 18px;
                 height: 18px;
             }
         }
+
         .right {
             display: flex;
             justify-content: center;
+
             img {
                 margin: 4px 5px 0 0;
                 width: 18px;
                 height: 18px;
             }
+
             .toSend {
                 .toSendButton {
                     background-color: transparent;
@@ -56,11 +64,13 @@
                     font-weight: 300;
                     cursor: pointer;
                     transition: all 0.3s;
+
                     &:hover {
                         border: 1px solid #14609e;
                     }
                 }
             }
+
             .help {
                 img {
                     width: 20px;
@@ -70,6 +80,47 @@
         }
     }
 }
+
 @media (max-width: 320px) {
-    
+    .card {
+        width: 78vw;
+        height: 60vh;
+
+        .title {
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .term {
+            font-size: 12px;
+        }
+
+        .description {
+            font-size: 12px;
+        }
+
+        .footer {
+            .pending {
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+
+            .right {
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+
+                .help {
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
 }

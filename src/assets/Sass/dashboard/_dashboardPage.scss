@@ -13,15 +13,15 @@
     .container {
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        width: 95vw;
         justify-content: center;
         align-items: center;
         .profile {
-            width: 100vw;
+            width: 90vw;
         }
         .projects {
-            width: 100vw;
-            padding: 0 20px 0 0;
+            width: 90vw;
+            padding: 0 0 0 0;
         }
     }
 }
