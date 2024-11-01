@@ -25,6 +25,20 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 0 40px 0 40px;
+        .text {
+            font-size: 16px;
+        }
+        .skills {
+            .skill {
+                font-size: 12px;
+                margin: 10px 5px;
+            }
+        }
+    }
+}
 @media (max-width: 425px) {
     .container {
         display: flex;
@@ -32,7 +46,7 @@
         width: 100vw;
         padding: 0 20px 0 20px;
         .text {
-            width: 85vw;
+            width: 100vw;
             padding: 6px;
             font-size: 18px;
             font-weight: 400;

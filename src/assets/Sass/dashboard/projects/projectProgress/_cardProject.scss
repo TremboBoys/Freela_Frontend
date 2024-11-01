@@ -86,6 +86,50 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .card {
+        width: 78vw;
+        height: 35vh;
+        margin-bottom: 1vh;
+
+        .title {
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .term {
+            font-size: 12px;
+        }
+
+        .description {
+            font-size: 12px;
+        }
+
+        .footer {
+            .pending {
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+
+            .right {
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+
+                .help {
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 425px) {
     .card {
         width: 78vw;
