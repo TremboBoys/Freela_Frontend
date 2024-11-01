@@ -17,9 +17,24 @@ main {
     }
   }
   .instructions{
+    margin: 0 0 0 3rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    .number{
+      height: 3rem;
+      width: 3rem;
+      border: 1px solid black;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p{
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+    }
+    .text{
+      font-size: 0.5rem;
+    }
   }
   }
 
