@@ -1,7 +1,6 @@
 .selectProject {
     display: flex;
     width: 848px;
-    height: px;
     flex-shrink: 0;
     border: 1px solid #D9D9D9;
     margin-left: 62px;
@@ -165,3 +164,54 @@
   
     }
   }
+
+@media (max-width: 320px) {
+  .selectProject {
+    margin-top: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+  
+    .select {
+    align-items: center;
+    text-align: center;
+      
+      .select-header-container {
+        width: 250px;
+  
+        .select-header {
+          display: flex;
+          justify-content: space-between;
+  
+          p {
+            width: 20px;
+            font-size: 14px;
+          }
+        }
+
+        .select-header2 {
+          width: 30px;
+          font-size: 10px;
+          padding-left: 5px;
+        }
+      }
+
+      .select-main-container {
+  
+        .select-subTitle {
+          width: 190px;
+          padding: 10px 10px 10px 0;
+          display: flex;
+          gap: 20px;
+          font-size: 10px;
+        }
+
+        .select-text {
+          width: 190px;;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
