@@ -1,3 +1,9 @@
+<script setup>
+import { useAuthStore } from '@/stores/auth/auth';
+
+const useAuth = useAuthStore();
+</script>
+
 <template>
     <main>
         <div class="container">
@@ -8,9 +14,7 @@
                 <div class="content">
                     <h1>Encontre os melhores profissionais ou ofereça seu talento como freelancer</h1>
                     <p>Sucesso começa com uma boa parceria</p>
-                    <router-link class="router" to="/sign-up">
-                        <button class="button">Registre-se</button>
-                    </router-link>
+                        <button class="button" @click="useAuth.state.showLogin = true">Registre-se</button>
                 </div>
             </div>
         </div>

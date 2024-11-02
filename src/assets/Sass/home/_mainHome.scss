@@ -41,26 +41,20 @@ main {
                     color: #000000;
                     margin-bottom: 1rem;
                 }
-                .router {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    text-decoration: none;
-                    .button {
-                        width: 200px;
-                        height: 50px;
-                        background-color: #0B2F34;
-                        color: #ffffff;
-                        font-size: 1.5rem;
-                        font-weight: 700;
-                        border: none;
-                        border-radius: 32px;
-                        margin-right: 1rem;
-                        cursor: pointer;
-                        transition: 0.3s;
-                        &:hover {
-                            background-color: #041e22;
-                        }
+                .button {
+                    width: 200px;
+                    height: 50px;
+                    background-color: #0B2F34;
+                    color: #ffffff;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    border: none;
+                    border-radius: 32px;
+                    margin-right: 1rem;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                        background-color: #041e22;
                     }
                 }
             }

@@ -9,6 +9,7 @@
     .form-control {
         width: 300px;
         height: 48px;
+        padding-left: 16px;
         flex-shrink: 0;
         border-radius: 10px;
         border: none;
@@ -16,11 +17,12 @@
         margin: 15px;
         border: 1px solid #9b9b9b;
         margin-bottom: -5px;
-    }
-    .form-control:focus {
-        outline: none;
-        transition: 0.5s;
-        border: 1px solid #000000;
+        &:focus {
+            border: 1px solid #007bff;
+            outline: none;
+            outline: none;
+            transition: 0.5s;
+        }
     }
     #nome {
         padding-left: 16px;
@@ -29,8 +31,8 @@
         position: relative;
         .labelInput {
             position: absolute;
-            top: 33px;
-            left: 16px;
+            top: 31px;
+            left: 8px;
             pointer-events: none;
             transition: 0.4s;
             color: rgb(0, 0, 0);

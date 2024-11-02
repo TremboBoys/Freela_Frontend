@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security, SignUp, VerificationCode, ProjectRegistration, DescriptionProject, TypeProject, SizeProject, CompleteProject } from '@/components';
+import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security, VerificationCode, ProjectRegistration, DescriptionProject, TypeProject, SizeProject, CompleteProject } from '@/components';
+import { useAuthStore } from '@/stores/auth/auth';
+import { useSignUpStore } from '@/stores/auth/signUp';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,17 +18,20 @@ const router = createRouter({
         {
           path: 'dashboard',
           name: 'dashboard',
-          component: () => import('@/views/global/DashboardView.vue')
+          component: () => import('@/views/global/DashboardView.vue'),
+          meta: { requiresAuth: true }
         },
         {
           path: 'profile',
           name: 'profile',
-          component: () => import('@/views/user/ProfileUserView.vue')
+          component: () => import('@/views/user/ProfileUserView.vue'),
+          meta: { requiresAuth: true }
         },
         {
           path: 'configurations/',
           name: 'configurations',
           component: () => import('@/views/user/ConfigurationUserView.vue'),
+          meta: { requiresAuth: true },
           children: [
             {
               path: '',
@@ -78,31 +83,32 @@ const router = createRouter({
           component: () => import('@/views/project/DetailProjectView.vue')
         },
         {
-          path: '/register-project/',
+          path: '/register-project',
           name: 'registerProject',
           component: () => import('@/views/project/RegisterProjectView.vue'),
+          meta: { requiresAuth: true },
           children: [
             {
-              path: '',
+              path: '/',
               component: ProjectRegistration
             },
             {
-              path: 'description',
+              path: '/description',
               name: 'description',
               component: DescriptionProject
             },
             {
-              path: 'types',
+              path: '/types',
               name: 'types',
               component: TypeProject
             },
             {
-              path: 'size',
+              path: '/size',
               name: 'size',
               component: SizeProject
             },
             {
-              path: 'complete',
+              path: '/complete',
               name: 'complete',
               component: CompleteProject
             }
@@ -111,22 +117,26 @@ const router = createRouter({
         {
           path: 'subscription-plan',
           name: 'subscriptionPlan',
-          component: () => import('@/views/plan/SubscriptionPlanView.vue')
+          component: () => import('@/views/plan/SubscriptionPlanView.vue'),
+          meta: { requiresAuth: true }
         },
         {
           path: 'proposal-registration/:project',
           name: 'proposalRegistration',
-          component: () => import('@/views/project/ProposalRegistrationProjectView.vue')
+          component: () => import('@/views/project/ProposalRegistrationProjectView.vue'),
+          meta: { requiresAuth: true }
         },
         {
           path: 'chat',
           name: 'chat',
-          component: () => import('@/views/chat/ChatView.vue')
+          component: () => import('@/views/chat/ChatView.vue'),
+          meta: { requiresAuth: true }
         },
         {
           path: 'payment/:project',
           name: 'payment',
-          component: () => import('@/views/payment/PaymentView.vue')
+          component: () => import('@/views/payment/PaymentView.vue'),
+          meta: { requiresAuth: true }
         },
         {
           path: 'freelancers',
@@ -156,37 +166,68 @@ const router = createRouter({
         {
           path: 'finished-project',
           name: 'finishedProject',
-          component: () => import('@/views/project/FinishedProjectView.vue')
+          component: () => import('@/views/project/FinishedProjectView.vue'),
+          meta: { requiresAuth: true }
         },
         {
-          path: '/make-payment',
+          path: 'make-payment',
           name: 'makePayment',
-          component: () => import('@/views/payment/PaymentView.vue')
+          component: () => import('@/views/payment/PaymentView.vue'),
+          meta: { requiresAuth: true }
         },
         {
           path: 'received-proposals',
           name: 'receivedProposals',
-          component: () => import('@/views/proposal/ReceivedProposalView.vue')
+          component: () => import('@/views/proposal/ReceivedProposalView.vue'),
+          meta: { requiresAuth: true }
         },
         {
           path: 'report',
           name: 'report',
-          component: () => import('@/views/report/ReportView.vue')
+          component: () => import('@/views/report/ReportView.vue'),
+          meta: { requiresAuth: true }
         }
       ]
-    },
-    
-    {
-      path: '/sign-up/',
-      name: 'signUp',
-      component: () => import('@/views/user/SignUpUserView.vue'),
-    },
-    {
-      path: '/sign-in',
-      name: 'signIn',
-      component: () => import('@/views/user/SignInUserView.vue')
-    }
+    }, 
+    // {
+    //   path: '/sign-up/',
+    //   name: 'signUp',
+    //   component: () => import('@/views/user/SignUpUserView.vue'),
+    // },
+    // {
+    //   path: '/sign-in',
+    //   name: 'signIn',
+    //   component: () => import('@/views/user/SignInUserView.vue')
+    // }
   ]
 })
 
-export default router
+router.beforeEach(async (to, from, next) => {
+  const useAuth = useAuthStore();
+  const useSignUp = useSignUpStore();
+  
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (useAuth.state.isAuthenticatedPassage === null) {
+      if (await useAuth.verifyAuth() === true) {
+        next();
+      }
+      else {
+        console.log(useAuth.state);
+        next(false);
+      }
+    } else if (useAuth.state.isAuthenticatedPassage === false) {
+      useAuth.state.showLogin = true;
+      next(false);
+    } else if (useAuth.state.userExist === false) {
+      useSignUp.state.registerUser = true;
+      next();
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
+
+
+export default router;
