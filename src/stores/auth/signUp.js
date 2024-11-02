@@ -14,7 +14,7 @@ export const useSignUpStore = defineStore('signUp', () => {
     });
 
     const state = {
-        registerUser: true,
+        registerUser: false,
         stepChooseTypeAccount: true,
         stepInputs: false,
     };
