@@ -64,7 +64,79 @@
         }
     }
 }
+@media (max-width: 1920px) {
+    .card {
+        width: 25vw;
+        height: 28vh;
+        padding: 16px;
 
+        .title {
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .term,
+        .description {
+            font-size: 16px;
+        }
+
+        .footer {
+            margin-top: 10px;
+
+            .pending,
+            .right {
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .help img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .card {
+        width: 40vw;
+        height: auto;
+        padding: 12px;
+
+        .title {
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+
+        .term,
+        .description {
+            font-size: 13px;
+        }
+
+        .footer {
+            margin-top: 8px;
+            flex-direction: column;
+
+            .pending,
+            .right {
+                justify-content: flex-start;
+                
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                .help img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}
 // @media (max-width: 1024px) {
 //     .card {
 //         width: 40vw; /* Ajusta para 40% da largura da tela */
