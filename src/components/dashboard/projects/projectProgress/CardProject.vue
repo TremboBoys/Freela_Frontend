@@ -11,7 +11,7 @@
             </div>
             <div class="footer">
                 <div class="pending">
-                    <img src="@/assets/images/dashboard/clock.png" class="clock" alt="">
+                    <img src="@/assets/images/dashboard/clock-icon.png" class="clock" alt="">
                     <span>Status: Pendente</span>
                 </div>
                 <div class="right">
@@ -36,7 +36,7 @@
             </div>
             <div class="footer">
                 <div class="pending">
-                    <img src="@/assets/images/dashboard/clock.png" class="clock" alt="">
+                    <img src="@/assets/images/dashboard/clock-icon.png" class="clock" alt="">
                     <span>Status: Pendente</span>
                 </div>
                 <div class="right">
