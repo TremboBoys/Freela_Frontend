@@ -86,6 +86,44 @@
         }
     }
 }
+// @media (max-width: 1024px) {
+//     .card {
+//         width: 40vw; /* Ajusta para 40% da largura da tela */
+//         height: auto; /* Deixa a altura flexível */
+//         padding: 12px; /* Diminui o padding */
+        
+//         .title {
+//             h2 {
+//                 font-size: 1.4rem; /* Ajuste leve no tamanho da fonte */
+//             }
+//         }
+
+//         .term,
+//         .description {
+//             font-size: 13px; /* Ajuste leve no tamanho da fonte */
+//         }
+
+//         .footer {
+//             margin-top: 8px; /* Reduz o espaço */
+//             flex-direction: column; /* Alinha os elementos em coluna */
+
+//             .pending,
+//             .right {
+//                 justify-content: flex-start;
+                
+//                 img {
+//                     width: 16px;
+//                     height: 16px;
+//                 }
+
+//                 .help img {
+//                     width: 18px;
+//                     height: 18px;
+//                 }
+//             }
+//         }
+//     }
+// }
 @media (max-width: 768px) {
     .card {
         width: 78vw;

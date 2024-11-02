@@ -6,45 +6,55 @@
     background-color: #f5f5f5;
     border-radius: 8px;
     padding: 16px;
+
     .title {
         color: #000;
+
         h2 {
             font-size: 1.5rem;
             color: #0c0c0c;
         }
     }
+
     .term {
         margin-top: 5px;
         display: flex;
         font-weight: 300;
         font-size: 14px;
     }
+
     .description {
         margin-top: 5px;
         font-weight: 300;
         font-size: 14px;
     }
+
     .footer {
         margin-top: 10px;
         display: flex;
         justify-content: space-between;
+
         .pending {
             display: flex;
             justify-content: center;
+
             img {
                 margin: 4px 5px 0 0;
                 width: 18px;
                 height: 18px;
             }
         }
+
         .right {
             display: flex;
             justify-content: center;
+
             img {
                 margin: 5px 5px 0 0;
                 width: 18px;
                 height: 18px;
             }
+
             .help {
                 img {
                     width: 20px;
@@ -54,6 +64,46 @@
         }
     }
 }
+
+// @media (max-width: 1024px) {
+//     .card {
+//         width: 40vw; /* Ajusta para 40% da largura da tela */
+//         height: auto; /* Deixa a altura flexível */
+//         padding: 12px; /* Diminui o padding */
+        
+//         .title {
+//             h2 {
+//                 font-size: 1.4rem; /* Ajuste leve no tamanho da fonte */
+//             }
+//         }
+
+//         .term,
+//         .description {
+//             font-size: 13px; /* Ajuste leve no tamanho da fonte */
+//         }
+
+//         .footer {
+//             margin-top: 8px; /* Reduz o espaço */
+//             flex-direction: column; /* Alinha os elementos em coluna */
+
+//             .pending,
+//             .right {
+//                 justify-content: flex-start;
+                
+//                 img {
+//                     width: 16px;
+//                     height: 16px;
+//                 }
+
+//                 .help img {
+//                     width: 18px;
+//                     height: 18px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
 @media (max-width: 768px) {
     .card {
         width: 78vw;
@@ -98,6 +148,7 @@
         }
     }
 }
+
 @media (max-width: 425px) {
     .card {
         width: 78vw;
@@ -142,6 +193,7 @@
         }
     }
 }
+
 @media (max-width: 320px) {
     .card {
         width: 78vw;

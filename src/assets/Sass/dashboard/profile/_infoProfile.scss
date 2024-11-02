@@ -39,6 +39,32 @@
         }
     }
 }
+// @media (max-width: 1024px) {
+//     .container {
+//         display: flex;
+//         flex-direction: column;
+//         padding: 0px 40px 0px 40px;
+//         .info-box {
+//             width: 30vw;
+//             .info-item {
+//                 display: flex;
+//                 margin-right: -70px;
+//                 h1 {
+//                     font-size: 16px;
+//                 }
+//                 h2 {
+//                     font-size: 16px;
+//                 }
+//                 p {
+//                     font-size: 12px;
+//                 }
+//                 .stars {
+//                     font-size: 1.5rem;
+//                 }
+//             }
+//         }
+//     }
+// }
 @media (max-width: 768px) {
     .container {
         padding: 0px 40px 0px 40px;
