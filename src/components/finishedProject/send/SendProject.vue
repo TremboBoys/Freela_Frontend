@@ -12,5 +12,5 @@
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/proposal/send/_sendProposal.scss';
+@import '@/assets/Sass/payment/send/_sendPayment.scss';
 </style>
