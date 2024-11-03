@@ -45,7 +45,7 @@
                     <img src="@/assets/images/Home/pencil-orange.png" class="img-card-orange" alt="">
                 </div>
                 <div class="title">
-                    <h1>Programação</h1>
+                    <h1>Design</h1>
                 </div>
             </div>
             <div class="topics">
@@ -54,7 +54,7 @@
                         <img src="@/assets/images/Home/pen-orange.png" class="img-card-orange" alt="">
                     </div>
                     <div class="text-topic">
-                        <p>Programação</p>
+                        <p>Design Web</p>
                     </div>
                 </div>
                 <div class="topic">
@@ -62,7 +62,7 @@
                         <img src="@/assets/images/Home/img-orange.png" class="img-card-orange" alt="">
                     </div>
                     <div class="text-topic">
-                        <p>Wordpress</p>
+                        <p>Edição de imagens</p>
                     </div>
                 </div>
                 <div class="topic">
@@ -70,7 +70,7 @@
                         <img src="@/assets/images/Home/phone-orange.png" class="img-card-orange" alt="">
                     </div>
                     <div class="text-topic">
-                        <p>Aplicação Android e IOS</p>
+                        <p>Design Android e IOS</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                     <img src="@/assets/images/Home/marketing.png" class="img-card-green" alt="">
                 </div>
                 <div class="title">
-                    <h1>Programação</h1>
+                    <h1>Marketing</h1>
                 </div>
             </div>
             <div class="topics">
@@ -90,7 +90,7 @@
                         <img src="@/assets/images/Home/abas-green.png" class="img-card-green" alt="">
                     </div>
                     <div class="text-topic">
-                        <p>Programação</p>
+                        <p>E-commerce</p>
                     </div>
                 </div>
                 <div class="topic">
@@ -106,7 +106,7 @@
                         <img src="@/assets/images/Home/graph-green.png" class="img-card-green" alt="">
                     </div>
                     <div class="text-topic">
-                        <p>Aplicação Android e IOS</p>
+                        <p>Publicidade</p>
                     </div>
                 </div>
             </div>
