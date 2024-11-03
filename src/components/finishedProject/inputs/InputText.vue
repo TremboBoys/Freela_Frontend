@@ -8,5 +8,5 @@
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/proposal/inputs/_inputText.scss';
+@import '@/assets/Sass/payment/inputs/_inputText.scss';
 </style>
