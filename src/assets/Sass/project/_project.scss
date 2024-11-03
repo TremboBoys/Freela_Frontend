@@ -285,3 +285,133 @@
 
   }
 }
+@media (max-width: 1024px) {
+  .select-header p {
+    font-size: 28px;
+  }
+  .select-header2 p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .select-header p {
+    font-size: 24px;
+  }
+  .select-header2 p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .select {
+    padding: 8px;
+  }
+  .select-header p {
+    font-size: 20px;
+  }
+  .select-header2 p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .select {
+    width: 80vw;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .select-footer-proposal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 40px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .main-project {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: auto;
+    width: 100vw;
+    .search {
+      width: 90vw;
+      height: auto;
+      margin-left: -.5rem;
+      .inputSearch {
+        .inputBox {
+          .form-control {
+            width: 80vw;
+          }
+        }
+      }
+      .categories {
+        height: auto;
+      }
+    }
+    .main-select {
+      margin-top: 1rem;
+      width: 90vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+      margin-left: -70px;
+      .selectProject {
+        width: 90vw;
+        height: auto;
+        .select-header-container {
+          .select-header {
+            p {
+              font-size: 24px;
+            }
+          }
+          .select-header2 {
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+        .select-bottom-container {
+          gap: 8px;
+          .select-bottom {
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 16px;
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+        .select-footer-container {
+          .select-footer-descrition {
+            .p-container {
+              .select-footer-text2 {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .select-footer-proposal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 40px;
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
