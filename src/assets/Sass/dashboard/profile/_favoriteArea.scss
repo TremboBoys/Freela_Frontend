@@ -18,3 +18,91 @@
         }
     }
 }
+@media (max-width: 1920px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0 80px 0 80px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 16px;
+        .text {
+            font-size: 18px;
+            font-weight: 500;
+            .link {
+                color: #1B75BF;
+                text-decoration: underline;
+                transition: color 0.3s;
+                &:hover {
+                    color: #18619c;
+                }
+            }
+        }
+    }
+}
+// @media (max-width: 1024px) {
+//     .container {
+//         display: flex;
+//         flex-direction: column;
+//         width: 100%;
+//         padding: 0 40px 0 40px;
+        
+//     }
+// }
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 40px 0 40px;
+        align-items: center;
+        .text {
+            font-size: 16px;
+        }
+    }
+}
+@media (max-width: 425px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 85vw;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        .text {
+            width: 85vw;
+            padding: 6px;
+            font-size: 18px;
+            font-weight: 400;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            .aboutMe {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 85vw;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        .text {
+            width: 85vw;
+            padding: 6px;
+            font-size: 18px;
+            font-weight: 400;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            .aboutMe {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+}

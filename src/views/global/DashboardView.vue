@@ -27,13 +27,5 @@ import CompletedProject from '@/components/dashboard/projects/completedProject/C
 </template>
 
 <style scoped>
-.container {
-    display: flex;
-    max-width: 100vw;
-}
-.projects {
-    width: 60vw;
-    padding: 0 40px 0 0;
-    margin-top: 48px;
-}
+@import '@/assets/Sass/dashboard/_dashboardPage.scss';
 </style>

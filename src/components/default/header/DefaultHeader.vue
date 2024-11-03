@@ -6,4 +6,5 @@ import headerContainer from'../../../components/default/header/headerContainer.v
         <headerContainer/>
     </header>
 </template>
-<style scoped></style>
+<style scoped>
+</style>
