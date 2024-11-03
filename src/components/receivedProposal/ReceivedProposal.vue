@@ -49,9 +49,7 @@
             </div>
         </div>
         <router-link to="/proposal" class="select-footer-proposal">
-            <button class="select-footer-proposal">
-                <p>Aceitar Proposta</p>
-            </button>
+            <p>Aceitar Proposta</p>
         </router-link>
     </div>
 </template>
