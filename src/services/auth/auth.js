@@ -28,7 +28,6 @@ async function verifyUserExistInBackend() {
             });
             return true;
         } catch(error) {
-            console.error('Erro ao verificar existência do usuário: ', error);
             return (error.response.status === 401) ? false : {message: 'Erro ao tentar verificar existência do usuário!'}
         }
     } catch(error) {

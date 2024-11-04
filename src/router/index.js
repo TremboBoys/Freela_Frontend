@@ -212,15 +212,14 @@ router.beforeEach(async (to, from, next) => {
         next();
       }
       else {
-        console.log(useAuth.state);
-        next(false);
+        next('/');
       }
     } else if (useAuth.state.isAuthenticatedPassage === false) {
       useAuth.state.showLogin = true;
-      next(false);
+      next('/');
     } else if (useAuth.state.userExist === false) {
       useSignUp.state.registerUser = true;
-      next();
+      next('/');
     } else {
       next();
     }

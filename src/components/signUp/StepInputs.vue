@@ -6,7 +6,6 @@ const useSignUp = useSignUpStore();
 const submitRef = ref(null);
 
 watch(() => [useSignUp.user.name, useSignUp.user.username], () => {
-    console.log('Chamando função')
     if (useSignUp.user.name !== '' && useSignUp.user.username !== '') {
         submitRef.value.classList.add("activeSubmit");
     } else {

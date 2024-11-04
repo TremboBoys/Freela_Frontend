@@ -1,11 +1,13 @@
 import { defineStore } from 'pinia';
 import { ref, reactive } from 'vue';
+import { useRouter } from 'vue-router';
 import { useWarningStore } from '@/stores/warning/warning';
 import { validateName } from '@/utils/validations/validationsSignUp';
 import SignUpService from '@/services/auth/signUp';
 
 export const useSignUpStore = defineStore('signUp', () => {
     const useWarning = useWarningStore();
+    const router = useRouter();
     const user = reactive({
         name: '',
         username: '',
@@ -13,11 +15,11 @@ export const useSignUpStore = defineStore('signUp', () => {
         type_acount: 0
     });
 
-    const state = {
+    const state = reactive({
         registerUser: false,
         stepChooseTypeAccount: true,
         stepInputs: false,
-    };
+    });
 
     // async function validationEmail(email) {
     //     console.log(user);
@@ -61,6 +63,7 @@ export const useSignUpStore = defineStore('signUp', () => {
             if (response === true) {
                 state.registerUser = false;
                 state.stepInputs = false;
+                router.push('/dashboard');
             } else {
                 useWarning.state.isActive = true;
                 useWarning.state.failure = true;
