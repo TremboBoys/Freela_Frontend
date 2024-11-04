@@ -5,6 +5,11 @@
     margin: 32px 80px;
     display: flex;
 }
+@media (max-width: 1024px) {
+    .configProfile-container{
+        border: 1px solid black;
+    }
+}
 @media (max-width: 768px) {
     .configProfile-container{
         border: none;

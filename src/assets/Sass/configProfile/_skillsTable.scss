@@ -104,10 +104,41 @@
         }
     }
 }
+@media (max-width: 1024px) {
+    .table-container {
+        .dropdown {
+            .dropdown-content {
+                .button {
+                    width: 12vw;
+                    height: 40px;
+                    margin-right: 10px;
+                    border-radius: 32px;
+                    font-size: 14px;
+                    background-color: #1B75BF;
+                    border: none;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: 0.3s;
 
-/* Responsividade */
+                    &:hover {
+                        background-color: #0b5a9b;
+                    }
+                }
+                .input {
+                    width: 30vw;
+                    height: 40px;
+                    padding: 10px;
+                    border: 1px solid #313131;
+                    border-radius: 8px;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 14px;
+                    color: #313131;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 768px) {
-
     .border-table table,
     .border-table thead,
     .border-table tbody,
