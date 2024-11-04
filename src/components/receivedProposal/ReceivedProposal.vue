@@ -47,12 +47,10 @@
                     <img src="@/assets/images/brasil-icon.png" alt="">
                 </div>
             </div>
-            <router-link to="/proposal" class="select-footer-proposal">
-                <button class="select-footer-proposal">
-                    <p>Aceitar Proposta</p>
-                </button>
-            </router-link>
         </div>
+        <router-link to="/proposal" class="select-footer-proposal">
+            <p>Aceitar Proposta</p>
+        </router-link>
     </div>
 </template>
 <style scoped>

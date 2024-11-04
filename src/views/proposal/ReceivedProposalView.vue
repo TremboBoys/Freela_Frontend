@@ -1,7 +1,6 @@
 <script setup>
 import ReceivedProposal from '../../components/receivedProposal/ReceivedProposal.vue'
 import ReceivedSearch from '../../components/receivedProposal/ReceivedSearch.vue'
-
 </script>
 
 <template>
@@ -24,9 +23,6 @@ import ReceivedSearch from '../../components/receivedProposal/ReceivedSearch.vue
             </div>
         </div>
     </div>
-
-        
-        
 </template>
 
 <style scoped>
