@@ -39,6 +39,46 @@
         }
     }
 }
+@media (max-width: 1440px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        padding: 8px;
+        
+        .cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 8px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            padding: 8px;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        padding: 8px;
+        
+        .cards {
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 8px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            padding: 8px;
+        }
+    }
+}
 // @media (max-width: 1024px) {
 //     .container {
 //         display: flex;
