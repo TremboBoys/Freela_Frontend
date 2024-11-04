@@ -29,5 +29,4 @@ const tabs = [
 
 <style scoped>
 @import "../../assets/Sass/configProfile/_sideBar.scss";
-
 </style>
