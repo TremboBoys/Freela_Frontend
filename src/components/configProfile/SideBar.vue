@@ -29,7 +29,4 @@ const tabs = [
 
 <style scoped>
 @import "../../assets/Sass/configProfile/_sideBar.scss";
-.sideBar {
-  display: none;
-}
 </style>
