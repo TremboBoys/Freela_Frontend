@@ -11,13 +11,17 @@ function toggleMenu() {
   isActive.value = !isActive.value;
 }
 
+function closeMenu() {
+  isActive.value = !isActive.value;
+}
+
 </script>
 
 <template>
     <div class="header-rightSide">
         <div class="icons">
             <HeaderIcons/>
-            <ListSmallScreens :isActive="isActive"/>
+            <ListSmallScreens @click="closeMenu" :isActive="isActive"/>
             <HamburgerButton @toggle="toggleMenu" />
         </div>
     </div>

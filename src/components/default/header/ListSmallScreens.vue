@@ -15,13 +15,16 @@ const myProjects = [
 const myFinances = [
   { name: 'Realizar pagamento', path: '/make-payment' },
 ];
-
-import { defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps({
   isActive: Boolean,
 });
+const emit = defineEmits(['close']);
 
+function closeMenu() {
+  emit('close');
+}
 </script>
 
 <template>
@@ -34,15 +37,15 @@ const props = defineProps({
         <div>
           <ul>
             <h1>Encontre Trabalho</h1>
-            <li><router-link v-for="(link, index) in jobLinks" :key="index" :to="link.path" class="routerlink">{{ link.name }}</router-link></li>
+            <li><router-link @click="closeMenu" v-for="(link, index) in jobLinks" :key="index" :to="link.path" class="routerlink">{{ link.name }}</router-link></li>
         </ul>
         <ul>
             <h1>Projetos</h1>
-            <li><router-link v-for="(link, index) in myProjects" :key="index" :to="link.path" class="routerlink">{{ link.name }}</router-link></li>
+            <li><router-link @click="closeMenu" v-for="(link, index) in myProjects" :key="index" :to="link.path" class="routerlink">{{ link.name }}</router-link></li>
         </ul>
         <ul>
             <h1>Minhas Finanças</h1>
-            <li><router-link v-for="(link, index) in myFinances" :key="index" :to="link.path" class="routerlink">{{ link.name }}</router-link></li>
+            <li><router-link @click="closeMenu" v-for="(link, index) in myFinances" :key="index" :to="link.path" class="routerlink">{{ link.name }}</router-link></li>
         </ul>
         </div>
     </div>
