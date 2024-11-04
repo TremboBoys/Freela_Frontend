@@ -133,6 +133,73 @@ main {
         }
     }
 }
+@media (max-width: 1700px) {
+    main {
+        .container {
+            display: flex;
+            height: 80vh;
+            .left {
+                margin-top: 64px;
+                width: 50%;
+                display: flex;
+                .img-work {
+                    width: 80%;
+                    margin: 0 auto;
+                    height: 80%;
+                }
+            }
+            .right {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .content {
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    h1 {
+                        font-size: 3rem;
+                        font-weight: 700;
+                        color: #000000;
+                        margin-bottom: 1rem;
+                        justify-content: center;
+                        width: 80%;
+                        text-align: center;
+                    }
+                    p {
+                        font-size: 2rem;
+                        color: #000000;
+                        margin-bottom: 1rem;
+                    }
+                    .router {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-decoration: none;
+                        .button {
+                            width: 250px;
+                            height: 60px;
+                            background-color: #0B2F34;
+                            color: #ffffff;
+                            font-size: 1.8rem;
+                            font-weight: 700;
+                            border: none;
+                            border-radius: 32px;
+                            margin-right: 1rem;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            &:hover {
+                                background-color: #041e22;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 1440px) {
     main {
         .container {
