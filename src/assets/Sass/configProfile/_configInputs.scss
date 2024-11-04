@@ -35,6 +35,11 @@ font-weight: 700;
         background-color: #d30303;
     }
 }
+@media (max-width: 1440px) {
+    .inputs-container{
+        gap: 150px;
+    }
+}
 @media (max-width: 1024px) {
     .inputs-container{
         flex-direction: row;
