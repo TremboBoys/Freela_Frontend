@@ -1,0 +1,43 @@
+.hamburger{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid black;
+    cursor: pointer;
+    z-index: 1;
+
+    &:before, &:after{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 5px 0;
+    }
+
+
+}
+
+@media (max-width: 875px){
+    .hamburger{
+        display: block;
+    }
+    .linkList.active .hamburger{
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+    .linkList.active .hamburger:before{
+        transform: rotate(45deg);
+        margin-top: 0;
+    }
+    .linkList.active .hamburger:after{
+        transform: rotate(-45deg);
+        margin-top: 0;
+    }
+    
+
+}
+
+
