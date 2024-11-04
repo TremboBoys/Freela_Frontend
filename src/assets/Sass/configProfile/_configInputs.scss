@@ -35,6 +35,15 @@ font-weight: 700;
         background-color: #d30303;
     }
 }
+@media (max-width: 425px) {
+    .inputs-container{
+        flex-direction: column;
+        gap: 20px;
+        .left, .right{
+            gap: 20px;
+        }
+    }
+}
 @media (max-width: 320px) {
     .inputs-container{
         flex-direction: column;
