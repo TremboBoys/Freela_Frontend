@@ -15,5 +15,5 @@ const payments = ['Pix', 'Cartão de crédito'];
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/proposal/inputs/_inputSelect.scss';
+@import '@/assets/Sass/payment/inputs/_inputSelect.scss';
 </style>
