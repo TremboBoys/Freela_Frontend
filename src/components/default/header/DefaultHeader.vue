@@ -7,4 +7,7 @@ import headerContainer from'../../../components/default/header/headerContainer.v
     </header>
 </template>
 <style scoped>
+header {
+    display: none;
+}
 </style>
