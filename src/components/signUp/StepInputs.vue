@@ -5,8 +5,8 @@ import { useSignUpStore } from '@/stores/auth/signUp';
 const useSignUp = useSignUpStore();
 const submitRef = ref(null);
 
-watch(() => [useSignUp.user.name, useSignUp.user.username], () => {
-    if (useSignUp.user.name !== '' && useSignUp.user.username !== '') {
+watch(() => [useSignUp.user.name, useSignUp.user.username, useSignUp.user.password], () => {
+    if (useSignUp.user.name !== '' && useSignUp.user.username !== '' && useSignUp.user.password) {
         submitRef.value.classList.add("activeSubmit");
     } else {
         if(submitRef.value.classList.contains("activeSubmit")) {
@@ -24,13 +24,19 @@ watch(() => [useSignUp.user.name, useSignUp.user.username], () => {
     </div>
 
     <form @submit.prevent="useSignUp.createUser(useSignUp.user)">
-        <div class="form-group inputBox">
-            <label for="nome">Nome</label>
-            <input type="nome" class="form-control" id="nome" v-model="useSignUp.user.name" aria-describedby="nomeHelp" placeholder="Como você quer ser chamado?">
-        </div>
-        <div class="form-group inputBox">
-            <label for="nome">Usuário</label>
-            <input type="nome" class="form-control" v-model="useSignUp.user.username" id="nome" aria-describedby="nomeHelp" placeholder="@user1234">
+        <div class="container-inputs">
+            <div class="form-group inputBox">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" v-model="useSignUp.user.name" id="nome" aria-describedby="nomeHelp" placeholder="Como você quer ser chamado?">
+            </div>
+            <div class="form-group inputBox">
+                <label for="nome">Usuário</label>
+                <input type="text" class="form-control" v-model="useSignUp.user.username" id="username" aria-describedby="nomeHelp" placeholder="@user1234">
+            </div>
+            <div class="form-group inputBox">
+                <label for="nome">Senha</label>
+                <input type="password" class="form-control" v-model="useSignUp.user.password" id="password" aria-describedby="nomeHelp" placeholder="user1234!">
+            </div>
         </div>
         <div class="container-submit">
             <button ref="submitRef" class="submit" type="submit">Finalizar Cadastro</button>

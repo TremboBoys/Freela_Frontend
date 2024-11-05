@@ -11,5 +11,17 @@ export const useWarningStore = defineStore('warning', () => {
         message: ''
     });
 
-    return { state };
+    function activeWarning(typeWarning, msg) {
+        state.isActive = true;
+        state[typeWarning] = true;
+        state.message = msg;
+
+        setTimeout(() => {
+            state.isActive = false;
+            state[typeWarning] = false;
+            state.message = '';
+        }, 10000);
+    }
+
+    return { state, activeWarning };
 });

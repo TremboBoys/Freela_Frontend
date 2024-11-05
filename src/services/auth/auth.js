@@ -22,13 +22,14 @@ async function verifyUserExistInBackend() {
         const useSignUp = useSignUpStore();
 
         useSignUp.user.email = email;
+        console.log(email);
         try {
             await apiAuth.post('/login/', {
                 email
             });
             return true;
         } catch(error) {
-            return (error.response.status === 401) ? false : {message: 'Erro ao tentar verificar existência do usuário!'}
+            return (error.response.status === 410) ? false : {message: 'Erro ao tentar verificar existência do usuário!'}
         }
     } catch(error) {
         console.error('Erro ao tentar obter email do usuário: ', error);

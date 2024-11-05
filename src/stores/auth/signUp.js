@@ -1,18 +1,21 @@
 import { defineStore } from 'pinia';
 import { ref, reactive } from 'vue';
 import { useRouter } from 'vue-router';
+import { useAuthStore } from './auth';
 import { useWarningStore } from '@/stores/warning/warning';
-import { validateName } from '@/utils/validations/validationsSignUp';
+import { validateName, validatePassword } from '@/utils/validations/validationsSignUp';
 import SignUpService from '@/services/auth/signUp';
 
 export const useSignUpStore = defineStore('signUp', () => {
     const useWarning = useWarningStore();
+    const useAuth = useAuthStore();
     const router = useRouter();
     const user = reactive({
         name: '',
         username: '',
         email: '',
-        type_acount: 0
+        password: '',
+        type_acount: ''
     });
 
     const state = reactive({
@@ -57,23 +60,16 @@ export const useSignUpStore = defineStore('signUp', () => {
     // };
 
     async function createUser(userInfo = {}) {
-        if (validateName) {
+        if (validateName && validatePassword) {
             const response = await SignUpService.createUser(userInfo);
     
             if (response === true) {
                 state.registerUser = false;
                 state.stepInputs = false;
-                router.push('/dashboard');
+                useAuth.state.userExist = true;
+                router.push({ path: '/dashboard' });
             } else {
-                useWarning.state.isActive = true;
-                useWarning.state.failure = true;
-                useWarning.state.message = 'Não foi possível registrar sua conta, reinicie a página e tente novamente!';
-    
-                setTimeout(() => {
-                    useWarning.state.isActive = false;
-                    useWarning.state.failure = false;
-                    useWarning.state.message = '';
-                }, 10000);
+                useWarning.activeWarning('failure', 'Não foi possível registrar sua conta, reinicie a página e tente novamente!');
             };
         }
     };

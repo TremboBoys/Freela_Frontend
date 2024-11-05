@@ -3,4 +3,9 @@ const validateName = (name) => {
     return nameRegex.test(name);
 };
 
-export { validateName };
+const validatePassword = (password) => {
+    const passwordRegex = /^\d*[a-zA-Z]+\d+$/;
+    return passwordRegex.test(password);
+};
+
+export { validateName, validatePassword };

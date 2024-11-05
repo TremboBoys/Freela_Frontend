@@ -38,16 +38,8 @@ export const useAuthStore = defineStore('auth', () => {
                 useSignUp.state.registerUser = true;
                 return false;
             } else {
-                useWarning.state.isActive = true;
-                useWarning.state.failure = true;
-                useWarning.state.message = 'Ocorreu um erro ao verificar se seu usuário existe, verifique sua conexão e reinicie a página!';
-
-                setTimeout(() => {
-                    useWarning.state.isActive = false;
-                    useWarning.state.failure = false;
-                    useWarning.state.message = '';
-                }, 10000);
-
+                useWarning.activeWarning('failure', 'Ocorreu um erro ao verificar se seu usuário existe, verifique sua conexão e reinicie a página!');
+                
                 return false;
             }
         } else {

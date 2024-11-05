@@ -24,14 +24,14 @@ onMounted(async() => {
 <template>
     <div>
         <HeaderHome/>
-        <MainHome :style="(useAuth.state.showLogin === true) ? useAuth.state.popUpEffect : ''" />
+        <MainHome :style="(useAuth.state.showLogin === true || useSignUp.state.registerUser === true) ? useAuth.state.popUpEffect : ''" />
         <SignInPassage v-if="useAuth.state.showLogin === true" />
         <PopUpSignUp v-if="useSignUp.state.registerUser === true" />
         <div class="container-warning-layout" v-if="useWarning.state.isActive">
             <QuickWarnings />
         </div>
-        <FreelaClient :style="(useAuth.state.showLogin === true) ? useAuth.state.popUpEffect : ''" />
-        <TalentsSkills :style="(useAuth.state.showLogin === true) ? useAuth.state.popUpEffect : ''" />
+        <FreelaClient :style="(useAuth.state.showLogin === true || useSignUp.state.registerUser === true) ? useAuth.state.popUpEffect : ''" />
+        <TalentsSkills :style="(useAuth.state.showLogin === true || useSignUp.state.registerUser === true) ? useAuth.state.popUpEffect : ''" />
         <DefaultFooter/>
     </div>
 </template>

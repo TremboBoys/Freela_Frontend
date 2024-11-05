@@ -40,15 +40,15 @@ function chooseType(accountType) {
 </script>
 
 <template>
-    <h1 class="title" @click="chooseType('none'); useSignUp.user.type_acount = 0">Para finalizar seu cadastro nos conte mais sobre você</h1>
-    <h2 class="question" @click="chooseType('none'); useSignUp.user.type_acount = 0">Como você quer utilizar o Tasker?</h2>
+    <h1 class="title" @click="chooseType('none'); useSignUp.user.type_acount = ''">Para finalizar seu cadastro nos conte mais sobre você</h1>
+    <h2 class="question" @click="chooseType('none'); useSignUp.user.type_acount = ''">Como você quer utilizar o Tasker?</h2>
     <div class="container-response">
-        <div class="container-freelancer" ref="freelancer" @click="chooseType('flc'); useSignUp.user.type_acount = 3">
+        <div class="container-freelancer" ref="freelancer" @click="chooseType('flc'); useSignUp.user.type_acount = 'freelancer'">
             <img class="freelancer-img" src="@/assets/images/signUp/office.png" alt="">
             <p class="intention">Gostaria de trabalhar</p>
             <p>Quero mostrar meus talentos</p>
         </div>
-        <div class="container-client" ref="client" @click="chooseType('clt'); useSignUp.user.type_acount = 2">
+        <div class="container-client" ref="client" @click="chooseType('clt'); useSignUp.user.type_acount = 'contractor'">
             <img class="client-img" src="@/assets/images/signUp/hired.png" alt="">
             <p class="intention">Gostaria de contratar</p>
             <p>Estou a procura de talentos</p>
