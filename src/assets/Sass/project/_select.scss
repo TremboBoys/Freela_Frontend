@@ -168,48 +168,96 @@
 @media (max-width: 320px) {
   .selectProject {
     margin-top: 20px;
-    width: 250px;
+    width: 180px;
     display: flex;
     flex-direction: column;
     margin-left: 0px;
+    padding: 5px ;
   
     .select {
     align-items: center;
-    text-align: center;
       
       .select-header-container {
         width: 250px;
+        display: flex;
+        flex-direction: column;
   
         .select-header {
-          display: flex;
-          justify-content: space-between;
   
           p {
-            width: 20px;
-            font-size: 14px;
+            width: 100px;
+            font-size: 10px;
           }
         }
 
         .select-header2 {
           width: 30px;
           font-size: 10px;
-          padding-left: 5px;
+          padding-left: 1px;
         }
       }
 
       .select-main-container {
   
+        display: flex;
+        flex-direction: column;
+
+
         .select-subTitle {
-          width: 190px;
-          padding: 10px 10px 10px 0;
           display: flex;
-          gap: 20px;
-          font-size: 10px;
+          flex-direction: column;
+          width: 190px;
+          padding: 10px 10px 10px 5px;
+          display: flex;
+          gap: 8px;
+          font-size: 8px;
         }
 
         .select-text {
-          width: 190px;;
-          font-size: 10px;
+          width: 150px;
+          font-size: 6px;
+        }
+
+        .select-bottom-container {
+          padding: 4px;
+          display: flex;
+          gap: 8px;
+
+          .select-bottom {
+            width: 50px;
+            height: 20px;
+
+            p {
+              font-size: 8px;
+              padding: 4px;
+            }
+          }
+        }
+      }
+
+      .select-footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .p-container {
+          font-size: 12px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          gap: 5px;
+        }
+
+        .select-footer-proposal {
+          width: 140px;
+          height: 40px;
+          align-items: center;
+          margin-left: 0px;
+          
+          p {
+            display: flex;
+            font-size: 12px;
+          }
         }
       }
     }
