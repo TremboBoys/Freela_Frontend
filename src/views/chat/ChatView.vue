@@ -1,6 +1,14 @@
 <script setup>
-import AsideContacts from '@/components/chat/AsideContacts.vue'
-import ChatMessage from '@/components/chat/ChatMessage.vue'
+import AsideContacts from '@/components/chat/AsideContacts.vue';
+import ChatMessage from '@/components/chat/ChatMessage.vue';
+import { useChatStore } from '@/stores/chat/chat';
+import { onMounted } from 'vue';
+
+const useChat = useChatStore();
+
+onMounted(async() => {
+  useChat.getAllMessages();
+})
 </script>
 
 <template>
