@@ -26,3 +26,11 @@
     }
   }
 }
+@media (max-width: 320px) {
+  .container {
+    .btn {
+      width: 80%;
+      font-size: 1.3rem;
+    }
+  }
+}

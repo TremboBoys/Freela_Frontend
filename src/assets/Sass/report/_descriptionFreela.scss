@@ -17,3 +17,10 @@
       height: 35vh;
     }
   }
+  @media (max-width: 320px) {
+    .text-area {
+      label {
+        font-size: 1.5rem;
+      }
+    }
+  }
