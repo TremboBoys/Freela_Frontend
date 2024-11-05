@@ -23,6 +23,13 @@
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 }
+@media (max-width: 1440px) {
+    .container {
+        .title {
+            font-size: 1.2rem;
+        }
+    }
+}
 @media (max-width: 1024px) {
     .container {
         .title {
