@@ -868,3 +868,12 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  .main-project {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+}

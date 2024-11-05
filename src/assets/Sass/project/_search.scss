@@ -155,5 +155,51 @@
           }
         }
       }
+
+}
+
+@media (max-width: 425px) {
+  .search{
+    display: flex;
+    width: 150px;
+    height: 508px;
+    flex-direction: column;
+
+    
+    .inputSearch {
+      width: 100px;
+    }
+    #search  {
+      width: 120px;
+    }
+    .inputBox {
+
+      width: 100px;
       
+      .form-control {
+        width: 50px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 10px;
+      }
+    }
+  
+    .categories {
+      width: 130px;
+      height: 300px;
+      margin-left: 5px;
+      .category {
+        font-size: 10px;
+      }
+    }
+
+    .bottom-search {
+
+      p {
+        width: 100px;
+        font-size: 10px;
+      }
+    }
+  }
+  
 }
