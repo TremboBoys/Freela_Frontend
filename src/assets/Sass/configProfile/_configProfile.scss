@@ -18,10 +18,16 @@
 @media (max-width: 425px) {
     .configProfile-container{
         border: none;
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
     }
 }
 @media (max-width: 320px) {
     .configProfile-container{
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
         border: none;
     }
 }
