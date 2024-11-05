@@ -40,6 +40,50 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .border-table {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        display: flex;
+        flex-direction: column;
+
+        thead {
+            display: none;
+        }
+
+        tbody {
+            display: flex;
+            flex-direction: column;
+            width: 60vw;
+
+            tr {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                border: 1px solid #000;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                gap: 5px;
+
+                td {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 0.8rem;
+                }
+
+                .tdTrash {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 425px) {
     .border-table {
         display: flex;
