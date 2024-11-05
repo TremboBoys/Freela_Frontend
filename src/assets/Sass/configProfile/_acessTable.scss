@@ -1,69 +1,174 @@
-.table-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    
-h1{
-    font-weight: 500;
-}
+.table-container {
+    padding: 10px;
 
-.border-table{
-    border: 1px solid black;
-    border-radius: 8px;
-
-}
-table{
-    width: 100%;
-    border-radius: 8px;
-    border-collapse: collapse;
-
-
-    th{
-        padding: 1vw 2vw;
-        font-weight: 400;
-        border-bottom: 1px solid black;
-        border-collapse: collapse;
-
+    h1 {
+        font-size: 1.2rem;
     }
 
-    
-    td{
-        padding: 2vw 5vw;
-        font-weight: 300;
-        .teste{
+    .border-table {
+        border-width: 0.5px;
+    }
+
+    table {
+        width: 100%;
+
+        th, td {
+            padding: 8px;
+            font-size: 0.9rem;
+        }
+
+        .teste {
+            gap: 5px;
+        }
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .tdTrash {
+            padding: 0 15px;
+
+            .tete {
+                gap: 5px;
+            }
+
+            img {
+                width: 16px;
+                height: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .border-table {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        display: flex;
+        flex-direction: column;
+
+        thead {
+            display: none;
+        }
+
+        tbody {
             display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-        img{
-            width: 19px;
-            height: 19px;
+            flex-direction: column;
+            width: 60vw;
+
+            tr {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                border: 1px solid #000;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                gap: 5px;
+
+                td {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 0.8rem;
+                }
+
+                .tdTrash {
+                    align-self: flex-end;
+                }
+            }
         }
     }
-
-    .tdTrash{
-        padding: 0 25px;
-        .tete{
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            gap: 7px;
-        }
-        img{
-            width: 19px;
-            height: 24px;
-            cursor: pointer;
-        }
-    }
-
-    tr td:first-child{
-        text-align: left;
-    }
-
 }
+@media (max-width: 425px) {
+    .border-table {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        display: flex;
+        flex-direction: column;
+
+        thead {
+            display: none;
+        }
+
+        tbody {
+            display: flex;
+            flex-direction: column;
+            width: 60vw;
+
+            tr {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                border: 1px solid #000;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                gap: 5px;
+
+                td {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 0.8rem;
+                }
+
+                .tdTrash {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .border-table {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        display: flex;
+        flex-direction: column;
+
+        thead {
+            display: none;
+        }
+
+        tbody {
+            display: flex;
+            flex-direction: column;
+            width: 60vw;
+
+            tr {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                border: 1px solid #000;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                gap: 5px;
+
+                td {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 0.8rem;
+                }
+
+                .tdTrash {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
 }
