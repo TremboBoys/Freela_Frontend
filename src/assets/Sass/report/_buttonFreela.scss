@@ -26,6 +26,14 @@
     }
   }
 }
+@media (max-width: 425px) {
+  .container {
+    .btn {
+      width: 70%;
+      font-size: 1.2rem;
+    }
+  }
+}
 @media (max-width: 320px) {
   .container {
     .btn {
