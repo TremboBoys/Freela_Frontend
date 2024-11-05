@@ -18,3 +18,18 @@
         }
     }
 }
+@media (max-width: 320px) {
+    .container {
+        padding: 16px 20px;
+        .row {
+            .col-12 {
+                .title {
+                    font-size: 1.5rem;
+                }
+                .description {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
