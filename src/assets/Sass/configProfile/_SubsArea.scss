@@ -5,13 +5,22 @@
     width: 100%;
     padding: 16px 80px 70px 80px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1920px) {
     .subscription-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 85vw;
-        padding: 16px 80px 70px 80px;
+        padding: 16px 0px 70px 80px;
+    }
+}
+@media (max-width: 1440px) {
+    .subscription-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 85vw;
+        padding: 16px 50px 70px 80px;
     }
 }
 @media (max-width: 1024px) {
