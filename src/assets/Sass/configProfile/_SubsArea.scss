@@ -5,6 +5,15 @@
     width: 100%;
     padding: 16px 80px 70px 80px;
 }
+@media (max-width: 768px) {
+    .subscription-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        padding: 16px 80px 70px 80px;
+    }
+}
 @media (max-width: 425px) {
     .subscription-container {
         display: flex;
