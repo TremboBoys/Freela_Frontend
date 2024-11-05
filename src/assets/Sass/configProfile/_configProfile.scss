@@ -5,3 +5,35 @@
     margin: 32px 80px;
     display: flex;
 }
+@media (max-width: 1024px) {
+    .configProfile-container{
+        border: 1px solid black;
+    }
+}
+@media (max-width: 768px) {
+    .configProfile-container{
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        margin: 32px 0;
+    }
+}
+@media (max-width: 425px) {
+    .configProfile-container{
+        border: none;
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+    }
+}
+@media (max-width: 320px) {
+    .configProfile-container{
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        border: none;
+    }
+}
