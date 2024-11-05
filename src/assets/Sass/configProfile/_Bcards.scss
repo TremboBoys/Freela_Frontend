@@ -12,6 +12,21 @@
         font-weight: 500;
     }
 }
+@media (max-width: 425px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        font-size: 18px;
+        border: 1px solid #1B75BF;
+        border-radius: 10px;
+        padding: 50px 10px;
+        li {
+            margin: 0 0 23px 0;
+            font-weight: 500;
+        }
+    }
+}
 @media (max-width: 320px) {
     .card {
         display: flex;
