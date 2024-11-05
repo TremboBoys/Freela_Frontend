@@ -14,6 +14,15 @@
         padding: 16px 80px 70px 80px;
     }
 }
+@media (max-width: 1024px) {
+    .subscription-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 85vw;
+        padding: 16px 80px 70px 80px;
+    }
+}
 @media (max-width: 768px) {
     .subscription-container {
         display: flex;
