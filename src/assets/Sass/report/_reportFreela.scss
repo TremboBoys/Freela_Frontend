@@ -13,6 +13,15 @@
       color: #000;
     }
   }
+  @media (max-width: 1024px) {
+    .content {
+      width: 70%;
+      padding: 1.5rem;
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+  }
   @media (max-width: 768px) {
     .content {
       width: 70%;
