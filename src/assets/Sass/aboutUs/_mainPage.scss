@@ -18,6 +18,21 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 16px 40px;
+        .row {
+            .col-12 {
+                .title {
+                    font-size: 2.5rem;
+                }
+                .description {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
 @media (max-width: 425px) {
     .container {
         padding: 16px 20px;
