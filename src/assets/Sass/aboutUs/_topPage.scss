@@ -35,3 +35,113 @@
         }
     }
 }
+@media (max-width: 1440px) {
+    .container {
+        padding: 16px 70px;
+        .row {
+            .col-12 {
+                .logo {
+                    width: 130px;
+                }
+                .about {
+                    width: 280px;
+                }
+                .text {
+                    font-size: 2.8rem;
+                }
+                .description {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        padding: 16px 60px;
+        .row {
+            .col-12 {
+                .logo {
+                    width: 130px;
+                }
+                .about {
+                    width: 280px;
+                }
+                .text {
+                    font-size: 2.8rem;
+                }
+                .description {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 16px 40px;
+        .row {
+            .col-12 {
+                .logo {
+                    width: 120px;
+                }
+                .about {
+                    display: none;
+                }
+                .text {
+                    font-size: 2.5rem;
+                }
+                .description {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .container {
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: column;
+        .row {
+            .col-12 {
+                .logo {
+                    width: 120px;
+                }
+                .about {
+                    width: 250px;
+                }
+                .text {
+                    font-size: 2.5rem;
+                }
+                .description {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        padding: 16px 20px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        .row {
+            .col-12 {
+                .logo {
+                    width: 100px;
+                }
+                .about {
+                    width: 200px;
+                }
+                .text {
+                    font-size: 2rem;
+                }
+                .description {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
