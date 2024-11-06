@@ -5,8 +5,20 @@ header{
     height: 100px;
     display: flex;
     align-items: center;
-    padding: 40px 80px;
+    padding: 5vh 8vw;
     justify-content: space-between;
     box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.25);
     z-index: 999;
 }
+@media (max-width: 875px){
+    .dropdowns{
+        background-color: red;
+    }
+}
+// - 320px
+// - 425px 
+// - 768px
+// - 1024px
+// - 1440px
+// - 1920px
+
