@@ -7,3 +7,7 @@ export const api = axios.create({
 export const apiAuth = axios.create({
     baseURL: 'http://localhost:8000/api/user/'
 });
+
+export const apiPerfil = axios.create({
+    baseURL: 'http://localhost:8000/api/perfil/'
+});

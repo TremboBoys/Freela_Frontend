@@ -20,8 +20,9 @@ export const useSignUpStore = defineStore('signUp', () => {
 
     const state = reactive({
         registerUser: false,
-        stepChooseTypeAccount: true,
+        stepChooseTypeAccount: false,
         stepInputs: false,
+        stepChooseArea: true
     });
 
     // async function validationEmail(email) {
