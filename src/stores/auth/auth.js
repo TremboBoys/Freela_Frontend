@@ -38,7 +38,7 @@ export const useAuthStore = defineStore('auth', () => {
                 useSignUp.state.registerUser = true;
                 return false;
             } else {
-                useWarning.activeWarning('failure', 'Ocorreu um erro ao verificar se seu usuário existe, verifique sua conexão e reinicie a página!');
+                useWarning.activeWarning('failure', 'Ocorreu um erro ao verificar se seu usuário existe, verifique sua conexão!');
                 
                 return false;
             }
