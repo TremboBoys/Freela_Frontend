@@ -1,5 +1,6 @@
 import PopUpSignUp from '@/components/signUp/PopUpSignUp.vue';
 import ChooseTypeAccount from '@/components/signUp/ChooseTypeAccount.vue';
+import ChooseArea from './signUp/ChooseArea.vue';
 import StepInputs from '@/components/signUp/StepInputs.vue';
 import VerificationCode from '@/components/configProfile/confirmation/CodeVerification.vue';
 import PersonalInformation from '@/components/configProfile/personalInformation/PersonalInformationConfig.vue';
@@ -36,6 +37,7 @@ import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 export {
     PopUpSignUp,
     ChooseTypeAccount,
+    ChooseArea,
     StepInputs,
     VerificationCode,
     PersonalInformation,

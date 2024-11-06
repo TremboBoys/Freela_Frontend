@@ -55,7 +55,7 @@ function chooseType(accountType) {
         </div>
     </div>
     <div class="container-continue">
-        <button ref="continueRef" class="continue" @click="(continueRef.classList.contains('activeContinue')) ? emit('continueSignUp') : ''">Continue <img class="next" src="@/assets/images/signUp/next.png">
+        <button ref="continueRef" class="continue" @click="(continueRef.classList.contains('activeContinue')) ? emit('continueSignUp', 'stepChooseTypeAccount', 'stepChooseArea') : ''">Continue <img class="next" src="@/assets/images/signUp/next.png">
         </button>
     </div>
 </template>
