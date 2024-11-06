@@ -277,21 +277,20 @@
     align-items: center;
       
       .select-header-container {
-        width: 250px;
+        width: 300px;
         display: flex;
-        flex-direction: column;
   
         .select-header {
   
           p {
-            width: 100px;
-            font-size: 10px;
+            width: 140px;
+            font-size: 14px;
           }
         }
 
         .select-header2 {
           width: 30px;
-          font-size: 10px;
+          font-size: 12px;
           padding-left: 1px;
         }
       }
@@ -304,31 +303,30 @@
 
         .select-subTitle {
           display: flex;
-          flex-direction: column;
-          width: 190px;
+          width: 270px;
           padding: 10px 10px 10px 5px;
           display: flex;
-          gap: 8px;
-          font-size: 8px;
+          gap: 20px;
+          font-size: 10px;
         }
 
         .select-text {
-          width: 150px;
-          font-size: 6px;
+          width: 280px;
+          font-size: 10px;
         }
 
         .select-bottom-container {
           padding: 4px;
           display: flex;
-          gap: 8px;
+          gap: 6px;
 
           .select-bottom {
-            width: 50px;
-            height: 20px;
+            width: 90px;
+            height: 30px;
 
             p {
-              font-size: 8px;
-              padding: 4px;
+              font-size: 10px;
+              padding: 2px;
             }
           }
         }
@@ -340,22 +338,119 @@
         align-items: center;
 
         .p-container {
-          font-size: 12px;
+          font-size: 14px;
           display: flex;
           flex-direction: column;
           text-align: center;
-          gap: 5px;
+          gap: 20px;
         }
 
         .select-footer-proposal {
-          width: 140px;
+          width: 180px;
           height: 40px;
           align-items: center;
           margin-left: 0px;
           
           p {
             display: flex;
-            font-size: 12px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .selectProject {
+    margin-top: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    padding: 5px ;
+  
+    .select {
+    align-items: center;
+      
+      .select-header-container {
+        width: 400px;
+        display: flex;
+  
+        .select-header {
+  
+          p {
+            width: 200px;
+            font-size: 14px;
+          }
+        }
+
+        .select-header2 {
+          width: 30px;
+          font-size: 12px;
+          padding-left: 1px;
+        }
+      }
+
+      .select-main-container {
+  
+        display: flex;
+        flex-direction: column;
+
+
+        .select-subTitle {
+          display: flex;
+          width: 400px;
+          padding: 10px 10px 10px 5px;
+          display: flex;
+          gap: 20px;
+          font-size: 10px;
+        }
+
+        .select-text {
+          width: 370px;
+          font-size: 12px;
+        }
+
+        .select-bottom-container {
+          padding: 4px;
+          display: flex;
+          gap: 8px;
+
+          .select-bottom {
+            width: 120px;
+            height: 30px;
+
+            p {
+              font-size: 10px;
+              padding: 2px;
+            }
+          }
+        }
+      }
+
+      .select-footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .p-container {
+          font-size: 14px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          gap: 20px;
+        }
+
+        .select-footer-proposal {
+          width: 180px;
+          height: 40px;
+          align-items: center;
+          margin-left: 0px;
+          
+          p {
+            display: flex;
+            font-size: 14px;
           }
         }
       }

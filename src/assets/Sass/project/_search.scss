@@ -161,16 +161,17 @@
 @media (max-width: 425px) {
   .search{
     display: flex;
-    width: 150px;
+    width: 300px;
     height: 508px;
     flex-direction: column;
+    margin-top: 50px;
 
     
     .inputSearch {
-      width: 100px;
+      width: 200px;
     }
     #search  {
-      width: 120px;
+      width: 270px;
     }
     .inputBox {
 
@@ -185,19 +186,66 @@
     }
   
     .categories {
-      width: 130px;
+      width: 180px;
       height: 300px;
       margin-left: 5px;
       .category {
-        font-size: 10px;
+        font-size: 14px;
       }
     }
 
     .bottom-search {
 
       p {
-        width: 100px;
-        font-size: 10px;
+        width: 250px;
+        font-size: 16px;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .search{
+    display: flex;
+    width: 300px;
+    height: 508px;
+    flex-direction: column;
+    margin-top: 50px;
+
+    
+    .inputSearch {
+      width: 200px;
+    }
+    #search  {
+      width: 270px;
+    }
+    .inputBox {
+
+      width: 100px;
+      
+      .form-control {
+        width: 50px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 10px;
+      }
+    }
+  
+    .categories {
+      width: 180px;
+      height: 300px;
+      margin-left: 5px;
+      .category {
+        font-size: 14px;
+      }
+    }
+
+    .bottom-search {
+
+      p {
+        width: 250px;
+        font-size: 16px;
       }
     }
   }
