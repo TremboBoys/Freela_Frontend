@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 import HeaderIcons from './HeaderIcons.vue';
-
 import HamburgerButton from './HamburgerButton.vue';
 import ListSmallScreens from './ListSmallScreens.vue';
 
@@ -12,7 +11,7 @@ function toggleMenu() {
 }
 
 function closeMenu() {
-  isActive.value = !isActive.value;
+  isActive.value = false; // Corrigido para fechar o menu
 }
 
 </script>
@@ -21,8 +20,8 @@ function closeMenu() {
     <div class="header-rightSide">
         <div class="icons">
             <HeaderIcons/>
-            <ListSmallScreens @click="closeMenu" :isActive="isActive"/>
-            <HamburgerButton @toggle="toggleMenu" />
+            <ListSmallScreens @click="closeMenu" :isActive="isActive" />
+            <HamburgerButton @toggle="toggleMenu" :isActive="isActive" /> <!-- Passando isActive para o botão -->
         </div>
     </div>
 </template>

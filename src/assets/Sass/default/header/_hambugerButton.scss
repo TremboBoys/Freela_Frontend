@@ -1,43 +1,39 @@
-.hamburger{
-    display: none;
-    border: none;
-    background: none;
-    border-top: 3px solid black;
-    cursor: pointer;
-    z-index: 1;
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid black; /* A linha superior do hambúrguer */
+  cursor: pointer;
+  z-index: 1;
 
-    &:before, &:after{
-        content: '';
-        display: block;
-        width: 30px;
-        height: 3px;
-        background: black;
-        margin: 5px 0;
-    }
-
-
+  &:before, &:after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 3px; /* Espessura das linhas do hambúrguer */
+      background: black; /* Cor das linhas do hambúrguer */
+      margin: 5px 0; /* Espaçamento entre as linhas */
+      transition: transform 0.3s, background-color 0.3s; /* Transição suave */
+  }
 }
 
-@media (max-width: 875px){
-    .hamburger {
-        display: block;
-      }
-    
-      /* Estilos para o estado ativo (vira um "X") */
-      .hamburger.active {
-        border-top-color: transparent; /* Oculta a linha do meio */
-      }
-    
-      .hamburger.active::before {
-        transform: rotate(45deg);
-        top: 0;
-      }
-    
-      .hamburger.active::after {
-        transform: rotate(-45deg);
-        top: 0;
-      }
-    }
-    
+@media (max-width: 875px) {
+  .hamburger {
+      display: block; /* Exibir o botão de hambúrguer em telas pequenas */
+  }
 
+  /* Estilos para o estado ativo (vira um "X") */
+  .hamburger.active {
+      border-top-color: transparent; /* Oculta a linha do meio */
+  }
 
+  .hamburger.active::before {
+      background-color: white; /* Cor do "X" */
+      transform: rotate(45deg) translate(5px); /* Ajuste para posicionar corretamente */
+  }
+
+  .hamburger.active::after {
+      background-color: white; /* Cor do "X" */
+      transform: rotate(-45deg) translate(5px); /* Ajuste para posicionar corretamente */
+  }
+}

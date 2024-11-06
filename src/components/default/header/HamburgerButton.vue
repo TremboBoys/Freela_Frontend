@@ -8,7 +8,6 @@ const emit = defineEmits(['toggle']);
 
 function toggleMenu() {
   emit('toggle');
-  console.log('isActive:', props.isActive.value);
 }
 </script>
 
