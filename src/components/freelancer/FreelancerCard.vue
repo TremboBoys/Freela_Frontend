@@ -4,6 +4,15 @@ const types = [
   { name: 'Javascript (3 a 5 anos)' },
   { name: 'Marketing (3 a 5 anos)' }
 ]
+
+const props = defineProps({
+  description: {
+    type: String,
+    default: "Esse usuário não possui uma descrição"
+  },
+  name: String,
+
+})
 </script>
 
 <template>
@@ -17,7 +26,7 @@ const types = [
         <div class="informations">
           <div class="name">
             <div class="pro-verified"><p>PRO</p></div>
-            <p>Nicolas Steffens Pereira</p>
+            <p>{{ props.name }}</p>
           </div>
           <div class="specifications">
             <p>Developer Frontend</p>
@@ -37,15 +46,7 @@ const types = [
         </div>
       </div>
       <div class="middle-side">
-        <p class="description">
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-        </p>
+      <p class="description">{{ props.description }}</p>
       </div>
       <div class="bottom-side">
         <div class="types-container">
@@ -57,7 +58,7 @@ const types = [
     </div>
     <div class="price-container">
         <div class="price-content">
-            <RouterLink to="/"><button class="profile-button">Ver Perfil</button></RouterLink>
+            <RouterLink id="btnL" to="/"><button class="profile-button">Ver Perfil</button></RouterLink>
         <div class="price">
             <p>Preço por hora:</p>
             <p>R$20,00</p>
@@ -74,4 +75,5 @@ const types = [
 
 <style scoped>
 @import '../../assets/Sass/freelancer/_freelancerCard.scss';
+@import '../../assets/Sass/freelancer/_FreelaCardResp.scss';
 </style>

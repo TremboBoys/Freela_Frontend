@@ -29,4 +29,5 @@ const categories = ['Nacionalidade', 'TI & Programação', 'Design', 'Administra
 <style scoped>
 
 @import '../../assets/Sass/freelancer/_searchArea.scss';
+@import '../../assets/Sass/freelancer/_searchAreaResp.scss';
 </style>
