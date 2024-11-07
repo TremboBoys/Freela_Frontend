@@ -17,13 +17,13 @@ export const useSignUpStore = defineStore('signUp', () => {
         username: '',
         email: '',
         password: '',
-        type_acount: ''
+        // type_acount: ''
     });
 
     const state = reactive({
         registerUser: false,
-        stepChooseTypeAccount: true,
-        stepChooseArea: false,
+        stepChooseTypeAccount: false,
+        stepChooseArea: true,
         stepInputs: false
     });
 
