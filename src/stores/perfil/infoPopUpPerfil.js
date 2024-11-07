@@ -10,6 +10,7 @@ export const useInfoPopUpStore = defineStore('infoPopUpPerfil', () => {
     async function getNacionalities() {
         try {
             const data = await PerfilService.getNacionalities();
+            console.log(data);
             nacionalities.value = data;
         } catch(error) {
             console.error('Error in GET nacionalities: ', error);
