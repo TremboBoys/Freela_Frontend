@@ -82,10 +82,12 @@
 }
 @media (max-width: 425px) {
     .sideBar {
-      width: 100%;
+      width: 100vw;
       display: flex;
       flex-direction: row;
       justify-content: center;
+      align-items: center;
+      margin-left: 9.5rem;
       .tabs-area {
         flex-direction: row;
         gap: 1rem;
@@ -120,10 +122,11 @@
 }
 @media (max-width: 320px) {
     .sideBar {
-      width: 100%;
+      width: 100vw;
       display: flex;
       flex-direction: row;
       justify-content: center;
+      margin-left: 10rem;
       .tabs-area {
         flex-direction: row;
         gap: 1rem;
