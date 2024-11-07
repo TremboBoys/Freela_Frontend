@@ -5,6 +5,13 @@
     }
 }
 
+@media(max-width: 720px){
+    .search-container{
+        width: 90vw;
+        height: 40vh;
+    }
+}
+
 @media(max-width: 410px){
     .search-container{
         height: 50vh;
