@@ -59,3 +59,45 @@
         }
     }
 }
+@media (max-width: 1920px) {
+    .container {
+        .form-control {
+            width: 40vw;
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .container {
+        .form-control {
+            width: 40vw;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        .form-control {
+            width: 45vw;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        .form-control {
+            width: 90vw;
+        }
+    }
+}
+@media (max-width: 425px) {
+    .container {
+        .form-control {
+            width: 90vw;
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        .form-control {
+            width: 90vw;
+        }
+    }
+}

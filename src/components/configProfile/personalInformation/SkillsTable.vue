@@ -44,12 +44,12 @@ function showDiv() {
         </thead>
         <tbody>
           <tr v-for="(item, index) in habilidades" :key="index">
-            <td>
+            <td data-label="Habilidades">
               <span class="fill">{{ item.habilidade }}</span>
             </td>
-            <td>{{ item.certificacao }}</td>
-            <td>{{ item.projetos }}</td>
-            <td>{{ item.experiencia }}</td>
+            <td data-label="Certificações">{{ item.certificacao }}</td>
+            <td data-label="Projetos trabalhados">{{ item.projetos }}</td>
+            <td data-label="Anos de experiência">{{ item.experiencia }}</td>
           </tr>
         </tbody>
       </table>
@@ -63,7 +63,7 @@ function showDiv() {
             <option value="4">5 a 10 anos</option>
             <option value="5">10 anos ou mais</option>
           </select>
-          <button class="button">Adicionar</button>
+          <button class="button">Enviar</button>
         </div>
       </div>
     </div>

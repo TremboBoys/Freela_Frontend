@@ -4,5 +4,5 @@
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/proposal/title/_titleProposal.scss';
+@import '@/assets/Sass/payment/title/_titlePayment.scss';
 </style>
