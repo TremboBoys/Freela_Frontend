@@ -3,12 +3,16 @@ import { reactive, ref } from "vue";
 import { io } from "socket.io-client";
 import { getAllMessagesService } from "@/services/chat/chat";
 import { usePerfilStore } from "../perfil/perfil";
+import { useWarningStore } from "../warning/warning";
 
 export const useChatStore = defineStore('chat', () => {
     const usePerfil = usePerfilStore();
+    const useWarning = useWarningStore();
     const messages = ref([]);
-    const messagesCurrentUser = ref([]);
-    const currentReceiver = ref('TK');
+    const messagesReceivedCurrentUser = ref([]);
+    const messagesSentCurrentUser = ref([]);
+    const currentReceiver = ref('');
+    const infoCurrentReceiver = ref({});
     const allUsers = ref([]);
     const socket = io('http://localhost:3333');
 
@@ -31,6 +35,14 @@ export const useChatStore = defineStore('chat', () => {
         socket.emit("saveUser", usePerfil.perfil.user.username);
     };
 
+    async function initApp() {
+        useWarning.state.isLoading = true;
+        await connectChat();
+        await usePerfil.getPerfis();
+        await getAllMessages(usePerfil.perfil.user.username);
+        useWarning.state.isLoading = false;
+    }
+
     async function getAllMessages(nameUser) {
         try {
             const data = await getAllMessagesService(nameUser);
@@ -50,37 +62,53 @@ export const useChatStore = defineStore('chat', () => {
     };
 
     function splitUsers(dataMessages = []) {
-        console.log(dataMessages, 'Rodou a função')
-        // Varre todas as mensagens
-        for(let c = 0; c < dataMessages.length; c++) {
-            console.log(c, dataMessages[c]);
-            let userStored = false; // booleano que diz se o usuário já está armazenado em allUsers
-            const senderOrReceiver = (dataMessages[c].sender === usePerfil.perfil.user.username) ? dataMessages[c].receiver : dataMessages[c].sender; // Pega o nome do usuário que me enviou ou recebeu a mensagem
-            const myMessage = (dataMessages[c].sender === usePerfil.perfil.user.username) ? true : false;
-
-            // Verifica se o usuário já está armazenado em allUsers
-            for (let i = 0; i < allUsers.value.length; c++) {
-                if (allUsers.value[i].user === senderOrReceiver) {
-                    userStored = true;
-                    if (dataMessages[c].receiver === usePerfil.perfil.user.username && !dataMessages[c].read) {
-                        allUsers.value[i].numberMessagesUnread += 1;
-                    };
-                    break;
+        console.log(dataMessages, 'Rodou a função');
+        
+        // Crie um Map para busca rápida de usuários já armazenados
+        const userMap = new Map();
+        
+        // Inicialize o Map com usuários existentes em allUsers para manter dados atuais
+        allUsers.value.forEach(user => {
+            userMap.set(user.user, user);
+        });
+    
+        dataMessages.forEach(msg => {
+            const isSender = msg.sender === usePerfil.perfil.user.username;
+            const senderOrReceiver = isSender ? msg.receiver : msg.sender;
+            const myMessage = isSender;
+    
+            if (userMap.has(senderOrReceiver)) {
+                const user = userMap.get(senderOrReceiver);
+    
+                // Incrementa mensagens não lidas se o destinatário é o usuário atual e a mensagem não foi lida
+                if (msg.receiver === usePerfil.perfil.user.username && !msg.read) {
+                    user.numberMessagesUnread += 1;
+                }
+    
+                // Atualiza a última mensagem
+                user.lastMessage = msg.message;
+            } else {
+                // Adiciona novo usuário no Map e no array `allUsers`
+                const newUser = {
+                    user: senderOrReceiver,
+                    numberMessagesUnread: myMessage ? 0 : 1,
+                    myMessage,
+                    lastMessage: msg.message,
+                    read: msg.read
                 };
-            };
-            // Se o usuário não estiver armazenado em allUsers
-            if (!userStored) {
-                allUsers.value.push({user: senderOrReceiver, numberMessagesUnread: (myMessage) ? 0 : 1, myMessage, lastMessage: dataMessages[c].message, read: dataMessages[c].read});
-            };
-        }
-    };
+                userMap.set(senderOrReceiver, newUser);
+                allUsers.value.push(newUser);
+            }
+        });
+    }    
 
     function sendMessage() {
+        console.log(usePerfil.perfil.user.username, currentReceiver.value, newMessage.value);
         socket.emit("sendMessage", (usePerfil.perfil.user.username, currentReceiver.value, newMessage.value));
     }
     socket.on("receivedMessage", (userSender, msg) => {
         if (userSender === currentReceiver.value) {
-            messagesCurrentUser.value.push(msg);
+            messagesReceivedCurrentUser.value.push(msg);
         } else {
             let userExist = false;
             for (let user of allUsers) {
@@ -94,6 +122,17 @@ export const useChatStore = defineStore('chat', () => {
                 allUsers.value.push({user: userSender, numberMessagesUnread: 1, myMessage: false, lastMessage: msg, read: false});
             };
         }
-    })
-    return { messages, allUsers, messagesCurrentUser, currentReceiver, state, newMessage, connectChat, saveUser, getAllMessages, sendMessage };
+    });
+
+    function openMessagesUser() {
+        const filterNameCurrentUser = usePerfil.perfis.filter(user => user.user.username === currentReceiver.value);
+        const filterMessagesReceived = messages.value.filter(message => message.sender === currentReceiver.value);
+        const filterMessagesSent = messages.value.filter(message => message.receiver === currentReceiver.value);
+        messagesReceivedCurrentUser.value = filterMessagesReceived;
+        messagesSentCurrentUser.value = filterMessagesSent;
+        infoCurrentReceiver.value = filterNameCurrentUser[0];
+        console.log(infoCurrentReceiver.value);
+    };
+
+    return { messages, allUsers, messagesReceivedCurrentUser, messagesSentCurrentUser, currentReceiver, infoCurrentReceiver, state, newMessage, connectChat, saveUser, initApp, getAllMessages, sendMessage, openMessagesUser };
 });

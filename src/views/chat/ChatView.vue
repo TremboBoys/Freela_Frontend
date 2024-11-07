@@ -8,20 +8,17 @@ const usePerfil = usePerfilStore();
 const useChat = useChatStore();
 
 onMounted(async() => {
-  await useChat.connectChat();
-  if (usePerfil.perfis == []) await usePerfil.getPerfis();
-  await useChat.getAllMessages(usePerfil.perfil.user.username);
-  console.log('Acabou o onMounted');
+  await useChat.initApp();
 });
 </script>
 
 <template>
     <div class="container-chat">
         <div class="aside-contacts">
-            <AsideContacts />
+            <AsideContacts v-if="useChat.allUsers.length >= 0 && usePerfil.perfil.user !== ''" />
         </div>
         <div class="chat-message">
-            <ChatMessage />
+            <ChatMessage v-if="useChat.messages.length >= 0" />
         </div>
     </div>
 </template>

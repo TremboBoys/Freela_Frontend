@@ -1,5 +1,5 @@
 <script setup>
-import { DefaultFooter, DefaultHeader,SignInPassage, QuickWarnings, PopUpSignUp } from '@/components';
+import { DefaultFooter, DefaultHeader,SignInPassage, LoadSpinner, QuickWarnings, PopUpSignUp } from '@/components';
 import { useAuthStore } from '@/stores/auth/auth';
 import { useSignUpStore } from '@/stores/auth/signUp';
 import { useWarningStore } from '@/stores/warning/warning';
@@ -14,6 +14,7 @@ const useWarning = useWarningStore();
         <DefaultHeader />
         <RouterView :style="(useAuth.state.showLogin === true || useSignUp.state.registerUser === true) ? useAuth.state.popUpEffect : ''" />
         <SignInPassage v-if="useAuth.state.showLogin === true" />
+        <LoadSpinner v-else-if="useWarning.state.isLoading === true" />
         <PopUpSignUp v-if="useSignUp.state.registerUser === true" />
         <div class="container-warning-layout" v-if="useWarning.state.isActive">
             <QuickWarnings />

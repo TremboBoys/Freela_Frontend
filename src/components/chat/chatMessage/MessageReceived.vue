@@ -1,18 +1,25 @@
+<script setup>
+import { useChatStore } from '@/stores/chat/chat';
+
+const useChat = useChatStore();
+
+// Função para determinar se o avatar deve ser exibido
+function shouldShowAvatar(index) {
+  // Verifica se é a primeira mensagem ou se o texto é diferente da mensagem anterior
+  return index === 0 || (useChat.messages.length > 0) == false;
+}
+</script>
+
 <template>
     <div class="container-received">
-        <div class="messageReceived">
+        <div class="messageReceived" v-for="(message, index) in useChat.messagesReceivedCurrentUser" :key="index">
             <div class="message">
                 <div class="avatar">
-                    <img src="@/assets/images/dashboard/luiz.jpg" alt="">
+                    <img src="@/assets/images/dashboard/user.png" alt="">
                 </div>
                 <div class="messages">
-                    <div class="message-text first-message">
-                        <p class="text">Hello, how are you?</p>
-                    </div>
                     <div class="message-text">
-                        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam minima aliquid
-                            similique nemo possimus placeat natus odit, cupiditate reiciendis explicabo molestias
-                            tenetur beatae officiis eum voluptates, necessitatibus ratione, repellat quisquam?</p>
+                        <p class="text">{{ message.message }}</p>
                     </div>
                 </div>
             </div>

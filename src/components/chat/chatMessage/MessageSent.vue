@@ -12,19 +12,19 @@ function shouldShowAvatar(index) {
 
 <template>
   <div class="container-sent">
-    <div class="messageSent" v-for="(message, index) in useChat.messages" :key="index">
+    <div class="messageSent" v-for="(message, index) in useChat.messagesSentCurrentUser" :key="index">
       <div class="message">
         <!-- Condição para mostrar o avatar apenas na primeira mensagem do grupo -->
         <div class="messages">
-          <div class="message-text" v-if="message.text">
-            <p class="text">{{ message.text }}</p>
+          <div class="message-text" v-if="message.message">
+            <p class="text">{{ message.message }}</p>
           </div>
-          <div class="message-text" v-if="message.file">
+          <!-- <div class="message-text" v-if="message.file">
             <p class="text">File: {{ message.file }}</p>
-          </div>
+          </div> -->
         </div>
         <div class="avatar" v-if="shouldShowAvatar(index)">
-          <img src="@/assets/images/dashboard/luiz.jpg" alt="">
+          <img src="@/assets/images/dashboard/user.png" alt="">
         </div>
       </div>
     </div>

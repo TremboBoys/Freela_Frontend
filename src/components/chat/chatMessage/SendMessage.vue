@@ -25,7 +25,7 @@ const handleFileUpload = (event) => {
             <p v-if="useChat.newMessage.file">File: {{ useChat.newMessage.file.name }}</p>
         </div>
         <div class="center">
-            <input type="text" placeholder="Type a message" v-model="useChat.newMessage.message" class="input-text" />
+            <input type="text" placeholder="Type a message" v-model="useChat.newMessage" class="input-text" />
             <button @click="useChat.sendMessage(); fileInput = '';" class="send-btn">
                 <i class="fa fa-paper-plane"></i>
             </button>

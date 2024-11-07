@@ -1,8 +1,17 @@
+<script setup>
+const props = defineProps({
+    user: {
+        type: Object,
+        required: true
+    }
+});
+</script>
+
 <template>
     <div class="container">
         <div class="left">
-            <img src="@/assets/images/dashboard/luiz.jpg" class="avatar" alt="">
-            <p class="name">Luiz Fernando</p>
+            <img src="@/assets/images/dashboard/user.png" class="avatar" alt="">
+            <p class="name">{{ props.user.user.name }}</p>
         </div>
         <div class="right">
             <div class="icons">
