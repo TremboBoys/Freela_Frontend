@@ -58,4 +58,5 @@ const popUp = () => {
 </template>
 <style scoped>
 @import '../../assets/Sass/project/_project.scss';
+@import '../../assets/Sass/project/_select.scss';
 </style>
