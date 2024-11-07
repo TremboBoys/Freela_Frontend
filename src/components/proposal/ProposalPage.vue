@@ -21,5 +21,5 @@ import SendProposal from './send/SendProposal.vue';
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/proposal/_proposalLayout.scss';
+@import '@/assets/Sass/payment/_paymentLayout.scss';
 </style>
