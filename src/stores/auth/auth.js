@@ -1,13 +1,15 @@
 import { defineStore } from 'pinia';
 // import { useRouter } from 'vue-router';
-import { reactive, watch } from 'vue';
+import { reactive } from 'vue';
 import { verifyAuthPassage, verifyUserExistInBackend } from '@/services/auth/auth';
 import { useSignUpStore } from './signUp';
+import { useInfoPopUpStore } from '../perfil/infoPopUpPerfil';
 import { useWarningStore } from '../warning/warning';
 
 export const useAuthStore = defineStore('auth', () => {
     const useSignUp = useSignUpStore();
     const useWarning = useWarningStore();
+    const useInfoPopUp = useInfoPopUpStore();
     // const router = useRouter();
     const state = reactive({
         showLogin: false,
@@ -15,15 +17,6 @@ export const useAuthStore = defineStore('auth', () => {
         userExist: null,
         popUpEffect: 'filter: blur(5px); pointer-events: none;'
     });
-
-    // watch(() => state.showLogin, (newValue) => {
-    //     console.log('Chamando o watch');
-    //     if (newValue === true) {
-    //         document.body.style.overflow = 'hidden'
-    //     } else {
-    //         document.body.style.overflow = ''
-    //     }
-    // });
 
     const verifyAuth = async() => {
         const isAuthenticated = await verifyAuthPassage();
@@ -36,6 +29,7 @@ export const useAuthStore = defineStore('auth', () => {
                 return true;
             } else if (state.userExist === false) {
                 useSignUp.state.registerUser = true;
+                await useInfoPopUp.getAllInfoNeedPopUp();
                 return false;
             } else {
                 useWarning.activeWarning('failure', 'Ocorreu um erro ao verificar se seu usuário existe, verifique sua conexão!');

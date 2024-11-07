@@ -3,17 +3,17 @@ import { apiAuth } from "@/plugins/axios";
 class SignUpService {
     async createUser(userInfo = {}) {
         try {
-            await apiAuth.post('/user/', {
+            const { data } = await apiAuth.post('/user/', {
                 name: userInfo.name,
                 email: userInfo.email,
                 username: userInfo.username,
                 password: userInfo.password,
                 type: userInfo.type_acount
             });
-            return true;
+            return data;
         } catch(error) {
             console.error(error);
-            return error;
+            return { "message": error };
         };
     }
 };

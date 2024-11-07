@@ -1,7 +1,16 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+
+const props = defineProps({
+    active: {
+        type: Boolean,
+        required: true
+    }
+});
 
 const isActive = ref(false);
+
+onMounted(() => isActive.value = props.active);
 
 const toggle = () => {
   isActive.value = !isActive.value;

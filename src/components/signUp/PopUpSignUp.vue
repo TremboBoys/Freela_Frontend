@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue';
 import { useSignUpStore } from '@/stores/auth/signUp';
 import { ChooseTypeAccount, StepInputs, ChooseArea } from '@/components';
 
@@ -13,8 +12,8 @@ function nextStep(current, next) {
 
 <template>
     <div class="container-pop-up">
-        <ChooseTypeAccount v-if="useSignUp.state.stepChooseTypeAccount" @continue-sign-up="nextStep(current, next)" />
-        <ChooseArea v-else-if="useSignUp.state.stepChooseArea" @continue-sign-up="nextStep(current, next)" />
+        <ChooseTypeAccount v-if="useSignUp.state.stepChooseTypeAccount" @continue-sign-up="nextStep" />
+        <ChooseArea v-else-if="useSignUp.state.stepChooseArea" @continue-sign-up="nextStep" />
         <StepInputs v-else-if="useSignUp.state.stepInputs"/>
     </div>
 </template>
@@ -25,7 +24,7 @@ function nextStep(current, next) {
     flex-direction: column;
     position: absolute;
     width: 1000px;
-    height: 640px;
+    height: 680px;
     padding: 20px;
     background-color: #FDFDFD;
     border: 1px solid #000;

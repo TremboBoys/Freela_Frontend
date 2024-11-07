@@ -15,6 +15,16 @@ class PerfilService {
         const { data } = await apiPerfil.get('/subArea/');
         return data;
     };
+
+    async createPerfil(perfil) {
+        const { data } = await apiPerfil.post('/perfil/', perfil);
+        return data;
+    };
+
+    async getPerfil(id) {
+        const { data } = await apiPerfil.get(`/perfil/${id}/`);
+        return data;
+    }
 };
 
 export default new PerfilService();
