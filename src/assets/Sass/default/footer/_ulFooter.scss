@@ -8,6 +8,10 @@
             color: black;
             text-decoration: none;
             font-weight: 275;
+            &:hover {
+                color: #1B75BF;
+                text-decoration: underline;
+            }
         }
     }
 

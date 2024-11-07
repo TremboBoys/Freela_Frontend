@@ -48,24 +48,30 @@
             justify-content: center;
 
             img {
-                margin: 4px 5px 0 0;
+                margin: 5px 5px 0 0;
                 width: 18px;
                 height: 18px;
             }
 
             .toSend {
                 .toSendButton {
+                    width: 64px;
+                    height: 31px;
                     background-color: transparent;
                     border: 1px solid #1B75BF;
                     border-radius: 20px;
                     margin-right: 6px;
                     padding: 4px 8px;
                     font-size: 14px;
-                    font-weight: 300;
+                    font-weight: bolder;
                     cursor: pointer;
                     transition: all 0.3s;
 
                     &:hover {
+                        background-color: #1B75BF;
+                        color: #FDFDFD;
+                        font-weight: bolder;
+                        transition: .3s;
                         border: 1px solid #14609e;
                     }
                 }
@@ -82,9 +88,10 @@
 }
 @media (max-width: 1920px) {
     .card {
-        width: 25vw;
+        width: 23vw;
         height: 28vh;
         padding: 16px;
+        height: auto;
 
         .title {
             h2 {

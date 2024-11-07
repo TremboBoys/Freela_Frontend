@@ -66,4 +66,5 @@
 </template>
 <style scoped lang="scss">   
 @import '../../assets/Sass/plans/_subscriptionPlans.scss';
+@import '../../assets/Sass/plans/_subscriptionPlansResponsive.scss';
 </style>

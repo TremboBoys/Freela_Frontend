@@ -40,5 +40,5 @@ const activitys = ["TI & Programação", "Design & Multimedia", "Tradução & Co
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/proposal/inputs/_inputSelect.scss';
+@import '@/assets/Sass/payment/inputs/_inputSelect.scss';
 </style>

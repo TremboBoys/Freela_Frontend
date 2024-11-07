@@ -1,5 +1,7 @@
 .container-complete {
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     .header-complete {
         justify-content: center;
         text-align: center;
@@ -16,8 +18,7 @@
         }
     }
     .main-complete {
-        margin-left: 550px;
-
+        margin-left: -300px;
         p {
             color: #000;
             font-family: Poppins;
@@ -30,6 +31,7 @@
         .main-register-complete {
             display: flex;
             gap: 12px;
+            
         }
 
         .main-register-complete2 {
@@ -76,7 +78,7 @@
         margin-bottom: 43px;
         display: flex;
         gap: 7px;
-        margin-left: 550px;
+
 
             
 

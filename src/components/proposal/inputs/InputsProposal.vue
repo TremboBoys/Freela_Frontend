@@ -17,5 +17,5 @@ import InputNumberProposal from './InputNumberProposal.vue';
     </div>
 </template>
 <style scoped>
-@import '@/assets/Sass/proposal/inputs/_inputsProposal.scss';
+@import '@/assets/Sass/payment/inputs/_inputsPayment.scss';
 </style>
