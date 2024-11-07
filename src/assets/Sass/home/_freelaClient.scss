@@ -111,7 +111,7 @@
             margin-right: 2rem;
             height: auto;
             .card {
-                height: 300px;
+                height: auto;
                 margin-bottom: 16px;
                 .header-card {
                     img {
@@ -133,7 +133,7 @@
             width: 100%;
             height: auto;
             .card {
-                height: 300px;
+                height: auto;
                 margin-bottom: 16px;
                 .header-card {
                     img {
@@ -170,6 +170,7 @@
             height: auto;
             margin-right: 2rem;
             .card {
+                height: auto;
                 margin-bottom: 16px;
                 .header-card {
                     img {
@@ -192,6 +193,7 @@
             height: auto;
             .card {
                 margin-bottom: 16px;
+                height: auto;
                 .header-card {
                     img {
                         width: 40px;
@@ -227,12 +229,14 @@
             width: 100%;
             margin-right: 0;
             .card {
+                height: auto;
                 margin-bottom: 16px;
             }
         }
         .right {
             width: 100%;
             .card {
+                height: auto;
                 margin-bottom: 16px;
             }
         }
@@ -255,12 +259,14 @@
             width: 100%;
             margin-right: 0;
             .card {
+                height: auto;
                 margin-bottom: 16px;
             }
         }
         .right {
             width: 100%;
             .card {
+                height: auto;
                 margin-bottom: 16px;
             }
         }
@@ -284,12 +290,14 @@
             margin-right: 0;
             .card {
                 margin-bottom: 16px;
+                height: auto;
             }
         }
         .right {
             width: 100%;
             .card {
                 margin-bottom: 16px;
+                height: auto;
             }
         }
     }
