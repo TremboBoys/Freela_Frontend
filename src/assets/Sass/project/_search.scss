@@ -160,46 +160,116 @@
 /* Estilo para telas com largura mínima de 1440px */
 @media (min-width: 1440px) {
   .search {
-    display: flex;
-    width: 500px;  /* Ajustando o search para telas de 1440px */
-    height: 500px;
-    flex-direction: column;
-    margin-top: 50px;
+    display: flexbox;
+    width: 308px;
+    height: 828px;
+    border-radius: 11px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
   }
 
   .inputSearch {
-    width: 350px;  /* Ajustando o inputSearch */
-  }
+    flex-shrink: 0;
+    fill: #fff;
+    stroke-width: 1px;
+    stroke: #d9d9d9;
+    border-radius: 10px;
 
-  #search {
-    width: 450px;
-  }
+    .inputBox {
+      position: relative;
 
-  .inputBox {
-    width: 180px;
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
-    .form-control {
-      width: 120px;
-      height: 35px;
-      border-radius: 10px;
+      .form-control {
+        width: 276px;
+        height: 51px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        border: 2px solid #bfbfbf;
+        background: #ffffff;
+        margin: 15px;
+        outline: none;
+      }
+
+      .searchlabelInput {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        pointer-events: none;
+        transition: 0.4s;
+        color: #bfbfbf;
+        font-size: 16px;
+
+        background-color: #ffffff;
+        margin: 20px;
+      }
+
+      .searchlabelInput::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: 0.4s;
+        color: #bfbfbf;
+      }
+
+      .form-control {
+        padding: 10px 0;
+      }
+
+      .form-control:focus~.searchlabelInput,
+      .form-control:not(:placeholder-shown)~.searchlabelInput {
+        top: -18%;
+        font-size: 16px;
+        color: #bfbfbf;
+      }
+
+      input {
+        margin-bottom: 10px;
+      }
     }
   }
 
   .categories {
-    width: 250px;
-    height: 350px;
-    margin-left: 10px;
+    width: 100%;
+    height: 400px;
+    margin-left: 20px;
 
     .category {
-      font-size: 16px;
+      width: 100%;
+      height: 20px;
+      color: #000;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 275;
+      line-height: normal;
+      margin: 10px;
+
+      input {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
     }
   }
 
   .bottom-search {
-    p {
-      width: 300px;
-      font-size: 18px;
-    }
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 265px;
+    padding: 0px 27px 32px 16px;
   }
 }
 
