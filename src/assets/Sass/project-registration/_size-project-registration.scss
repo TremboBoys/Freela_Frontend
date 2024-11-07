@@ -1,11 +1,12 @@
 .container {
     width: 600px;
     flex-direction: column;
-
+    align-items: center;
+    margin-left: 500px;
 
     .header-size {
         text-align: center; 
-
+        align-items: center;
 
         h1 {
             margin: 32px 0px 12px 0px;
