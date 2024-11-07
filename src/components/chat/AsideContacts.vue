@@ -1,24 +1,13 @@
 <script setup>
-import ButtonSearch from '@/components/chat/contacts/ButtonSearch.vue'
-import ContactUser from './contacts/ContactUser.vue'
+import { useChatStore } from '@/stores/chat/chat';
+import { ButtonSearch, ContactUser } from '@/components/'
+
+const useChat = useChatStore();
 </script>
 <template>
     <div class="container">
         <ButtonSearch />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
+        <ContactUser v-for="(user, index) in useChat.allUsers" :key="index" :username="user.user" :my-message="user.myMessage" :last-message="user.lastMessage" :number-messages-unread="user.numberMessagesUnread" />
     </div>
 </template>
 <style scoped>

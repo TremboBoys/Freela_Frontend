@@ -1,13 +1,8 @@
 <script setup>
-import { onMounted } from 'vue';
 import { LogoName, InfoProfile, PublicProfile, MainSkills, FavoriteArea, AboutMe, ProjectProgress, CompletedProject } from '@/components';
 import { usePerfilStore } from '@/stores/perfil/perfil';
 
 const usePerfil = usePerfilStore();
-
-onMounted(async() => {
-    await usePerfil.getPerfil();
-});
 </script>
 
 <template>

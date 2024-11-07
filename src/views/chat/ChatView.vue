@@ -1,14 +1,18 @@
 <script setup>
-import AsideContacts from '@/components/chat/AsideContacts.vue';
-import ChatMessage from '@/components/chat/ChatMessage.vue';
+import { AsideContacts, ChatMessage } from '@/components';
+import { usePerfilStore } from '@/stores/perfil/perfil';
 import { useChatStore } from '@/stores/chat/chat';
 import { onMounted } from 'vue';
 
+const usePerfil = usePerfilStore();
 const useChat = useChatStore();
 
 onMounted(async() => {
-  useChat.getAllMessages();
-})
+  await useChat.connectChat();
+  if (usePerfil.perfis == []) await usePerfil.getPerfis();
+  await useChat.getAllMessages(usePerfil.perfil.user.username);
+  console.log('Acabou o onMounted');
+});
 </script>
 
 <template>

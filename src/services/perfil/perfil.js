@@ -25,6 +25,10 @@ class PerfilService {
         const { data } = await apiPerfil.get(`/perfil/${id}/`);
         return data;
     }
+    async getPerfis() {
+        const { data } = await apiPerfil.get('/perfil/');
+        return data;
+    }
 };
 
 export default new PerfilService();

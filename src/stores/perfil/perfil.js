@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { reactive } from "vue";
+import { ref, reactive } from "vue";
 import { useWarningStore } from "@/stores/warning/warning";
 import PerfilService from "@/services/perfil/perfil";
 
@@ -17,6 +17,7 @@ export const usePerfilStore = defineStore('perfil', () => {
         area: 'Selecione sua área',
         sub_area: 'Selecione sua sub-area'
     });
+    const perfis = ref([]);
 
     async function createPerfil() {
         try {
@@ -41,7 +42,25 @@ export const usePerfilStore = defineStore('perfil', () => {
             console.error('Error in GET perfil: ', error);
         };
         useWarning.state.isLoading = false;
+    };
+
+    async function getPerfis() {
+        useWarning.state.isLoading = true;
+        try {
+            const data = await PerfilService.getPerfis();
+            perfis.value = data;
+        } catch(error) {
+            console.error('Error in GET perfis: ', error);
+        };
+        useWarning.state.isLoading = false;
+    };
+
+    function filterPerfil(username = '') {
+        if (username !== '') {
+            const perfil = perfis.value.filter(perfil => perfil.user.username === username);
+            return perfil[0];
+        }
     }
 
-    return { perfil, createPerfil, getPerfil };
+    return { perfil, perfis, createPerfil, getPerfil, getPerfis, filterPerfil };
 });

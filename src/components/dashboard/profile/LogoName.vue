@@ -7,7 +7,7 @@ const props = defineProps(['photo', 'name', 'area', 'nacionality']);
     <div class="container">
         <div class="info">
             <div class="logo">
-                <img src="@/assets/images/dashboard/luiz.jpg" class="img-logo" alt="">
+                <img src="@/assets/images/dashboard/user.png" class="img-logo" alt="">
             </div>
             <div class="details">
                 <div class="name">
