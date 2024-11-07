@@ -41,7 +41,7 @@
           transition: 0.4s;
           color: #bfbfbf;
           font-size: 16px;
-          z-index: 9999;
+
           background-color: #ffffff;
           margin: 20px;
         }
@@ -111,143 +111,281 @@
     }
 }
 
-
-@media (max-width: 320px) {
-      .search{
-        display: flex;
-        width: 150px;
-        height: 508px;
-        flex-direction: column;
-
-        
-        .inputSearch {
-          width: 100px;
-        }
-        #search  {
-          width: 120px;
-        }
-        .inputBox {
-
-          width: 100px;
-          
-          .form-control {
-            width: 50px;
-            height: 30px;
-            flex-shrink: 0;
-            border-radius: 10px;
-          }
-        }
-      
-        .categories {
-          width: 130px;
-          height: 300px;
-          margin-left: 5px;
-          .category {
-            font-size: 10px;
-          }
-        }
-
-        .bottom-search {
-
-          p {
-            width: 100px;
-            font-size: 10px;
-          }
-        }
-      }
-
-}
-
-@media (max-width: 425px) {
-  .search{
+/* Estilo para telas com largura mínima de 1920px */
+@media (min-width: 1920px) {
+  .search {
     display: flex;
-    width: 300px;
-    height: 508px;
+    width: 600px;  /* Aumentando a largura do search em telas grandes */
+    height: 70px;
     flex-direction: column;
     margin-top: 50px;
+  }
 
-    
-    .inputSearch {
-      width: 200px;
-    }
-    #search  {
-      width: 270px;
-    }
-    .inputBox {
+  .inputSearch {
+    width: 400px; /* Aumentando a largura do inputSearch */
+  }
 
-      width: 100px;
-      
-      .form-control {
-        width: 50px;
-        height: 30px;
-        flex-shrink: 0;
-        border-radius: 10px;
-      }
-    }
-  
-    .categories {
-      width: 180px;
-      height: 300px;
-      margin-left: 5px;
-      .category {
-        font-size: 14px;
-      }
-    }
+  #search {
+    width: 500px;
+  }
 
-    .bottom-search {
+  .inputBox {
+    width: 200px;
 
-      p {
-        width: 250px;
-        font-size: 16px;
-      }
+    .form-control {
+      width: 150px;
+      height: 40px;
+      border-radius: 10px;
     }
   }
-  
+
+  .categories {
+    width: 300px;
+    height: 400px;
+    margin-left: 15px;
+
+    .category {
+      font-size: 18px;
+    }
+  }
+
+  .bottom-search {
+    p {
+      width: 350px;
+      font-size: 20px;
+    }
+  }
 }
 
+/* Estilo para telas com largura mínima de 1440px */
+@media (min-width: 1440px) {
+  .search {
+    display: flex;
+    width: 500px;  /* Ajustando o search para telas de 1440px */
+    height: 500px;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .inputSearch {
+    width: 350px;  /* Ajustando o inputSearch */
+  }
+
+  #search {
+    width: 450px;
+  }
+
+  .inputBox {
+    width: 180px;
+
+    .form-control {
+      width: 120px;
+      height: 35px;
+      border-radius: 10px;
+    }
+  }
+
+  .categories {
+    width: 250px;
+    height: 350px;
+    margin-left: 10px;
+
+    .category {
+      font-size: 16px;
+    }
+  }
+
+  .bottom-search {
+    p {
+      width: 300px;
+      font-size: 18px;
+    }
+  }
+}
+
+/* Estilo para telas de até 1024px */
+@media (max-width: 1024px) {
+  .search {
+    display: flex;
+    width: 400px;  /* Ajustando a largura do search para telas menores */
+    height: 400px;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .inputSearch {
+    width: 250px; /* Ajustando o inputSearch */
+  }
+
+  #search {
+    width: 350px;
+  }
+
+  .inputBox {
+    width: 150px;
+
+    .form-control {
+      width: 100px;
+      height: 35px;
+      border-radius: 10px;
+    }
+  }
+
+  .categories {
+    width: 220px;
+    height: 300px;
+    margin-left: 5px;
+
+    .category {
+      font-size: 14px;
+    }
+  }
+
+  .bottom-search {
+    p {
+      width: 250px;
+      font-size: 16px;
+    }
+  }
+}
+
+/* Estilo para telas de até 768px */
 @media (max-width: 768px) {
-  .search{
+  .search {
     display: flex;
-    width: 300px;
-    height: 508px;
+    width: 280px; /* Ajuste da largura do search para telas ainda menores */
+    height: 480px;
     flex-direction: column;
     margin-top: 50px;
+  }
 
-    
-    .inputSearch {
-      width: 200px;
-    }
-    #search  {
-      width: 270px;
-    }
-    .inputBox {
+  .inputSearch {
+    width: 180px; /* Ajuste da largura do inputSearch */
+  }
 
-      width: 100px;
-      
-      .form-control {
-        width: 50px;
-        height: 30px;
-        flex-shrink: 0;
-        border-radius: 10px;
-      }
-    }
-  
-    .categories {
-      width: 180px;
-      height: 300px;
-      margin-left: 5px;
-      .category {
-        font-size: 14px;
-      }
-    }
+  #search {
+    width: 240px;
+  }
 
-    .bottom-search {
+  .inputBox {
+    width: 100px;
 
-      p {
-        width: 250px;
-        font-size: 16px;
-      }
+    .form-control {
+      width: 50px;
+      height: 30px;
+      flex-shrink: 0;
+      border-radius: 10px;
     }
   }
-  
+
+  .categories {
+    width: 170px;
+    height: 280px;
+    margin-left: 5px;
+
+    .category {
+      font-size: 12px;
+    }
+  }
+
+  .bottom-search {
+    p {
+      width: 230px;
+      font-size: 14px;
+    }
+  }
+}
+
+/* Estilo para telas de até 425px */
+@media (max-width: 425px) {
+  .search {
+    display: flex;
+    width: 270px; /* Ajuste da largura do search */
+    height: 450px;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .inputSearch {
+    width: 180px;  /* Ajuste da largura do inputSearch */
+  }
+
+  #search {
+    width: 240px;
+  }
+
+  .inputBox {
+    width: 90px;
+
+    .form-control {
+      width: 50px;
+      height: 30px;
+      flex-shrink: 0;
+      border-radius: 10px;
+    }
+  }
+
+  .categories {
+    width: 160px;
+    height: 260px;
+    margin-left: 5px;
+
+    .category {
+      font-size: 12px;
+    }
+  }
+
+  .bottom-search {
+    p {
+      width: 220px;
+      font-size: 14px;
+    }
+  }
+}
+
+/* Estilo para telas de até 320px */
+@media (max-width: 320px) {
+  .search {
+    display: flex;
+    width: 200px;  /* Ajuste da largura do search para telas pequenas */
+    height: 450px;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .inputSearch {
+    width: 120px;  /* Ajuste da largura do inputSearch */
+  }
+
+  #search {
+    width: 120px;
+  }
+
+  .inputBox {
+    width: 80px;
+
+    .form-control {
+      width: 40px;
+      height: 25px;
+      flex-shrink: 0;
+      border-radius: 10px;
+    }
+  }
+
+  .categories {
+    width: 130px;
+    height: 220px;
+    margin-left: 5px;
+
+    .category {
+      font-size: 10px;
+    }
+  }
+
+  .bottom-search {
+    p {
+      width: 100px;
+      font-size: 10px;
+    }
+  }
 }

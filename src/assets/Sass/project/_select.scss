@@ -165,104 +165,389 @@
     }
   }
 
-@media (max-width: 320px) {
+/* Estilo para telas com largura mínima de 1920px */
+@media (min-width: 1920px) {
   .selectProject {
     margin-top: 20px;
-    width: 180px;
+    width: 1200px;  /* Aumentando a largura para telas ainda maiores */
     display: flex;
     flex-direction: column;
     margin-left: 0px;
-    padding: 5px ;
+    padding: 20px;
   
     .select {
-    align-items: center;
+      align-items: center;
       
       .select-header-container {
-        width: 250px;
+        width: 1000px;
         display: flex;
-        flex-direction: column;
-  
+    
         .select-header {
-  
           p {
-            width: 100px;
-            font-size: 10px;
+            width: 800px;
+            font-size: 32px;  /* Aumentando ainda mais o tamanho da fonte */
           }
         }
 
         .select-header2 {
-          width: 30px;
-          font-size: 10px;
-          padding-left: 1px;
+          width: 60px;
+          font-size: 16px;
+          padding-left: 5px;
         }
       }
-
-      .select-main-container {
   
+      .select-main-container {
         display: flex;
         flex-direction: column;
-
-
+  
         .select-subTitle {
           display: flex;
-          flex-direction: column;
-          width: 190px;
-          padding: 10px 10px 10px 5px;
-          display: flex;
-          gap: 8px;
-          font-size: 8px;
+          width: 1000px;
+          padding: 20px 20px 20px 15px;
+          gap: 100px;
+          font-size: 20px;
         }
-
+  
         .select-text {
-          width: 150px;
-          font-size: 6px;
+          width: 900px;
+          font-size: 24px;
+          margin-bottom: 70px;
         }
-
+  
         .select-bottom-container {
-          padding: 4px;
+          padding: 12px;
           display: flex;
-          gap: 8px;
-
+          gap: 100px;
+          margin-bottom: 80px;
+  
           .select-bottom {
-            width: 50px;
-            height: 20px;
-
+            width: 280px;
+            height: 70px;
+  
             p {
-              font-size: 8px;
-              padding: 4px;
+              font-size: 18px;
+              padding: 6px;
             }
           }
         }
       }
-
+  
       .select-footer-container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-
+  
         .p-container {
-          font-size: 12px;
+          font-size: 18px;
           display: flex;
           flex-direction: column;
           text-align: center;
-          gap: 5px;
+          gap: 30px;
         }
-
+  
         .select-footer-proposal {
-          width: 140px;
-          height: 40px;
+          width: 300px;
+          height: 60px;
           align-items: center;
           margin-left: 0px;
           
           p {
             display: flex;
-            font-size: 12px;
+            font-size: 18px;
           }
         }
       }
     }
   }
 }
+
+/* Estilo para telas com largura mínima de 1440px */
+@media (min-width: 1440px) {
+  .selectProject {
+    margin-top: 20px;
+    width: 1000px;  /* Aumentando a largura para telas maiores */
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    padding: 15px;
+  
+    .select {
+      align-items: center;
+      
+      .select-header-container {
+        width: 900px;
+        display: flex;
+    
+        .select-header {
+          p {
+            width: 700px;
+            font-size: 28px;  /* Aumentando o tamanho da fonte */
+          }
+        }
+
+        .select-header2 {
+          width: 50px;
+          font-size: 14px;
+          padding-left: 5px;
+        }
+      }
+  
+      .select-main-container {
+        display: flex;
+        flex-direction: column;
+  
+        .select-subTitle {
+          display: flex;
+          width: 900px;
+          padding: 15px 15px 15px 10px;
+          gap: 80px;
+          font-size: 18px;
+        }
+  
+        .select-text {
+          width: 800px;
+          font-size: 22px;
+          margin-bottom: 50px;
+        }
+  
+        .select-bottom-container {
+          padding: 10px;
+          display: flex;
+          gap: 80px;
+          margin-bottom: 60px;
+  
+          .select-bottom {
+            width: 240px;
+            height: 60px;
+  
+            p {
+              font-size: 16px;
+              padding: 5px;
+            }
+          }
+        }
+      }
+  
+      .select-footer-container {
+        display: flex;
+  
+        .p-container {
+          font-size: 16px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          gap: 25px;
+        }
+  
+        .select-footer-proposal {
+          width: 240px;
+          height: 50px;
+          align-items: center;
+          margin-left: 0px;
+          
+          p {
+            display: flex;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Estilo para telas de até 1024px */
+@media (max-width: 1024px) {
+  .selectProject {
+    margin-top: 20px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    padding: 5px ;
+  
+    .select {
+      align-items: center;
+      
+      .select-header-container {
+        width: 700px;
+        display: flex;
+    
+        .select-header {
+          p {
+            width: 500px;
+            font-size: 24px;
+          }
+        }
+
+        .select-header2 {
+          width: 30px;
+          font-size: 12px;
+          padding-left: 1px;
+        }
+      }
+  
+      .select-main-container {
+        display: flex;
+        flex-direction: column;
+  
+        .select-subTitle {
+          display: flex;
+          width: 700px;
+          padding: 10px 10px 10px 5px;
+          display: flex;
+          gap: 50px;
+          font-size: 16px;
+        }
+  
+        .select-text {
+          width: 600px;
+          font-size: 20px;
+          margin-bottom: 40px;
+        }
+  
+        .select-bottom-container {
+          padding: 4px;
+          display: flex;
+          gap: 50px;
+          margin-bottom: 50px;
+  
+          .select-bottom {
+            width: 190px;
+            height: 50px;
+  
+            p {
+              font-size: 14px;
+              padding: 1px;
+            }
+          }
+        }
+      }
+  
+      .select-footer-container {
+        display: flex;
+  
+        .p-container {
+          font-size: 14px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          gap: 20px;
+        }
+  
+        .select-footer-proposal {
+          width: 180px;
+          height: 40px;
+          align-items: center;
+          margin-left: 0px;
+          
+          p {
+            display: flex;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+  @media (max-width: 768px) {
+    .selectProject {
+      margin-top: 20px;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 0px;
+      padding: 5px ;
+    
+      .select {
+      align-items: center;
+        
+        .select-header-container {
+          width: 400px;
+          display: flex;
+    
+          .select-header {
+    
+            p {
+              width: 200px;
+              font-size: 14px;
+            }
+          }
+  
+          .select-header2 {
+            width: 30px;
+            font-size: 12px;
+            padding-left: 1px;
+          }
+        }
+  
+        .select-main-container {
+    
+          display: flex;
+          flex-direction: column;
+  
+  
+          .select-subTitle {
+            display: flex;
+            width: 400px;
+            padding: 10px 10px 10px 5px;
+            display: flex;
+            gap: 20px;
+            font-size: 10px;
+          }
+  
+          .select-text {
+            width: 370px;
+            font-size: 12px;
+          }
+  
+          .select-bottom-container {
+            padding: 4px;
+            display: flex;
+            gap: 8px;
+  
+            .select-bottom {
+              width: 120px;
+              height: 30px;
+  
+              p {
+                font-size: 10px;
+                padding: 2px;
+              }
+            }
+          }
+        }
+  
+        .select-footer-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+  
+          .p-container {
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+          }
+  
+          .select-footer-proposal {
+            width: 180px;
+            height: 40px;
+            align-items: center;
+            margin-left: 0px;
+            
+            p {
+              display: flex;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
 
 @media (max-width: 425px) {
   .selectProject {
@@ -361,10 +646,10 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 320px) {
   .selectProject {
     margin-top: 20px;
-    width: 400px;
+    width: 180px;
     display: flex;
     flex-direction: column;
     margin-left: 0px;
@@ -374,20 +659,21 @@
     align-items: center;
       
       .select-header-container {
-        width: 400px;
+        width: 250px;
         display: flex;
+        flex-direction: column;
   
         .select-header {
   
           p {
-            width: 200px;
-            font-size: 14px;
+            width: 100px;
+            font-size: 10px;
           }
         }
 
         .select-header2 {
           width: 30px;
-          font-size: 12px;
+          font-size: 10px;
           padding-left: 1px;
         }
       }
@@ -400,16 +686,17 @@
 
         .select-subTitle {
           display: flex;
-          width: 400px;
+          flex-direction: column;
+          width: 190px;
           padding: 10px 10px 10px 5px;
           display: flex;
-          gap: 20px;
-          font-size: 10px;
+          gap: 8px;
+          font-size: 8px;
         }
 
         .select-text {
-          width: 370px;
-          font-size: 12px;
+          width: 150px;
+          font-size: 6px;
         }
 
         .select-bottom-container {
@@ -418,12 +705,12 @@
           gap: 8px;
 
           .select-bottom {
-            width: 120px;
-            height: 30px;
+            width: 50px;
+            height: 20px;
 
             p {
-              font-size: 10px;
-              padding: 2px;
+              font-size: 8px;
+              padding: 4px;
             }
           }
         }
@@ -435,22 +722,22 @@
         align-items: center;
 
         .p-container {
-          font-size: 14px;
+          font-size: 12px;
           display: flex;
           flex-direction: column;
           text-align: center;
-          gap: 20px;
+          gap: 5px;
         }
 
         .select-footer-proposal {
-          width: 180px;
+          width: 140px;
           height: 40px;
           align-items: center;
           margin-left: 0px;
           
           p {
             display: flex;
-            font-size: 14px;
+            font-size: 12px;
           }
         }
       }
