@@ -1,32 +1,46 @@
 import { defineStore } from 'pinia';
-import { useRouter } from 'vue-router';
-import { ref, reactive } from 'vue';
-import AuthService from '@/services/auth/auth';
+// import { useRouter } from 'vue-router';
+import { reactive } from 'vue';
+import { verifyAuthPassage, verifyUserExistInBackend } from '@/services/auth/auth';
+import { useSignUpStore } from './signUp';
+import { useInfoPopUpStore } from '../perfil/infoPopUpPerfil';
+import { useWarningStore } from '../warning/warning';
 
 export const useAuthStore = defineStore('auth', () => {
-    const router = useRouter();
-    const isLogged = ref(false);
-    const user = reactive({
-        username: '',
-        password: ''
+    const useSignUp = useSignUpStore();
+    const useWarning = useWarningStore();
+    const useInfoPopUp = useInfoPopUpStore();
+    // const router = useRouter();
+    const state = reactive({
+        showLogin: false,
+        isAuthenticatedPassage: null,
+        userExist: null,
+        popUpEffect: 'filter: blur(5px); pointer-events: none;'
     });
-    const token = ref({});
 
-    const verifyAuth = () => {
-        console.log('Aaaa');
-    };
+    const verifyAuth = async() => {
+        const isAuthenticated = await verifyAuthPassage();
+        state.isAuthenticatedPassage = (isAuthenticated === true) ? true : false;
 
-    const createAuth = async(user) => {
-        try {
-            const data = await AuthService.createAuth(user);
-            token.value = data;
-            isLogged.value = true;
-            router.push('/dashboard');
-        }
-        catch(error) {
-            console.error('Erro', error);
+        if (state.isAuthenticatedPassage === true) {
+            state.userExist = await verifyUserExistInBackend();
+
+            if (state.userExist === true) {
+                return true;
+            } else if (state.userExist === false) {
+                useSignUp.state.registerUser = true;
+                await useInfoPopUp.getAllInfoNeedPopUp();
+                return false;
+            } else {
+                useWarning.activeWarning('failure', 'Ocorreu um erro ao verificar se seu usuário existe, verifique sua conexão!');
+                
+                return false;
+            }
+        } else {
+            state.showLogin = true;
+            return false;
         }
     }
 
-    return { user, createAuth, verifyAuth };
+    return { state, verifyAuth };
 });

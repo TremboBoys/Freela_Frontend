@@ -1,3 +1,8 @@
+<script setup>
+const props = defineProps(['photo', 'name', 'area', 'nacionality']);
+</script>
+
+
 <template>
     <div class="container">
         <div class="info">
@@ -6,13 +11,13 @@
             </div>
             <div class="details">
                 <div class="name">
-                    <h1>Luiz Fernando</h1>
+                    <h1>{{ props.name }}</h1>
                     <router-link to="/configurations/">
                         <img src="@/assets/images/dashboard/pencil-blue.png" alt="">
                     </router-link>
                 </div>
                 <div class="additional-info">
-                    <p class="description">Front-end developer</p>
+                    <p class="description">{{ props.area }}</p>
                     <div class="country">
                         <img src="@/assets/images/dashboard/brasil-country.webp" alt="">
                         <p>Brasil</p>

@@ -1,6 +1,5 @@
 <script setup>
 import LoginContent from '@/components/signIn/LoginContent.vue'
-
 </script>
 
 <template>

@@ -1,11 +1,11 @@
 <script setup>
-import ulFooter from './ulFooter.vue';
+import LinksFooter from './LinksFooter.vue';
 import LogoAndIcons from './LogoAndIcons.vue';
 </script>
 <template>
   <footer>
     <LogoAndIcons/>
-    <ulFooter/>
+    <LinksFooter />
   </footer>
 </template>
 <style scoped>
