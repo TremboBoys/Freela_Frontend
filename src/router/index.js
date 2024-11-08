@@ -83,32 +83,32 @@ const router = createRouter({
           component: () => import('@/views/project/DetailProjectView.vue')
         },
         {
-          path: '/register-project',
+          path: '/register-project/',
           name: 'registerProject',
           component: () => import('@/views/project/RegisterProjectView.vue'),
-          meta: { requiresAuth: true },
+          // meta: { requiresAuth: true },
           children: [
             {
-              path: '/',
+              path: '',
               component: ProjectRegistration
             },
             {
-              path: '/description',
+              path: 'description',
               name: 'description',
               component: DescriptionProject
             },
             {
-              path: '/types',
+              path: 'types',
               name: 'types',
               component: TypeProject
             },
             {
-              path: '/size',
+              path: 'size',
               name: 'size',
               component: SizeProject
             },
             {
-              path: '/complete',
+              path: 'complete',
               name: 'complete',
               component: CompleteProject
             }
