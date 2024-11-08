@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc7a41ebe3712eeb1f8830a81a0872c57afb59cf
 <script setup>
  import contactTitle from './contactTitle.vue';
  import questionsHelp from './questionsHelp.vue';
@@ -27,5 +30,9 @@
   </main>
 </template>
 <style scoped>
+<<<<<<< HEAD
   @import '@/assets/Sass/help/contact/_contactPage.scss';
+=======
+  @import '@/assets/Sass/help/contact/_contactPage.scss'
+>>>>>>> bc7a41ebe3712eeb1f8830a81a0872c57afb59cf
 </style>
