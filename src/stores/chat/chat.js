@@ -46,7 +46,7 @@ export const useChatStore = defineStore('chat', () => {
     async function getAllMessages(nameUser) {
         try {
             const data = await getAllMessagesService(nameUser);
-            messages.value = data;
+            messages.value = sortOldestMessages(data);
             splitUsers(sortNewestMessages(data));
         } catch(error) {
             console.error('Error in GET "/messages/:nameUser": ', error);
@@ -54,6 +54,13 @@ export const useChatStore = defineStore('chat', () => {
     };
 
     // Retorna um array ordenado da mensagem mais nova para a mais antiga
+    function sortOldestMessages(dataMessages) {
+        dataMessages.sort((a, b) => {
+            return new Date(a.dateTime).getTime() - new Date(b.dateTime).getTime();
+        });
+        return dataMessages;
+    };
+
     function sortNewestMessages(dataMessages) {
         dataMessages.sort((a, b) => {
             return new Date(b.dateTime).getTime() - new Date(a.dateTime).getTime();
@@ -76,6 +83,7 @@ export const useChatStore = defineStore('chat', () => {
             const isSender = msg.sender === usePerfil.perfil.user.username;
             const senderOrReceiver = isSender ? msg.receiver : msg.sender;
             const myMessage = isSender;
+            console.log(msg.message, myMessage);
     
             if (userMap.has(senderOrReceiver)) {
                 const user = userMap.get(senderOrReceiver);
@@ -84,7 +92,7 @@ export const useChatStore = defineStore('chat', () => {
                 if (msg.receiver === usePerfil.perfil.user.username && !msg.read) {
                     user.numberMessagesUnread += 1;
                 }
-    
+                
                 // Atualiza a última mensagem
                 user.lastMessage = msg.message;
             } else {
@@ -104,20 +112,24 @@ export const useChatStore = defineStore('chat', () => {
 
     function sendMessage() {
         console.log(usePerfil.perfil.user.username, currentReceiver.value, newMessage.value);
-        socket.emit("sendMessage", (usePerfil.perfil.user.username, currentReceiver.value, newMessage.value));
+        socket.emit("sendMessage", usePerfil.perfil.user.username, currentReceiver.value, newMessage.value);
+        messagesSentCurrentUser.value.push({sender: usePerfil.perfil.user.username, receiver: currentReceiver.value, message: newMessage.value, dateTime: new Date(), read: false});
+        newMessage.value = '';
     }
-    socket.on("receivedMessage", (userSender, msg) => {
+    socket.on("receiveMessage", (userSender, userReceiver, msg, dateTime, read) => {
         if (userSender === currentReceiver.value) {
-            messagesReceivedCurrentUser.value.push(msg);
+            messagesReceivedCurrentUser.value.push({sender: userSender, receiver: userReceiver, message: msg, dateTime: dateTime, read});
         } else {
             let userExist = false;
-            for (let user of allUsers) {
-                if (user.user === userSender) {
-                    allUsers.value[userSender].lastMessage = msg;
-                    allUsers.value[userSender].numberMessages += 1;
+
+            for (let c = 0; c < allUsers.value.length; c++) {
+                if (allUsers.value[c].user === userSender) {
+                    allUsers.value[c].lastMessage = msg;
+                    allUsers.value[c].numberMessages += 1;
+                    userExist = true;
                     break;
-                };
-            };
+                }
+            }
             if (!userExist) {
                 allUsers.value.push({user: userSender, numberMessagesUnread: 1, myMessage: false, lastMessage: msg, read: false});
             };
@@ -126,8 +138,8 @@ export const useChatStore = defineStore('chat', () => {
 
     function openMessagesUser() {
         const filterNameCurrentUser = usePerfil.perfis.filter(user => user.user.username === currentReceiver.value);
-        const filterMessagesReceived = messages.value.filter(message => message.sender === currentReceiver.value);
-        const filterMessagesSent = messages.value.filter(message => message.receiver === currentReceiver.value);
+        const filterMessagesReceived = sortOldestMessages(messages.value).filter(message => message.sender === currentReceiver.value);
+        const filterMessagesSent = sortOldestMessages(messages.value).filter(message => message.receiver === currentReceiver.value);
         messagesReceivedCurrentUser.value = filterMessagesReceived;
         messagesSentCurrentUser.value = filterMessagesSent;
         infoCurrentReceiver.value = filterNameCurrentUser[0];

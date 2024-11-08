@@ -11,18 +11,6 @@ const props = defineProps({
     index: {
         type: Number,
         required: true
-    },
-    myMessage: {
-        type: Boolean,
-        required: true
-    },
-    lastMessage: {
-        type: String,
-        required: true
-    },
-    numberMessagesUnread: {
-        type: Number,
-        required: true
     }
 });
 
@@ -44,11 +32,11 @@ onMounted(() => {
             </div>
             <div class="contact-info">
                 <h3>{{ perfil?.user?.name || 'Nome não encontrado' }}</h3>  <!-- Verificação segura para evitar erros de acesso -->
-                <p v-if="props.myMessage">Você: {{ props.lastMessage }}</p>
-                <p v-else>{{ props.lastMessage }}</p>
+                <p v-if="useChat.allUsers[index].myMessage">Você: {{ useChat.allUsers[index].lastMessage }}</p>
+                <p v-else>{{ useChat.allUsers[index].lastMessage }}</p>
             </div>
             <div class="contact-notification">
-                <p v-if="!props.myMessage && props.numberMessagesUnread > 0">{{ props.numberMessagesUnread }}</p>
+                <p v-if="!useChat.allUsers[index].myMessage && useChat.allUsers[index].numberMessagesUnread > 0">{{ useChat.allUsers[index].numberMessagesUnread }}</p>
             </div>
         </div>
     </div>

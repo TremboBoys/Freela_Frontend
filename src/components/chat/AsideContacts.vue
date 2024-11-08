@@ -14,9 +14,6 @@ const usePerfil = usePerfilStore();
             :key="index"
             :index="index" 
             :username="user.user" 
-            :my-message="user.myMessage" 
-            :last-message="user.lastMessage" 
-            :number-messages-unread="user.numberMessagesUnread" 
         />
     </div>
 </template>
