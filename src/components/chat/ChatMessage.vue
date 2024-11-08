@@ -1,9 +1,8 @@
 <script setup>
 import { useChatStore } from "@/stores/chat/chat";
 import HeaderContact from './chatMessage/HeaderContact.vue';
-import MessageSentVue from './chatMessage/MessageSent.vue';
+import MessagesUser from './chatMessage/MessagesUser.vue';
 import SelectedNone from './chatMessage/SelectedNone.vue';
-import MessageReceived from './chatMessage/MessageReceived.vue';
 import SendMessage from './chatMessage/SendMessage.vue';
 
 const useChat = useChatStore();
@@ -14,8 +13,8 @@ const useChat = useChatStore();
     <HeaderContact v-if="Object.keys(useChat.infoCurrentReceiver).length > 0" :user="('user' in useChat.infoCurrentReceiver) ? useChat.infoCurrentReceiver : {}" />
   </div>
   <div class="message">
-    <MessageReceived />
-    <MessageSentVue />
+    <MessagesUser />
+  <div></div>
   </div>
   <div class="send">
     <SendMessage/>

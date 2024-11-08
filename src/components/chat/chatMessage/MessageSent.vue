@@ -14,7 +14,9 @@ function shouldShowAvatar(index) {
   <div class="container-sent">
     <div class="messageSent" v-for="(message, index) in useChat.messagesSentCurrentUser" :key="index">
       <div class="message">
-        <!-- Condição para mostrar o avatar apenas na primeira mensagem do grupo -->
+          <div class="avatar">
+            <img src="@/assets/images/dashboard/user.png" alt="">
+          </div>
         <div class="messages">
           <div class="message-text" v-if="message.message">
             <p class="text">{{ message.message }}</p>

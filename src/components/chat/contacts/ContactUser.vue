@@ -32,7 +32,7 @@ onMounted(() => {
             </div>
             <div class="contact-info">
                 <h3>{{ perfil?.user?.name || 'Nome não encontrado' }}</h3>  <!-- Verificação segura para evitar erros de acesso -->
-                <p v-if="useChat.allUsers[index].myMessage">Você: {{ useChat.allUsers[index].lastMessage }}</p>
+                <p v-if="useChat.allUsers[index].myMessage === true">Você: {{ useChat.allUsers[index].lastMessage }} {{ useChat.allUsers[index] }}</p>
                 <p v-else>{{ useChat.allUsers[index].lastMessage }}</p>
             </div>
             <div class="contact-notification">

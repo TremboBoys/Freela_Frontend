@@ -4,10 +4,10 @@ import { useChatStore } from '@/stores/chat/chat';
 const useChat = useChatStore();
 
 // Função para determinar se o avatar deve ser exibido
-function shouldShowAvatar(index) {
-  // Verifica se é a primeira mensagem ou se o texto é diferente da mensagem anterior
-  return index === 0 || (useChat.messages.length > 0) == false;
-}
+// function shouldShowAvatar(index) {
+//   // Verifica se é a primeira mensagem ou se o texto é diferente da mensagem anterior
+//   return index === 0 || (useChat.messages.length > 0) == false;
+// }
 </script>
 
 <template>
