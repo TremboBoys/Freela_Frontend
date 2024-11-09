@@ -166,10 +166,10 @@
   }
 
 /* Estilo para telas com largura mínima de 1920px */
-@media (min-width: 1920px) {
+@media (max-width: 1920px) {
   .selectProject {
     margin-top: 20px;
-    width: 1200px;  /* Aumentando a largura para telas ainda maiores */
+    width: 100vw;  /* Aumentando a largura para telas ainda maiores */
     display: flex;
     flex-direction: column;
     margin-left: 100px;
@@ -204,7 +204,6 @@
           display: flex;
           width: 1000px;
           padding: 20px 20px 20px 15px;
-          gap: 100px;
           font-size: 20px;
         }
   
@@ -217,16 +216,16 @@
         .select-bottom-container {
           padding: 12px;
           display: flex;
-          gap: 100px;
           margin-bottom: 80px;
+          width: 60vw;
   
           .select-bottom {
-            width: 280px;
-            height: 70px;
-  
+            width: 15vw;
+            height: 60px;
             p {
               font-size: 18px;
-              padding: 6px;
+              padding: 2px;
+              width: 100px;
             }
           }
         }
@@ -244,7 +243,7 @@
         }
   
         .select-footer-proposal {
-          width: 300px;
+          width: 40vw;
           height: 60px;
           align-items: center;
           margin-left: 0px;
@@ -260,10 +259,10 @@
 }
 
 /* Estilo para telas com largura mínima de 1440px */
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
   .selectProject {
     margin-top: 20px;
-    width: 800px;  /* Aumentando a largura para telas maiores */
+    width: 60vw;  /* Aumentando a largura para telas maiores */
     display: flex;
     margin-left: 30px;
     padding: 15px;
@@ -275,12 +274,12 @@
         width: 100%;
   
         .select-header {
-          flex-grow: 1;
+          width: 40vw;
   
           p {
             color: #000;
             font-family: Poppins;
-            font-size: 32px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -290,7 +289,6 @@
         .select-header2 {
           flex-shrink: 0;
           width: auto;
-          min-width: 128px;
           padding-left: 80px;
           color: #1B75BF;
           font-family: 'Poppins', sans-serif;
@@ -316,6 +314,7 @@
         }
   
         .select-text {
+          width: 50vw;
           color: #000;
           font-family: Poppins;
           font-size: 16px;
@@ -329,10 +328,11 @@
         padding: 16px;
         display: flex;
         gap: 16px;
+        width: 40vw;
   
         .select-bottom {
           padding: 16px;
-          width: 87px;
+          width:40vw;
           height: 20px;
           flex-shrink: 0;
           border-radius: 35px;
@@ -404,22 +404,22 @@
 @media (max-width: 1024px) {
   .selectProject {
     margin-top: 20px;
-    width: 800px;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     margin-left: 0px;
-    padding: 5px ;
+    padding: 20px ;
   
     .select {
       align-items: center;
       
       .select-header-container {
-        width: 700px;
+        width: 70vw;
         display: flex;
     
         .select-header {
           p {
-            width: 500px;
+            width: 50vw;
             font-size: 24px;
           }
         }
@@ -455,9 +455,10 @@
           display: flex;
           gap: 50px;
           margin-bottom: 50px;
+          width: 40vw;
   
           .select-bottom {
-            width: 190px;
+            width: 15vw;
             height: 50px;
   
             p {
@@ -499,7 +500,7 @@
   @media (max-width: 768px) {
     .selectProject {
       margin-top: 20px;
-      width: 400px;
+      width: 80vw;
       display: flex;
       flex-direction: column;
       margin-left: 0px;
@@ -509,13 +510,13 @@
       align-items: center;
         
         .select-header-container {
-          width: 400px;
+          width: 80vw;
           display: flex;
     
           .select-header {
     
             p {
-              width: 200px;
+              width: 40vw;
               font-size: 14px;
             }
           }
@@ -535,7 +536,7 @@
   
           .select-subTitle {
             display: flex;
-            width: 400px;
+            width: 80vw;
             padding: 10px 10px 10px 5px;
             display: flex;
             gap: 20px;
@@ -543,7 +544,7 @@
           }
   
           .select-text {
-            width: 370px;
+            width: 70vw;
             font-size: 12px;
           }
   
@@ -551,9 +552,10 @@
             padding: 4px;
             display: flex;
             gap: 8px;
+            width: 80vw;
   
             .select-bottom {
-              width: 120px;
+              width: 20vw;
               height: 30px;
   
               p {
@@ -578,7 +580,7 @@
           }
   
           .select-footer-proposal {
-            width: 180px;
+            width: 30vw;
             height: 40px;
             align-items: center;
             margin-left: 0px;

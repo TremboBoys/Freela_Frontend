@@ -112,7 +112,7 @@
 }
 
 /* Estilo para telas com largura mínima de 1920px */
-@media (min-width: 1920px) {
+@media (max-width: 1920px) {
   .search {
     display: flex;
     width: 600px;  /* Aumentando a largura do search em telas grandes */
@@ -158,7 +158,7 @@
 }
 
 /* Estilo para telas com largura mínima de 1440px */
-@media (min-width: 1440px) {
+@media (max-width: 1440px) {
   .search {
     display: flexbox;
     width: 308px;
@@ -277,7 +277,7 @@
 @media (max-width: 1024px) {
   .search {
     display: flex;
-    width: 400px;  /* Ajustando a largura do search para telas menores */
+    width: 40vw;  /* Ajustando a largura do search para telas menores */
     height: 400px;
     flex-direction: column;
     margin-top: 50px;
@@ -288,7 +288,7 @@
   }
 
   #search {
-    width: 350px;
+    width: 35vw;
   }
 
   .inputBox {
