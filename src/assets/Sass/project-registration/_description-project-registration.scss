@@ -1,12 +1,15 @@
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     .container-description {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        margin-left: 400px;
+        margin-left: 300px;
+
 
         
         .cadastro{
@@ -131,6 +134,7 @@
 
             .router-link {
                 margin-bottom: 40px;
+                margin-left: 50px;
                 button {
                     cursor: pointer;
                     width: 176px;
