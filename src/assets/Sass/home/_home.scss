@@ -1,0 +1,81 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    .logo {
+      width: 20vw;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar-collapse {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .nav-link {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        color: #000;
+        &:hover {
+          border-bottom: 2px solid #0d4247;
+        }
+      }
+    }
+  }
+}
+.banner {
+  width: 100vw;
+  .container {
+    .left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      
+      .banner-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        h2 {
+          margin-top: 4rem;
+          font-size: 3rem;
+          font-weight: 700;
+          color: #0d4247;
+        }
+        h6 {
+          font-size: 2rem;
+          font-weight: 400;
+          color: #000000;
+        }
+        .routerLink {
+          text-decoration: none;
+          button {
+            margin-top: 2rem;
+            padding: 10px;
+            background-color: #0d4247;
+            color: #ffffff;
+            border: none;
+            border-radius: 40px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18vw;
+            &:hover {
+              background-color: #0d4247;
+            }
+          }
+        }
+      }
+    }
+  }
+}
