@@ -68,6 +68,22 @@
                 </div>
             </div>
         </section>
+        <section class="section-padding">
+            <div class="container">
+                <div class="row text-center">
+                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Usuários
+                    </h3>
+                    <div class="col-md-6 text-center left">
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">Nossos usuários são clientes ou freelancers, onde o freelancer oferece suas habilidades para projetos que os clientes cadastraram. Contamos com um sistema de um avaliação para melhor escolha de qual freelancer contratar.</p>
+                    </div>
+                    <div class="col-md-6 text-center right">
+                        <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+                            <DotLottieVue style="height: 450px; width: 450px" autoplay loop src="https://lottie.host/b959557c-90f3-4af9-8836-9b7c89b3b89c/EFmvF3ozlC.json" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
