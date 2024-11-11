@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <router-link to="/" class="navbar-brand navbar-logo">
-                    <img src="@/assets/images/logo/tasker-logo.png" alt="logo" class="logo" />
+                    <img src="@/assets/images/logo/full-logo.png" alt="logo" class="logo" />
                 </router-link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -29,14 +29,16 @@
                         <div class="col-md-7 col-sm-12 left">
                             <div class="banner-text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                                 <h2 class="white">Bem-vindo ao nosso sistema!</h2>
-                                <h6 class="white">Encontre os melhores profissionais ou ofereça seu talento como freelancer.</h6>
+                                <h6 class="white">Encontre os melhores profissionais ou ofereça seu talento como
+                                    freelancer.</h6>
                                 <router-link to="" class="routerLink">
                                     <button class="fadeIn">Registre-se</button>
                                 </router-link>
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-12 right">
-                            <DotLottieVue style="height: 400px; width: 400px" class="img-fluid wow fadeInUp" autoplay loop src="https://lottie.host/3698d83f-18ed-40db-87f5-a01d3a6a4908/AUzzJ8stah.json" />  
+                            <DotLottieVue style="height: 400px; width: 400px" class="img-fluid wow fadeInUp" autoplay
+                                loop src="https://lottie.host/3698d83f-18ed-40db-87f5-a01d3a6a4908/AUzzJ8stah.json" />
                         </div>
                     </div>
                 </div>
@@ -47,14 +49,21 @@
         </section>
 
         <!-- Other sections (About, Features, etc.) -->
-        <section v-for="(section, index) in sections" :key="index" :id="section.id" :data-scroll-index="index"
-            class="section-padding">
+        <section class="section-padding">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">{{ section.title }}</h3>
-                        <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"></span>
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">{{ section.content }}</p>
+                <div class="row text-center">
+                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Sistema de pagamento
+                    </h3>
+                    <div class="col-md-6 text-center left">
+                        <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+                            <DotLottieVue style="height: 450px; width: 450px" autoplay loop
+                                src="https://lottie.host/af9c7499-8b74-4f88-b07e-9dc02a172dbb/kucosvPxVz.json" />
+                        </span>
+                    </div>
+                    <div class="col-md-6 text-center right">
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">Nosso sistema de pagamento
+                            é realizado com a tecnologia PIX, cartão de crédito e débito. Os pagamentos serão realizados
+                            somente quando o freelancer realizar o projeto do cliente.</p>
                     </div>
                 </div>
             </div>
