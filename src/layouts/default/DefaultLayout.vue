@@ -3,10 +3,15 @@ import { DefaultFooter, DefaultHeader,SignInPassage, QuickWarnings, PopUpSignUp 
 import { useAuthStore } from '@/stores/auth/auth';
 import { useSignUpStore } from '@/stores/auth/signUp';
 import { useWarningStore } from '@/stores/warning/warning';
+import { onMounted } from 'vue';
 
 const useAuth = useAuthStore();
 const useSignUp = useSignUpStore();
 const useWarning = useWarningStore();
+
+onMounted(() => {
+    window.scrollTo(0, 0);
+})
 </script>
 
 <template>
