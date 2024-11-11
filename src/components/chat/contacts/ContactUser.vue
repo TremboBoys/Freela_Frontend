@@ -40,6 +40,7 @@ onMounted(() => {
                     <img v-else-if="useChat.allUsers[index].read && useChat.allUsers[index].myMessage" src="@/assets/images/chat/read.png" class="read-icon" alt="">
                 </div>
             </div>
+            </div>
             <div class="contact-notification">
                 <p v-if="!useChat.allUsers[index].myMessage && useChat.allUsers[index].numberMessagesUnread > 0">{{ useChat.allUsers[index].numberMessagesUnread }}</p>
             </div>

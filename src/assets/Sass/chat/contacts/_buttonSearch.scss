@@ -46,7 +46,6 @@
         padding: 10px;
         border-radius: 30px;
         width: 100%;
-        max-width: 320px;
         z-index: 999;
     }
 
@@ -91,4 +90,17 @@
     border-top: 1px solid #000;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+@media(max-width: 1920px){
+    .search-bar{
+        max-width: 320px;
+    }
+}
+
+@media(max-width: 810px){
+    .search-bar{
+        max-width: none;
+        width: 100%;
+    }
 }
