@@ -5,6 +5,12 @@ async function getAllMessagesService(nameUser) {
     return data;
 };
 
+async function updateMessage(id, update) {
+    const { data } = await apiChat.patch(`/message/${id}`, update);
+    return data;
+}
+
 export {
-    getAllMessagesService
+    getAllMessagesService,
+    updateMessage
 };

@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { reactive, ref } from "vue";
 import { io } from "socket.io-client";
-import { getAllMessagesService } from "@/services/chat/chat";
+import { getAllMessagesService, updateMessage } from "@/services/chat/chat";
 import { usePerfilStore } from "../perfil/perfil";
 import { useWarningStore } from "../warning/warning";
 
@@ -60,13 +60,6 @@ export const useChatStore = defineStore('chat', () => {
         return dataMessages;
     };
 
-    // function sortNewestMessages(dataMessages) {
-    //     dataMessages.sort((a, b) => {
-    //         return new Date(b.dateTime).getTime() - new Date(a.dateTime).getTime();
-    //     });
-    //     return dataMessages;
-    // };
-
     function splitUsers(dataMessages = []) {        
         // Crie um Map para busca rápida de usuários já armazenados
         const userMap = new Map();
@@ -75,14 +68,11 @@ export const useChatStore = defineStore('chat', () => {
         allUsers.value.forEach(user => {
             userMap.set(user.user, user);
         });
-
-        console.log(userMap, dataMessages);
     
         dataMessages.forEach(msg => {
             const isSender = msg.sender == usePerfil.perfil.user.username;
             const senderOrReceiver = isSender ? msg.receiver : msg.sender;
             const myMessage = isSender;
-            console.log(msg.sender, usePerfil.perfil.user.username, isSender, myMessage);
     
             if (userMap.has(senderOrReceiver)) {
                 const user = userMap.get(senderOrReceiver);
@@ -98,6 +88,7 @@ export const useChatStore = defineStore('chat', () => {
             } else {
                 // Adiciona novo usuário no Map e no array `allUsers`
                 const newUser = {
+                    idMessage: msg._id,
                     user: senderOrReceiver,
                     numberMessagesUnread: myMessage ? 0 : 1,
                     myMessage,
@@ -105,53 +96,74 @@ export const useChatStore = defineStore('chat', () => {
                     read: msg.read
                 };
                 userMap.set(senderOrReceiver, newUser);
-                console.log(userMap);
                 allUsers.value.push(newUser);
             }
         });
     }    
 
     function sendMessage() {
-        console.log(usePerfil.perfil.user.username, currentReceiver.value, newMessage.value);
         socket.emit("sendMessage", usePerfil.perfil.user.username, currentReceiver.value, newMessage.value);
         const dateTime = new Date();
         messagesCurrentUser.value.push({sender: usePerfil.perfil.user.username, receiver: currentReceiver.value, message: newMessage.value, dateTime, read: false});
-        splitUsers({sender: usePerfil.perfil.user.username, receiver: currentReceiver.value, message: newMessage.value, dateTime, read: false});
+        splitUsers([{sender: usePerfil.perfil.user.username, receiver: currentReceiver.value, message: newMessage.value, dateTime, read: false}]);
         newMessage.value = '';
     }
     socket.on("receiveMessage", (userSender, userReceiver, msg, dateTime, read) => {
         if (userSender === currentReceiver.value) {
             messagesCurrentUser.value.push({sender: userSender, receiver: userReceiver, message: msg, dateTime: dateTime, read});
+            messages.value.push({sender: userSender, receiver: userReceiver, message: msg, dateTime: dateTime, read});
         }
-        console.log(userSender, userReceiver, msg, dateTime, read);
         const message = [];
         message.push({sender: userSender, receiver: userReceiver, message: msg, dateTime, read});
-        console.log(message);
 
         splitUsers(message);
-        //     let userExist = false;
-
-        //     for (let c = 0; c < allUsers.value.length; c++) {
-        //         if (allUsers.value[c].user === userSender) {
-        //             allUsers.value[c].lastMessage = msg;
-        //             allUsers.value[c].numberMessages += 1;
-        //             userExist = true;
-        //             break;
-        //         }
-        //     }
-        //     if (!userExist) {
-        //         allUsers.value.push({user: userSender, numberMessagesUnread: 1, myMessage: false, lastMessage: msg, read: false});
-        //     };
-        // }
     });
 
     function openMessagesUser() {
         const filterNameCurrentUser = usePerfil.perfis.filter(user => user.user.username === currentReceiver.value);
-        const filterMessages = sortOldestMessages(messages.value).filter(message => message.sender === currentReceiver.value || message.receiver === currentReceiver.value);
+        const filterMessages = sortOldestMessages(messages.value).filter(message => (message.sender === currentReceiver.value && message.receiver === usePerfil.perfil.user.username) || (message.sender === usePerfil.perfil.user.username && message.receiver === currentReceiver.value));
         messagesCurrentUser.value = filterMessages;
         infoCurrentReceiver.value = filterNameCurrentUser[0];
-        console.log(infoCurrentReceiver.value);
     };
 
-    return { messages, allUsers, messagesCurrentUser, currentReceiver, infoCurrentReceiver, state, newMessage, connectChat, saveUser, initApp, getAllMessages, sendMessage, openMessagesUser };
+    async function makeMessageRead(id) {
+        socket.emit("notificationUpdateRead", currentReceiver.value, id);
+        const data = await updateMessage(id, {read: true});
+        console.log(data);
+        messages.value.forEach((message, index) => {
+            if (message._id == id) {
+                message.read = true;
+            }
+        });
+        allUsers.value.forEach((user) => {
+            if (user.user == currentReceiver.value) {
+                user.numberMessagesUnread -= 1;
+            };
+        });
+    }
+
+    socket.on("updateRead", (userSender, idMessage) => {
+        console.log('Mensagem atualizada!');
+        if (userSender === currentReceiver.value) {
+            messagesCurrentUser.value.forEach((message) => {
+                if (message._id == idMessage) {
+                    message.read = true;
+                }
+            })
+        }
+        messages.value.forEach((message) => {
+            if (message._id == idMessage) {
+                message.read = true;
+            }
+        })
+        allUsers.value.forEach((user) => {
+            if (user.user == userSender) {
+                if (user.idMessage == idMessage) {
+                    user.read = true;
+                }
+            }
+        });
+    })
+
+    return { messages, allUsers, messagesCurrentUser, currentReceiver, infoCurrentReceiver, state, newMessage, connectChat, saveUser, initApp, getAllMessages, sendMessage, openMessagesUser, makeMessageRead };
 });

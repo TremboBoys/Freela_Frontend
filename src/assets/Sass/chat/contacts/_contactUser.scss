@@ -1,12 +1,13 @@
 .container {
     display: flex;
+    margin-top: 20px;
     .contact {
+        width: 100%;
         display: flex;
         align-items: center;
         padding: 10px;
         background-color: #f8f8f8;
         cursor: pointer;
-        width: 350px;
         transition: background-color 0.2s;
         
         &:hover {
@@ -24,6 +25,7 @@
 
         .contact-info {
             display: flex;
+            flex-grow: 1;
             flex-direction: column;
             justify-content: center;
 

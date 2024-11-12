@@ -1,7 +1,7 @@
 .container {
     display: flex;
     background-color: #F6F6F6;    
-    width: 78vw;
+    width: 70vw;
     max-height: 10vh;
     flex-direction: row;
     justify-content: space-between;
@@ -15,9 +15,22 @@
             height: 40px;
             border-radius: 50%;
         }
+    .container-name-user {
+        display: flex;
+        flex-direction: column;
+        margin-left: 8px;
+
         .name {
-            margin-left: 8px;
+            position: relative;
+            left: 3px;
+            font-weight: bolder;
         }
+
+        .username {
+            font-size: 14px;
+            color: rgb(113, 118, 123);;
+        }
+    }
     }
     .right {
         display: flex;

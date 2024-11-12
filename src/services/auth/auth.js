@@ -14,9 +14,18 @@ async function verifyAuthPassage() {
     }
 };
 
-async function verifyUserExistInBackend() {
+async function getEmailUser() {
     try {
         const email = (await passageCurrentUser.userInfo()).email;
+        return email;
+    } catch(error) {
+        console.error('Error in GET email passage: ', error);
+    }
+}
+
+async function verifyUserExistInBackend() {
+    try {
+        const email = await getEmailUser();
 
         const { useSignUpStore } = await import('@/stores/auth/signUp');
         const useSignUp = useSignUpStore();
@@ -39,5 +48,6 @@ async function verifyUserExistInBackend() {
 
 export {
     verifyAuthPassage,
+    getEmailUser,
     verifyUserExistInBackend
 };

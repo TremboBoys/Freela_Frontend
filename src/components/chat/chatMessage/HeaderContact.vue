@@ -11,7 +11,10 @@ const props = defineProps({
     <div class="container">
         <div class="left">
             <img src="@/assets/images/dashboard/user.png" class="avatar" alt="">
-            <p class="name">{{ props.user.user.name }}</p>
+            <div class="container-name-user">
+                <p class="name">{{ props.user.user.name }}</p>
+                <p class="username">@{{ props.user.user.username }}</p>
+            </div>
         </div>
         <div class="right">
             <div class="icons">

@@ -13,7 +13,7 @@ const useChat = useChatStore();
     <HeaderContact v-if="Object.keys(useChat.infoCurrentReceiver).length > 0" :user="('user' in useChat.infoCurrentReceiver) ? useChat.infoCurrentReceiver : {}" />
   </div>
   <div class="message">
-    <MessagesUser />
+    <MessagesUser v-if="useChat.messagesCurrentUser.length > 0" />
   <div></div>
   </div>
   <div class="send">
