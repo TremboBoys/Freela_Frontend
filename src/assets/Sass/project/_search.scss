@@ -116,7 +116,7 @@
   .search {
     display: flex;
     width: 600px;  /* Aumentando a largura do search em telas grandes */
-    height: 70px;
+    height: 700px;
     flex-direction: column;
     margin-top: 50px;
   }
@@ -126,7 +126,7 @@
   }
 
   #search {
-    width: 500px;
+    width: 540px;
   }
 
   .inputBox {
@@ -151,8 +151,8 @@
 
   .bottom-search {
     p {
-      width: 350px;
-      font-size: 20px;
+      width: 250px;
+      font-size: 14px;
     }
   }
 }
@@ -166,6 +166,10 @@
     border-radius: 11px;
     border: 1px solid #d9d9d9;
     background: #fff;
+  }
+
+  #search {
+    width: 280px;
   }
 
   .inputSearch {
@@ -264,7 +268,7 @@
   .bottom-search {
     color: #000;
     font-family: Poppins;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
