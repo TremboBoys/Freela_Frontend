@@ -1,27 +1,33 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+
     .logo {
       width: 15vw;
     }
+
     .navbar-brand {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
     .navbar-collapse {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+
       .nav-link {
         font-size: 1.2rem;
         margin-right: 1rem;
         color: #000;
+
         &:hover {
           border-bottom: 2px solid #0d4247;
         }
@@ -29,78 +35,91 @@
     }
   }
 }
+
 .banner {
   width: 100vw;
-  .container {
-    .left {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      
-      .banner-text {
+  height: 80vh;
+
+  .banner-overlay {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+      .left {
         display: flex;
-        flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        text-align: center;
-        h2 {
-          margin-top: 4rem;
-          font-size: 3rem;
-          font-weight: 700;
-          color: #0d4247;
-        }
-        h6 {
-          font-size: 2rem;
-          font-weight: 400;
-          color: #000000;
-        }
-        .routerLink {
-          text-decoration: none;
-          button {
-            margin-top: 2rem;
-            padding: 10px;
-            color: #ffffff;
-            border: none;
-            border-radius: 40px;
-            font-size: 1.5rem;
-            font-weight: 500;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 18vw;
-            position: relative;
-            overflow: hidden;
-            background: transparent;
+        align-items: flex-start;
 
-            /* Camada inicial */
-            &::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background: linear-gradient(90deg, rgb(78, 107, 110) 0%, rgb(33, 77, 80) 50%, rgb(13, 59, 63) 100%);
-              transition: opacity 0.5s ease;
-              z-index: -1;
-            }
+        .banner-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
 
-            /* Camada de hover */
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background: linear-gradient(90deg, rgb(53, 93, 97) 0%, rgba(13,66,71,1) 50%, rgba(8,52,56,1) 100%);
-              z-index: -2;
-            }
+          h2 {
+            margin-top: 4rem;
+            font-size: 4rem;
+            font-weight: 700;
+            color: #0d4247;
+          }
 
-            /* Hover */
-            &:hover::before {
-              opacity: 0;
+          h6 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #000000;
+          }
+
+          .routerLink {
+            text-decoration: none;
+
+            button {
+              margin-top: 2rem;
+              padding: 10px;
+              color: #ffffff;
+              border: none;
+              border-radius: 40px;
+              font-size: 1.5rem;
+              font-weight: 500;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 18vw;
+              position: relative;
+              overflow: hidden;
+              background: transparent;
+
+              /* Camada inicial */
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(90deg, rgb(78, 107, 110) 0%, rgb(33, 77, 80) 50%, rgb(13, 59, 63) 100%);
+                transition: opacity 0.5s ease;
+                z-index: -1;
+              }
+
+              /* Camada de hover */
+              &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(90deg, rgb(53, 93, 97) 0%, rgba(13, 66, 71, 1) 50%, rgba(8, 52, 56, 1) 100%);
+                z-index: -2;
+              }
+
+              /* Hover */
+              &:hover::before {
+                opacity: 0;
+              }
             }
           }
         }
@@ -108,34 +127,41 @@
     }
   }
 }
+
 .section-padding {
   .container {
     background-color: #858585;
+
     .row {
       z-index: 1;
       background-color: #fff;
+
       .left {
         background-color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
         p {
           font-size: 1.6rem;
           color: #2b2b2b;
           margin-top: 2rem;
         }
       }
+
       h3 {
         font-size: 2.5rem;
         font-weight: 700;
         color: #0d4247;
         margin-bottom: 1.5rem;
       }
+
       .right {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
         p {
           font-size: 1.6rem;
           color: #2b2b2b;
