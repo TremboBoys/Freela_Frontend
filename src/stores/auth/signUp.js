@@ -30,7 +30,6 @@ export const useSignUpStore = defineStore('signUp', () => {
     async function createUser(userInfo = {}) {
         if (validateName && validatePassword) {
             const response = await SignUpService.createUser(userInfo);
-            console.log(response);
     
             if ("message" in response) {
                 useWarning.activeWarning('failure', 'Não foi possível registrar sua conta, reinicie a página e tente novamente!');

@@ -22,7 +22,6 @@ class PerfilService {
     };
 
     async getCurrentPerfil(type, info = []) {
-        console.log(type, info);
         if (type == 'email') {
             const { data } = await apiPerfil.get(`/perfil/?user_email=${info[0]}`);
             return data;

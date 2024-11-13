@@ -28,7 +28,6 @@ export const usePerfilStore = defineStore('perfil', () => {
         delete perfilCopy.id
         try {
             const data = await PerfilService.createPerfil(perfilCopy);
-            console.log(data);
             return true;
         } catch(error) {
             console.error('Error registering profile: ', error);
@@ -41,7 +40,6 @@ export const usePerfilStore = defineStore('perfil', () => {
         try {
             const email = await getEmailUser();
             try {
-                console.log(email);
                 const data = await PerfilService.getCurrentPerfil('email', [email]);
 
                 for (let c = 0; c < data.length; c++) {

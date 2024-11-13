@@ -88,9 +88,9 @@ export const useChatStore = defineStore('chat', () => {
             } else {
                 // Adiciona novo usuário no Map e no array `allUsers`
                 const newUser = {
-                    idMessage: msg._id,
+                    _id: msg._id,
                     user: senderOrReceiver,
-                    numberMessagesUnread: myMessage ? 0 : 1,
+                    numberMessagesUnread: myMessage ? 0 : (myMessage === false && msg.read) ? 0 : 1,
                     myMessage,
                     lastMessage: msg.message,
                     read: msg.read
@@ -108,13 +108,14 @@ export const useChatStore = defineStore('chat', () => {
         splitUsers([{sender: usePerfil.perfil.user.username, receiver: currentReceiver.value, message: newMessage.value, dateTime, read: false}]);
         newMessage.value = '';
     }
-    socket.on("receiveMessage", (userSender, userReceiver, msg, dateTime, read) => {
+    socket.on("receiveMessage", (_id, userSender, userReceiver, msg, dateTime, read) => {
         if (userSender === currentReceiver.value) {
-            messagesCurrentUser.value.push({sender: userSender, receiver: userReceiver, message: msg, dateTime: dateTime, read});
-            messages.value.push({sender: userSender, receiver: userReceiver, message: msg, dateTime: dateTime, read});
+            messagesCurrentUser.value.push({_id, sender: userSender, receiver: userReceiver, message: msg, dateTime: dateTime, read});
+            messages.value.push({_id, sender: userSender, receiver: userReceiver, message: msg, dateTime: dateTime, read});
         }
         const message = [];
-        message.push({sender: userSender, receiver: userReceiver, message: msg, dateTime, read});
+        message.push({_id, sender: userSender, receiver: userReceiver, message: msg, dateTime, read});
+        messages.value.push({_id, sender: userSender, receiver: userReceiver, message: msg, dateTime: dateTime, read});
 
         splitUsers(message);
     });

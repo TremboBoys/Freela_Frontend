@@ -11,7 +11,6 @@ const triggerFileInput = () => {
 
 const handleFileUpload = (event) => {
     useChat.newMessage.file = event.target.files[0];
-    console.log(useChat.newMessage.file);
 };
 </script>
 

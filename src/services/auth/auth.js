@@ -31,7 +31,6 @@ async function verifyUserExistInBackend() {
         const useSignUp = useSignUpStore();
 
         useSignUp.user.email = email;
-        console.log(email);
         try {
             await apiAuth.post('/login/', {
                 email

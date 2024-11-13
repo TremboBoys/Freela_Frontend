@@ -27,17 +27,23 @@ function shouldShowDetailMessage(message, index) {
 
 function verifyReadMessage(entries, observer) {
     entries.forEach(entry => {
-        const index = entry.target.getAttribute('id');
-        if (entry.isIntersecting && !useChat.messagesCurrentUser[index].read) {
+        const index = Number(entry.target.getAttribute('id'));
+        if ((entry.isIntersecting || entry.intersectionRatio > 0) && !useChat.messagesCurrentUser[index].read) {
             useChat.makeMessageRead(useChat.messagesCurrentUser[index]._id);
+            console.log('Callback!');
+            observer.unobserve(entry.target);
+        } else if (useChat.messagesCurrentUser[index].read) {
+            observer.unobserve(entry.target);
         }
     })
-}
+};
+
+let containerMessage = document.querySelector('.message');
 
 const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5
+    root: containerMessage,
+    rootMargin: '0px 0px 0px 50px',
+    threshold: 0.01
 };
 const observer = new IntersectionObserver(verifyReadMessage, options);
 
@@ -46,7 +52,7 @@ function observerMessages() {
         console.log(el);
         messageRefs.value = el.getAttribute('id');
         observer.observe(el);
-    })
+    });
 }
 
 watch(() => useChat.messages, () => {
@@ -55,9 +61,13 @@ watch(() => useChat.messages, () => {
 
         if (lastMessage && lastMessage.sender === useChat.currentReceiver) {
             const receivedMessages = document.querySelectorAll('.messageReceived');
-            const lastReceivedMessage = receivedMessages.length ? receivedMessages[receivedMessages.length - 1] : null;
+            const lastReceivedMessage = receivedMessages[receivedMessages.length - 1]
+            console.log(receivedMessages.length, );
 
             if (lastReceivedMessage) {
+                if (lastReceivedMessage.getAttribute('id') === null) {
+                    lastReceivedMessage.setAttribute('id', ((useChat.messagesCurrentUser.length) - 1).toString());
+                }
                 messageRefs.value = lastReceivedMessage.getAttribute('id');
                 console.log(lastReceivedMessage.getAttribute('id'));
                 observer.observe(lastReceivedMessage);
