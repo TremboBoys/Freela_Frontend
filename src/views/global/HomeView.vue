@@ -1,23 +1,16 @@
 <template>
     <div>
         <!-- Navbar Section -->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar">
             <div class="container">
                 <router-link to="/" class="navbar-brand navbar-logo">
                     <img src="@/assets/images/logo/full-logo.png" alt="logo" class="logo" />
                 </router-link>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="fas fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item" v-for="(item, index) in navItems" :key="index">
-                            <router-link class="nav-link" :href="`${item.link}`">{{ item.text }}</router-link>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" v-for="(item, index) in navItems" :key="index">
+                        <router-link class="nav-link" :href="`${item.link}`">{{ item.text }}</router-link>
+                    </li>
+                </ul>
             </div>
         </nav>
 
@@ -57,7 +50,7 @@
                     <div class="col-md-6 text-center left">
                         <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
                             <DotLottieVue style="height: 450px; width: 450px" autoplay loop
-                                src="https://lottie.host/af9c7499-8b74-4f88-b07e-9dc02a172dbb/kucosvPxVz.json" />
+                                src="https://lottie.host/af9c7499-8b74-4f88-b07e-9dc02a172dbb/kucosvPxVz.json" class="canvas" />
                         </span>
                     </div>
                     <div class="col-md-6 text-center right">
@@ -74,11 +67,15 @@
                     <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Usuários
                     </h3>
                     <div class="col-md-6 text-center left">
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">Nossos usuários são clientes ou freelancers, onde o freelancer oferece suas habilidades para projetos que os clientes cadastraram. Contamos com um sistema de um avaliação para melhor escolha de qual freelancer contratar.</p>
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">Nossos usuários são
+                            clientes ou freelancers, onde o freelancer oferece suas habilidades para projetos que os
+                            clientes cadastraram. Contamos com um sistema de um avaliação para melhor escolha de qual
+                            freelancer contratar.</p>
                     </div>
                     <div class="col-md-6 text-center right">
                         <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                            <DotLottieVue style="height: 450px; width: 450px" autoplay loop src="https://lottie.host/b959557c-90f3-4af9-8836-9b7c89b3b89c/EFmvF3ozlC.json" />
+                            <DotLottieVue style="height: 450px; width: 450px" autoplay loop
+                                src="https://lottie.host/b959557c-90f3-4af9-8836-9b7c89b3b89c/EFmvF3ozlC.json" class="canvas" />
                         </span>
                     </div>
                 </div>
