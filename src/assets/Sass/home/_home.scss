@@ -130,8 +130,6 @@
 }
 
 .section-padding {
-  margin-top: 10vh;
-  height: 70vh;
   .container {
     background-color: #858585;
 
@@ -174,448 +172,186 @@
     }
   }
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 1440px) {
+  .navbar .container .logo {
+    width: 18vw;
+  }
   .navbar {
-    display: flex;
-    justify-content: space-between;
-
     .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100vw;
-
-      .logo {
-        width: 20vw;
-      }
-
-      .navbar {
-        .nav-link {
-          font-size: 1.5rem;
-        }
+      .navbar-nav {
+        font-size: 1.8rem;
       }
     }
   }
-
   .banner {
+    height: 60vh;
+  }
+  .banner .banner-overlay .container .left .banner-text h2 {
+    font-size: 3.5rem;
+  }
+
+  .banner .banner-overlay .container .left .banner-text h6 {
+    font-size: 2.5rem;
+  }
+  .banner .banner-overlay .container .row .right {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: auto !important;
-
-    .svg-wave {
-      display: none;
-    }
-
-    .banner-overlay {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 0;
-      .container {
-        .row {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: row;
-          width: 100vw !important;
-          height: auto;
-
-          .left {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 60vw !important;
-
-            .banner-text {
-              h2 {
-                font-size: 3rem;
-              }
-
-              h6 {
-                font-size: 2rem;
-              }
-
-              .routerLink {
-                button {
-                  font-size: 1.5rem;
-                  width: 30vw;
-                }
-              }
-            }
-          }
-
-          .right {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40vw !important;
-            height: 40vh !important;
-            flex-direction: row;
-
-            .svg-hero {
-              height: auto !important;
-              width: 40vw !important;
-            }
-          }
-        }
-      }
-    }
   }
-
   .section-padding {
     width: 100vw;
+  }
+  .section-padding .container .row .right {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
-    flex-direction: row;
+    width: 39vw;
+  }
+}
+@media (max-width: 992px) {
+  .navbar .container .logo {
+    width: 20vw;
+  }
+  .navbar {
     .container {
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .row {
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-
-        .left {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 43vw !important;
-        }
+      .navbar-nav {
+        font-size: 1.5rem;
       }
     }
   }
+
+  .banner .banner-overlay .container .left .banner-text h2 {
+    font-size: 3rem;
+  }
+
+  .banner .banner-overlay .container .left .banner-text h6 {
+    font-size: 2rem;
+  }
+  .banner .banner-overlay .container .row .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-padding {
+    width: 100vw;
+  }
+  .section-padding .container .row .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39vw;
+  }
 }
+
 @media (max-width: 768px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100vw;
-
-      .logo {
-        width: 25vw;
-      }
-
-      .navbar-collapse {
-        .nav-link {
-          font-size: 1.3rem;
-        }
-      }
-    }
+  .navbar .container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: auto !important;
+    height: 60vh;
+    margin-bottom: 10vh;
+    .banner-overlay {
+      margin-top: 0;
+    }
+    .banner-overlay .container .left .banner-text h2 {
+      font-size: 2.5rem;
+    }
 
-    .svg-wave {
+    .banner-overlay .container .left .banner-text h6 {
+      font-size: 1.5rem;
+    }
+    .banner-overlay .container .row .left .wow button {
+      width: 40vw;
+      font-size: 1.5rem;
+    }
+    .banner-overlay .container .row .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .section-padding .container .row h3 {
+    font-size: 2rem;
+  }
+
+  .section-padding .container .row .left p,
+  .section-padding .container .row .right p {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .container .logo {
+    width: 30vw;
+  }
+
+  .banner .banner-overlay .container .left .banner-text h2 {
+    font-size: 2rem;
+  }
+
+  .banner .banner-overlay .container .left .banner-text h6 {
+    font-size: 1.2rem;
+  }
+  .banner .banner-overlay .container .row .left .wow button {
+    width: 70vw;
+    font-size: 1.2rem;
+  }
+  .banner .banner-overlay .container .row .right {
+    display: none;
+  }
+
+  .section-padding .container .row h3 {
+    font-size: 1.8rem;
+  }
+
+  .section-padding .container .row .left p,
+  .section-padding .container .row .right p {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .container .logo {
+    width: 35vw;
+  }
+
+  .banner {
+    height: auto;
+
+    .banner-overlay .container .left .banner-text h2 {
+      font-size: 1.8rem;
+    }
+
+    .banner-overlay .container .left .banner-text h6 {
+      font-size: 1rem;
+    }
+
+    .banner-overlay .container .row .left .wow button {
+      width: 60vw;
+      font-size: 1rem;
+    }
+    .banner-overlay .container .row .right {
       display: none;
     }
-
-    .banner-overlay {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 0;
-      .container {
-        .row {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: row;
-          width: 100vw !important;
-          height: auto;
-
-          .left {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 60vw !important;
-
-            .banner-text {
-              h2 {
-                font-size: 3rem;
-              }
-
-              h6 {
-                font-size: 2rem;
-              }
-
-              .routerLink {
-                button {
-                  font-size: 1.5rem;
-                  width: 30vw;
-                }
-              }
-            }
-          }
-
-          .right {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40vw !important;
-            height: 40vh !important;
-            flex-direction: row;
-
-            .svg-hero {
-              height: auto !important;
-              width: 40vw !important;
-            }
-          }
-        }
-      }
-    }
   }
 
-  .section-padding {
-    width: 100vw;
+  .section-padding .container .row h3 {
+    font-size: 1.6rem;
+  }
+  .section-padding .container .row .right {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
-    flex-direction: row;
-    .container {
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .row {
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-
-        .left {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 43vw !important;
-
-          .canvas {
-            width: 50vw !important;
-            height: auto !important;
-          }
-
-          p {
-            font-size: 1.2rem;
-          }
-        }
-
-        h3 {
-          font-size: 2rem;
-          margin-bottom: 5rem;
-        }
-
-        .right {
-          width: 50vw;
-          display: flex;
-          justify-content: center;
-
-          .canvas {
-            width: 50vw !important;
-            height: auto !important;
-          }
-
-          p {
-            font-size: 1.2rem;
-          }
-        }
-      }
-    }
+    width: 100vw;
   }
-}
-
-@media (max-width: 425px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100vw;
-
-      .logo {
-        width: 50vw;
-      }
-
-      .nav-link {
-        font-size: 1.3rem;
-      }
-    }
-  }
-
-  .banner {
-    .banner-overlay {
-      .container {
-        .left {
-          .banner-text {
-            h2 {
-              font-size: 2.5rem;
-            }
-
-            h6 {
-              font-size: 1.5rem;
-            }
-
-            .routerLink {
-              button {
-                font-size: 1rem;
-                width: 50vw;
-              }
-            }
-          }
-        }
-
-        .right {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .section-padding {
-    .container {
-      width: 100vw;
-
-      .row {
-        .left {
-          .canvas {
-            width: 100vw !important;
-            height: auto !important;
-          }
-
-          p {
-            font-size: 1.2rem;
-          }
-        }
-
-        h3 {
-          font-size: 1.5rem;
-        }
-
-        .right {
-          width: 100vw;
-          display: flex;
-          justify-content: center;
-
-          .canvas {
-            width: 100vw !important;
-            height: auto !important;
-          }
-
-          p {
-            font-size: 1.2rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 320px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100vw;
-
-      .logo {
-        width: 50vw;
-      }
-
-      .navbar-collapse {
-        .nav-link {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-
-  .banner {
-    .banner-overlay {
-      .container {
-        .left {
-          .banner-text {
-            h2 {
-              font-size: 2.5rem;
-            }
-
-            h6 {
-              font-size: 1.5rem;
-            }
-
-            .routerLink {
-              button {
-                font-size: 1rem;
-                width: 50vw;
-              }
-            }
-          }
-        }
-
-        .right {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .section-padding {
-    .container {
-      width: 100vw;
-
-      .row {
-        .left {
-          .canvas {
-            width: 100vw !important;
-            height: auto !important;
-          }
-
-          p {
-            font-size: 1.2rem;
-          }
-        }
-
-        h3 {
-          font-size: 1.5rem;
-        }
-
-        .right {
-          width: 100vw;
-          display: flex;
-          justify-content: center;
-
-          .canvas {
-            width: 100vw !important;
-            height: auto !important;
-          }
-
-          p {
-            font-size: 1.2rem;
-          }
-        }
-      }
-    }
+  .section-padding .container .row .left p,
+  .section-padding .container .row .right p {
+    font-size: 1rem;
   }
 }
