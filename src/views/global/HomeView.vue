@@ -89,7 +89,7 @@
                     <div class="col-md-6 text-center left">
                         <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
                             <DotLottieVue style="height: 450px; width: 450px" autoplay loop
-                                src="https://lottie.host/0f7464d9-41a1-4663-8a4d-f70fff7de23e/8PBdmhXQcI.json" />
+                                src="https://lottie.host/0f7464d9-41a1-4663-8a4d-f70fff7de23e/8PBdmhXQcI.json" class="canvas"/>
                         </span>
                     </div>
                     <div class="col-md-6 text-center right">
@@ -108,7 +108,7 @@
                     </div>
                     <div class="col-md-6 text-center right">
                         <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                            <DotLottieVue style="height: 450px; width: 450px" autoplay loop src="https://lottie.host/452ec843-f41b-4863-8479-2c8c4650f51b/lFmmcq3bvr.json" />
+                            <DotLottieVue style="height: 350px; width: 3 50px" autoplay loop src="https://lottie.host/452ec843-f41b-4863-8479-2c8c4650f51b/lFmmcq3bvr.json" class="canvas"  />
                         </span>
                     </div>
                 </div>

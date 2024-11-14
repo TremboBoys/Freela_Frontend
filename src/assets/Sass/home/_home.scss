@@ -174,7 +174,124 @@
     }
   }
 }
+@media (max-width: 1024px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
 
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100vw;
+
+      .logo {
+        width: 20vw;
+      }
+
+      .navbar {
+        .nav-link {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto !important;
+
+    .svg-wave {
+      display: none;
+    }
+
+    .banner-overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+      .container {
+        .row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          width: 100vw !important;
+          height: auto;
+
+          .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60vw !important;
+
+            .banner-text {
+              h2 {
+                font-size: 3rem;
+              }
+
+              h6 {
+                font-size: 2rem;
+              }
+
+              .routerLink {
+                button {
+                  font-size: 1.5rem;
+                  width: 30vw;
+                }
+              }
+            }
+          }
+
+          .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40vw !important;
+            height: 40vh !important;
+            flex-direction: row;
+
+            .svg-hero {
+              height: auto !important;
+              width: 40vw !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-padding {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    flex-direction: row;
+    .container {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .row {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+
+        .left {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 43vw !important;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 768px) {
   .navbar {
     display: flex;
@@ -220,7 +337,7 @@
           justify-content: center;
           align-items: center;
           flex-direction: row;
-          width: 100vw;
+          width: 100vw !important;
           height: auto;
 
           .left {
@@ -252,10 +369,12 @@
             justify-content: center;
             align-items: center;
             width: 40vw !important;
+            height: 40vh !important;
             flex-direction: row;
 
             .svg-hero {
-              width: 30vw;
+              height: auto !important;
+              width: 40vw !important;
             }
           }
         }
