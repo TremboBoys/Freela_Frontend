@@ -173,6 +173,152 @@
   }
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100vw;
+
+      .logo {
+        width: 25vw;
+      }
+
+      .navbar-collapse {
+        .nav-link {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto !important;
+
+    .svg-wave {
+      display: none;
+    }
+
+    .banner-overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+      .container {
+        .row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          width: 100vw;
+          height: auto;
+
+          .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60vw !important;
+
+            .banner-text {
+              h2 {
+                font-size: 3rem;
+              }
+
+              h6 {
+                font-size: 2rem;
+              }
+
+              .routerLink {
+                button {
+                  font-size: 1.5rem;
+                  width: 30vw;
+                }
+              }
+            }
+          }
+
+          .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40vw !important;
+            flex-direction: row;
+
+            .svg-hero {
+              width: 30vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-padding {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    flex-direction: row;
+    .container {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .row {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+
+        .left {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 43vw !important;
+
+          .canvas {
+            width: 50vw !important;
+            height: auto !important;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        h3 {
+          font-size: 2rem;
+          margin-bottom: 5rem;
+        }
+
+        .right {
+          width: 50vw;
+          display: flex;
+          justify-content: center;
+
+          .canvas {
+            width: 50vw !important;
+            height: auto !important;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 425px) {
   .navbar {
     display: flex;
