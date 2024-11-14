@@ -81,6 +81,39 @@
                 </div>
             </div>
         </section>
+        <section class="section-padding">
+            <div class="container">
+                <div class="row text-center">
+                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Sistema de conversa entre freelancer e cliente
+                    </h3>
+                    <div class="col-md-6 text-center left">
+                        <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+                            <DotLottieVue style="height: 450px; width: 450px" autoplay loop
+                                src="https://lottie.host/0f7464d9-41a1-4663-8a4d-f70fff7de23e/8PBdmhXQcI.json" />
+                        </span>
+                    </div>
+                    <div class="col-md-6 text-center right">
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">Nosso sistema de chat foi desenvolvido para uma melhor comunicação entre o freelancer e o cliente, sem precisar passar outros meios de comunicação, dando mais segurança aos nossos usuários.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding">
+            <div class="container">
+                <div class="row text-center">
+                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Recomendação de serviços
+                    </h3>
+                    <div class="col-md-6 text-center left">
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">Contamos com uma IA de recomendação de projetos. Ela consiste em analisar sua área de trabalho e recomendar somente serviços que tenha relação com sua área escolhida. Mas, temos temos também um sistema de busca para caso queira procurar projetos com uma área diferente da sua.</p>
+                    </div>
+                    <div class="col-md-6 text-center right">
+                        <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+                            <DotLottieVue style="height: 450px; width: 450px" autoplay loop src="https://lottie.host/452ec843-f41b-4863-8479-2c8c4650f51b/lFmmcq3bvr.json" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
