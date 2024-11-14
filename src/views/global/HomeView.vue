@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-12 right">
-                            <DotLottieVue style="height: 500px; width: 500px" class="img-fluid wow fadeInUp" autoplay
+                            <DotLottieVue style="height: 500px; width: 500px" class="img-fluid wow img-responsive fadeInUp" autoplay
                                 loop src="https://lottie.host/3698d83f-18ed-40db-87f5-a01d3a6a4908/AUzzJ8stah.json" />
                         </div>
                     </div>
