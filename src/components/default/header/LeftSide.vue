@@ -7,9 +7,11 @@ import MyFinances from './dropdowns/MyFinances.vue';
 <template>
     <div class="header-leftSide">
         <RouterLink to="/"><img id="logo" src="../../../assets/images/logo/tasker-logo.png" alt=""></RouterLink>
+        <div class="dropdowns">
             <FoundJob/>
             <MyProjects/>
             <MyFinances/>
+        </div>
     </div>
 </template>
 

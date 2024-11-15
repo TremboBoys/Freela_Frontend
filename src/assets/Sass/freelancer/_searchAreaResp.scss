@@ -1,0 +1,19 @@
+@media(max-width:1340px){
+    .search-container{
+        width: 70vw;
+        height: 40vh;
+    }
+}
+
+@media(max-width: 720px){
+    .search-container{
+        width: 90vw;
+        height: 40vh;
+    }
+}
+
+@media(max-width: 410px){
+    .search-container{
+        height: 50vh;
+    }
+}

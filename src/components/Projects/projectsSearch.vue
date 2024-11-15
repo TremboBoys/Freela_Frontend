@@ -55,13 +55,14 @@ const handleAllow = (position) => {
         </label>
       </div>
     </div>
-
     <div class="bottom-search">
-      <p>
-        Ative a localização para uma melhor experiência: 
-        <a href="#" @click.prevent="showPopup = true">Ative aqui!</a>
-      </p>
-    </div>
+        <p>
+          Ative a localização para uma melhor experiência: 
+          <a href="#" @click.prevent="showPopup = true">Ative aqui!</a>
+        </p>
+      </div>
+
+    
     
     <PopUp 
       :show="showPopup" 
@@ -73,4 +74,5 @@ const handleAllow = (position) => {
 
 <style scoped>
 @import '@/assets/Sass/project/_project.scss';
+@import '../../assets/Sass/project/_search.scss';
 </style>

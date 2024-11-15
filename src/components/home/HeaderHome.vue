@@ -1,3 +1,9 @@
+<script setup>
+import { useAuthStore } from '@/stores/auth/auth';
+
+const useAuth = useAuthStore();
+</script>
+
 <template>
   <header>
     <div class="logo">
@@ -7,9 +13,7 @@
     </div>
     <nav>
       <p>Já tem uma conta?</p>
-      <router-link class="router" to="/sign-in">
-        <button class="button">Entrar</button>
-      </router-link>
+      <button class="router button" @click="useAuth.state.showLogin = true">Entrar</button>
     </nav>
   </header>
 </template>

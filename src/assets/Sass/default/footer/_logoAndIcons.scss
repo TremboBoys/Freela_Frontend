@@ -30,7 +30,7 @@
 @media (max-width: 1920px) {
     .logo-icon {
         .top-div {
-            gap: 40px;
+            gap: 30px;
 
             #logo {
                 width: 180px;
@@ -46,6 +46,8 @@
             }
         }
         .bottom-div {
+            position: relative;
+            left: 14px;
             p {
                 font-size: 1rem;
                 padding: 4px; 
@@ -56,7 +58,7 @@
 @media (max-width: 1440px) {
     .logo-icon {
         .top-div {
-            gap: 40px;
+            gap: 30px;
 
             #logo {
                 width: 180px;

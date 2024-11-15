@@ -1,19 +1,11 @@
-const validateEmail = (email) => {
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailPattern.test(email);
+const validateName = (name) => {
+    const nameRegex = /^[A-Za-zÀ-ÿ]+([ '-][A-Za-zÀ-ÿ]+)*$/;
+    return nameRegex.test(name);
 };
 
-const validateConfirmPassword = (password, confirmPassword) => {
-    return password === confirmPassword;
+const validatePassword = (password) => {
+    const passwordRegex = /^\d*[a-zA-Z]+\d+$/;
+    return passwordRegex.test(password);
 };
 
-const validateCode = (code = []) => {
-    for (let number of code) {
-        if (number === '') {
-            return false;
-        }
-    }
-    return true;
-}
-
-export { validateEmail, validateConfirmPassword, validateCode };
+export { validateName, validatePassword };

@@ -1,0 +1,44 @@
+@media(max-width: 1920px){
+    .plan1, .plan2, .plan3{
+        margin: 0 1em;
+        width: 35rem;
+    }
+}
+
+@media(max-width: 1280px){
+    .container{
+        flex-direction: column;
+        gap: 60px;
+    }
+    .plan1, .plan2, .plan3{
+        margin: 0 1em;
+        width: 35rem;
+    }
+    .sign{
+        height: 10rem;
+    }
+}
+
+@media(max-width: 600px){
+    .plan1, .plan2, .plan3{
+        margin: 0 1em;
+        width: 25rem;
+    }
+}
+
+@media(max-width: 420px){
+    .plan1, .plan2, .plan3{
+        margin: 0 1em;
+        width: 20rem;
+    }
+}
+
+
+@media(max-width: 335px){
+    .plan1, .plan2, .plan3{
+        ul{
+            flex-wrap: wrap;
+        }
+
+    }
+}
