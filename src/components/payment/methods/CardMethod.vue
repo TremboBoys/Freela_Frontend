@@ -87,11 +87,11 @@ const submitPixPayment = () => {
 </script>
 
 <style scoped lang="scss">
-$secondary-color: #008cba;
+$secondary-color: #0d4247;
 $background-color: #f7f7f7;
 $input-border-color: #ccc;
 $input-focus-color: #008cba;
-$button-hover-color: darken($secondary-color, 10%);
+$button-hover-color: darken($secondary-color, 3%);
 $font-size-base: 16px;
 $font-size-heading: 24px;
 $font-title-color: #000;
