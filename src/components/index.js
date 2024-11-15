@@ -31,6 +31,10 @@ import SizeProject from '@/components/registerProject/sizeProject/SizeProjectReg
 import CompleteProject from '@/components/registerProject/completeProject/CompleteProjectRegistration.vue';
 import LoadSpinner from './global/LoadSpinner.vue';
 import QuickWarnings from './global/QuickWarnings.vue';
+import MethodsPayment from './payment/MethodsPayment.vue';
+import AddressUser from './payment/methods/AddressUser.vue';
+import PaymentConfirm from './payment/PaymentConfirm.vue';
+import QRCode from './payment/methods/QRCode.vue';
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
 import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 
@@ -68,6 +72,10 @@ export {
     CompleteProject,
     LoadSpinner,
     QuickWarnings,
+    MethodsPayment,
+    AddressUser,
+    PaymentConfirm,
+    QRCode,
     DefaultHeader,
     DefaultFooter,
 };

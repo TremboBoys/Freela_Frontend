@@ -1,60 +1,64 @@
 <template>
-    <div class="payment-container">
-        <h1>Escolha o Método de Pagamento</h1>
-        <select v-model="paymentMethod">
-            <option value="credit">Crédito</option>
-            <option value="debit">Débito</option>
-            <option value="pix">Pix</option>
-        </select>
+  <div class="payment-container">
+    <h1>Escolha o Método de Pagamento</h1>
+    <select v-model="paymentMethod">
+      <option value="credit">Crédito</option>
+      <option value="debit">Débito</option>
+      <option value="pix">Pix</option>
+    </select>
 
-        <div v-if="paymentMethod === 'debit'" class="payment-form">
-            <h2>Pagamento com Débito</h2>
-            <form @submit.prevent="submitDebitPayment">
-                <div>
-                    <label for="debitCardNumber">Número do Cartão:</label>
-                    <input type="text" id="debitCardNumber" v-model="debitCardNumber" required />
-                </div>
-                <div>
-                    <label for="debitExpiryDate">Data de Validade:</label>
-                    <input type="text" id="debitExpiryDate" v-model="debitExpiryDate" required />
-                </div>
-                <div>
-                    <label for="debitCvv">CVV:</label>
-                    <input type="text" id="debitCvv" v-model="debitCvv" required />
-                </div>
-                <button type="submit">Pagar</button>
-            </form>
+    <div v-if="paymentMethod === 'debit'" class="payment-form">
+      <h2>Pagamento com Débito</h2>
+      <form @submit.prevent="submitDebitPayment">
+        <div>
+          <label for="debitCardNumber">Número do Cartão:</label>
+          <input type="text" id="debitCardNumber" v-model="debitCardNumber" required />
         </div>
-
-        <div v-if="paymentMethod === 'credit'" class="payment-form">
-            <h2>Pagamento com Crédito</h2>
-            <form @submit.prevent="submitCreditPayment">
-                <div>
-                    <label for="creditCardNumber">Número do Cartão:</label>
-                    <input type="text" id="creditCardNumber" v-model="creditCardNumber" required />
-                </div>
-                <div>
-                    <label for="creditExpiryDate">Data de Validade:</label>
-                    <input type="text" id="creditExpiryDate" v-model="creditExpiryDate" required />
-                </div>
-                <div>
-                    <label for="creditCvv">CVV:</label>
-                    <input type="text" id="creditCvv" v-model="creditCvv" required />
-                </div>
-                <button type="submit">Pagar</button>
-            </form>
+        <div>
+          <label for="debitExpiryDate">Data de Validade:</label>
+          <input type="text" id="debitExpiryDate" v-model="debitExpiryDate" required />
         </div>
-
-        <div v-if="paymentMethod === 'pix'" class="payment-form">
-            <RouterLink @submit.prevent="submitPixPayment" to="/payment/pix" class="pix-link">Pagar com Pix</RouterLink>
+        <div>
+          <label for="debitCvv">CVV:</label>
+          <input type="text" id="debitCvv" v-model="debitCvv" required />
         </div>
+        <RouterLink to="address" class="submit">
+          <button type="submit">Pagar com Cartão de Débito</button>
+        </RouterLink>
+      </form>
     </div>
+
+    <div v-if="paymentMethod === 'credit'" class="payment-form">
+      <h2>Pagamento com Crédito</h2>
+      <form @submit.prevent="submitCreditPayment">
+        <div>
+          <label for="creditCardNumber">Número do Cartão:</label>
+          <input type="text" id="creditCardNumber" v-model="creditCardNumber" required />
+        </div>
+        <div>
+          <label for="creditExpiryDate">Data de Validade:</label>
+          <input type="text" id="creditExpiryDate" v-model="creditExpiryDate" required />
+        </div>
+        <div>
+          <label for="creditCvv">CVV:</label>
+          <input type="text" id="creditCvv" v-model="creditCvv" required />
+        </div>
+        <RouterLink to="address" class="submit">
+          <button type="submit"> Pagar com Cartão de Crédito</button>
+        </RouterLink>
+      </form>
+    </div>
+
+    <div v-if="paymentMethod === 'pix'" class="payment-form">
+      <RouterLink @submit.prevent="submitPixPayment" to="QRCode" class="pix-link">Pagar com Pix
+      </RouterLink>
+    </div>
+  </div>
 </template>
 
 
 <script setup>
 import { ref } from 'vue';
-
 const paymentMethod = ref('credit');
 const debitCardNumber = ref('');
 const debitExpiryDate = ref('');
@@ -64,25 +68,23 @@ const creditExpiryDate = ref('');
 const creditCvv = ref('');
 
 const submitDebitPayment = () => {
-    // Lógica para processar o pagamento com débito
-    console.log('Pagamento com débito submetido', {
-        cardNumber: debitCardNumber.value,
-        expiryDate: debitExpiryDate.value,
-        cvv: debitCvv.value,
-    });
+  console.log('Pagamento com débito submetido', {
+    cardNumber: debitCardNumber.value,
+    expiryDate: debitExpiryDate.value,
+    cvv: debitCvv.value,
+  });
 };
 
 const submitCreditPayment = () => {
-    // Lógica para processar o pagamento com crédito
-    console.log('Pagamento com crédito submetido', {
-        cardNumber: creditCardNumber.value,
-        expiryDate: creditExpiryDate.value,
-        cvv: creditCvv.value,
-    });
+  console.log('Pagamento com crédito submetido', {
+    cardNumber: creditCardNumber.value,
+    expiryDate: creditExpiryDate.value,
+    cvv: creditCvv.value,
+  });
 };
 const submitPixPayment = () => {
-    // Lógica para processar o pagamento com Pix
-    console.log('Pagamento com Pix submetido');
+  // Lógica para processar o pagamento com Pix
+  console.log('Pagamento com Pix submetido');
 };
 </script>
 
@@ -95,6 +97,7 @@ $button-hover-color: darken($secondary-color, 3%);
 $font-size-base: 16px;
 $font-size-heading: 24px;
 $font-title-color: #000;
+
 // Estilos gerais
 .payment-container {
   max-width: 50vw;
@@ -195,7 +198,8 @@ $font-title-color: #000;
     padding: 1.5rem;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: $font-size-base * 1.5;
   }
 
@@ -203,5 +207,4 @@ $font-title-color: #000;
     font-size: $font-size-base * 0.9;
   }
 }
-
 </style>
