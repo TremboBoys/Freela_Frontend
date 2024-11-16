@@ -1,14 +1,20 @@
 <script setup>
 import { DefaultFooter, DefaultHeader,SignInPassage, LoadSpinner, QuickWarnings, PopUpSignUp } from '@/components';
+import { useChatStore } from '@/stores/chat/chat';
 import { useAuthStore } from '@/stores/auth/auth';
 import { useSignUpStore } from '@/stores/auth/signUp';
 import { usePerfilStore } from '@/stores/perfil/perfil';
 import { useWarningStore } from '@/stores/warning/warning';
+import { onMounted } from 'vue';
 
+const useChat = useChatStore();
 const useAuth = useAuthStore();
 const useSignUp = useSignUpStore();
 const useWarning = useWarningStore();
 const usePerfil = usePerfilStore();
+onMounted(async() => {
+  await useChat.initApp();
+});
 </script>
 
 <template>

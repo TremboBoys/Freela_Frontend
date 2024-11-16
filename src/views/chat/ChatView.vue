@@ -2,14 +2,10 @@
 import { AsideContacts, ChatMessage } from '@/components';
 import { usePerfilStore } from '@/stores/perfil/perfil';
 import { useChatStore } from '@/stores/chat/chat';
-import { onMounted } from 'vue';
+// import { ref, onMounted } from 'vue';
 
 const usePerfil = usePerfilStore();
 const useChat = useChatStore();
-
-onMounted(async() => {
-  await useChat.initApp();
-});
 </script>
 
 <template>

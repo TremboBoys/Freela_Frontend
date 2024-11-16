@@ -32,8 +32,13 @@ onMounted(() => {
             </div>
             <div class="contact-info">
                 <h3>{{ perfil?.user?.name || 'Nome não encontrado' }}</h3>  <!-- Verificação segura para evitar erros de acesso -->
-                <p v-if="useChat.allUsers[index].myMessage === true">Você: {{ useChat.allUsers[index].lastMessage }}</p>
-                <p v-else>{{ useChat.allUsers[index].lastMessage }}</p>
+                <div class="container-message">
+                    <p v-if="useChat.allUsers[index].isTyping === true" class="typing">Digitando...</p>
+                    <p v-else-if="useChat.allUsers[index].myMessage === true && useChat.allUsers[index].isTyping === false">Você: {{ useChat.allUsers[index].lastMessage }}</p>
+                    <p v-else-if="useChat.allUsers[index].myMessage === false && useChat.allUsers[index].isTyping === false">{{ useChat.allUsers[index].lastMessage }}</p>
+                    <img v-if="!useChat.allUsers[index].read && useChat.allUsers[index].myMessage" src="@/assets/images/chat/unread.png" class="unread-icon" alt="">
+                    <img v-else-if="useChat.allUsers[index].read && useChat.allUsers[index].myMessage" src="@/assets/images/chat/read.png" class="read-icon" alt="">
+                </div>
             </div>
             <div class="contact-notification">
                 <p v-if="!useChat.allUsers[index].myMessage && useChat.allUsers[index].numberMessagesUnread > 0">{{ useChat.allUsers[index].numberMessagesUnread }}</p>

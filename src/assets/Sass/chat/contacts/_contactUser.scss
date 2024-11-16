@@ -35,10 +35,27 @@
                 margin: 0;
             }
 
-            p {
-                font-size: 1rem;
-                margin: 0;
-                color: #404040;
+            .container-message {
+                display: flex;
+                column-gap: 5px;
+                align-items: center;
+    
+                .typing {
+                    color: #1B75BF;
+                }
+    
+    
+                p {
+                    font-size: 1rem;
+                    margin: 0;
+                    color: #404040;
+                }
+    
+                .unread-icon, .read-icon {
+                    position: relative;
+                    width: 23px;
+                    height: 23px;
+                }
             }
         }
 

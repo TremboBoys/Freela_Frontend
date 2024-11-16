@@ -14,6 +14,7 @@ const props = defineProps({
             <div class="container-name-user">
                 <p class="name">{{ props.user.user.name }}</p>
                 <p class="username">@{{ props.user.user.username }}</p>
+                <!-- <p class="isOnline">Visto pela última vez as 17:54h</p> -->
             </div>
         </div>
         <div class="right">
