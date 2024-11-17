@@ -22,7 +22,7 @@
           <label for="debitCvv">CVV:</label>
           <input type="text" id="debitCvv" v-model="debitCvv" required />
         </div>
-        <RouterLink to="address" class="submit">
+        <RouterLink to="methods-payment/address" class="submit">
           <button type="submit">Pagar com Cartão de Débito</button>
         </RouterLink>
       </form>
@@ -43,14 +43,14 @@
           <label for="creditCvv">CVV:</label>
           <input type="text" id="creditCvv" v-model="creditCvv" required />
         </div>
-        <RouterLink to="address" class="submit">
-          <button type="submit"> Pagar com Cartão de Crédito</button>
+        <RouterLink to="methods-payment/address" class="submit">
+          <button type="submit">Pagar com Cartão de Crédito</button>
         </RouterLink>
       </form>
     </div>
 
     <div v-if="paymentMethod === 'pix'" class="payment-form">
-      <RouterLink @submit.prevent="submitPixPayment" to="QRCode" class="pix-link">Pagar com Pix
+      <RouterLink @submit.prevent="submitPixPayment" to="methods-payment/QRCode" class="pix-link">Pagar com Pix
       </RouterLink>
     </div>
   </div>

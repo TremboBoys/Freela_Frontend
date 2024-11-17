@@ -22,7 +22,9 @@
                 <label for="zip">CEP:</label>
                 <input type="text" id="zip" v-model="address.zip" required />
             </div>
-            <button type="submit">Cadastrar</button>
+            <RouterLink to="paymentConfirm" class="submit">
+                <button type="submit">Cadastrar</button>
+            </RouterLink>
         </form>
     </div>
 </template>
@@ -53,6 +55,7 @@ $button-hover-color: darken($secondary-color, 3%);
 $font-size-base: 16px;
 $font-size-heading: 24px;
 $font-title-color: #000;
+
 .address-form {
     max-width: 400px;
     margin: 0 auto;
