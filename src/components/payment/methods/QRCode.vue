@@ -2,13 +2,9 @@
     <div class="container">
         <h1 v-if="!isLoading">Clique no botão abaixo para gerar o QRCode e o método de "copia e cola" para prosseguir com o pagamento</h1>
         <button class="buttonShow" @click="showPopup = true" v-if="!isLoading">Realizar o Pagamento</button>
-
-        <!-- Tela de loading -->
         <div v-if="isLoading" class="loading">
-            <p>Processando pagamento...</p>
+            <LoadSpinner />
         </div>
-
-        <!-- Popup -->
         <div v-if="showPopup && !isLoading" class="popup">
             <div class="popup-content">
                 <span class="close" @click="showPopup = false">&times;</span>
@@ -28,23 +24,23 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import LoadSpinner from '@/components/global/LoadSpinner.vue';
 
 const router = useRouter();
 const payment = ref(false);
 const showPopup = ref(false);
-const isLoading = ref(false); // Variável para o estado de loading
+const isLoading = ref(false); 
 const pixCode = '00020126360014BR.GOV.BCB.PIX0114+55119999999925204000053039865406123456789ABCD';
 
 const copyToClipboard = () => {
     navigator.clipboard.writeText(pixCode).then(() => {
         alert('PIX Code copied to clipboard');
         payment.value = true;
-        isLoading.value = true; // Ativa o loading
+        isLoading.value = true;
 
-        // Simula um tempo de processamento e redireciona após 2 segundos
         setTimeout(() => {
-            isLoading.value = false; // Desativa o loading
-            router.push({ name: 'paymentConfirm' }); // Redireciona
+            isLoading.value = false;
+            router.push({ name: 'paymentConfirm' });
         }, 2000);
     });
 };
