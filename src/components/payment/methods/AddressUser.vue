@@ -1,5 +1,5 @@
 <template>
-    <div class="address-form">
+    <div v-if="!isLoading" class="address-form">
         <h2>Cadastro de Endereço</h2>
         <form @submit.prevent="submitForm">
             <div>
@@ -22,16 +22,20 @@
                 <label for="zip">CEP:</label>
                 <input type="text" id="zip" v-model="address.zip" required />
             </div>
-            <RouterLink to="paymentConfirm" class="submit">
-                <button type="submit">Cadastrar</button>
-            </RouterLink>
+            <button type="submit">Cadastrar</button>
         </form>
+    </div>
+    <div v-if="isLoading" class="loading">
+        <LoadSpinner />
     </div>
 </template>
 
 <script setup>
-import { reactive } from 'vue';
-
+import { reactive, ref } from 'vue';
+import { useRouter } from 'vue-router';
+import LoadSpinner from '@/components/global/LoadSpinner.vue';
+const router = useRouter();
+const isLoading = ref(false);
 const address = reactive({
     street: '',
     number: '',
@@ -41,7 +45,13 @@ const address = reactive({
 });
 
 const submitForm = () => {
-    console.log('Endereço cadastrado:', address);
+    console.log(address);
+    isLoading.value = true;
+
+    setTimeout(() => {
+        isLoading.value = false;
+        router.push({ name: 'paymentConfirm' });
+    }, 2000);
     // Adicionar a lógica para enviar o endereço para o backend
 };
 </script>
