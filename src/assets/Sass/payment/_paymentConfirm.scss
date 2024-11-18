@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 main {
     display: flex;
     justify-content: center;
@@ -19,15 +20,40 @@ main {
     color: white;
     font-size: 2.2rem;
 }
-.check p{
+
+.check p {
     font-size: 9.5rem;
     font-weight: 400;
 }
-p{
+
+p {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2rem;
 }
+
 .text {
     margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .check {
+            width: 10rem;
+            height: 10rem;
+        }
+
+        .check p {
+            font-size: 7rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
 }

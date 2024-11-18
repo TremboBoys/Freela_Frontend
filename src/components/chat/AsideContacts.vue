@@ -1,24 +1,20 @@
 <script setup>
-import ButtonSearch from '@/components/chat/contacts/ButtonSearch.vue'
-import ContactUser from './contacts/ContactUser.vue'
+import { usePerfilStore } from '@/stores/perfil/perfil';
+import { useChatStore } from '@/stores/chat/chat';
+import { ButtonSearch, ContactUser } from '@/components/';
+
+const useChat = useChatStore();
+const usePerfil = usePerfilStore();
 </script>
 <template>
-    <div class="container">
+    <div class="container" v-if="usePerfil.perfis.length > 0 && usePerfil.perfil && usePerfil.perfil.user">
         <ButtonSearch />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
-        <ContactUser />
+        <ContactUser 
+            v-for="(user, index) in useChat.allUsers" 
+            :key="index"
+            :index="index" 
+            :username="user.user" 
+        />
     </div>
 </template>
 <style scoped>

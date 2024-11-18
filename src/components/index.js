@@ -12,6 +12,10 @@ import ConfEmailTitles from './configProfile/confirmation/ConfEmailTitles.vue';
 import CodeVerification from '@/components/configProfile/confirmation/CodeVerification.vue';
 import SendButton from './configProfile/password/SendButton.vue';
 import LogoName from '@/components/dashboard/profile/LogoName.vue';
+import AsideContacts from '@/components/chat/AsideContacts.vue';
+import ChatMessage from '@/components/chat/ChatMessage.vue';
+import ButtonSearch from '@/components/chat/contacts/ButtonSearch.vue';
+import ContactUser from '@/components/chat/contacts/ContactUser.vue';
 import InfoProfile from '@/components/dashboard/profile/InfoProfile.vue';
 import PublicProfile from '@/components/dashboard/profile/PublicProfile.vue';
 import MainSkills from '@/components/dashboard/profile/MainSkills.vue';
@@ -54,6 +58,10 @@ export {
     CodeVerification,
     SendButton,
     LogoName,
+    AsideContacts,
+    ChatMessage,
+    ButtonSearch,
+    ContactUser,
     InfoProfile,
     PublicProfile,
     MainSkills,

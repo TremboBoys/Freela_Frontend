@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+import { useChatStore } from '@/stores/chat/chat';
 import { ref } from 'vue';
 import HeaderIcons from './HeaderIcons.vue';
 import HamburgerButton from './HamburgerButton.vue';
@@ -14,6 +16,7 @@ function closeMenu() {
   isActive.value = false; // Corrigido para fechar o menu
 }
 
+const useChat = useChatStore();
 </script>
 
 <template>
