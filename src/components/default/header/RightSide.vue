@@ -1,6 +1,20 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import { useChatStore } from '@/stores/chat/chat';
+import { ref } from 'vue';
+import HeaderIcons from './HeaderIcons.vue';
+import HamburgerButton from './HamburgerButton.vue';
+import ListSmallScreens from './ListSmallScreens.vue';
+
+const isActive = ref(false);
+
+function toggleMenu() {
+  isActive.value = !isActive.value;
+}
+
+function closeMenu() {
+  isActive.value = false; // Corrigido para fechar o menu
+}
 
 const useChat = useChatStore();
 </script>
@@ -8,9 +22,9 @@ const useChat = useChatStore();
 <template>
     <div class="header-rightSide">
         <div class="icons">
-            <RouterLink to="/chat"><span class="numberMessages" v-if="useChat.numberMessagesUnread > 0">{{ useChat.numberMessagesUnread <= 9 ? useChat.numberMessagesUnread : '9+' }}</span> <img src="../../../assets/images/chat-icon.png" alt=""></RouterLink>
-            <RouterLink to="/subscription-plan"><img src="../../../assets/images/crown-icon.png" alt=""></RouterLink>
-            <RouterLink to="/dashboard"><img src="../../../assets/images/usuario-de-perfil.png" alt=""></RouterLink>
+            <HeaderIcons/>
+            <ListSmallScreens @click="closeMenu" :isActive="isActive" />
+            <HamburgerButton @toggle="toggleMenu" :isActive="isActive" /> <!-- Passando isActive para o botão -->
         </div>
     </div>
 </template>

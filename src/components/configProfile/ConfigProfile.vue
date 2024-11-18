@@ -12,5 +12,7 @@ import SideBar from './SideBar.vue';
 
 <style scoped>
 @import '../../assets/Sass/configProfile/_configProfile.scss';
-
+.configProfile-container {
+    padding-bottom: 0;
+}
 </style>

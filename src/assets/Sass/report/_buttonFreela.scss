@@ -26,3 +26,51 @@
     }
   }
 }
+@media (max-width: 1920px) {
+  .container {
+    .btn {
+      width: 40%;
+      font-size: 1rem;
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .container {
+    .btn {
+      width: 40%;
+      font-size: 1rem;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    .btn {
+      width: 60%;
+      font-size: 1.2rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    .btn {
+      width: 60%;
+      font-size: 1.2rem;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    .btn {
+      width: 70%;
+      font-size: 1.2rem;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    .btn {
+      width: 80%;
+      font-size: 1.3rem;
+    }
+  }
+}

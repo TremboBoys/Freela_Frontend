@@ -26,11 +26,13 @@
         flex-direction: column;
         width: 60vw;
         padding: 8px;
+        height: auto;
         
         .cards {
             flex-wrap: wrap;
             gap: 16px;
             padding: 8px;
+            height: auto;
         }
 
         .title {
@@ -45,6 +47,7 @@
         flex-direction: column;
         width: 60vw;
         padding: 8px;
+        height: auto;
         
         .cards {
             display: flex;
@@ -66,6 +69,7 @@
         flex-direction: column;
         width: 60vw;
         padding: 8px;
+        height: auto;
         
         .cards {
             flex-wrap: wrap;
