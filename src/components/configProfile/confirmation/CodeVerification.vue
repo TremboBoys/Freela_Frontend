@@ -29,7 +29,6 @@ const handleInput = (currentIndex, event) => {
   else if (inputValue) {
     if (useSignUp.user.code[currentIndex - 1] == '') {
       useSignUp.user.code[currentIndex - 1] = inputValue;
-      console.log(useSignUp.user.code[currentIndex - 1]);
       if (currentIndex < 6 && useSignUp.user.code.includes('') === true) {
         let nextInput = undefined;
         if (currentIndex === 6) {
