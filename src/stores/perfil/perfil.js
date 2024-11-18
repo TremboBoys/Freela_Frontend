@@ -1,13 +1,11 @@
 import { defineStore } from "pinia";
 import { ref, reactive } from "vue";
 import { useWarningStore } from "@/stores/warning/warning";
-import { useSearchChatStore } from "../chat/searchChat";
 import { getEmailUser } from "@/services/auth/auth";
 import PerfilService from "@/services/perfil/perfil";
 
 export const usePerfilStore = defineStore('perfil', () => {
     const useWarning = useWarningStore();
-    const useSearchChat = useSearchChatStore();
     const perfil = reactive({
         id: null,
         balance: 0,

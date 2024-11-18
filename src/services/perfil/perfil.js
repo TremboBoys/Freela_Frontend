@@ -23,10 +23,10 @@ class PerfilService {
 
     async getCurrentPerfil(type, info = []) {
         if (type == 'email') {
-            const { data } = await apiPerfil.get(`/perfil/?user_email=${info[0]}`);
+            const { data } = await apiPerfil.get(`/currentUser/?user_email=${info[0]}`);
             return data;
         } else {
-            let URL = `/perfil/`;
+            let URL = `/currentUser/`;
             for (let c = 0; c < info.length; c++) {
                 if (c == 0) {
                     URL += `?user_username=${info[c]}`
