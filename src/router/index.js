@@ -211,7 +211,8 @@ const router = createRouter({
               name: 'QRCode',
               component: QRCode
             }
-          ]
+          ],
+        },
         {
           path: 'profile/:id',
           name: 'profile',
