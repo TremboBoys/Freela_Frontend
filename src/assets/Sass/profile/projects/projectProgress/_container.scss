@@ -1,0 +1,192 @@
+.container {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 8px 6px 14px #888888;
+    border-radius: 6px;
+    margin-bottom: 32px;
+
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .title {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        color: #000;
+    }
+}
+@media (max-width: 1920px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        padding: 8px;
+        
+        .cards {
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 8px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            padding: 8px;
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        padding: 8px;
+        
+        .cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 8px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            padding: 8px;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        padding: 8px;
+        
+        .cards {
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 8px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            padding: 8px;
+        }
+    }
+}
+// @media (max-width: 1024px) {
+//     .container {
+//         display: flex;
+//         flex-direction: column;
+//         width: 60vw; /* Ajusta para 85% da largura da tela */
+//         padding: 8px; /* Reduz o padding geral */
+//         margin: 0;
+        
+//         .cards {
+//             flex-wrap: wrap; /* Permite quebra de linha para os elementos */
+//             gap: 16px; /* Espaçamento entre os elementos */
+//             padding: 8px;
+//         }
+
+//         .title {
+//             font-size: 1.2rem; /* Ajuste no tamanho da fonte */
+//             padding: 8px;
+//         }
+//     }
+// }
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        height: 100%;
+        box-shadow: none;
+        border: 1px solid #a3a3a3;
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            height: 100%;
+            width: 100vw;
+        }
+
+        .title {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            color: #000;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        height: 100%;
+        box-shadow: none;
+        border: 1px solid #a3a3a3;
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            height: 100%;
+        }
+
+        .title {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            color: #000;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        height: 80%;
+        box-shadow: none;
+        border: 1px solid #a3a3a3;
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            height: 100%;
+        }
+
+        .title {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            color: #000;
+        }
+    }
+}
