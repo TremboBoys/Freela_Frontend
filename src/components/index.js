@@ -41,6 +41,12 @@ import MethodsPayment from './payment/MethodsPayment.vue';
 import AddressUser from './payment/methods/AddressUser.vue';
 import PaymentConfirm from './payment/PaymentConfirm.vue';
 import QRCode from './payment/methods/QRCode.vue';
+import LogoAndName from '@/components/profile/profile/LogoName.vue';
+import InfosProfile from '@/components/profile/profile/InfoProfile.vue';
+import MainSkill from '@/components/profile/profile/MainSkills.vue';
+import AboutMes from '@/components/profile/profile/AboutMe.vue';
+import ProjectInProgress from '@/components/profile/projects/projectProgress/ProjectProgress.vue';
+import CompletedProjects from '@/components/profile/projects/completedProject/CompletedProject.vue';
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
 import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 
@@ -88,6 +94,12 @@ export {
     AddressUser,
     PaymentConfirm,
     QRCode,
+    LogoAndName,
+    InfosProfile,
+    MainSkill,
+    AboutMes,
+    ProjectInProgress,
+    CompletedProjects,
     DefaultHeader,
     DefaultFooter,
 };
