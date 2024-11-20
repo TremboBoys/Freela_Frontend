@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security, VerificationCode, ProjectRegistration, DescriptionProject, TypeProject, SizeProject, CompleteProject } from '@/components';
+import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security, VerificationCode, ProjectRegistration, DescriptionProject, TypeProject, SizeProject, CompleteProject, MethodsPayment, AddressUser, PaymentConfirm, QRCode } from '@/components';
 import { useAuthStore } from '@/stores/auth/auth';
 import { useSignUpStore } from '@/stores/auth/signUp';
 
@@ -194,7 +194,33 @@ const router = createRouter({
           meta: { requiresAuth: true }
          },
          {
-          path: 'profile',
+          path: 'methods-payment/',
+          name: 'methodsPayment',
+          component: () => import('@/views/payment/MethodsPaymentView.vue'),
+          children: [
+            {
+              path: '',
+              component: MethodsPayment
+            },
+            {
+              path: 'address',
+              name: 'addressUser',
+              component: AddressUser
+            },
+            {
+              path: 'paymentConfirm',
+              name: 'paymentConfirm',
+              component: PaymentConfirm
+            },
+            {
+              path: 'QRCode',
+              name: 'QRCode',
+              component: QRCode
+            }
+          ],
+        },
+        {
+          path: 'profile/:id',
           name: 'profile',
           component: () => import('@/views/user/ProfileUserView.vue'),
           meta: { requiresAuth: true }
