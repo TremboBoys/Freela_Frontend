@@ -1,3 +1,93 @@
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import { gsap } from 'gsap';
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+import { useAuthStore } from '@/stores/auth/auth';
+import WOW from 'wow.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+const useAuth = useAuthStore();
+
+// Dados das seções e navbar
+const navItems = ref([
+{ text: 'Entrar', link: '/' },
+]);
+
+const sections = ref([
+{ id: 'about', title: 'About', content: 'Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra.' },
+{ id: 'features', title: 'Features', content: 'Lorem ipsum dolor sit amet.' },
+{ id: 'team', title: 'Our Team', content: 'Meet the best team in the world.' },
+{ id: 'testimonials', title: 'Testimonials', content: 'What our clients say about us.' },
+{ id: 'faq', title: 'FAQ', content: 'Frequently Asked Questions' },
+{ id: 'contact', title: 'Contact Us', content: 'Get in touch with us.' }
+]);
+
+// Referência para as seções
+const sectionRefs = ref([]);
+const currentIndex = ref(0);
+const topOffset = 0;
+
+// Função para rolar até a seção
+function scrollToSection(index) {
+if (index < 0 || index >= sections.value.length) return;
+
+const targetPosition = sectionRefs.value[index].offsetTop + topOffset;
+window.scrollTo({
+    top: targetPosition,
+    behavior: 'smooth',
+});
+
+currentIndex.value = index;
+}
+
+// Atualiza o índice atual com base na rolagem
+function updateCurrentIndex() {
+const scrollPosition = window.scrollY;
+for (let i = 0; i < sectionRefs.value.length; i++) {
+    const sectionTop = sectionRefs.value[i].offsetTop + topOffset;
+    const sectionBottom = sectionTop + sectionRefs.value[i].offsetHeight;
+    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        currentIndex.value = i;
+        break;
+    }
+}
+}
+
+// Ouve eventos de rolagem e teclas de seta
+function handleKeyDown(event) {
+if (event.key === 'ArrowUp' && currentIndex.value > 0) {
+    scrollToSection(currentIndex.value - 1);
+} else if (event.key === 'ArrowDown' && currentIndex.value < sections.value.length - 1) {
+    scrollToSection(currentIndex.value + 1);
+}
+}
+
+onMounted(() => {
+// Inicializa o WOW.js
+new WOW({
+    boxClass: 'wow', // A classe aplicada aos elementos que terão animação
+    animateClass: 'animated', // A classe que ativa a animação
+    offset: 100, // Distância de rolagem antes de animar o elemento
+    mobile: true, // Ativar animações em dispositivos móveis
+}).init();
+
+// Animação GSAP
+gsap.from('.banner-text h2', { duration: 1, y: -50, opacity: 0 });
+gsap.from('.banner-text h6', { duration: 1.2, y: -30, opacity: 0, delay: 0.5 });
+gsap.from('.banner-text p', { duration: 1.4, y: -20, opacity: 0, delay: 0.8 });
+
+// Adiciona eventos de rolagem e tecla
+window.addEventListener('scroll', updateCurrentIndex);
+window.addEventListener('keydown', handleKeyDown);
+});
+
+onUnmounted(() => {
+// Remove eventos de rolagem e tecla
+window.removeEventListener('scroll', updateCurrentIndex);
+window.removeEventListener('keydown', handleKeyDown);
+});
+</script>
 <template>
     <div>
         <!-- Navbar Section -->
@@ -24,7 +114,7 @@
                                 <h2 class="white">Bem-vindo ao nosso sistema!</h2>
                                 <h6 class="white">Encontre os melhores profissionais ou ofereça seu talento como
                                     freelancer.</h6>
-                                <router-link to="" class="routerLink">
+                                <router-link to="/dashboard" class="routerLink">
                                     <button class="fadeIn">Registre-se</button>
                                 </router-link>
                             </div>
@@ -69,7 +159,7 @@
                     <div class="col-md-6 text-center left">
                         <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">Nossos usuários são
                             clientes ou freelancers, onde o freelancer oferece suas habilidades para projetos que os
-                            clientes cadastraram. Contamos com um sistema de um avaliação para melhor escolha de qual
+                            clientes cadastraram. Contamos com um sistema de avaliação para uma melhor escolha de qual
                             freelancer contratar.</p>
                     </div>
                     <div class="col-md-6 text-center right">
@@ -104,7 +194,7 @@
                     <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Recomendação de serviços
                     </h3>
                     <div class="col-md-6 text-center left">
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">Contamos com uma IA de recomendação de projetos. Ela consiste em analisar sua área de trabalho e recomendar somente serviços que tenha relação com sua área escolhida. Mas, temos temos também um sistema de busca para caso queira procurar projetos com uma área diferente da sua.</p>
+                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">Contamos com uma IA de recomendação de projetos. Ela consiste em analisar sua área de trabalho e recomendar somente serviços que tenham relação com sua área escolhida. Mas, temos também um sistema de busca para caso queira procurar projetos com uma área diferente da sua.</p>
                     </div>
                     <div class="col-md-6 text-center right">
                         <span class="line wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
@@ -117,92 +207,6 @@
     </div>
 </template>
 
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import WOW from 'wow.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import { gsap } from 'gsap';
-import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
-// Dados das seções e navbar
-const navItems = ref([
-    { text: 'Entrar', link: '/' },
-]);
-
-const sections = ref([
-    { id: 'about', title: 'About', content: 'Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra.' },
-    { id: 'features', title: 'Features', content: 'Lorem ipsum dolor sit amet.' },
-    { id: 'team', title: 'Our Team', content: 'Meet the best team in the world.' },
-    { id: 'testimonials', title: 'Testimonials', content: 'What our clients say about us.' },
-    { id: 'faq', title: 'FAQ', content: 'Frequently Asked Questions' },
-    { id: 'contact', title: 'Contact Us', content: 'Get in touch with us.' }
-]);
-
-// Referência para as seções
-const sectionRefs = ref([]);
-const currentIndex = ref(0);
-const topOffset = 0;
-
-// Função para rolar até a seção
-function scrollToSection(index) {
-    if (index < 0 || index >= sections.value.length) return;
-
-    const targetPosition = sectionRefs.value[index].offsetTop + topOffset;
-    window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth',
-    });
-
-    currentIndex.value = index;
-}
-
-// Atualiza o índice atual com base na rolagem
-function updateCurrentIndex() {
-    const scrollPosition = window.scrollY;
-    for (let i = 0; i < sectionRefs.value.length; i++) {
-        const sectionTop = sectionRefs.value[i].offsetTop + topOffset;
-        const sectionBottom = sectionTop + sectionRefs.value[i].offsetHeight;
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-            currentIndex.value = i;
-            break;
-        }
-    }
-}
-
-// Ouve eventos de rolagem e teclas de seta
-function handleKeyDown(event) {
-    if (event.key === 'ArrowUp' && currentIndex.value > 0) {
-        scrollToSection(currentIndex.value - 1);
-    } else if (event.key === 'ArrowDown' && currentIndex.value < sections.value.length - 1) {
-        scrollToSection(currentIndex.value + 1);
-    }
-}
-
-onMounted(() => {
-    // Inicializa o WOW.js
-    new WOW({
-        boxClass: 'wow', // A classe aplicada aos elementos que terão animação
-        animateClass: 'animated', // A classe que ativa a animação
-        offset: 100, // Distância de rolagem antes de animar o elemento
-        mobile: true, // Ativar animações em dispositivos móveis
-    }).init();
-
-    // Animação GSAP
-    gsap.from('.banner-text h2', { duration: 1, y: -50, opacity: 0 });
-    gsap.from('.banner-text h6', { duration: 1.2, y: -30, opacity: 0, delay: 0.5 });
-    gsap.from('.banner-text p', { duration: 1.4, y: -20, opacity: 0, delay: 0.8 });
-
-    // Adiciona eventos de rolagem e tecla
-    window.addEventListener('scroll', updateCurrentIndex);
-    window.addEventListener('keydown', handleKeyDown);
-});
-
-onUnmounted(() => {
-    // Remove eventos de rolagem e tecla
-    window.removeEventListener('scroll', updateCurrentIndex);
-    window.removeEventListener('keydown', handleKeyDown);
-});
-</script>
 
 <style scoped>
 @import '@/assets/Sass/home/_animation.scss';
