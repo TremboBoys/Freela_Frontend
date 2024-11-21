@@ -14,7 +14,7 @@ export const useChatStore = defineStore('chat', () => {
     const infoCurrentReceiver = ref({});
     const allUsers = ref([]);
     const numberMessagesUnread = ref(0);
-    const socket = io('http://localhost:3333');
+    const socket = io('https://microsservice-chat.onrender.com');
 
     const state = reactive({
         fileInput: null,

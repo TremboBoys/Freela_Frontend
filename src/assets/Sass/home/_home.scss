@@ -38,7 +38,7 @@
 
 .banner {
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
 
   .banner-overlay {
     margin-top: 10vh;
@@ -207,8 +207,23 @@
     justify-content: center;
     align-items: center;
     width: 39vw;
+    flex-grow: 1;
   }
 }
+
+@media (max-width: 1024px) {
+  .banner {
+    margin-bottom: 50px;
+  }
+  .section-padding .container .row .right {
+    flex-grow: 1;
+  }
+
+  p.wow {
+      text-align: justify;
+  }
+}
+
 @media (max-width: 992px) {
   .navbar .container .logo {
     width: 20vw;
@@ -246,7 +261,7 @@
 
 @media (max-width: 768px) {
   .navbar .container {
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -277,11 +292,14 @@
   .section-padding .container .row h3 {
     font-size: 2rem;
   }
+  .section-padding .container .row .right {
+    flex-grow: 1;
+  }
 
   .section-padding .container .row .left p,
   .section-padding .container .row .right p {
     font-size: 1.4rem;
-    padding: 0 1rem;
+    margin-right: 0;
   }
 }
 
@@ -353,5 +371,6 @@
   .section-padding .container .row .left p,
   .section-padding .container .row .right p {
     font-size: 1rem;
+    margin-right: 0;
   }
 }
