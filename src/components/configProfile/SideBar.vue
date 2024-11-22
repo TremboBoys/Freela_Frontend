@@ -4,12 +4,17 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const tabs = [
-  { route: '/configurations', icon: ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSSQ54cez5FfmC1SwY94-WNqM_-RkzorKmkg&s'), text: 'Informações pessoais' },
-  { route: '/configurations/password', icon: ('https://cdn-icons-png.flaticon.com/512/61/61457.png'), text: 'Senha' },
-  { route: '/configurations/email', icon: ('https://cdn-icons-png.flaticon.com/512/561/561188.png'), text: 'Email' },
-  { route: '/configurations/subscription', icon: ('https://www.shareicon.net/download/2016/01/05/698562_award_512x512.png'), text: 'Plano de assinatura' },
-  { route: '/configurations/security', icon: ('https://cdn-icons-png.flaticon.com/512/95/95454.png'), text: 'Segurança' }
-]
+  { route: '/configurations', icon: new URL('@/assets/images/configProfile/person-icon.png', import.meta.url).href, text: 'Informações pessoais' },
+  { route: '/configurations/password', icon: new URL('@/assets/images/configProfile/padlock-icon.png', import.meta.url).href, text: 'Senha' },
+  { route: '/configurations/email', icon: new URL('@/assets/images/configProfile/email-icon.png', import.meta.url).href, text: 'Email' },
+  { route: '/configurations/subscription', icon: new URL('@/assets/images/configProfile/medal-icon.png', import.meta.url).href, text: 'Plano de assinatura' },
+  { route: '/configurations/security', icon: new URL('@/assets/images/configProfile/security-icon.png', import.meta.url).href, text: 'Segurança' }
+];
+
+function createURL(path) {
+  const url = URL.createObjectURL(path);
+  console.log(url);
+}
 </script>
 <template>
     <div class="sideBar">
