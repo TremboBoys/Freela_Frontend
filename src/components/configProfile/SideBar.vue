@@ -24,7 +24,7 @@ function createURL(path) {
           :key="index" 
           :to="tab.route" 
           class="tab"
-          :class="{ active: route.path === tab.route }">
+          :class="route.path === tab.route ? 'active' : ''">
           <img :src="tab.icon" :alt="tab.text">
           <p>{{ tab.text }}</p>
         </RouterLink>

@@ -11,6 +11,6 @@ import CardMethod from './methods/CardMethod.vue';
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    margin: 30px 0;
 }
 </style>

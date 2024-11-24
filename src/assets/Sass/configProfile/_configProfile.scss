@@ -1,9 +1,10 @@
 .configProfile-container{
-    padding-bottom: 80px;
+    display: flex;
+    min-height: 700px;
     border-radius: 10px;
     border: 1px solid black;
     margin: 32px 80px;
-    display: flex;
+    padding-bottom: 80px;
 }
 @media (max-width: 1024px) {
     .configProfile-container{
