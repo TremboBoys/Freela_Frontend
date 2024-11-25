@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { ref, reactive, watch } from "vue";
-import { flagCardFunction, luhnAlgorithm, cpfValidator } from "@/utils/validations/paymentAlgorithms";
+import { flagCardFunction, luhnAlgorithm, cpfValidator, cnpjValidator } from "@/utils/validations/paymentAlgorithms";
 import {} from "@/utils/validations/paymentAlgorithms";
 import PaymentService from "@/services/payment/payment";
 
@@ -43,11 +43,18 @@ export const usePaymentStore = defineStore('payment', () => {
                 state.validDocument = cpfValidator(infoPayment.numberDocument);
             } else {
                 state.validDocument = null;
-            }
-        } else if (infoPayment.typeDocument == 'CNPJ' && newValueNumberDocument.length == 18) {
-            // console.log();
+            };
+        } else if (infoPayment.typeDocument == 'CNPJ') {
+            if (newValueNumberDocument.length == 18) {
+                state.validDocument = cnpjValidator(infoPayment.numberDocument);
+            } else {
+                state.validDocument = null;
+            };
         };
-        if (newValueNumberCard.length > oldValueNumberCard.length && newValueNumberCard.length == 4) {
+        if (newValueNumberCard.length > oldValueNumberCard.length) {
+            if ((newValueNumberCard.length == 4) || (newValueNumberCard.length == 9) || newValueNumberCard.length == 14) {
+                infoPayment.numberCard += ' ';
+            }
             verifyFlagCard();
         } else if (newValueNumberCard.length < 4) {
             state.flagCard = 'unknown';

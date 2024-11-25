@@ -60,7 +60,7 @@ function verifyMasterCard(numberCard = '') {
     let sliceTwoNumbers = Number(numberCard.slice(0, 2));
     let sliceFourNumbers = Number(numberCard.slice(0, 4));
 
-    if ((sliceTwoNumbers >= 51 && sliceTwoNumbers <= 55) || (sliceFourNumbers >= 2221 && sliceFourNumbers <= 2720)) {
+    if ((sliceTwoNumbers >= 50 && sliceTwoNumbers <= 55) || (sliceFourNumbers >= 2221 && sliceFourNumbers <= 2720)) {
         return true;
     } else {
         return false;
@@ -145,28 +145,30 @@ export function cpfValidator(cpf = '') {
 
 export function cnpjValidator(cnpj = '') {
     cnpj = cnpj.replace(/[^0-9]/g, '');
+    let cnpjNoVerifier = cnpj.slice(0, 12);
+
+    // Verifica se o CNPJ possui 14 dígitos
+    if (cnpj.length !== 14) {
+        return false;
+    }
 
     const calculateVerifier = (cnpjPartial, factor) => {
         let sum = 0;
-        for (let c = 0; c < cpfValidator.length; c++) {
-            if (factor < 2) {
-                sum += Number(cnpjPartial[c]) * factor + 7;
-
-                factor--;
-            } else {
-                sum += Number(cnpjPartial[c]) * factor--;
-            };
-        };
+        for (let c = 0; c < cnpjPartial.length; c++) {
+            sum += Number(cnpjPartial[c]) * factor;
+            factor = factor === 2 ? 9 : factor - 1;
+        }
         const remainder = sum % 11;
-        return remainder < 2 ? 0 : 11 - remainder;
+        let verifier = remainder < 2 ? '0' : (11 - remainder).toString();
+        if (cnpjNoVerifier.length == 12) cnpjNoVerifier += verifier; 
+        return verifier;
     };
 
-    const firstVerifier = calculateVerifier(cnpj.slice(0, 13), 5);
-    const secondVerifier = calculateVerifier(cnpj.slice(0, 14), 6);
+    const firstVerifier = calculateVerifier(cnpjNoVerifier, 5);
+    const secondVerifier = calculateVerifier(cnpjNoVerifier, 6);
 
-    if (cnpj[12] == firstVerifier.toString() && cnpj[13] == secondVerifier.toString()) {
-        return true;
-    } else {
-        return false;
-    }
-}
+    return (
+        cnpj[12] == firstVerifier.toString() &&
+        cnpj[13] == secondVerifier.toString()
+    );
+};
