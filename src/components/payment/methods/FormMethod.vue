@@ -13,7 +13,7 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
     if (usePayment.infoPayment.expirationDate.length == 2 && newValueExpirationDate.length > oldValueExpirationDate.length) {
         usePayment.infoPayment.expirationDate += '/'
     }
-    if (usePayment.typeDocuments == 'CPF') {
+    if (usePayment.infoPayment.typeDocument == 'CPF') {
         if (newValueNumberDocument.length > oldValueNumberDocument.length) {
             if (newValueNumberDocument.length == 3 || newValueNumberDocument.length == 7) {
                 usePayment.infoPayment.numberDocument += '.';
@@ -39,16 +39,16 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
 <template>
     <div v-if="usePayment.infoPayment.methodPayment != 'pix'" class="payment-form">
       <h2>Pagamento com {{(usePayment.infoPayment.methodPayment == 'credit') ? 'Crédito' : 'Débito'}}</h2>
-      <form @submit.prevent="submitCreditPayment">
+      <form @submit.prevent="usePayment.solicityPayment('card')">
         <div>
           <label for="debitCardNumber">Nome do titular do Cartão:<sup>*</sup></label>
           <input type="text" id="cardName" v-model="usePayment.infoPayment.namePayer" required />
         </div>
         <div>
           <label for="creditCardNumber">Número do Cartão:<sup>*</sup></label>
-          <input type="text" id="creditCardNumber" v-model="usePayment.infoPayment.numberCard" :minlength="(usePayment.flagCard == 'amex') ? '15' : (usePayment.flagCard == 'visa') ? '13' : '16'" :maxlength="(usePayment.flagCard == 'amex') ? '18' : '19'" required />
-          <div class="container-flag" :style="(usePayment.flagCard == 'unknown') ? 'visibility: hidden' : 'visibility: visible'">
-            <img :src="urlFlag(usePayment.flagCard)" :style="(usePayment.flagCard == 'amex') ? 'width: 48px' : 'width: 40px'" alt="">
+          <input type="text" id="creditCardNumber" v-model="usePayment.infoPayment.numberCard" :minlength="(usePayment.state.flagCard == 'amex') ? '15' : (usePayment.state.flagCard == 'visa') ? '13' : '16'" :maxlength="(usePayment.state.flagCard == 'amex') ? '18' : '19'" required />
+          <div class="container-flag" :style="(usePayment.state.flagCard == 'unknown') ? 'visibility: hidden' : 'visibility: visible'">
+            <img :src="urlFlag(usePayment.state.flagCard)" :style="(usePayment.state.flagCard == 'amex') ? 'width: 48px' : 'width: 40px'" alt="">
           </div>
         </div>
         <div>
@@ -57,7 +57,7 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
         </div>
         <div>
           <label for="creditCvv">CVV:<sup>*</sup></label>
-          <input type="text" id="creditCvv" required />
+          <input type="text" id="creditCvv" maxlength="3" required />
         </div>
         <div>
           <label for="typeDocument">Tipo de documento:<sup>*</sup></label>
@@ -69,7 +69,7 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
         <div v-if="usePayment.infoPayment.typeDocument !== 'Selecione o seu tipo de documento'">
             <div>
                 <label for="debitCvv">Número do {{ usePayment.infoPayment.typeDocument }}:<sup>*</sup></label>
-                <input type="text" id="numberDocument" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" required>
+                <input type="text" id="numberDocument" :style="(usePayment.state.validDocument) ? 'border: green solid 1px' : (usePayment.state.validDocument === false) ? 'border: red solid 1px' : ''" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" required>
             </div>
         </div>
     
@@ -80,19 +80,21 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
     </div>
 
     <div v-else class="payment-form">
-      <div>
-          <label for="typeDocument">Tipo de documento:<sup>*</sup></label>
-          <select id="typeDocument" v-model="usePayment.infoPayment.typeDocument" required>
-            <option value="Selecione o seu tipo de documento" disabled>Selecione o seu tipo de documento</option>
-            <option v-for="(type, index) in usePayment.typeDocuments" :key="index" :value="type.name">{{ type.name }}</option>
-          </select>
-      </div>
-      <div v-if="usePayment.infoPayment.typeDocument !== 'Selecione o seu tipo de documento'">
-        <div>
-          <label for="debitCvv">Número do {{ usePayment.infoPayment.typeDocument }}:<sup>*</sup></label>
-          <input type="text" id="numberDocument" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" required />
-        </div>
-      </div>
+      <form @submit.prevent="usePayment.solicityPayment('pix')">
+          <div>
+              <label for="typeDocument">Tipo de documento:<sup>*</sup></label>
+              <select id="typeDocument" v-model="usePayment.infoPayment.typeDocument" required>
+                <option value="Selecione o seu tipo de documento" disabled>Selecione o seu tipo de documento</option>
+                <option v-for="(type, index) in usePayment.typeDocuments" :key="index" :value="type.name">{{ type.name }}</option>
+              </select>
+          </div>
+          <div v-if="usePayment.infoPayment.typeDocument !== 'Selecione o seu tipo de documento'">
+            <div>
+              <label for="debitCvv">Número do {{ usePayment.infoPayment.typeDocument }}:<sup>*</sup></label>
+              <input type="text" id="numberDocument" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" required />
+            </div>
+          </div>
+      </form>
       <!-- <RouterLink @submit.prevent="submitPixPayment" to="methods-payment/QRCode" class="pix-link">Pagar com Pix</RouterLink> -->
     </div>
 </template>

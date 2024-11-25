@@ -113,37 +113,32 @@ export function urlFlag(flag) {
 };
 
 export function cpfValidator(cpf = '') {
+    // Remover caracteres não numéricos
     cpf = cpf.replace(/[^0-9]/g, '');
-    let cpfNineFirstNumbers = cpf.split('');
-    cpfNineFirstNumbers = cpfNineFirstNumbers.slice(0, 10).reverse();
 
-    for(let c = 0; c < cpfNineFirstNumbers.length; c++) {
-        cpfNineFirstNumbers[c] = Number(cpfNineFirstNumbers[c]) * c + 2;
-    };
-
-    const sumCpfNineNumbers = cpfNineFirstNumbers.reduce((accumulator, currentValue) => accumulator += Number(currentValue), 0);
-
-    if ((sumCpfNineNumbers % 11) >= 2) {
-        cpfNineFirstNumbers.unshift((11 - sumCpfNineNumbers % 11).toString());
-    } else {
-        cpfNineFirstNumbers.unshift('0');
-    };
-
-    for(let c = 0; c < cpfNineFirstNumbers.length; c++) {
-        cpfNineFirstNumbers[c] = Number(cpfNineFirstNumbers[c]) * c + 2;
-    };
-
-    const sumCpfTenFirstNumbers = cpfNineFirstNumbers.reduce((accumulator, currentValue) => accumulator += Number(currentValue), 0);
-
-    if ((sumCpfNineNumbers % 11) >= 2) {
-        cpfNineFirstNumbers.unshift((11 - sumCpfTenFirstNumbers % 11).toString());
-    } else {
-        cpfNineFirstNumbers.unshift('0');
+    // Verificar se tem 11 dígitos ou é formado por dígitos repetidos
+    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+        return false;
     }
 
-    if (cpfNineFirstNumbers.reverse().join('') == cpf) {
+    // Função para calcular os dígitos verificadores
+    const calculateVerifier = (cpfPartial, factor) => {
+        let sum = 0;
+        for (let i = 0; i < cpfPartial.length; i++) {
+            sum += Number(cpfPartial[i]) * factor--;
+        }
+        const remainder = sum % 11;
+        return remainder < 2 ? 0 : 11 - remainder;
+    };
+
+    // Cálculo do primeiro e segundo dígitos verificadores
+    const firstVerifier = calculateVerifier(cpf.slice(0, 9), 10);
+    const secondVerifier = calculateVerifier(cpf.slice(0, 10), 11);
+
+    // Verificar se os dígitos calculados coincidem com os do CPF
+    if (cpf[9] == firstVerifier.toString() && cpf[10] == secondVerifier.toString()) {
         return true;
     } else {
         return false;
-    };
+    }
 }

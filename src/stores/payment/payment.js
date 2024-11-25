@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { ref, reactive, watch } from "vue";
-import { flagCardFunction, luhnAlgorithm } from "@/utils/validations/paymentAlgorithms";
+import { flagCardFunction, luhnAlgorithm, cpfValidator } from "@/utils/validations/paymentAlgorithms";
 import {} from "@/utils/validations/paymentAlgorithms";
 import PaymentService from "@/services/payment/payment";
 
@@ -14,8 +14,12 @@ export const usePaymentStore = defineStore('payment', () => {
         expirationDate: '',
         cvv: ''
     });
+    const state = reactive({
+        validDocument: null,
+        validNumberCard: null,
+        flagCard: 'unknown',
+    });
     const typeDocuments = ref([]);
-    const flagCard = ref('unknown');
     const luhn = ref(false);
 
     async function getTypeDocuments() {
@@ -26,18 +30,32 @@ export const usePaymentStore = defineStore('payment', () => {
     };
 
     function verifyFlagCard() {
-        flagCard.value = flagCardFunction(infoPayment.numberCard.toString());
+        state.flagCard = flagCardFunction(infoPayment.numberCard.toString());
     };
 
-    watch(() => infoPayment.numberCard, (newValue, oldValue) => {
-        console.log(newValue);
-        if (newValue.length > oldValue.length && newValue.length == 4) {
-            console.log(newValue);
+    async function solicityPayment(typePayment) {
+
+    };
+
+    watch(() => [infoPayment.numberCard, infoPayment.numberDocument], ([newValueNumberCard, newValueNumberDocument], [oldValueNumberCard, oldValueNumberDocument]) => {
+        if (infoPayment.typeDocument == 'CPF') {
+            if (newValueNumberDocument.length == 14) {
+                state.validDocument = cpfValidator(infoPayment.numberDocument);
+            } else {
+                state.validDocument = null;
+            }
+        } else if (infoPayment.typeDocument == 'CNPJ' && newValueNumberDocument.length == 18) {
+            // console.log();
+        };
+        if (newValueNumberCard.length > oldValueNumberCard.length && newValueNumberCard.length == 4) {
             verifyFlagCard();
-        } else if (newValue.length < 4) {
-            flagCard.value = 'unknown';
-        }
+        } else if (newValueNumberCard.length < 4) {
+            state.flagCard = 'unknown';
+        };
+        if (newValueNumberCard.length >= 13) {
+            state.validNumberCard = luhnAlgorithm(infoPayment.numberCard);
+        };
     })
 
-    return { infoPayment, typeDocuments, flagCard, luhn, getTypeDocuments };
+    return { infoPayment, state, typeDocuments, luhn, getTypeDocuments, solicityPayment };
 })
