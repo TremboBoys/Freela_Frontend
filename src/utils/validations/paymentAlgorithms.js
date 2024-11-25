@@ -140,5 +140,33 @@ export function cpfValidator(cpf = '') {
         return true;
     } else {
         return false;
+    };
+};
+
+export function cnpjValidator(cnpj = '') {
+    cnpj = cnpj.replace(/[^0-9]/g, '');
+
+    const calculateVerifier = (cnpjPartial, factor) => {
+        let sum = 0;
+        for (let c = 0; c < cpfValidator.length; c++) {
+            if (factor < 2) {
+                sum += Number(cnpjPartial[c]) * factor + 7;
+
+                factor--;
+            } else {
+                sum += Number(cnpjPartial[c]) * factor--;
+            };
+        };
+        const remainder = sum % 11;
+        return remainder < 2 ? 0 : 11 - remainder;
+    };
+
+    const firstVerifier = calculateVerifier(cnpj.slice(0, 13), 5);
+    const secondVerifier = calculateVerifier(cnpj.slice(0, 14), 6);
+
+    if (cnpj[12] == firstVerifier.toString() && cnpj[13] == secondVerifier.toString()) {
+        return true;
+    } else {
+        return false;
     }
 }
