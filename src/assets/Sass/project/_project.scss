@@ -56,7 +56,7 @@
   .main-project {
     display: flex;
     flex-direction: column;
-    padding: 32px 0px 16px 10px; /* Menor padding para telas de celulares */
-
+    padding: 0; /* Menor padding para telas de celulares */
+    align-items: center;
 }
 }

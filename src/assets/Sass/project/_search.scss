@@ -115,7 +115,7 @@
 @media (max-width: 1920px) {
   .search {
     display: flex;
-    width: 600px;  /* Aumentando a largura do search em telas grandes */
+    width: 30vh;  /* Aumentando a largura do search em telas grandes */
     height: 700px;
     flex-direction: column;
     margin-top: 50px;
@@ -126,7 +126,7 @@
   }
 
   #search {
-    width: 540px;
+    width: 25vh;
   }
 
   .inputBox {
