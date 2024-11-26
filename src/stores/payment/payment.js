@@ -1,7 +1,8 @@
 import { defineStore } from "pinia";
 import { ref, reactive, watch } from "vue";
 import { flagCardFunction, luhnAlgorithm, cpfValidator, cnpjValidator } from "@/utils/validations/paymentAlgorithms";
-import {} from "@/utils/validations/paymentAlgorithms";
+import { useWarningStore } from "../warning/warning";
+import { usePerfilStore } from "../perfil/perfil";
 import PaymentService from "@/services/payment/payment";
 
 export const usePaymentStore = defineStore('payment', () => {
@@ -15,12 +16,17 @@ export const usePaymentStore = defineStore('payment', () => {
         cvv: ''
     });
     const state = reactive({
+        stepInformationPayment: true,
+        stepAddress: false,
+        stepQrCode: false,
+        stepFinished: false,
         validDocument: null,
         validNumberCard: null,
         flagCard: 'unknown',
     });
+    const useWarning = useWarningStore();
+    const usePerfil = usePerfilStore();
     const typeDocuments = ref([]);
-    const luhn = ref(false);
 
     async function getTypeDocuments() {
         const types =  await PaymentService.getTypeDocuments();
@@ -34,7 +40,33 @@ export const usePaymentStore = defineStore('payment', () => {
     };
 
     async function solicityPayment(typePayment) {
-
+        if (state.validDocument && state.validNumberCard) {
+            if (typePayment == 'pix') {
+                const data = await PaymentService.makePayment({transaction_amount: 0.01, payment_method_id: 'pix', payer: {
+                    email: usePerfil.perfil.user.email, identification: {
+                        type: infoPayment.typeDocument,
+                        number: infoPayment.numberDocument
+                    }
+                }});
+                if ("error" in data) {
+                    useWarning.activeWarning('failure', 'Erro ao solicitar pagamento: ', data.error);
+                };
+            } else {
+                const token = await PaymentService.getTokenCard(infoPayment.namePayer, infoPayment.numberCard, infoPayment.expirationDate, infoPayment.cvv);
+                
+                if (token !== false) {
+                    const data = await PaymentService.makePayment({transaction_amount: 0.01, token, installments: 1, payment_method_id: state.flagCard, payer: {
+                        email: usePerfil.perfil.user.email,
+                        identification: {
+                            type: infoPayment.typeDocument,
+                            number: infoPayment.numberDocument
+                        }
+                    }});
+                }
+            };
+        } else {
+            useWarning.activeWarning('failure', 'Documento ou número do cartão inválidos!');
+        };
     };
 
     watch(() => [infoPayment.numberCard, infoPayment.numberDocument], ([newValueNumberCard, newValueNumberDocument], [oldValueNumberCard, oldValueNumberDocument]) => {
@@ -64,5 +96,5 @@ export const usePaymentStore = defineStore('payment', () => {
         };
     })
 
-    return { infoPayment, state, typeDocuments, luhn, getTypeDocuments, solicityPayment };
+    return { infoPayment, state, typeDocuments, getTypeDocuments, solicityPayment };
 })

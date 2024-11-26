@@ -57,7 +57,7 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
         </div>
         <div>
           <label for="creditCvv">CVV:<sup>*</sup></label>
-          <input type="text" id="creditCvv" maxlength="3" required />
+          <input type="text" id="creditCvv" maxlength="3" v-model="usePayment.infoPayment.cvv" required />
         </div>
         <div>
           <label for="typeDocument">Tipo de documento:<sup>*</sup></label>
@@ -69,7 +69,7 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
         <div v-if="usePayment.infoPayment.typeDocument !== 'Selecione o seu tipo de documento'">
             <div>
                 <label for="debitCvv">Número do {{ usePayment.infoPayment.typeDocument }}:<sup>*</sup></label>
-                <input type="text" id="numberDocument" :style="(usePayment.state.validDocument) ? 'border: green solid 1px' : (usePayment.state.validDocument === false) ? 'border: red solid 1px' : ''" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" required>
+                <input type="text" id="numberDocument" :style="(usePayment.state.validDocument) ? 'border: green solid 1px' : (usePayment.state.validDocument === false) ? 'border: red solid 1px' : ''" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" :maxlength="(usePayment.infoPayment.typeDocument == 'CPF') ? '14' : '18'" required>
             </div>
         </div>
     
@@ -91,11 +91,13 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
           <div v-if="usePayment.infoPayment.typeDocument !== 'Selecione o seu tipo de documento'">
             <div>
               <label for="debitCvv">Número do {{ usePayment.infoPayment.typeDocument }}:<sup>*</sup></label>
-              <input type="text" id="numberDocument" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" required />
+              <input type="text" id="numberDocument" :style="(usePayment.state.validDocument) ? 'border: green solid 1px' : (usePayment.state.validDocument === false) ? 'border: red solid 1px' : ''" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" :minlength="(usePayment.infoPayment.typeDocument == 'CPF') ? '14' : '18'" :maxlength="(usePayment.infoPayment.typeDocument == 'CPF') ? '14' : '18'" required>
             </div>
           </div>
+          <RouterLink @submit.prevent="usePayment.solicityPayment('pix')" to="methods-payment/QRCode" class="pix-link">
+            <button type="submit">Pagar com Pix</button>
+          </RouterLink>
       </form>
-      <!-- <RouterLink @submit.prevent="submitPixPayment" to="methods-payment/QRCode" class="pix-link">Pagar com Pix</RouterLink> -->
     </div>
 </template>
 

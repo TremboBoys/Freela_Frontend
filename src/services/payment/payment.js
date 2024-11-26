@@ -1,3 +1,4 @@
+import { loadMercadoPago } from "@mercadopago/sdk-js";
 import axios from "axios";
 
 class PaymentService {
@@ -15,13 +16,37 @@ class PaymentService {
         };
     };
 
+    async getTokenCard(cardholderName, cardNumber, cardExpirationDate, securityCode, cardholderEmail, identification) {
+        await loadMercadoPago();
+
+        const mp = new window.MercadoPago(import.meta.env.VITE_VUE_MERCADO_PAGO_PUBLIC_KEY);
+
+        try {
+            const cardToken = mp.card.createToken({
+                cardNumber,
+                cardholderName,
+                cardExpirationDate,
+                securityCode,
+                cardholderEmail,
+                identification: {
+                    type: identification.type,
+                    number: identification.number
+                }
+            });
+            return cardToken;
+        } catch(error) {
+            console.error('Erro ao gerar token para o cartão: ', error);
+            return false;
+        };
+    };
+
     async makePayment(infoPayment) {
         try {
-            const { data } = await axios.post('http://localhost:8000/api/pay/', infoPayment);
+            const { data } = await axios.post('http://localhost:8000/api/project/finished/', infoPayment);
             return data;
         } catch(error) {
             console.error('Error trying to make payment: ', error);
-            return false;
+            return { error };
         };
     };
 }

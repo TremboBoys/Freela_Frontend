@@ -101,7 +101,7 @@ window.removeEventListener('keydown', handleKeyDown);
                 </router-link>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" v-for="(item, index) in navItems" :key="index">
-                        <router-link class="nav-link" :href="`${item.link}`">{{ item.text }}</router-link>
+                        <router-link class="nav-link" to="/dashboard">{{ item.text }}</router-link>
                     </li>
                 </ul>
             </div>

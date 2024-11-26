@@ -30,7 +30,7 @@ export function flagCardFunction(numberCard = '') {
     } else if (verifyVisa(numberCard)) {
         return 'visa';
     } else if (verifyMasterCard(numberCard)) {
-        return 'mastercard';
+        return 'master';
     } else if (verifyElo(numberCard)) {
         return 'elo';
     } else if (verifyDiscover(numberCard)) {
@@ -91,7 +91,7 @@ function verifyDiscover(numberCard = '') {
 };
 
 export function urlFlag(flag) {
-    if (flag == 'mastercard') {
+    if (flag == 'master') {
         const url = new URL('@/assets/images/payment/mastercard.png', import.meta.url).href;
         return url;
     } else if (flag == 'amex') {
