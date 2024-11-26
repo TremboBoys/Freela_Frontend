@@ -166,97 +166,6 @@
   }
 
 /* Estilo para telas com largura mínima de 1920px */
-@media (max-width: 1920px) {
-  .selectProject {
-    margin-top: 20px;
-    width: 100vw;  /* Aumentando a largura para telas ainda maiores */
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    padding: 20px;
-  
-    .select {
-      align-items: center;
-      
-      .select-header-container {
-        width: 1000px;
-        display: flex;
-    
-        .select-header {
-          p {
-            width: 800px;
-            font-size: 32px;  /* Aumentando ainda mais o tamanho da fonte */
-          }
-        }
-
-        .select-header2 {
-          width: 60px;
-          font-size: 16px;
-          padding-left: 5px;
-        }
-      }
-  
-      .select-main-container {
-        display: flex;
-        flex-direction: column;
-  
-        .select-subTitle {
-          display: flex;
-          width: 1000px;
-          padding: 20px 20px 20px 15px;
-          font-size: 20px;
-        }
-  
-        .select-text {
-          width: 900px;
-          font-size: 24px;
-          margin-bottom: 70px;
-        }
-  
-        .select-bottom-container {
-          padding: 12px;
-          display: flex;
-          margin-bottom: 80px;
-          width: 60vw;
-  
-          .select-bottom {
-            width: 15vw;
-            height: 60px;
-            p {
-              font-size: 18px;
-              padding: 2px;
-              width: 100px;
-            }
-          }
-        }
-      }
-  
-      .select-footer-container {
-        display: flex;
-  
-        .p-container {
-          font-size: 18px;
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-          gap: 30px;
-        }
-  
-        .select-footer-proposal {
-          width: 40vw;
-          height: 60px;
-          align-items: center;
-          margin-left: 0px;
-          
-          p {
-            display: flex;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-  }
-}
 
 /* Estilo para telas com largura mínima de 1440px */
 @media (max-width: 1440px) {
@@ -332,7 +241,7 @@
   
         .select-bottom {
           padding: 16px;
-          width:40vw;
+          width:14vw;
           height: 20px;
           flex-shrink: 0;
           border-radius: 35px;
@@ -697,7 +606,7 @@
 @media (max-width: 320px) {
   .selectProject {
     margin-top: 20px;
-    width: 180px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     margin-left: 0px;
@@ -715,7 +624,7 @@
   
           p {
             width: 100px;
-            font-size: 10px;
+            font-size: px;
           }
         }
 
@@ -744,7 +653,7 @@
 
         .select-text {
           width: 150px;
-          font-size: 6px;
+          font-size: 10px;
         }
 
         .select-bottom-container {
