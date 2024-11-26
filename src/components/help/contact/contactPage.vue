@@ -10,13 +10,25 @@ import { ref } from 'vue';
 const client = ref(true);
 const freelancer = ref(true);
  function selectClient() {
-  client.value = false;
+  if (client.value === true) {
+    client.value = false;
   freelancer.value = true;
+  }
+  else {
+    client.value = true;
+  }
+ 
 };
+
 function selectFreelancer(){
-  client.value = true;
-  freelancer.value = false;
-};
+  if (freelancer.value === true) {
+    freelancer.value = false;
+    client.value = true;
+}
+  else {
+    freelancer.value = true;
+  }
+}
 </script>
 <template>
   <main>
@@ -34,7 +46,7 @@ function selectFreelancer(){
     </div>
     <div class="select-Perfil">
       <defaultClient @click = selectClient()  v-if="client" />
-    <selectedClient  @click = selectClient() v-if="!client" />
+      <selectedClient  @click = selectClient() v-if="!client" />
       <defaultFreelancer @click = selectFreelancer() v-if="freelancer" />
       <selectedFreelancer @click = selectFreelancer() v-if="!freelancer" />
      </div>
