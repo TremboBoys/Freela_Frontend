@@ -1,0 +1,58 @@
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    width: 62vw;
+    justify-content: space-between;
+    align-items: center;
+    .profile-title{
+      display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 16vw;
+    .number{
+      width: 3vw;
+      height: 3vw;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1.9px solid #646464;
+      p{
+        font-size: 1.3rem;
+        font-weight: 700;
+        align-items: center;
+        color: #646464;
+      }
+    }
+    .text{
+      display: flex;
+      align-items: center;
+      width: 12vw;
+      font-size: 1.2rem;
+      margin: 0 0 0 0.5rem;
+      font-weight: 700;
+      p{
+        color: #646464;
+      }
+    }
+    }
+  }
+  .select-Perfil{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40vw;
+    .perfil{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 30vw;
+      .perfil-title{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 1rem 0 0;
+      }
+      
+    }
+  }
+  
