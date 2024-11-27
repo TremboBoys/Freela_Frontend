@@ -19,6 +19,7 @@
         .select-header {
           flex-grow: 1;
   
+
           p {
             color: #000;
             font-family: Poppins;
@@ -165,13 +166,11 @@
     }
   }
 
-/* Estilo para telas com largura mínima de 1920px */
 
-/* Estilo para telas com largura mínima de 1440px */
 @media (max-width: 1440px) {
   .selectProject {
     margin-top: 20px;
-    width: 60vw;  /* Aumentando a largura para telas maiores */
+    width: 60vw;
     display: flex;
     margin-left: 30px;
     padding: 15px;
@@ -309,7 +308,6 @@
 }
 
 
-/* Estilo para telas de até 1024px */
 @media (max-width: 1024px) {
   .selectProject {
     margin-top: 20px;
