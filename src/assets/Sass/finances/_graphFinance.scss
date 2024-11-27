@@ -1,0 +1,74 @@
+.chart-container {
+  min-width: 55vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.week-details {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+@media (max-width: 1920px) {
+  .chart-container {
+    min-width: 55vw;
+  }
+
+  .week-details {
+    margin-top: 20px;
+    padding: 10px;
+  }
+}
+@media (max-width: 1440px) {
+  .chart-container {
+    min-width: 55vw;
+  }
+
+  .week-details {
+    margin-top: 20px;
+    padding: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .chart-container {
+    max-width: 60vw;
+  }
+
+  .week-details {
+    margin-top: 10px;
+    padding: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .chart-container {
+    max-width: 60vw;
+  }
+
+  .week-details {
+    margin-top: 10px;
+    padding: 5px;
+  }
+}
+@media (max-width: 425px) {
+  .chart-container {
+    min-width: 70vw;
+  }
+
+  .week-details {
+    margin-top: 10px;
+    padding: 5px;
+  }
+}
+@media (max-width: 320px) {
+  .chart-container {
+    min-width: 100%;
+    height: auto;
+  }
+
+  .week-details {
+    margin-top: 10px;
+    padding: 5px;
+  }
+}
