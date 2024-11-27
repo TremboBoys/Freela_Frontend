@@ -1,6 +1,8 @@
 <script setup>
 import GraphFinance from '@/components/finances/GraphFinance.vue';
 import TextLeft from '@/components/finances/TextLeft.vue';
+import LockIcon from '@/components/finances/LockIcon.vue';
+import PopUpMp from '@/components/finances/PopUpMp.vue';
 </script>
 <template>
   <div class="container">
@@ -10,6 +12,12 @@ import TextLeft from '@/components/finances/TextLeft.vue';
     <div class="right">
       <GraphFinance />
     </div>
+  </div>
+  <!-- <div class="lock">
+    <LockIcon />
+  </div> -->
+  <div class="popUpMp">
+    <PopUpMp />
   </div>
 </template>
 <style scoped>

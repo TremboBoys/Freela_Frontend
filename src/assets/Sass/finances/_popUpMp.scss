@@ -1,0 +1,34 @@
+.container-pop-up-mp {
+    display: flex;
+    justify-content: space-evenly;
+    width: 800px;
+    height: 400px;
+    padding: 80px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: #FDFDFD;
+    box-shadow: 0px 0px 15px 5px gray;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 380px;
+    row-gap: 60px;
+    margin-bottom: 50px;
+
+    .image-logo {
+        width: 200px;
+    }
+    .image-add {
+        width: 30px;
+    }
+    .image-mp {
+        width: 200px;
+    }
+}
+
+.container-request {
+    width: 380px;
+}

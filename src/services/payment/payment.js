@@ -6,7 +6,7 @@ class PaymentService {
         try {
             const { data } = await axios.get('https://api.mercadopago.com/v1/identification_types', {
                 headers: {
-                    Authorization: `Bearer ${import.meta.env.VITE_VUE_MERCADO_PAGO_ACESS_TOKEN}`
+                    Authorization: `Bearer ${import.meta.env.VITE_VUE_MERCADO_PAGO_ACCESS_TOKEN}`
                 }
             });
             return data;

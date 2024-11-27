@@ -2,8 +2,7 @@
 import '@passageidentity/passage-elements/passage-auth';
 import { useAuthStore } from '@/stores/auth/auth';
 
-// const appId = import.meta.env.VITE_VUE_APP_PASSAGE_APP_ID;
-const appId = import.meta.env
+const appId = import.meta.env.VITE_VUE_APP_PASSAGE_APP_ID;
 const useAuth = useAuthStore();
 </script>
 

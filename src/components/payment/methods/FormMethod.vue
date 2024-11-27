@@ -40,26 +40,29 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
     <div v-if="usePayment.infoPayment.methodPayment != 'pix'" class="payment-form">
       <h2>Pagamento com {{(usePayment.infoPayment.methodPayment == 'credit') ? 'Crédito' : 'Débito'}}</h2>
       <form @submit.prevent="usePayment.solicityPayment('card')">
-        <div>
+        <div class="container-field">
           <label for="debitCardNumber">Nome do titular do Cartão:<sup>*</sup></label>
-          <input type="text" id="cardName" v-model="usePayment.infoPayment.namePayer" required />
+          <input type="text" id="cardName" v-model="usePayment.infoPayment.namePayer" placeholder="MARIA EDUARDA" required />
+          <!-- <span class="icon-input"><img src="@/assets/images/payment/cardholder.png" alt=""></span> -->
         </div>
-        <div>
+        <div class="container-field">
           <label for="creditCardNumber">Número do Cartão:<sup>*</sup></label>
-          <input type="text" id="creditCardNumber" v-model="usePayment.infoPayment.numberCard" :minlength="(usePayment.state.flagCard == 'amex') ? '15' : (usePayment.state.flagCard == 'visa') ? '13' : '16'" :maxlength="(usePayment.state.flagCard == 'amex') ? '18' : '19'" required />
+          <input type="text" id="creditCardNumber" v-model="usePayment.infoPayment.numberCard" :minlength="(usePayment.state.flagCard == 'amex') ? '15' : (usePayment.state.flagCard == 'visa') ? '13' : '16'" :maxlength="(usePayment.state.flagCard == 'amex') ? '18' : '19'" placeholder="**** **** **** 7524" required />
           <div class="container-flag" :style="(usePayment.state.flagCard == 'unknown') ? 'visibility: hidden' : 'visibility: visible'">
             <img :src="urlFlag(usePayment.state.flagCard)" :style="(usePayment.state.flagCard == 'amex') ? 'width: 48px' : 'width: 40px'" alt="">
           </div>
         </div>
-        <div>
+        <div class="container-field">
           <label for="creditExpiryDate">Data de Validade:<sup>*</sup></label>
-          <input type="text" id="creditExpiryDate" v-model="usePayment.infoPayment.expirationDate" maxlength="5" required />
+          <input type="text" id="creditExpiryDate" v-model="usePayment.infoPayment.expirationDate" maxlength="5" placeholder="MM/YY" required />
+          <!-- <span class="icon-input"><img src="@/assets/images/payment/calendar.png" alt=""></span> -->
         </div>
-        <div>
+        <div class="container-field">
           <label for="creditCvv">CVV:<sup>*</sup></label>
-          <input type="text" id="creditCvv" maxlength="3" v-model="usePayment.infoPayment.cvv" required />
+          <input type="text" id="creditCvv" maxlength="3" v-model="usePayment.infoPayment.cvv" placeholder="123" required />
+          <!-- <span class="icon-input"><img src="@/assets/images/payment/cvv.png" alt=""></span> -->
         </div>
-        <div>
+        <div class="container-field">
           <label for="typeDocument">Tipo de documento:<sup>*</sup></label>
           <select id="typeDocument" v-model="usePayment.infoPayment.typeDocument">
             <option v-for="(type, index) in usePayment.typeDocuments" :key="index" :value="type.name">{{ type.name }}</option>
@@ -69,7 +72,7 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
         <div v-if="usePayment.infoPayment.typeDocument !== 'Selecione o seu tipo de documento'">
             <div>
                 <label for="debitCvv">Número do {{ usePayment.infoPayment.typeDocument }}:<sup>*</sup></label>
-                <input type="text" id="numberDocument" :style="(usePayment.state.validDocument) ? 'border: green solid 1px' : (usePayment.state.validDocument === false) ? 'border: red solid 1px' : ''" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" :maxlength="(usePayment.infoPayment.typeDocument == 'CPF') ? '14' : '18'" required>
+                <input type="text" id="numberDocument" :style="(usePayment.state.validDocument) ? 'border: green solid 1px' : (usePayment.state.validDocument === false) ? 'border: red solid 1px' : ''" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. XXX.XXX.XXX-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" :maxlength="(usePayment.infoPayment.typeDocument == 'CPF') ? '14' : '18'" required>
             </div>
         </div>
     
@@ -91,7 +94,7 @@ watch(() => [usePayment.infoPayment.numberDocument, usePayment.infoPayment.expir
           <div v-if="usePayment.infoPayment.typeDocument !== 'Selecione o seu tipo de documento'">
             <div>
               <label for="debitCvv">Número do {{ usePayment.infoPayment.typeDocument }}:<sup>*</sup></label>
-              <input type="text" id="numberDocument" :style="(usePayment.state.validDocument) ? 'border: green solid 1px' : (usePayment.state.validDocument === false) ? 'border: red solid 1px' : ''" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. 123.456.789-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" :minlength="(usePayment.infoPayment.typeDocument == 'CPF') ? '14' : '18'" :maxlength="(usePayment.infoPayment.typeDocument == 'CPF') ? '14' : '18'" required>
+              <input type="text" id="numberDocument" :style="(usePayment.state.validDocument) ? 'border: green solid 1px' : (usePayment.state.validDocument === false) ? 'border: red solid 1px' : ''" :placeholder="(usePayment.infoPayment.typeDocument == 'CPF') ? 'Ex. XXX.XXX.XXX-10' : 'Ex. XX.XXX.XXX/000X-XX.'" v-model="usePayment.infoPayment.numberDocument" :minlength="(usePayment.infoPayment.typeDocument == 'CPF') ? '14' : '18'" :maxlength="(usePayment.infoPayment.typeDocument == 'CPF') ? '14' : '18'" required>
             </div>
           </div>
           <RouterLink @submit.prevent="usePayment.solicityPayment('pix')" to="methods-payment/QRCode" class="pix-link">
@@ -131,6 +134,7 @@ $font-title-color: #000;
     font-weight: bold;
     color: $font-title-color;
     margin-bottom: 0.5rem;
+    margin-left: 5px;
     sup {
       position: relative;
       top: 4px;
@@ -215,6 +219,25 @@ $font-title-color: #000;
     &:focus {
       border-color: $input-focus-color;
     }
+  }
+}
+
+.container-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icon-input {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  left: 428px;
+  bottom: 45px;
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
 </style>
