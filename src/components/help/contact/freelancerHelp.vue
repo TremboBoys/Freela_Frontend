@@ -6,24 +6,27 @@ const faqCategories = ref([
     title: 'Retiro de dinheiro / Não recebi meu pagamento',
     items: [
       'Como faço para sacar o dinheiro?',
-      'Problemas ao efetuar pagamento',
-      'Como posso pagar um projeto por horas?',
+      'Quando recebo meu pagamento?',
+      'Por que não recebi meu pagamento?',
+      'Outras perguntas / Entre em contato',
     ],
   },
   {
     title: 'Quero cancelar o projeto / O cliente não responde',
     items: [
-      'Como cancelo o pagamento?',
-      'Como cancelo o projeto?',
-      'Como posso pedir reembolso?',
+      'O que fazer quando o cliente não responde?',
+      'Política de cancelamento',
+      'Política de cancelamento de projeto por horas',
+      'Outras perguntas / Entre em contato',
     ],
   },
   {
     title: 'Tenho propostas suspensas ou conta suspensa',
     items: [
-      'Como faço para cadastrar um projeto?',
-      'Aceitei uma proposta. Qual o próximo o passo?',
-      'Conselhos para aceitar uma proposta',
+        'Por que minhas propostas foram suspensas?',
+        'Por que minha conta foi suspensa?',
+        'Como faço para reativar minha conta?',
+        'Outras perguntas / Entre em contato',
     ],
   },
   {
@@ -37,17 +40,21 @@ const faqCategories = ref([
   {
     title: 'Moderação',
     items: [
-      'Como pagar os projetos por hora?',
-      'Como encerrar um projeto por hora',
-      'Como funciona o projeto por hora?',
+        'O que é moderação?',
+        'Como funciona a moderação?',
+        'Por que minha proposta foi rejeitada?',
+        'Por que enviamos um código de confirmação no email?',
+        'Outras perguntas / Entre em contato',
     ],
   },
   {
-    title: 'Outros assuntosz',
+    title: 'Outros assuntos',
     items: [
       'O que são os planos de assinatura?',
-      'Outras perguntas / Entre em contato',
+      'Desejo mudar meu email',
+      'Desejo mudar minha senha',
       'Como faço para cancelar minha conta?',
+      'Outras perguntas / Entre em contato',
     ],
   },
 ]);

@@ -5,6 +5,7 @@ import selectedClient from './buttons/clientButtons/selectedClient.vue';
 import selectedFreelancer from './buttons/freelancerButtons/selectedFreelancer.vue';
 import { ref } from 'vue';
 import clientHelp from './clientHelp.vue';
+import freelancerHelp from './freelancerHelp.vue';
 
 // Estados reativos para os perfis
 const client = ref(true);
@@ -48,6 +49,7 @@ function selectFreelancer(){
       <selectedFreelancer @click = selectFreelancer() v-if="!freelancer" />
     </div>
     <clientHelp v-if="!client" />
+    <freelancerHelp v-if="!freelancer" />
   </div>
 </template>
 
