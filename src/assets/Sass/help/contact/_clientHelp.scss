@@ -1,0 +1,97 @@
+.client-help {
+    width: 100%;
+    border: 1px solid #646464;
+    border-radius: 12px;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  
+  .number-title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2vh;
+    width: 100%;
+    border-bottom: 1px solid #646464;
+    margin-bottom: 2rem;
+  
+    .number {
+      background-color: #F2F2F2;
+      border: #646464 1.6px solid;
+      border-radius: 50%;
+      width: 3vw;
+      height: 3vw;
+      margin-right: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      p {
+        font-size: 1.3vw;
+        font-weight: bold;
+        color: #646464;
+      }
+    }
+  
+    p.title {
+      font-size: 1.2vw;
+      font-weight: bold;
+      color: #646464;
+    }
+  }
+  
+  .options{
+      margin-top: 3vh;
+  }
+  
+  .options ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .faq-category {
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq-container {
+    display: flex; /* Alinha o botão e a lista na horizontal */
+    align-items: flex-start; /* Alinha verticalmente */
+  }
+  
+  .faq-button {
+    background: none;
+    width: 2.5rem; /* Largura do botão */
+    height: 2.5rem; /* Altura do botão */
+    border: none;
+    margin-right: 1rem; /* Espaço entre o botão e a lista */
+    cursor: pointer; /* Cursor de clique */
+    p{
+      font-size: 2rem; /* Tamanho da fonte */
+      
+      color: #646464; /* Cor do texto */
+    }
+  }
+  
+  .faq-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #646464;
+    margin-top: 0.75rem; /* Espaçamento entre o título e a lista */
+    
+  }
+  .faq-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+  .faq-item {
+    font-size: 1rem;
+    color: #646464;
+    margin-bottom: 0.5rem; /* Espaçamento entre os itens */
+    .icon{
+                width: 0.7rem;
+                height: 0.7rem;
+                margin: 0 0 0 0.3rem;
+              }
+  }
