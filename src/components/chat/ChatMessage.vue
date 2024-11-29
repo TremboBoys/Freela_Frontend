@@ -1,18 +1,22 @@
 <script setup>
+import { useChatStore } from "@/stores/chat/chat";
 import HeaderContact from './chatMessage/HeaderContact.vue';
-import MessageSentVue from './chatMessage/MessageSent.vue';
+import MessagesUser from './chatMessage/MessagesUser.vue';
 import SelectedNone from './chatMessage/SelectedNone.vue';
-import MessageReceived from './chatMessage/MessageReceived.vue';
 import SendMessage from './chatMessage/SendMessage.vue';
+import PopUpImageSelect from "./chatMessage/PopUpImageSelect.vue";
+
+const useChat = useChatStore();
 </script>
 <template>
   <div class="container">
     <!-- <SelectedNone /> -->
-    <HeaderContact />
+    <HeaderContact v-if="Object.keys(useChat.infoCurrentReceiver).length > 0" :user="('user' in useChat.infoCurrentReceiver) ? useChat.infoCurrentReceiver : {}" />
   </div>
-  <div class="message">
-    <MessageReceived />
-    <MessageSentVue />
+  <div ref="messageContainer" style="" v-if="useChat.messagesCurrentUser.length > 0" class="container-all-messages">
+    <PopUpImageSelect v-if="useChat.state.fileInput !== null" />
+    <MessagesUser v-if="useChat.messagesCurrentUser.length > 0 && useChat.state.fileInput === null" />
+  <div></div>
   </div>
   <div class="send">
     <SendMessage/>
@@ -23,21 +27,21 @@ import SendMessage from './chatMessage/SendMessage.vue';
   display: flex;
   flex: 1;
 }
-.message {
+.container-all-messages {
   overflow-y: auto;
   padding: 10px;
   background-color: #fff;
   border: 1px solid #ccc;
   min-height: 68vh;
 }
-.message::-webkit-scrollbar {
+.container-all-messages::-webkit-scrollbar {
   width: 8px;
 }
-.message::-webkit-scrollbar-thumb {
+.container-all-messages::-webkit-scrollbar-thumb {
   background: #1B75BF;
   border-radius: 10px;
 } 
-.message::-webkit-scrollbar-thumb:hover {
+.container-all-messages::-webkit-scrollbar-thumb:hover {
   background: #16619e;
 }
 </style>

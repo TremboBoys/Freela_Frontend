@@ -1,0 +1,376 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+
+    .logo {
+      width: 15vw;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-collapse {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .nav-link {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        color: #000;
+
+        &:hover {
+          border-bottom: 2px solid #0d4247;
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  width: 100vw;
+  height: 70vh;
+
+  .banner-overlay {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      .left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .banner-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          text-align: center;
+
+          h2 {
+            margin-top: 4rem;
+            font-size: 4rem;
+            font-weight: 700;
+            color: #0d4247;
+          }
+
+          h6 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #000000;
+          }
+
+          .routerLink {
+            text-decoration: none;
+
+            button {
+              margin-top: 2rem;
+              padding: 10px;
+              color: #ffffff;
+              border: none;
+              border-radius: 40px;
+              font-size: 1.5rem;
+              font-weight: 500;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 18vw;
+              position: relative;
+              overflow: hidden;
+              background: transparent;
+
+              /* Camada inicial */
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(90deg, rgb(78, 107, 110) 0%, rgb(33, 77, 80) 50%, rgb(13, 59, 63) 100%);
+                transition: opacity 0.5s ease;
+                z-index: -1;
+              }
+
+              /* Camada de hover */
+              &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(90deg, rgb(53, 93, 97) 0%, rgba(13, 66, 71, 1) 50%, rgba(8, 52, 56, 1) 100%);
+                z-index: -2;
+              }
+
+              /* Hover */
+              &:hover::before {
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-padding {
+  .container {
+    background-color: #858585;
+
+    .row {
+      z-index: 1;
+      background-color: #fff;
+
+      .left {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+          font-size: 1.6rem;
+          color: #2b2b2b;
+          margin-top: 2rem;
+        }
+      }
+
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #0d4247;
+        margin-bottom: 1.5rem;
+      }
+
+      .right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        p {
+          font-size: 1.6rem;
+          color: #2b2b2b;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .navbar .container .logo {
+    width: 18vw;
+  }
+  .navbar {
+    .container {
+      .navbar-nav {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .banner {
+    height: auto;
+  }
+  .banner .banner-overlay .container .left .banner-text h2 {
+    font-size: 3.5rem;
+  }
+
+  .banner .banner-overlay .container .left .banner-text h6 {
+    font-size: 2.5rem;
+  }
+  .banner .banner-overlay .container .row .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-padding {
+    width: 100vw;
+  }
+  .section-padding .container .row .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39vw;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    margin-bottom: 50px;
+  }
+  .section-padding .container .row .right {
+    flex-grow: 1;
+  }
+
+  p.wow {
+      text-align: justify;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar .container .logo {
+    width: 20vw;
+  }
+  .navbar {
+    .container {
+      .navbar-nav {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .banner .banner-overlay .container .left .banner-text h2 {
+    font-size: 3rem;
+  }
+
+  .banner .banner-overlay .container .left .banner-text h6 {
+    font-size: 2rem;
+  }
+  .banner .banner-overlay .container .row .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-padding {
+    width: 100vw;
+  }
+  .section-padding .container .row .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .banner {
+    height: 60vh;
+    margin-bottom: 10vh;
+    .banner-overlay {
+      margin-top: 0;
+    }
+    .banner-overlay .container .left .banner-text h2 {
+      font-size: 2.5rem;
+    }
+
+    .banner-overlay .container .left .banner-text h6 {
+      font-size: 1.5rem;
+    }
+    .banner-overlay .container .row .left .wow button {
+      width: 40vw;
+      font-size: 1.5rem;
+    }
+    .banner-overlay .container .row .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .section-padding .container .row h3 {
+    font-size: 2rem;
+  }
+  .section-padding .container .row .right {
+    flex-grow: 1;
+  }
+
+  .section-padding .container .row .left p,
+  .section-padding .container .row .right p {
+    font-size: 1.4rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .container .logo {
+    width: 30vw;
+  }
+
+  .banner .banner-overlay .container .left .banner-text h2 {
+    font-size: 2rem;
+  }
+
+  .banner .banner-overlay .container .left .banner-text h6 {
+    font-size: 1.2rem;
+  }
+  .banner .banner-overlay .container .row .left .wow button {
+    width: 70vw;
+    font-size: 1.2rem;
+  }
+  .banner .banner-overlay .container .row .right {
+    display: none;
+  }
+
+  .section-padding .container .row h3 {
+    font-size: 1.8rem;
+  }
+
+  .section-padding .container .row .left p,
+  .section-padding .container .row .right p {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .container .logo {
+    width: 35vw;
+  }
+
+  .banner {
+    height: auto;
+
+    .banner-overlay .container .left .banner-text h2 {
+      font-size: 1.8rem;
+    }
+
+    .banner-overlay .container .left .banner-text h6 {
+      font-size: 1rem;
+    }
+
+    .banner-overlay .container .row .left .wow button {
+      width: 60vw;
+      font-size: 1rem;
+    }
+    .banner-overlay .container .row .right {
+      display: none;
+    }
+  }
+
+  .section-padding .container .row h3 {
+    font-size: 1.6rem;
+  }
+  .section-padding .container .row .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .section-padding .container .row .left p,
+  .section-padding .container .row .right p {
+    font-size: 1rem;
+    margin-right: 0;
+  }
+}

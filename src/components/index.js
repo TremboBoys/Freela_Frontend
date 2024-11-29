@@ -12,6 +12,10 @@ import ConfEmailTitles from './configProfile/confirmation/ConfEmailTitles.vue';
 import CodeVerification from '@/components/configProfile/confirmation/CodeVerification.vue';
 import SendButton from './configProfile/password/SendButton.vue';
 import LogoName from '@/components/dashboard/profile/LogoName.vue';
+import AsideContacts from '@/components/chat/AsideContacts.vue';
+import ChatMessage from '@/components/chat/ChatMessage.vue';
+import ButtonSearch from '@/components/chat/contacts/ButtonSearch.vue';
+import ContactUser from '@/components/chat/contacts/ContactUser.vue';
 import InfoProfile from '@/components/dashboard/profile/InfoProfile.vue';
 import PublicProfile from '@/components/dashboard/profile/PublicProfile.vue';
 import MainSkills from '@/components/dashboard/profile/MainSkills.vue';
@@ -31,6 +35,10 @@ import SizeProject from '@/components/registerProject/sizeProject/SizeProjectReg
 import CompleteProject from '@/components/registerProject/completeProject/CompleteProjectRegistration.vue';
 import LoadSpinner from './global/LoadSpinner.vue';
 import QuickWarnings from './global/QuickWarnings.vue';
+import MethodsPayment from './payment/MethodsPayment.vue';
+import AddressUser from './payment/methods/AddressUser.vue';
+import PaymentConfirm from './payment/PaymentConfirm.vue';
+import QRCode from './payment/methods/QRCode.vue';
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
 import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 
@@ -50,6 +58,10 @@ export {
     CodeVerification,
     SendButton,
     LogoName,
+    AsideContacts,
+    ChatMessage,
+    ButtonSearch,
+    ContactUser,
     InfoProfile,
     PublicProfile,
     MainSkills,
@@ -68,6 +80,10 @@ export {
     CompleteProject,
     LoadSpinner,
     QuickWarnings,
+    MethodsPayment,
+    AddressUser,
+    PaymentConfirm,
+    QRCode,
     DefaultHeader,
     DefaultFooter,
 };
