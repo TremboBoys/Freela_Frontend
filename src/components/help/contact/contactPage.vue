@@ -1,8 +1,9 @@
 <script setup>
- import contactTitle from './contactTitle.vue';
- import questionsHelp from './questionsHelp.vue';
- import helpCentral from './helpCentral.vue';
- import profileSections from './profileSections.vue';
+import contactTitle from './contactTitle.vue'
+import questionsHelp from './questionsHelp.vue'
+import helpCentral from './helpCentral.vue'
+import profileSections from './profileSections.vue'
+import utilityLinks from './utilityLinks.vue'
 </script>
 <template>
   <main>
@@ -12,20 +13,9 @@
       <helpCentral />
       <profileSections />
     </div>
-    <div class="links">
-      <h1>Links</h1>
-    </div>
+    <utilityLinks />
   </main>
 </template>
-<style scoped>
-  @import '@/assets/Sass/help/contact/_contactPage.scss';
- .links {
-    background-color: yellow;
-    width: 20%;
-    border: 1px solid black;
-    margin-right: 5%;
-    margin-bottom: 10vh;
-    position: absolute;
-    right: 0;
-  }
+<style scoped lang="scss">
+@import '@/assets/Sass/help/contact/_contactPage.scss';
 </style>
