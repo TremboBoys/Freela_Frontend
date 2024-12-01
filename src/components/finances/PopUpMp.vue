@@ -15,7 +15,7 @@
 
                 <button><a href="https://auth.mercadopago.com.br/authorization?response_type=code&client_id=2559043759198862&redirect_uri=https://ms-pix.onrender.com/authClient/">Autorizar nosso sistema</a></button>
 
-                <p class="observation">Caso ainda não tenha uma conta como vendedor no Mercado Pago, crie uma antes com o mesmo email de sua conta no Tasker.</p>
+                <p class="observation">Caso ainda não tenha uma conta de vendedor no Mercado Pago, crie uma antes com o mesmo email de sua conta no Tasker.</p>
             </div>
         </div>
     </div>

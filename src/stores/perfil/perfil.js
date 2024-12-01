@@ -40,6 +40,8 @@ export const usePerfilStore = defineStore('perfil', () => {
             try {
                 const data = await PerfilService.getCurrentPerfil('email', [email]);
 
+                console.log(data);
+
                 for (let c = 0; c < data.length; c++) {
                     Object.entries(data[c]).forEach(([key, value]) => {
                         perfil[key] = value; // Atribuindo o valor à propriedade do perfil
