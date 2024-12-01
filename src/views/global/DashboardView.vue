@@ -1,17 +1,8 @@
 <script setup>
 import { LogoName, InfoProfile, PublicProfile, MainSkills, FavoriteArea, AboutMe, ProjectProgress, CompletedProject } from '@/components';
 import { usePerfilStore } from '@/stores/perfil/perfil';
-import { useAuthStore } from '@/stores/auth/auth';
-import { onMounted } from 'vue';
 
 const usePerfil = usePerfilStore();
-const useAuth = useAuthStore();
-
-onMounted(() => {
-    setTimeout(() => {
-        useAuth.signOut();
-    }, 5000);
-})
 </script>
 
 <template>
