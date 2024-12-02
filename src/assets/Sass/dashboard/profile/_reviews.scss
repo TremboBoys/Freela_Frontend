@@ -1,0 +1,23 @@
+.container-reviews {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .reviews {
+        width: 460px;
+        border-radius: 15px;
+        height: 350px;
+        border: 1px solid #898989;
+        overflow-y: auto;
+
+        #first-review {
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}

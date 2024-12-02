@@ -9,6 +9,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        position: relative;
+        right: 8px;
 
         .logo {
             img {

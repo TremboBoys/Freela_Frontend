@@ -28,12 +28,21 @@
             }
             .stars {
                 display: flex;
-                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                column-gap: 5px;
                 margin-top: 10px;
                 font-size: 1.7rem;
                 color: #1B75BF;
                 span {
                     display: inline-block;
+                }
+
+                .quantityAvaliations {
+                    position: relative;
+                    top: 2px;
+                    color: #000;
+                    font-size: 1rem;
                 }
             }
         }
@@ -56,6 +65,8 @@
                     font-size: 14px;
                 }
                 .stars {
+                    position: relative;
+                    right: 6px;
                     font-size: 1.7rem;
                 }
             }

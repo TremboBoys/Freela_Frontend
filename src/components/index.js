@@ -21,6 +21,8 @@ import PublicProfile from '@/components/dashboard/profile/PublicProfile.vue';
 import MainSkills from '@/components/dashboard/profile/MainSkills.vue';
 import FavoriteArea from '@/components/dashboard/profile/FavoriteArea.vue';
 import AboutMe from '@/components/dashboard/profile/AboutMe.vue';
+import ShortcutsProfile from '@/components/dashboard/profile/ShortcutsProfile.vue';
+import ReviewsProfile from './dashboard/profile/ReviewsProfile.vue';
 import ProjectProgress from '@/components/dashboard/projects/projectProgress/ProjectProgress.vue';
 import CompletedProject from '@/components/dashboard/projects/completedProject/CompletedProject.vue';
 import SignInPassage from './signIn/SignInPassage.vue';
@@ -67,6 +69,8 @@ export {
     MainSkills,
     FavoriteArea,
     AboutMe,
+    ShortcutsProfile,
+    ReviewsProfile,
     ProjectProgress,
     CompletedProject,
     SignInPassage,
