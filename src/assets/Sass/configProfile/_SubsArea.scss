@@ -10,8 +10,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 85vw;
-        padding: 16px 0px 70px 80px;
+        width: 75%;
+        flex-grow: 1;
+        padding: 16px 0 70px 0;
     }
 }
 @media (max-width: 1440px) {

@@ -218,6 +218,7 @@ const router = createRouter({
               component: QRCode
             }
           ],
+          meta: { requiresAuth: true }
         },
         {
           path: 'profile/:id',

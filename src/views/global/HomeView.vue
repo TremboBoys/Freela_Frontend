@@ -2,12 +2,15 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { gsap } from 'gsap';
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+import { useSignUpStore } from '@/stores/auth/signUp';
 import { useAuthStore } from '@/stores/auth/auth';
+import { PopUpSignUp, SignInPassage } from '@/components';
 import WOW from 'wow.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const useAuth = useAuthStore();
+const useSignUp = useSignUpStore();
 
 // Dados das seções e navbar
 const navItems = ref([
@@ -89,7 +92,7 @@ window.removeEventListener('keydown', handleKeyDown);
 });
 </script>
 <template>
-    <div>
+    <div :style="(useAuth.state.showLogin) ? useAuth.state.popUpEffect : (useSignUp.state.registerUser) ? useAuth.state.popUpEffect : ''">
         <!-- Navbar Section -->
         <nav class="navbar">
             <div class="container">
@@ -98,7 +101,7 @@ window.removeEventListener('keydown', handleKeyDown);
                 </router-link>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" v-for="(item, index) in navItems" :key="index">
-                        <router-link class="nav-link" :href="`${item.link}`">{{ item.text }}</router-link>
+                        <router-link class="nav-link" to="/dashboard">{{ item.text }}</router-link>
                     </li>
                 </ul>
             </div>
@@ -205,6 +208,8 @@ window.removeEventListener('keydown', handleKeyDown);
             </div>
         </section>
     </div>
+    <SignInPassage v-if="useAuth.state.showLogin" />
+    <PopUpSignUp v-if="useSignUp.state.registerUser" />
 </template>
 
 

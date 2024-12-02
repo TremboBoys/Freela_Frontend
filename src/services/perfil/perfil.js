@@ -8,6 +8,7 @@ class PerfilService {
 
     async getAreas() {
         const { data } = await apiPerfil.get('/area/');
+        console.log(data);
         return data;
     };
 

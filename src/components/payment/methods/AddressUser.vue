@@ -1,60 +1,55 @@
+<script setup>
+import { ref, reactive } from 'vue';
+import { useRouter } from 'vue-router';
+import { useAddressStore } from '@/stores/payment/address';
+import { useWarningStore } from '@/stores/warning/warning';
+import LoadSpinner from '@/components/global/LoadSpinner.vue';
+const useAddress = useAddressStore();
+const useWarning = useWarningStore();
+const router = useRouter();
+</script>
+
 <template>
-    <div v-if="!isLoading" class="address-form">
+    <div class="address-form">
         <h2>Cadastro de Endereço</h2>
-        <form @submit.prevent="submitForm">
+        <form @submit.prevent="">
+            <div>
+                <label for="zip">CEP:</label>
+                <input type="text" id="zip" placeholder="Ex: 12345-678" v-model="useAddress.address.zip" minlength="9" maxlength="9" required />
+            </div>
             <div>
                 <label for="street">Rua:</label>
-                <input type="text" id="street" v-model="address.street" required />
+                <input type="text" id="street" v-model="useAddress.address.street" required />
             </div>
             <div>
                 <label for="number">Número:</label>
-                <input type="text" id="number" v-model="address.number" required />
+                <input type="text" id="number" v-model="useAddress.address.number" required />
+            </div>
+            <div>
+                <label for="neighborhood">Bairro:</label>
+                <input type="text" id="neighborhood" v-model="useAddress.address.neighborhood" required />
+            </div>
+            <div>
+                <label for="complement">Complemento:</label>
+                <input type="text" id="complement" v-model="useAddress.address.complement" />
             </div>
             <div>
                 <label for="city">Cidade:</label>
-                <input type="text" id="city" v-model="address.city" required />
+                <input type="text" id="city" v-model="useAddress.address.city" required />
             </div>
             <div>
                 <label for="state">Estado:</label>
-                <input type="text" id="state" v-model="address.state" required />
+                <input type="text" id="state" v-model="useAddress.address.state" required />
             </div>
             <div>
-                <label for="zip">CEP:</label>
-                <input type="text" id="zip" v-model="address.zip" required />
+                <label for="cellphone">Número de telefone:</label>
+                <input type="text" id="cellphone" placeholder="Ex. (47) 98830-0373" v-model="useAddress.address.cellphone" required>
             </div>
             <button type="submit">Cadastrar</button>
         </form>
     </div>
-    <div v-if="isLoading" class="loading">
-        <LoadSpinner />
-    </div>
 </template>
 
-<script setup>
-import { reactive, ref } from 'vue';
-import { useRouter } from 'vue-router';
-import LoadSpinner from '@/components/global/LoadSpinner.vue';
-const router = useRouter();
-const isLoading = ref(false);
-const address = reactive({
-    street: '',
-    number: '',
-    city: '',
-    state: '',
-    zip: ''
-});
-
-const submitForm = () => {
-    console.log(address);
-    isLoading.value = true;
-
-    setTimeout(() => {
-        isLoading.value = false;
-        router.push({ name: 'paymentConfirm' });
-    }, 2000);
-    // Adicionar a lógica para enviar o endereço para o backend
-};
-</script>
 
 <style scoped lang="scss">
 $secondary-color: #0d4247;

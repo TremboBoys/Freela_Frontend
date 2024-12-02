@@ -22,8 +22,8 @@ export const useSignUpStore = defineStore('signUp', () => {
 
     const state = reactive({
         registerUser: false,
-        stepChooseTypeAccount: false,
-        stepChooseArea: true,
+        stepChooseTypeAccount: true,
+        stepChooseArea: false,
         stepInputs: false
     });
 
