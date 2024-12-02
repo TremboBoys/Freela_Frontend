@@ -1,8 +1,15 @@
 <script setup>
 import { LogoName, InfoProfile, PublicProfile, MainSkills, FavoriteArea, AboutMe, ProjectProgress, CompletedProject } from '@/components';
+import { onMounted } from 'vue';
 import { usePerfilStore } from '@/stores/perfil/perfil';
+import PaymentService from '@/services/payment/payment';
 
 const usePerfil = usePerfilStore();
+
+onMounted(async () => {
+    const token = await PaymentService.getTokenCard('BRUNA PORTELA', '5201324693388928', 12, 2028, '763', 'portelabruna20@gmail.com', {type: 'CPF', number: '08181698932'});
+    console.log(token);
+})
 </script>
 
 <template>

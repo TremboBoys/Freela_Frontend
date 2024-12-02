@@ -23,6 +23,7 @@
     "font-awesome": "^4.7.0",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
+    "ngrok": "^5.0.0-beta.2",
     "pinia": "^2.1.7",
     "sass": "^1.77.8",
     "socket.io-client": "^4.8.1",
