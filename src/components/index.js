@@ -17,7 +17,6 @@ import ChatMessage from '@/components/chat/ChatMessage.vue';
 import ButtonSearch from '@/components/chat/contacts/ButtonSearch.vue';
 import ContactUser from '@/components/chat/contacts/ContactUser.vue';
 import InfoProfile from '@/components/dashboard/profile/InfoProfile.vue';
-import PublicProfile from '@/components/dashboard/profile/PublicProfile.vue';
 import MainSkills from '@/components/dashboard/profile/MainSkills.vue';
 import FavoriteArea from '@/components/dashboard/profile/FavoriteArea.vue';
 import AboutMe from '@/components/dashboard/profile/AboutMe.vue';
@@ -63,7 +62,6 @@ export {
     ButtonSearch,
     ContactUser,
     InfoProfile,
-    PublicProfile,
     MainSkills,
     FavoriteArea,
     AboutMe,

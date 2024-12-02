@@ -30,5 +30,5 @@ const useChat = useChatStore();
 </template>
 
 <style scoped>
-@import '../../../assets/Sass/default/header/_rightSide.scss';
+@import '@/assets/Sass/default/header/_rightSide.scss';
 </style>

@@ -16,4 +16,9 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
 @import '../../../assets/Sass/default/header/_rightSide.scss';
+@media (max-width: 875px) {
+    .icons-container {
+        display: none;
+    }
+}
 </style>
