@@ -26,23 +26,21 @@
                 color: #666;
                 margin: 5px 0 0 0;
             }
-            .stars {
+            .note {
+                margin: 10px 0;
+                position: relative;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                column-gap: 5px;
-                margin-top: 10px;
-                font-size: 1.7rem;
-                color: #1B75BF;
-                span {
-                    display: inline-block;
-                }
+                column-gap: 2px;
+                right: 2px;
+                bottom: 1px;
+                height: 24px;
 
-                .quantityAvaliations {
-                    position: relative;
-                    top: 2px;
-                    color: #000;
-                    font-size: 1rem;
+                .blue-star, .black-star {
+                    img {
+                        width: 24px;
+                        height: 100%;
+                        object-fit: contain;
+                    }
                 }
             }
         }

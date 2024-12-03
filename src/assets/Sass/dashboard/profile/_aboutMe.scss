@@ -1,5 +1,5 @@
 .container-about {
-    width: 30vw;
+    max-width: 70%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -30,7 +30,7 @@
         padding: 0 80px 0 80px;
         font-family: 'Poppins', sans-serif;
         margin-bottom: 16px;
-        width: 35vw;
+        width: 30vw;
         .text {
             padding: 6px;
             font-size: 18px;

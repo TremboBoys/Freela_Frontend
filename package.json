@@ -14,7 +14,6 @@
     "@mercadopago/sdk-js": "^0.0.3",
     "@passageidentity/passage-elements": "^2.0.2",
     "@passageidentity/passage-js": "^4.0.3",
-    "@popperjs/core": "^2.11.8",
     "@vueuse/core": "^11.2.0",
     "axios": "^1.7.4",
     "bootstrap": "^5.3.3",

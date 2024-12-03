@@ -2,22 +2,97 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    padding: 10px 40px 10px 10px;
     .title {
         font-size: 1.2rem;
     }
 
     .reviews {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
         width: 460px;
-        border-radius: 15px;
         height: 350px;
+        padding: 20px;
         border: 1px solid #898989;
+        border-radius: 15px;
         overflow-y: auto;
 
         #first-review {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            border-bottom: 1px solid #000;
+            .container-infoUser {
+                display: flex;
+                column-gap: 5px;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+                .infoUser {
+                    display: flex;
+                    flex-direction: column;
+
+                    .container-date-note {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 8px;
+                        .date {
+                            position: relative;
+                            font-size: 12px;
+                            left: 2px;
+                        }
+                        .note {
+                            position: relative;
+                            display: flex;
+                            column-gap: 2px;
+                            left: 2px;
+                            bottom: 1px;
+                            height: 18px;
+            
+                            .blue-star, .black-star {
+                                img {
+                                    width: 16px;
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .descriptionReview {
+                margin-bottom: 5px;
+            }
+        }
+        .button-expand {
+            display: flex;
+            justify-content: center;
+            padding-right: 15px;
             img {
-                width: 50px;
-                height: 50px;
+                cursor: pointer;
             }
         }
     }
+/* Personaliza a largura da barra */
+::-webkit-scrollbar {
+    width: 4px; /* Largura para barras verticais */
+  }
+  
+  /* Cor de fundo da barra */
+  ::-webkit-scrollbar-track {
+    border-radius: 15px; /* Cantos arredondados */
+  }
+  
+  /* Cor da "pegada" da barra */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+  
+  /* Cor da "pegada" ao passar o mouse */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
