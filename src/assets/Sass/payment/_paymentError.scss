@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 main {
     display: flex;
     justify-content: center;
@@ -18,16 +19,119 @@ main {
     background-color: #bf1b1b;
     color: white;
     font-size: 2.2rem;
+
+    p {
+        font-size: 9.5rem;
+        font-weight: 400;
+    }
 }
-.check p{
-    font-size: 9.5rem;
-    font-weight: 400;
-}
-p{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-}
+
 .text {
     margin-top: 2rem;
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 320px) {
+    .check {
+        width: 10rem;
+        height: 10rem;
+        
+        p {
+            font-size: 6rem;
+        }
+    }
+    .text p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 425px) {
+    .check {
+        width: 12rem;
+        height: 12rem;
+
+        p {
+            font-size: 8rem;
+        }
+    }
+    .text p {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .check {
+        width: 13rem;
+        height: 13rem;
+
+        p {
+            font-size: 8.5rem;
+        }
+    }
+    .text p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .check {
+        width: 14rem;
+        height: 14rem;
+
+        p {
+            font-size: 9rem;
+        }
+    }
+    .text p {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .check {
+        width: 16rem;
+        height: 16rem;
+
+        p {
+            font-size: 10rem;
+        }
+    }
+    .text p {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .check {
+        width: 18rem;
+        height: 18rem;
+
+        p {
+            font-size: 11rem;
+        }
+    }
+    .text p {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1921px) {
+    .check {
+        width: 20rem;
+        height: 20rem;
+
+        p {
+            font-size: 12rem;
+        }
+    }
+    .text p {
+        font-size: 3rem;
+    }
 }
