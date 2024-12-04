@@ -44,5 +44,4 @@ import SendButton from '../password/SendButton.vue';
 </template>
 
 <style scoped>
-@import '../../../assets/Sass/configProfile/_emailInputs.scss';
 </style>

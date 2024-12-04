@@ -25,18 +25,15 @@ const props = defineProps({
         </div>
         <div class="informations">
           <div class="name">
-            <div class="pro-verified"><p>PRO</p></div>
+            <div class="pro-verified">
+              <p>PRO</p>
+            </div>
             <p>{{ props.name }}</p>
           </div>
           <div class="specifications">
             <p>Developer Frontend</p>
             <div class="stars">
-              <img
-                v-for="index in 5"
-                :key="index"
-                src="../../assets/images/star.png"
-                alt="Imagem repetida"
-              />
+              <img v-for="index in 5" :key="index" src="../../assets/images/star.png" alt="Imagem repetida" />
             </div>
             <div class="country">
               <img src="../../assets/images/brasil-flag.png" alt="" />
@@ -46,7 +43,7 @@ const props = defineProps({
         </div>
       </div>
       <div class="middle-side">
-      <p class="description">{{ props.description }}</p>
+        <p class="description">{{ props.description }}</p>
       </div>
       <div class="bottom-side">
         <div class="types-container">
@@ -57,18 +54,18 @@ const props = defineProps({
       </div>
     </div>
     <div class="price-container">
-        <div class="price-content">
-            <RouterLink id="btnL" to="/"><button class="profile-button">Ver Perfil</button></RouterLink>
+      <div class="price-content">
+        <RouterLink id="btnL" to="profile"><button class="profile-button">Ver Perfil</button></RouterLink>
         <div class="price">
-            <p>Preço por hora:</p>
-            <p>R$20,00</p>
+          <p>Preço por hora:</p>
+          <p>R$20,00</p>
         </div>
         <div class="project-info">
-            <p>Projetos realizados: 10</p>
-            <p>Horas trabalhadas em projetos por hora: 2</p>
+          <p>Projetos realizados: 10</p>
+          <p>Horas trabalhadas em projetos por hora: 2</p>
         </div>
-        </div>
-        <p id="seeMore">Ver mais...</p>
+      </div>
+      <p id="seeMore">Ver mais...</p>
     </div>
   </div>
 </template>
