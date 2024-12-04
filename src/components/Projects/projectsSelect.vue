@@ -47,7 +47,7 @@ const popUp = () => {
                 </div>
                 <div class="select-footer-images">
                     <img src="@/assets/images/stars-project.png" alt="">
-                    <img src="@/assets/images/brasil-icon.png" alt="">
+                    <img id="flag-img" src="@/assets/images/brasil-icon.png" alt="">
                 </div>
             </div>
             <router-link to="/proposal-registration/:project" class="select-footer-proposal">
@@ -57,6 +57,6 @@ const popUp = () => {
     </div>
 </template>
 <style scoped>
-@import '../../assets/Sass/project/_project.scss';
+/* @import '../../assets/Sass/project/_project.scss'; */
 @import '../../assets/Sass/project/_select.scss';
 </style>

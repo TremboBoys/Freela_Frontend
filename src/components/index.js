@@ -20,6 +20,9 @@ import InfoProfile from '@/components/dashboard/profile/InfoProfile.vue';
 import PublicProfile from '@/components/dashboard/profile/PublicProfile.vue';
 import MainSkills from '@/components/dashboard/profile/MainSkills.vue';
 import AboutMe from '@/components/dashboard/profile/AboutMe.vue';
+import ShortcutsProfile from '@/components/dashboard/profile/ShortcutsProfile.vue';
+import ReviewsProfile from '@/components/dashboard/profile/ReviewsProfile.vue';
+import ExpandedReviews from '@/components/dashboard/profile/ExpandedReviews.vue';
 import ProjectProgress from '@/components/dashboard/projects/projectProgress/ProjectProgress.vue';
 import CompletedProject from '@/components/dashboard/projects/completedProject/CompletedProject.vue';
 import SignInPassage from './signIn/SignInPassage.vue';
@@ -38,6 +41,12 @@ import MethodsPayment from './payment/MethodsPayment.vue';
 import AddressUser from './payment/methods/AddressUser.vue';
 import PaymentConfirm from './payment/PaymentConfirm.vue';
 import QRCode from './payment/methods/QRCode.vue';
+import LogoAndName from '@/components/profile/profile/LogoName.vue';
+import InfosProfile from '@/components/profile/profile/InfoProfile.vue';
+import MainSkill from '@/components/profile/profile/MainSkills.vue';
+import AboutMes from '@/components/profile/profile/AboutMe.vue';
+import ProjectInProgress from '@/components/profile/projects/projectProgress/ProjectProgress.vue';
+import CompletedProjects from '@/components/profile/projects/completedProject/CompletedProject.vue';
 import DefaultFooter from "@/components/default/footer/DefaultFooter.vue";
 import DefaultHeader from "@/components/default/header/DefaultHeader.vue";
 
@@ -65,6 +74,9 @@ export {
     PublicProfile,
     MainSkills,
     AboutMe,
+    ShortcutsProfile,
+    ReviewsProfile,
+    ExpandedReviews,
     ProjectProgress,
     CompletedProject,
     SignInPassage,
@@ -82,6 +94,12 @@ export {
     AddressUser,
     PaymentConfirm,
     QRCode,
+    LogoAndName,
+    InfosProfile,
+    MainSkill,
+    AboutMes,
+    ProjectInProgress,
+    CompletedProjects,
     DefaultHeader,
     DefaultFooter,
 };

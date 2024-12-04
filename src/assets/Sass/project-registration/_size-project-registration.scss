@@ -54,37 +54,69 @@
                 line-height: normal;
                 text-align: center;
                 padding: 12px 0px 12px 0px;
+                transition: 0.5s;
+                background-color: transparent;
+                cursor: pointer;
+                &:hover{
+                    border: 1.5px solid #447981;
+                    background-color: #EBFBFD;
+                }
+            }
+            .option-chose {
+                width: 146px;
+                height: 48px;
+                flex-shrink: 0;
+                border-radius: 8px;
+                border: 1.5px solid #447981;
+                background-color: #EBFBFD;
+                color: #000;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                text-align: center;
+                padding: 12px 0px 12px 0px;
+                transition: 0.5s;
+                background-color: transparent;
+                cursor: pointer;
             }
         }
     }
 
     .entrega {
         display: flex;
-        gap: 5px;
+        gap: 10px;
         justify-content: space-between;
+        align-items: center;
+        margin-top: 32px;
 
         label {
-            
             input {
                 width: 24px;
                 height: 24px;
                 flex-shrink: 0;
+                cursor: pointer;
             }
+        }
 
+        p {
+            width: 300px;
+            margin-bottom: 0;
         }
 
         .date {
-            margin-left: 102px;
             width: 278px;
-            height: 30px;
-
+            height: 30px;                
+            padding-left: 10px;
+            margin-left: 50px;
+            cursor: pointer;
         }
             
     }
 
     .footer-size {
         margin-top: 81px;
-        margin-bottom: 43px;
         display: flex;
         gap: 7px;
             
@@ -122,8 +154,17 @@
     }
 
     .bottom {
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
         margin-bottom: 60px;
-        margin-left: 230px;
+        .return-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 26px;
+            column-gap: 10px;
+        }
         button {
             border: none;
             width: 176px;
@@ -140,6 +181,12 @@
             font-weight: 500;
             line-height: normal;
             border-radius: 35px;
+            transition: .3s;
+            cursor: pointer;
+
+        }
+        button:hover {
+            box-shadow: 0px 0px 8px 1px #374044;
         }
     }
 }

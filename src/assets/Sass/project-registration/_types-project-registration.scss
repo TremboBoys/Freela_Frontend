@@ -36,6 +36,8 @@
                 border-radius: 7px;
                 border: 1px solid #B4B4B4;
                 background: rgba(217, 217, 217, 0.00);
+                padding-top: 10px;
+                padding-left: 10px;
 
                 label {
                     width: 145px;
@@ -90,11 +92,21 @@
                 }
     }
     
-    .router-link {
-        margin-bottom: 40px;
-        margin-left: 230px;
+    .container-submit {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+        .return-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 26px;
+            column-gap: 10px;
+        }
         button {
-            cursor: pointer;
+            position: relative;
+            bottom: 50px;
             width: 176px;
             height: 46px;
             flex-shrink: 0;
@@ -102,6 +114,7 @@
             stroke-width: 1px;
             stroke: #7A7A7A;
             color: #FFF;
+            border: none;
             text-align: center;
             font-family: Poppins;
             font-size: 16px;
@@ -109,6 +122,11 @@
             font-weight: 500;
             line-height: normal;
             border-radius: 35px;
+            cursor: pointer;
+            transition: .3s;
+        }
+        button:hover {
+            box-shadow: 0px 0px 8px 1px #374044;
         }
     }
 }

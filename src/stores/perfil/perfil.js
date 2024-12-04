@@ -20,6 +20,17 @@ export const usePerfilStore = defineStore('perfil', () => {
         sub_area: 'Selecione sua sub-area'
     });
     const perfis = ref([]);
+    const state = reactive({
+        showReviews: false
+    });
+
+    function scrollTopShowReviews() {
+        state.showReviews = true;
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
 
     async function createPerfil() {
         let perfilCopy = perfil;
@@ -39,6 +50,8 @@ export const usePerfilStore = defineStore('perfil', () => {
             const email = await getEmailUser();
             try {
                 const data = await PerfilService.getCurrentPerfil('email', [email]);
+
+                console.log(data);
 
                 for (let c = 0; c < data.length; c++) {
                     Object.entries(data[c]).forEach(([key, value]) => {
@@ -75,5 +88,5 @@ export const usePerfilStore = defineStore('perfil', () => {
         }
     }
 
-    return { perfil, perfis, createPerfil, getPerfil, getPerfis, filterPerfil };
+    return { perfil, perfis, state, scrollTopShowReviews, createPerfil, getPerfil, getPerfis, filterPerfil };
 });

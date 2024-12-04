@@ -61,9 +61,6 @@ const handleAllow = (position) => {
           <a href="#" @click.prevent="showPopup = true">Ative aqui!</a>
         </p>
       </div>
-
-    
-    
     <PopUp 
       :show="showPopup" 
       @deny="handleDeny" 
@@ -73,6 +70,5 @@ const handleAllow = (position) => {
 </template>
 
 <style scoped>
-@import '@/assets/Sass/project/_project.scss';
 @import '../../assets/Sass/project/_search.scss';
 </style>

@@ -1,0 +1,40 @@
+.help-central{
+    height: 15vh;
+    width: 62vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin: 1.5rem 0 1.8rem 0;
+    .help-title{
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 0 0 1rem;
+    }
+  }
+  .instructions{
+    display: flex;
+    width: 41vw;
+    .instruction{
+        display: flex;
+        width: 21vw;
+    }
+    .number{
+      border-radius: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p{
+        font-size: 1.3rem;
+        font-weight: 700;
+        align-items: center;
+      }
+    }
+    .text{
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+      margin: 0 0 0 0.5rem;
+    }
+  }

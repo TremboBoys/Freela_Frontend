@@ -1,32 +1,19 @@
 <script setup>
+import { useRegisterProjectStore } from '@/stores/project/register-project';
+import ButtonOption from '@/components/registerProject/projectRegistration/ButtonOption.vue'
+import generateUuid from '@/utils/generateUuid';
 
+const useRegisterProject = useRegisterProjectStore();
 </script>
 <template>
     <div class="text">
         <p>Suporte Administrativo</p>
     </div>
-    <button class="option">
-        <p>Assistente virtual</p>
-    </button>
-    <button class="option">
-        <p>Atenção ao cliente</p>
-    </button>
-    <button class="option">
-        <p>Data entry</p>
-    </button>
-    <button class="option">
-        <p>Investigação de mercado</p>
-    </button>
-    <button class="option">
-        <p>Televendas</p>
-    </button>
-    <button class="option">
-        <p>Inteligência Artificial</p>
-    </button>
-    <button class="option">
-        <p>Outros</p>
-    </button>
-    <RouterLink to="/register-project/description" class="router-link">
+    <ButtonOption text="SEO" :uuid="generateUuid()" />
+    <ButtonOption text="Vendedor" :uuid="generateUuid()" />
+    <ButtonOption text="Data Analytics" :uuid="generateUuid()" />
+    <ButtonOption text="Outros" :uuid="generateUuid()" />
+    <RouterLink :to="(useRegisterProject.canNextPage('description')) ? '/register-project/description' : '/register-project/'" class="router-link">
         <button class="continue">
             <p>Continuar</p>
         </button>
