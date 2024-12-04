@@ -29,7 +29,6 @@ export const useAuthStore = defineStore('auth', () => {
                 return true;
             } else if (state.userExist === false) {
                 useSignUp.state.registerUser = true;
-                console.log('Função puxada')
                 await useInfoPopUp.getAllInfoNeedPopUp();
                 return false;
             } else {

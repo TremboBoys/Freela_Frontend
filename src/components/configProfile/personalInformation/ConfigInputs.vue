@@ -39,14 +39,16 @@ const paymentMethods = ref([
     <div class="left">
       <label for="">Nome</label>
       <input v-model="name" type="text" />
-      <label for="">Freelancer</label>
+      <label for="">Área</label>
       <select>
         <option v-for="(job, index) in jobs" :key="index" :value="job.value">
           {{ job.label }}
         </option>
       </select>
-      <label for="">Atividade Freelancer</label>
-      <input v-model="atv" type="text" />
+      <label for="">Sub-área</label>
+      <select>
+        <option value="">Emprego</option>
+      </select>
     </div>
     <div class="right">
       <label for="">Preço por hora</label>

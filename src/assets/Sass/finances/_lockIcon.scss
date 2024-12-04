@@ -1,0 +1,13 @@
+.container-lock-icon {
+    cursor: pointer;
+
+    img.show {
+        display: block;
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Suaviza a transição */
+        opacity: 1;
+    }
+    img.hidden {
+        display: none;
+        opacity: 0;
+    }
+}
