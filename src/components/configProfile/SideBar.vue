@@ -17,20 +17,20 @@ function createURL(path) {
 }
 </script>
 <template>
-    <div class="sideBar">
-      <div class="tabs-area">
-        <RouterLink 
-          v-for="(tab, index) in tabs" 
-          :key="index" 
-          :to="tab.route" 
-          class="tab"
-          :class="route.path === tab.route ? 'active' : ''">
-          <img :src="tab.icon" :alt="tab.text">
-          <p>{{ tab.text }}</p>
-        </RouterLink>
-      </div>
+  <div class="sideBar">
+    <div class="tabs-area">
+      <RouterLink v-for="(tab, index) in tabs" :key="index" :to="tab.route" class="tab"
+        :class="route.path === tab.route ? 'active' : ''">
+        <img :src="tab.icon" :alt="tab.text">
+        <p>{{ tab.text }}</p>
+      </RouterLink>
     </div>
-  </template>
+
+    <RouterLink to="/configurations/delete-account" class="logout">
+      <img src="@/assets/images/configProfile/logout.png" class="icon" alt="">Sair da sua conta
+    </RouterLink>
+  </div>
+</template>
 
 <style scoped>
 @import "../../assets/Sass/configProfile/_sideBar.scss";
