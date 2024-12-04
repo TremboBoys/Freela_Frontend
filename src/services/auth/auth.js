@@ -45,8 +45,18 @@ async function verifyUserExistInBackend() {
     }
 };
 
+async function logout() {
+    try {
+        const signOut = await passage.session.signOut();
+        return signOut;
+    } catch(error) {
+        console.error('Error in logout passage: ', error);
+    }
+}
+
 export {
     verifyAuthPassage,
     getEmailUser,
-    verifyUserExistInBackend
+    verifyUserExistInBackend,
+    logout
 };

@@ -1,0 +1,116 @@
+.container-expanded-reviews {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+        position: relative;
+        left: 2px;
+    }
+
+    .container-reviews {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        width: 800px;
+        height: 600px;
+        padding: 20px;
+        background-color: #FDFDFD;
+        box-shadow: 0px 0px 15px 5px gray;
+        overflow-y: auto;
+
+        h1 {
+            text-align: center;
+        }
+
+        .container-filters {
+            display: flex;
+            justify-content: space-between;
+            .filters {
+                display: flex;
+                column-gap: 10px;
+                font-size: 1.2rem;
+                font-weight: bolder;
+                button {
+                    width: 120px;
+                    border: 1px solid #000;
+                    border-radius: 25px;
+                    padding: 5px;
+                    background: transparent;
+                    transition: .3s;
+                    cursor: pointer;
+                }
+                button:hover {
+                    font-weight: bolder;
+                    box-shadow: 0px 0px 3px 0px #000;
+                }
+            }
+
+            .exit-pop-up {
+                span {
+                    img {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            min-width: 500px;
+            border-top: 1px solid #000;
+            padding-top: 15px;
+            // padding-bottom: 5px;
+            #first-review {
+                display: flex;
+                flex-direction: column;
+                row-gap: 8px;
+                border-bottom: 1px solid #000;
+                .container-infoUser {
+                    display: flex;
+                    column-gap: 5px;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .infoUser {
+                        display: flex;
+                        flex-direction: column;
+    
+                        .container-date-note {
+                            display: flex;
+                            align-items: center;
+                            column-gap: 8px;
+                            .date {
+                                position: relative;
+                                font-size: 12px;
+                                left: 2px;
+                            }
+                            .note {
+                                position: relative;
+                                display: flex;
+                                column-gap: 2px;
+                                left: 2px;
+                                bottom: 1px;
+                                height: 18px;
+                
+                                .blue-star, .black-star {
+                                    img {
+                                        width: 16px;
+                                        height: 100%;
+                                        object-fit: contain;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .descriptionReview {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

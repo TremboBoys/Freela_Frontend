@@ -16,22 +16,25 @@ class PaymentService {
         };
     };
 
-    async getTokenCard(cardholderName, cardNumber, cardExpirationDate, securityCode, cardholderEmail, identification) {
+    async getTokenCard(cardholderName, cardNumber, cardExpirationDateMonth, cardExpirationDateYear, securityCode, cardholderEmail, identification) {
         await loadMercadoPago();
+        console.log(cardholderName, cardNumber, cardExpirationDateMonth, cardExpirationDateYear, securityCode, cardholderEmail, identification);
+
+        console.log("expiration_month:", cardExpirationDateMonth);
 
         const mp = new window.MercadoPago(import.meta.env.VITE_VUE_MERCADO_PAGO_PUBLIC_KEY);
+        console.log(mp, mp.fields);
 
         try {
-            const cardToken = mp.card.createToken({
+            const cardToken = await mp.createCardToken({
                 cardNumber,
                 cardholderName,
-                cardExpirationDate,
+                expiration_month: cardExpirationDateMonth,
+                expiration_year: cardExpirationDateYear,
                 securityCode,
-                cardholderEmail,
-                identification: {
-                    type: identification.type,
-                    number: identification.number
-                }
+                cardholder_email: cardholderEmail,
+                identificationType: identification.type,
+                identificationNumber: identification.number
             });
             return cardToken;
         } catch(error) {

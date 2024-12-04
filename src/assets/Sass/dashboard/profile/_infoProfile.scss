@@ -26,14 +26,21 @@
                 color: #666;
                 margin: 5px 0 0 0;
             }
-            .stars {
+            .note {
+                margin: 10px 0;
+                position: relative;
                 display: flex;
-                flex-direction: column;
-                margin-top: 10px;
-                font-size: 1.7rem;
-                color: #1B75BF;
-                span {
-                    display: inline-block;
+                column-gap: 2px;
+                right: 2px;
+                bottom: 1px;
+                height: 24px;
+
+                .blue-star, .black-star {
+                    img {
+                        width: 24px;
+                        height: 100%;
+                        object-fit: contain;
+                    }
                 }
             }
         }
@@ -56,6 +63,8 @@
                     font-size: 14px;
                 }
                 .stars {
+                    position: relative;
+                    right: 6px;
                     font-size: 1.7rem;
                 }
             }

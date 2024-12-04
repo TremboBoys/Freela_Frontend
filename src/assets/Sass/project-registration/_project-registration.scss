@@ -99,6 +99,20 @@
                     background-color: #EBFBFD;
                 }
             }
+            .option-chose {
+                display: inline-block;
+                height: 48px;
+                border-radius: 8px;
+                padding: 12px 21px 12px 21px;
+                margin-top: 26px;
+                margin-left: 19px;
+                color: #000;
+                font-size: 16px;
+                font-weight: 300;
+                border: 1.5px solid #447981;
+                background-color: #EBFBFD;
+                cursor: pointer;
+            }
         }
 
     .continue {
@@ -109,7 +123,7 @@
         flex-shrink: 0;
         background-color: #0B2F34;
         stroke-width: 1px;
-        border: 1px solid #7A7A7A;
+        border: none;
         color: #FFF;
         text-align: center;
         font-family: Poppins;
@@ -118,7 +132,12 @@
         font-weight: 500;
         line-height: normal;
         border-radius: 35px;
+        transition: .4s;
         cursor: pointer;
+        // box-shadow: 0px 0px 8px 1px #0B2F34;
+    }
+    .continue:hover {
+        box-shadow: 0px 0px 8px 1px #374044;
     }
     .router-link {
         text-decoration: none;

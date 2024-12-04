@@ -1,9 +1,10 @@
 <script></script>
 
 <template>
-    <div class="container">
+    <div class="container-about">
+        <p class="aboutMe">Sobre mim</p>
         <div class="text">
-            <span><span class="aboutMe">Sobre mim:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid incidunt nobis assumenda ipsum dicta!</span>
+            <span>Olá pessoal, me chamo João Victor Portela Rocha, sou estudante/programador Full-Stack no Instituto Federal Catarinense - Araquari</span>
         </div>
     </div>
 </template>

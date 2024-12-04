@@ -65,10 +65,10 @@
     flex-direction: row;
     padding: 16px;
     height: auto;
-    width: 80vw;
+    column-gap: 50px;
     .search {
       width: 23vw;
-      height: auto;
+      height: 100%;
       margin-left: -0.5rem;
       .inputSearch {
         .inputBox {
@@ -89,17 +89,17 @@
       flex-direction: column;
       gap: 16px;
       .selectProject {
-        width: 68vw;
+        width: 65%;
         height: auto;
         .select-header-container {
           .select-header {
             p {
-              font-size: 3rem;
+              font-size: 2rem;
             }
           }
           .select-header2 {
             p {
-              font-size: 2rem;
+              font-size: 1.4rem;
             }
           }
         }
@@ -107,12 +107,12 @@
           .select-subTitle {
             gap: 20px;
             p {
-              font-size: 1.5rem;
+              font-size: 0.9rem;
             }
           }
           .select-text {
             p {
-              font-size: 1.5rem;
+              font-size: 1.2rem;
             }
           }
         }
@@ -121,12 +121,11 @@
           width: auto;
           .select-bottom {
             width: 8vw;
-            height: auto;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             p {
-              width: 7vw;
               font-size: 1rem;
             }
           }
