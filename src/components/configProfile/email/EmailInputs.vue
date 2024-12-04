@@ -39,7 +39,7 @@ import SendButton from '../password/SendButton.vue';
         <label class="email labelInput" for="email">Confirmar email</label>
       </div>
     </div>
-    <RouterLink to="/ConfirmationEmail"><SendButton/></RouterLink>
+    <RouterLink to="/ConfirmationEmail"><SendButton title="Enviar" /></RouterLink>
   </div>
 </template>
 

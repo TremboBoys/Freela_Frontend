@@ -24,10 +24,7 @@
 
       &:hover {
         text-decoration: wavy;
-
       }
-
-
       img {
         width: 32px;
         height: 32px;
@@ -38,12 +35,33 @@
       }
 
     }
-
     .tab.active {
       background-color: rgba(27, 117, 191, 0.16);
     }
   }
+
+  .logout {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    margin-top: 21vw;
+    gap: 13px;
+    text-decoration: none;
+    color: #ff0000;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: #aa0303;
+    }
+
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
 }
+
 @media (max-width: 768px) {
       .sideBar {
         width: 100%;
@@ -183,6 +201,3 @@
           }
         }
       }
-    }
-  }
-}

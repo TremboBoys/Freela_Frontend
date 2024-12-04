@@ -7,5 +7,4 @@ import EmailInputs from './EmailInputs.vue';
 </template>
 
 <style scoped>
-@import '../../../assets/Sass/configProfile/_emailConfig.scss';
 </style>

@@ -21,7 +21,7 @@ function submitCode(code) {
         <ConfEmailTitles/>
         <form>
             <CodeVerification @submit-code="submitCode"/>
-            <SendButton/>
+            <SendButton title="Enviar" />
         </form>
     </div>
 </template>

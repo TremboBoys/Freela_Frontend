@@ -8,7 +8,7 @@ import SendButton from '../password/SendButton.vue'
     <div class="confArea">
         <ConfPasswordTitles/>
         <CodeVerification/>
-        <RouterLink to="/configurations/password" ><SendButton/></RouterLink>
+        <RouterLink to="/configurations/password"><SendButton title="Enviar" /></RouterLink>
     </div>
 </template>
 

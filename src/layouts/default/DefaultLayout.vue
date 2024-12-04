@@ -11,6 +11,9 @@ const useChat = useChatStore();
 const useAuth = useAuthStore();
 const useSignUp = useSignUpStore();
 const useWarning = useWarningStore();
+onMounted(() => {
+    window.scrollTo(0, 0);
+})
 const usePerfil = usePerfilStore();
 onMounted(async() => {
   await useChat.initApp();
