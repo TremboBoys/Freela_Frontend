@@ -1,4 +1,14 @@
 <script setup>
+import { onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+import { useRegisterProjectStore } from '@/stores/project/register-project';
+
+const route = useRoute();
+const useRegisterProject = useRegisterProjectStore();
+
+onMounted(async () => {
+    await useRegisterProject.getCreatedProject(route.params.id);
+})
 </script>
 
 <template>
@@ -10,17 +20,17 @@
         <div class="main-complete">
             <p>Cadastrado como:</p>
             <div class="main-register-complete">
-                <input type="checkbox">
+                <input type="checkbox" checked disabled>
                 <p>TI e Programação</p>
             </div>
             <div class="main-register-complete2">
-                <input type="checkbox">
+                <input type="checkbox" checked disabled>
                 <p>Aplicação Web</p>
             </div>
         </div>
         <div class="footer-title-project-register">
             <p>Título do projeto</p>
-            <input type="text">
+            <input v-model="useRegisterProject.createdProject.title" disabled type="text">
         </div>
         <div class="footer-size">
             <div class="footer-barra-description-verde">

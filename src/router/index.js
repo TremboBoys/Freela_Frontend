@@ -108,7 +108,7 @@ const router = createRouter({
               component: SizeProject
             },
             {
-              path: 'complete',
+              path: 'complete/:id',
               name: 'complete',
               component: CompleteProject
             }

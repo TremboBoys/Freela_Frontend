@@ -6,8 +6,8 @@ const usePerfil = usePerfilStore();
 
 <template>
     <div class="container-expanded-reviews">
-        <h1>Avaliações sobre você</h1>
         <div class="container-reviews">
+            <h1>Avaliações sobre você</h1>
             <div class="container-filters">
                 <div class="filters">
                     <p>Filtros:</p>
