@@ -1,0 +1,23 @@
+.image-title {
+    display: flex;
+    align-items: center;
+    width: 45vw;
+    .text-title {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #0b2f34;
+    }
+    img {
+      width: 100%;
+      max-width: 7rem;
+      height: auto;
+      margin-right: 1rem;
+      border-radius: 50%;
+    }
+  }
+  .subTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem 4rem 1rem 8.05rem;
+    width: 52vw;
+  }

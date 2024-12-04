@@ -1,0 +1,85 @@
+@import '@fortawesome/fontawesome-free/css/all.css';
+.links {
+    width: 25%;
+    align-items: start;
+    justify-content: center;
+    .box {
+        margin: 12.15rem 0 0;
+        width: 90%;
+        padding: 0.5rem;
+        min-height: auto;
+        max-height: 60vh;
+        border: 1px solid rgb(117, 117, 117);
+        border-radius: 12px;
+        justify-content: center;
+        align-items: center;
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid black;
+            h1 {
+                text-align: left;
+                font-size: 2rem;
+                font-weight: 500;
+                font-family: Poppins;
+                padding: 0 0 0.5rem 0.5rem;
+            }
+            button {
+                background-color: transparent;
+                border: none;
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+                font-weight: 500;
+                font-family: Poppins;
+                cursor: pointer;
+            }
+        }
+        .support {
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            p {
+                font-size: 1.2rem;
+                font-weight: 400;
+                font-family: Poppins;
+                text-align: center;
+            }
+        }
+        .helps {
+            padding: 1rem;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                li {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    font-family: Poppins;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    &:hover {
+                        color: rgb(0, 0, 0);
+                        background-color: rgb(235, 235, 235);
+                    }
+                }
+            }
+        }
+        .social {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 7rem;
+            span {
+                font-size: 2rem;
+                padding: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
