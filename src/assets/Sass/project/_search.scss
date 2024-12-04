@@ -148,7 +148,6 @@
   }
 }
 
-/* Para telas maiores que 1440px e até 1920px */
 @media (min-width: 1440px) and (max-width: 1919px) {
   .search {
     width: 500px;
@@ -167,7 +166,6 @@
   }
 }
 
-/* Para telas até 1024px */
 @media (max-width: 1024px) {
   .search {
     width: 90%;
@@ -192,16 +190,14 @@
   }
 }
 
-/* Para telas até 768px */
 @media (max-width: 768px) {
   .search {
-    width: 90%;
-    max-width: 280px;
+    width: 100vw;
     height: auto;
   }
 
   .inputSearch {
-    width: 70%;
+    width: 100%;
   }
 
   .categories {
