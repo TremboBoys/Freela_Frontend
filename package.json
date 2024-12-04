@@ -19,6 +19,7 @@
     "bootstrap": "^5.3.3",
     "bxslider": "^4.2.17",
     "chart.js": "^4.4.6",
+    "date-fns": "^4.1.0",
     "font-awesome": "^4.7.0",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",

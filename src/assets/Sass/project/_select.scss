@@ -21,12 +21,18 @@
           width: 700px;
   
           p {
-            color: #000;
             font-family: Poppins;
             font-size: 32px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+            a {
+              text-decoration: none;
+              color: #000;
+            }
+            a:hover {
+              text-decoration: underline;
+            }
           }
         }
   
@@ -115,6 +121,14 @@
             display: flex;
             align-items: center;
             gap: 18px;
+
+            a {
+              text-decoration: none;
+              color: #000;
+            }
+            a:hover {
+              text-decoration: underline;
+            }
   
             .select-footer-text2 {
               color: #000;
@@ -186,8 +200,10 @@
     
         .select-header {
           p {
-            // width: 800px;
-            // font-size: 32px;  /* Aumentando ainda mais o tamanho da fonte */
+
+          }
+          p:hover {
+            text-decoration: underline;
           }
         }
 
