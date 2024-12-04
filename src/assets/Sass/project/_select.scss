@@ -19,6 +19,7 @@
         .select-header {
           flex-grow: 1;
   
+
           p {
             color: #000;
             font-family: Poppins;
@@ -165,105 +166,11 @@
     }
   }
 
-/* Estilo para telas com largura mínima de 1920px */
-@media (min-width: 1920px) {
+
+@media (max-width: 1440px) {
   .selectProject {
     margin-top: 20px;
-    width: 1200px;  /* Aumentando a largura para telas ainda maiores */
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    padding: 20px;
-  
-    .select {
-      align-items: center;
-      
-      .select-header-container {
-        width: 1000px;
-        display: flex;
-    
-        .select-header {
-          p {
-            width: 800px;
-            font-size: 32px;  /* Aumentando ainda mais o tamanho da fonte */
-          }
-        }
-
-        .select-header2 {
-          width: 60px;
-          font-size: 16px;
-          padding-left: 5px;
-        }
-      }
-  
-      .select-main-container {
-        display: flex;
-        flex-direction: column;
-  
-        .select-subTitle {
-          display: flex;
-          width: 1000px;
-          padding: 20px 20px 20px 15px;
-          gap: 100px;
-          font-size: 20px;
-        }
-  
-        .select-text {
-          width: 900px;
-          font-size: 24px;
-          margin-bottom: 70px;
-        }
-  
-        .select-bottom-container {
-          padding: 12px;
-          display: flex;
-          gap: 100px;
-          margin-bottom: 80px;
-  
-          .select-bottom {
-            width: 280px;
-            height: 70px;
-  
-            p {
-              font-size: 18px;
-              padding: 6px;
-            }
-          }
-        }
-      }
-  
-      .select-footer-container {
-        display: flex;
-  
-        .p-container {
-          font-size: 18px;
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-          gap: 30px;
-        }
-  
-        .select-footer-proposal {
-          width: 300px;
-          height: 60px;
-          align-items: center;
-          margin-left: 0px;
-          
-          p {
-            display: flex;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Estilo para telas com largura mínima de 1440px */
-@media (min-width: 1440px) {
-  .selectProject {
-    margin-top: 20px;
-    width: 800px;  /* Aumentando a largura para telas maiores */
+    width: 60vw;
     display: flex;
     margin-left: 30px;
     padding: 15px;
@@ -275,12 +182,12 @@
         width: 100%;
   
         .select-header {
-          flex-grow: 1;
+          width: 40vw;
   
           p {
             color: #000;
             font-family: Poppins;
-            font-size: 32px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -290,7 +197,6 @@
         .select-header2 {
           flex-shrink: 0;
           width: auto;
-          min-width: 128px;
           padding-left: 80px;
           color: #1B75BF;
           font-family: 'Poppins', sans-serif;
@@ -316,6 +222,7 @@
         }
   
         .select-text {
+          width: 50vw;
           color: #000;
           font-family: Poppins;
           font-size: 16px;
@@ -329,10 +236,11 @@
         padding: 16px;
         display: flex;
         gap: 16px;
+        width: 40vw;
   
         .select-bottom {
           padding: 16px;
-          width: 87px;
+          width:14vw;
           height: 20px;
           flex-shrink: 0;
           border-radius: 35px;
@@ -400,26 +308,25 @@
 }
 
 
-/* Estilo para telas de até 1024px */
 @media (max-width: 1024px) {
   .selectProject {
     margin-top: 20px;
-    width: 800px;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     margin-left: 0px;
-    padding: 5px ;
+    padding: 20px ;
   
     .select {
       align-items: center;
       
       .select-header-container {
-        width: 700px;
+        width: 70vw;
         display: flex;
     
         .select-header {
           p {
-            width: 500px;
+            width: 50vw;
             font-size: 24px;
           }
         }
@@ -455,9 +362,10 @@
           display: flex;
           gap: 50px;
           margin-bottom: 50px;
+          width: 40vw;
   
           .select-bottom {
-            width: 190px;
+            width: 15vw;
             height: 50px;
   
             p {
@@ -499,7 +407,7 @@
   @media (max-width: 768px) {
     .selectProject {
       margin-top: 20px;
-      width: 400px;
+      width: 80vw;
       display: flex;
       flex-direction: column;
       margin-left: 0px;
@@ -509,13 +417,13 @@
       align-items: center;
         
         .select-header-container {
-          width: 400px;
+          width: 80vw;
           display: flex;
     
           .select-header {
     
             p {
-              width: 200px;
+              width: 40vw;
               font-size: 14px;
             }
           }
@@ -535,7 +443,7 @@
   
           .select-subTitle {
             display: flex;
-            width: 400px;
+            width: 80vw;
             padding: 10px 10px 10px 5px;
             display: flex;
             gap: 20px;
@@ -543,7 +451,7 @@
           }
   
           .select-text {
-            width: 370px;
+            width: 70vw;
             font-size: 12px;
           }
   
@@ -551,9 +459,10 @@
             padding: 4px;
             display: flex;
             gap: 8px;
+            width: 80vw;
   
             .select-bottom {
-              width: 120px;
+              width: 20vw;
               height: 30px;
   
               p {
@@ -578,7 +487,7 @@
           }
   
           .select-footer-proposal {
-            width: 180px;
+            width: 30vw;
             height: 40px;
             align-items: center;
             margin-left: 0px;
@@ -695,7 +604,7 @@
 @media (max-width: 320px) {
   .selectProject {
     margin-top: 20px;
-    width: 180px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     margin-left: 0px;
@@ -713,7 +622,7 @@
   
           p {
             width: 100px;
-            font-size: 10px;
+            font-size: px;
           }
         }
 
@@ -742,7 +651,7 @@
 
         .select-text {
           width: 150px;
-          font-size: 6px;
+          font-size: 10px;
         }
 
         .select-bottom-container {
