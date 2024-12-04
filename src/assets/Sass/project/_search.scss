@@ -1,473 +1,267 @@
 .main-search {
   margin-top: 1rem;
   margin-left: 20px;
-  
-  .searchProject {
-    height: 80%;
-  }
 }
 
 .search {
-    display: flex;
-    flex-direction: column;
-    display: flexbox;
-    width: 308px;
-    height: 828px;
-    border-radius: 11px;
-    border: 1px solid #b1adad;
-    background: #fff;
-
-    .inputSearch {
-      flex-shrink: 0;
-      fill: #fff;
-      stroke-width: 1px;
-      stroke: #d9d9d9;
-      border-radius: 10px;
-
-      .inputBox {
-        position: relative;
-
-        .form-group {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
-
-        .form-control {
-          width: 276px;
-          height: 51px;
-          flex-shrink: 0;
-          border-radius: 10px;
-          border: 2px solid #bfbfbf;
-          background: #ffffff;
-          margin: 15px;
-          outline: none;
-        }
-
-        .searchlabelInput {
-          position: absolute;
-          top: 10px;
-          left: 10px;
-          pointer-events: none;
-          transition: 0.4s;
-          color: #bfbfbf;
-          font-size: 16px;
-
-          background-color: #ffffff;
-          margin: 20px;
-        }
-
-        .searchlabelInput::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
-          transition: 0.4s;
-          color: #bfbfbf;
-        }
-
-        .form-control {
-          padding: 10px 0;
-        }
-
-        .form-control:focus~.searchlabelInput,
-        .form-control:not(:placeholder-shown)~.searchlabelInput {
-          top: -18%;
-          font-size: 16px;
-          color: #bfbfbf;
-        }
-
-        input {
-          margin-bottom: 10px;
-        }
-      }
-    }
-
-    .categories {
-      flex-grow: 1;
-      width: 100%;
-      height: 400px;
-      margin-left: 20px;
-
-      .category {
-        width: 100%;
-        height: 20px;
-        color: #000;
-        font-family: Poppins;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 275;
-        line-height: normal;
-        margin: 10px;
-
-        input {
-          width: 16px;
-          height: 16px;
-          flex-shrink: 0;
-        }
-      }
-    }
-
-    .bottom-search {
-      color: #000;
-      font-family: Poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      width: 265px;
-      padding: 0px 27px 32px 20px;
-    }
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+  max-width: 308px;
+  height: auto;
+  max-height: 828px;
+  border-radius: 11px;
+  border: 1px solid #b1adad;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Estilo para telas com largura mínima de 1920px */
+.inputSearch {
+  flex-shrink: 0;
+  fill: #fff;
+  stroke-width: 1px;
+  stroke: #d9d9d9;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-control {
+  width: 100%;
+  height: 51px;
+  border-radius: 10px;
+  border: 2px solid #bfbfbf;
+  background: #ffffff;
+  padding: 10px;
+  outline: none;
+  margin: 15px 0;
+}
+
+.searchlabelInput {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  pointer-events: none;
+  transition: 0.4s;
+  color: #bfbfbf;
+  font-size: 16px;
+  background-color: #ffffff;
+  margin: 20px;
+}
+
+.searchlabelInput::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.4s;
+  color: #bfbfbf;
+}
+
+.form-control:focus ~ .searchlabelInput,
+.form-control:not(:placeholder-shown) ~ .searchlabelInput {
+  top: -18%;
+  font-size: 16px;
+  color: #bfbfbf;
+}
+
+.inputBox input {
+  margin-bottom: 10px;
+}
+
+/* Estilo da categoria */
+.categories {
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 20px;
+  color: #000;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 275;
+  margin: 10px 0;
+}
+
+.category input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.bottom-search {
+  color: #000;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0px 27px 32px 20px;
+}
+
 @media (min-width: 1920px) {
   .search {
-    display: flex;
-    width: 600px;  /* Aumentando a largura do search em telas grandes */
-    height: 70px;
-    flex-direction: column;
-    margin-top: 50px;
+    width: 600px;
+    height: auto;
   }
 
   .inputSearch {
-    width: 400px; /* Aumentando a largura do inputSearch */
+    width: 400px;
   }
 
-  #search {
-    width: 500px;
-  }
-
-  .inputBox {
-    width: 200px;
-
-    .form-control {
-      width: 150px;
-      height: 40px;
-      border-radius: 10px;
-    }
+  .inputBox .form-control {
+    width: 16.5rem;
+    height: 50px;
   }
 
   .categories {
     width: 300px;
-    height: 400px;
     margin-left: 15px;
-
-    .category {
-      font-size: 18px;
-    }
   }
 
-  .bottom-search {
-    p {
-      width: 350px;
-      font-size: 20px;
-    }
+  .category {
+    font-size: 18px;
+  }
+
+  .bottom-search p {
+    font-size: 20px;
   }
 }
 
-/* Estilo para telas com largura mínima de 1440px */
-@media (min-width: 1440px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .search {
-    display: flexbox;
-    width: 308px;
-    height: 828px;
-    border-radius: 11px;
-    border: 1px solid #b1adad;
-    background: #fff;
+    width: 500px;
   }
 
   .inputSearch {
-    flex-shrink: 0;
-    fill: #fff;
-    stroke-width: 1px;
-    stroke: #d9d9d9;
-    border-radius: 10px;
+    width: 350px;
+  }
 
-    .inputBox {
-      position: relative;
+  .categories {
+    width: 270px;
+  }
 
-      .form-group {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
+  .category {
+    font-size: 16px;
+  }
+}
 
-      .form-control {
-        width: 276px;
-        height: 51px;
-        flex-shrink: 0;
-        border-radius: 10px;
-        border: 2px solid #bfbfbf;
-        background: #ffffff;
-        margin: 15px;
-        outline: none;
-      }
+@media (max-width: 1024px) {
+  .search {
+    width: 90%;
+    height: auto;
+    max-width: 400px;
+  }
 
-      .searchlabelInput {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        pointer-events: none;
-        transition: 0.4s;
-        color: #bfbfbf;
-        font-size: 16px;
-
-        background-color: #ffffff;
-        margin: 20px;
-      }
-
-      .searchlabelInput::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        transition: 0.4s;
-        color: #bfbfbf;
-      }
-
-      .form-control {
-        padding: 10px 0;
-      }
-
-      .form-control:focus~.searchlabelInput,
-      .form-control:not(:placeholder-shown)~.searchlabelInput {
-        top: -18%;
-        font-size: 16px;
-        color: #bfbfbf;
-      }
-
-      input {
-        margin-bottom: 10px;
-      }
-    }
+  .inputSearch {
+    width: 80%;
   }
 
   .categories {
     width: 100%;
-    height: 400px;
-    margin-left: 20px;
-
-    .category {
-      width: 100%;
-      height: 20px;
-      color: #000;
-      font-family: Poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 275;
-      line-height: normal;
-      margin: 10px;
-
-      input {
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
-      }
-    }
   }
 
-  .bottom-search {
-    color: #000;
-    font-family: Poppins;
+  .category {
     font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    width: 265px;
-    padding: 0px 27px 32px 16px;
+  }
+
+  .bottom-search p {
+    font-size: 16px;
   }
 }
 
-/* Estilo para telas de até 1024px */
-@media (max-width: 1024px) {
-  .search {
-    display: flex;
-    width: 400px;  /* Ajustando a largura do search para telas menores */
-    height: 400px;
-    flex-direction: column;
-    margin-top: 50px;
-  }
-
-  .inputSearch {
-    width: 250px; /* Ajustando o inputSearch */
-  }
-
-  #search {
-    width: 350px;
-  }
-
-  .inputBox {
-    width: 150px;
-
-    .form-control {
-      width: 100px;
-      height: 35px;
-      border-radius: 10px;
-    }
-  }
-
-  .categories {
-    width: 220px;
-    height: 300px;
-    margin-left: 5px;
-
-    .category {
-      font-size: 14px;
-    }
-  }
-
-  .bottom-search {
-    p {
-      width: 250px;
-      font-size: 16px;
-    }
-  }
-}
-
-/* Estilo para telas de até 768px */
 @media (max-width: 768px) {
   .search {
-    display: flex;
-    width: 280px; /* Ajuste da largura do search para telas ainda menores */
-    height: 480px;
-    flex-direction: column;
-    margin-top: 50px;
+    width: 100vw;
+    height: auto;
   }
 
   .inputSearch {
-    width: 180px; /* Ajuste da largura do inputSearch */
-  }
-
-  #search {
-    width: 240px;
-  }
-
-  .inputBox {
-    width: 100px;
-
-    .form-control {
-      width: 50px;
-      height: 30px;
-      flex-shrink: 0;
-      border-radius: 10px;
-    }
+    width: 100%;
   }
 
   .categories {
-    width: 170px;
-    height: 280px;
-    margin-left: 5px;
-
-    .category {
-      font-size: 12px;
-    }
+    width: 100%;
+    height: auto;
   }
 
-  .bottom-search {
-    p {
-      width: 230px;
-      font-size: 14px;
-    }
+  .category {
+    font-size: 12px;
+  }
+
+  .bottom-search p {
+    font-size: 14px;
   }
 }
 
-/* Estilo para telas de até 425px */
+/* Para telas até 425px */
 @media (max-width: 425px) {
   .search {
-    display: flex;
-    width: 270px; /* Ajuste da largura do search */
-    height: 450px;
-    flex-direction: column;
-    margin-top: 50px;
+    width: 90%;
+    max-width: 270px;
+    height: auto;
   }
 
   .inputSearch {
-    width: 180px;  /* Ajuste da largura do inputSearch */
-  }
-
-  #search {
-    width: 240px;
-  }
-
-  .inputBox {
-    width: 90px;
-
-    .form-control {
-      width: 50px;
-      height: 30px;
-      flex-shrink: 0;
-      border-radius: 10px;
-    }
+    width: 80%;
   }
 
   .categories {
-    width: 160px;
-    height: 260px;
-    margin-left: 5px;
-
-    .category {
-      font-size: 12px;
-    }
+    width: 100%;
+    height: auto;
   }
 
-  .bottom-search {
-    p {
-      width: 220px;
-      font-size: 14px;
-    }
+  .category {
+    font-size: 12px;
+  }
+
+  .bottom-search p {
+    font-size: 12px;
   }
 }
 
-/* Estilo para telas de até 320px */
+/* Para telas até 320px */
 @media (max-width: 320px) {
   .search {
-    display: flex;
-    width: 200px;  /* Ajuste da largura do search para telas pequenas */
-    height: 450px;
-    flex-direction: column;
-    margin-top: 50px;
+    width: 90%;
+    max-width: 200px;
+    height: auto;
   }
 
   .inputSearch {
-    width: 120px;  /* Ajuste da largura do inputSearch */
-  }
-
-  #search {
-    width: 120px;
-  }
-
-  .inputBox {
-    width: 80px;
-
-    .form-control {
-      width: 40px;
-      height: 25px;
-      flex-shrink: 0;
-      border-radius: 10px;
-    }
+    width: 80%;
   }
 
   .categories {
-    width: 130px;
-    height: 220px;
-    margin-left: 5px;
-
-    .category {
-      font-size: 10px;
-    }
+    width: 100%;
+    height: auto;
   }
 
-  .bottom-search {
-    p {
-      width: 100px;
-      font-size: 10px;
-    }
+  .category {
+    font-size: 10px;
+  }
+
+  .bottom-search p {
+    font-size: 10px;
   }
 }
