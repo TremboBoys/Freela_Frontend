@@ -1,9 +1,9 @@
 <script setup>
-
+defineProps(['title'])
 </script>
 
 <template>
-    <button type="submit">Enviar</button>
+    <button type="submit">{{ title }}</button>
 </template>
 
 <style scoped>

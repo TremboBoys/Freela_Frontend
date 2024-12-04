@@ -11,3 +11,7 @@ export const apiAuth = axios.create({
 export const apiPerfil = axios.create({
     baseURL: 'http://localhost:8000/api/perfil/'
 });
+
+export const apiChat = axios.create({
+    baseURL: 'https://microsservice-chat.onrender.com/'
+});

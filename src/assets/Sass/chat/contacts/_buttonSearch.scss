@@ -1,13 +1,44 @@
 @import 'font-awesome/css/font-awesome.min.css';
 .container {
+    // position: relative;
+    // left: 8px;
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #f8f8f8;
-    width: 350px;
-    z-index: -999;
+    margin-top: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: #f3f3f3;
+    
+    .onBorderRadius {
+        border-radius: 20px;
+        animation: onBorderRadius 1s ease-out;
+    }
+    
+    .offBorderRadius {
+        border-radius: 0;
+        animation: offBorderRadius 1s ease-out;
+    }
+
+    @keyframes onBorderRadius {
+        0% {
+            border-radius: 0;
+        }
+        100% {
+            border-radius: 20px;
+        }
+    }
+    
+    @keyframes offBorderRadius {
+        0% {
+            border-radius: 20px;
+        }
+        100% {
+            border-radius: 0;
+        }
+    }
+
     .search-bar {
         display: flex;
         align-items: center;
@@ -24,7 +55,6 @@
         flex-direction: column;
         justify-content: space-between;
         height: 18px;
-        margin-right: 15px;
 
         .bar {
             width: 25px;
@@ -34,19 +64,31 @@
     }
 
     input {
-        flex-grow: 1;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
         border: none;
         outline: none;
         background-color: transparent;
         font-size: 16px;
+        margin-right: 20px;
         z-index: 10000;
     }
+
 
     .search-icon {
         font-size: 20px;
         color: #062b33;
         cursor: pointer;
-        margin-left: -75px;
         z-index: 9999;
     }
+}
+
+.container-dropdown-search {
+    width: 95%;
+    height: 300px;
+    background-color: #f3f3f3;
+    border-top: 1px solid #000;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

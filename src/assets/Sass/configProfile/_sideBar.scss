@@ -1,161 +1,240 @@
-*{
-    font-family: Poppins;
+* {
+  font-family: Poppins;
 }
-.sideBar{
-    width: 310px;
+
+.sideBar {
+  height: 100%;
+
+  .tabs-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
 
-    .tabs-area{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
+    .tab {
+      width: 100%;
+      padding: 16px;
+      height: 64px;
+      display: flex;
+      gap: 13px;
+      text-decoration: none;
+      color: #000;
 
-        .tab{
-        border-radius: 9px 0 0 10px;
-        width: 100%;
-        padding: 16px;
+      &:hover {
+        text-decoration: wavy;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+
+      #email-icon {
+        height: 25px;
+      }
+    }
+
+    .tab.active {
+      background-color: rgba(27, 117, 191, 0.16);
+    }
+  }
+
+  .logout {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    margin-top: 21vw;
+    gap: 13px;
+    text-decoration: none;
+    color: #ff0000;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: #aa0303;
+    }
+
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sideBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .tabs-area {
+      flex-direction: row;
+      gap: 1rem;
+
+      .tab {
+        border-radius: 0;
+        width: 25%;
+        padding: 16px 6px;
         height: 64px;
         display: flex;
         gap: 13px;
         text-decoration: none;
         color: #000;
 
-            &:hover{
-                text-decoration: wavy;
-                
-            }
-
-
-            img{
-                width: 32px;
-                height: 32px;
-            }
-
-            #email-icon{
-                height: 25px;
-            }
-
+        &:hover {
+          text-decoration: wavy;
         }
-        .tab.active {
-            background-color: rgba(27, 117, 191, 0.16);
-          }
-    }
-}
-@media (max-width: 768px) {
-    .sideBar {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      .tabs-area {
-        flex-direction: row;
-        gap: 1rem;
-        .tab {
-          border-radius: 0;
-          width: 25%;
-          padding: 16px 6px;
-          height: 64px;
-          display: flex;
-          gap: 13px;
-          text-decoration: none;
-          color: #000;
-          &:hover {
-            text-decoration: wavy;
-          }
-          img {
-            width: 32px;
-            height: 32px;
-          }
-          #email-icon {
-            height: 25px;
-          }
-          p {
-            display: none;
-          }
+
+        img {
+          width: 32px;
+          height: 32px;
         }
-        .tab.active {
-          background-color: rgba(27, 117, 191, 0.16);
+
+        #email-icon {
+          height: 25px;
+        }
+
+        p {
+          display: none;
         }
       }
+
+      .tab.active {
+        background-color: rgba(27, 117, 191, 0.16);
+      }
     }
+
+    .logout {
+      width: auto;
+      margin-top: 0;
+      padding: 8px;
+      gap: 8px;
+      font-size: 0.875rem;
+
+      .icon {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
 }
+
 @media (max-width: 425px) {
-    .sideBar {
-      width: 100vw;
-      display: flex;
+  .sideBar {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .tabs-area {
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin-left: 9.5rem;
-      .tabs-area {
-        flex-direction: row;
-        gap: 1rem;
-        .tab {
-          border-radius: 0;
-          width: 25%;
-          padding: 16px 6px;
-          height: 64px;
-          display: flex;
-          gap: 13px;
-          text-decoration: none;
-          color: #000;
-          &:hover {
-            text-decoration: wavy;
-          }
-          img {
-            width: 32px;
-            height: 32px;
-          }
-          #email-icon {
-            height: 25px;
-          }
-          p {
-            display: none;
-          }
+      gap: 1rem;
+
+      .tab {
+        border-radius: 0;
+        width: 25%;
+        padding: 16px 6px;
+        height: 64px;
+        display: flex;
+        gap: 13px;
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+          text-decoration: wavy;
         }
-        .tab.active {
-          background-color: rgba(27, 117, 191, 0.16);
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+
+        #email-icon {
+          height: 25px;
+        }
+
+        p {
+          display: none;
         }
       }
+
+      .tab.active {
+        background-color: rgba(27, 117, 191, 0.16);
+      }
     }
+
+    .logout {
+      width: auto;
+      margin-top: 0;
+      padding: 8px;
+      gap: 8px;
+      font-size: 0.75rem;
+
+      .icon {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+    }
+  }
 }
+
 @media (max-width: 320px) {
-    .sideBar {
-      width: 100vw;
-      display: flex;
+  .sideBar {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+
+    .tabs-area {
       flex-direction: row;
-      justify-content: center;
-      margin-left: 10rem;
-      .tabs-area {
-        flex-direction: row;
-        gap: 1rem;
-        .tab {
-          border-radius: 0;
-          width: 25%;
-          padding: 16px 6px;
-          height: 64px;
-          display: flex;
-          gap: 13px;
-          text-decoration: none;
-          color: #000;
-          &:hover {
-            text-decoration: wavy;
-          }
-          img {
-            width: 32px;
-            height: 32px;
-          }
-          #email-icon {
-            height: 25px;
-          }
-          p {
-            display: none;
-          }
+      gap: 1rem;
+
+      .tab {
+        border-radius: 0;
+        width: 25%;
+        padding: 16px 6px;
+        height: 64px;
+        display: flex;
+        gap: 13px;
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+          text-decoration: wavy;
         }
-        .tab.active {
-          background-color: rgba(27, 117, 191, 0.16);
+
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        #email-icon {
+          height: 25px;
+        }
+
+        p {
+          display: none;
         }
       }
+
+      .tab.active {
+        background-color: rgba(27, 117, 191, 0.16);
+      }
     }
+
+    .logout {
+      width: auto;
+      margin-top: 0;
+      padding: 8px;
+      gap: 8px;
+      font-size: 0.625rem;
+      display: none;
+
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
 }

@@ -1,0 +1,101 @@
+.container {
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 20px;
+        .emphasis {
+            color: #1B75BF;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+    .balance {
+        font-size: 1.6rem;
+        margin-top: 20px;
+        .currentBalance {
+            color: #1B75BF;
+        }
+    }
+}
+@media (max-width: 1920px) {
+    .container {
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        .balance {
+            font-size: 1.6rem;
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .container {
+        h1 {
+            font-size: 2.4rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+        .balance {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        h1 {
+            font-size: 2.4rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+        .balance {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        h1 {
+            font-size: 2.3rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+        .balance {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media (max-width: 425px) {
+    .container {
+        h1 {
+            font-size: 2.2rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+        .balance {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .balance {
+            font-size: 1.4rem;
+        }
+    }
+}

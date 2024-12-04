@@ -1,21 +1,39 @@
+.header-rightSide {
+  display: flex;
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 
-.header-rightSide{
-display: flex;
-    .icons{
-        display: flex;
-        align-items: center;
-        gap: 16px;
-
-        img{
-            width: 30px;
-            height: 30px;
-        }
-
-    }
-    @media (max-width: 875px){
-        .icons-container{
-            display: none;
-        }
+    img {
+      width: 30px;
+      height: 30px;
     }
 
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .numberMessages {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      position: relative;
+      bottom: 24px;
+      left: 43px;
+      background-color: red;
+      color: #fdfdfd;
+      border-radius: 50%;
+      padding: 5px;
+      font-size: 12px;
+      @media (max-width: 875px) {
+        .icons-container {
+          display: none;
+        }
+      }
+    }
+  }
 }

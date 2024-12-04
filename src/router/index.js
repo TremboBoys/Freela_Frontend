@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security, VerificationCode, ProjectRegistration, DescriptionProject, TypeProject, SizeProject, CompleteProject } from '@/components';
+import { PersonalInformation, PasswordConfig, EmailConfig, SubscriptionPlan, Security, VerificationCode, ProjectRegistration, DescriptionProject, TypeProject, SizeProject, CompleteProject, MethodsPayment, AddressUser, PaymentConfirm, QRCode } from '@/components';
 import { useAuthStore } from '@/stores/auth/auth';
 import { useSignUpStore } from '@/stores/auth/signUp';
 
@@ -185,6 +185,45 @@ const router = createRouter({
           path: 'report',
           name: 'report',
           component: () => import('@/views/report/ReportView.vue'),
+          meta: { requiresAuth: true }
+        },
+        {
+          path: 'finances',
+          name: 'finances',
+          component: () => import('@/views/finances/FinancesView.vue'),
+          meta: { requiresAuth: true }
+         },
+         {
+          path: 'methods-payment/',
+          name: 'methodsPayment',
+          component: () => import('@/views/payment/MethodsPaymentView.vue'),
+          children: [
+            {
+              path: '',
+              component: MethodsPayment
+            },
+            {
+              path: 'address',
+              name: 'addressUser',
+              component: AddressUser
+            },
+            {
+              path: 'paymentConfirm',
+              name: 'paymentConfirm',
+              component: PaymentConfirm
+            },
+            {
+              path: 'QRCode',
+              name: 'QRCode',
+              component: QRCode
+            }
+          ],
+          meta: { requiresAuth: true }
+        },
+        {
+          path: 'profile/:id',
+          name: 'profile',
+          component: () => import('@/views/user/ProfileUserView.vue'),
           meta: { requiresAuth: true }
         }
       ]

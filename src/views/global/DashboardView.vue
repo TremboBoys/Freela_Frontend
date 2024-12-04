@@ -1,13 +1,8 @@
 <script setup>
-import { onMounted } from 'vue';
-import { LogoName, InfoProfile, PublicProfile, MainSkills, FavoriteArea, AboutMe, ProjectProgress, CompletedProject } from '@/components';
+import { LogoName, InfoProfile, PublicProfile, MainSkills, AboutMe, ProjectProgress, CompletedProject } from '@/components';
 import { usePerfilStore } from '@/stores/perfil/perfil';
 
 const usePerfil = usePerfilStore();
-
-onMounted(async() => {
-    await usePerfil.getPerfil();
-});
 </script>
 
 <template>
@@ -17,7 +12,6 @@ onMounted(async() => {
             <InfoProfile :balance="usePerfil.perfil.balance" :price-per-hour="usePerfil.perfil.price_per_hour" />
             <PublicProfile :active="usePerfil.perfil.is_public" />
             <MainSkills />
-            <FavoriteArea />
             <AboutMe :about-me="usePerfil.perfil.about_me" />
         </div>
         <div class="projects">

@@ -5,8 +5,10 @@
     background-color: #f6f6f6;
     height: 7vh;
     .left {
-        margin-left: 10px;
+        width: 120px;
         display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
         .upload-btn {
             background-color: #1B75BF;
             color: white;
@@ -35,12 +37,20 @@
             margin-top: 10px;
             color: #333;
         }
+
+        .selected-image {
+            width: 40px;
+            height: 50px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
     }
     .center {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        margin-right: 20px;
         .input-text {
             width: 80%;
             height: 40px;

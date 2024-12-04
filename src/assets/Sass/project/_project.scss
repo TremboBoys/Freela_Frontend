@@ -57,6 +57,589 @@
     display: flex;
     flex-direction: column;
     padding: 32px 0px 16px 10px; /* Menor padding para telas de celulares */
-
+  }
 }
+@media (max-width: 1920px) {
+  .main-project {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    height: auto;
+    width: 80vw;
+    .search {
+      width: 23vw;
+      height: auto;
+      margin-left: -0.5rem;
+      .inputSearch {
+        .inputBox {
+          .form-control {
+            width: 20vw;
+          }
+        }
+      }
+      .categories {
+        height: auto;
+      }
+    }
+    .main-select {
+      margin-top: 1rem;
+      width: 90vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .selectProject {
+        width: 68vw;
+        height: auto;
+        .select-header-container {
+          .select-header {
+            p {
+              font-size: 3rem;
+            }
+          }
+          .select-header2 {
+            p {
+              font-size: 2rem;
+            }
+          }
+        }
+        .select-main-container {
+          .select-subTitle {
+            gap: 20px;
+            p {
+              font-size: 1.5rem;
+            }
+          }
+          .select-text {
+            p {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .select-bottom-container {
+          gap: 8px;
+          width: auto;
+          .select-bottom {
+            width: 8vw;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+              width: 7vw;
+              font-size: 1rem;
+            }
+          }
+        }
+        .select-footer-container {
+          display: flex;
+          align-items: flex-start;
+          .select-footer-img {
+            width: 60px;
+            height: 60px;
+            img {
+              width: 60px;
+              height: 60px;
+            }
+          }
+          .select-footer-descrition {
+            font-size: 1.3rem;
+            .p-container {
+              .select-footer-text2 {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        .select-footer-proposal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 180px;
+          height: 40px;
+          margin-top: -50px;
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .main-project {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    height: auto;
+    width: 80vw;
+    .search {
+      width: 23vw;
+      height: auto;
+      margin-left: -0.5rem;
+      .inputSearch {
+        .inputBox {
+          .form-control {
+            width: 20vw;
+          }
+        }
+      }
+      .categories {
+        height: auto;
+      }
+    }
+    .main-select {
+      margin-top: 1rem;
+      width: 90vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .selectProject {
+        width: 68vw;
+        height: auto;
+        .select-header-container {
+          .select-header {
+            p {
+              font-size: 24px;
+            }
+          }
+          .select-header2 {
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+        .select-bottom-container {
+          gap: 8px;
+          .select-bottom {
+            width: 70px;
+            display: flex;
+            height: 16px;
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+        .select-footer-container {
+          display: flex;
+          align-items: flex-start;
+          .select-footer-descrition {
+            .p-container {
+              .select-footer-text2 {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .select-footer-proposal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 40px;
+          margin-top: -50px;
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .main-project {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    height: auto;
+    width: 80vw;
+    .search {
+      width: 23vw;
+      height: auto;
+      margin-left: -0.5rem;
+      .inputSearch {
+        .inputBox {
+          .form-control {
+            width: 20vw;
+          }
+        }
+      }
+      .categories {
+        height: auto;
+      }
+    }
+    .main-select {
+      margin-top: 1rem;
+      width: 90vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .selectProject {
+        width: 68vw;
+        height: auto;
+        .select-header-container {
+          .select-header {
+            p {
+              font-size: 24px;
+            }
+          }
+          .select-header2 {
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+        .select-bottom-container {
+          gap: 8px;
+          .select-bottom {
+            width: 70px;
+            display: flex;
+            height: 16px;
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+        .select-footer-container {
+          display: flex;
+          align-items: flex-start;
+          .select-footer-descrition {
+            .p-container {
+              .select-footer-text2 {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .select-footer-proposal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 40px;
+          margin-top: -50px;
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+    }
+  }
+  .select {
+    width: 80vw;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    .select-footer-proposal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 40px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .main-project {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: auto;
+    width: 100vw;
+    .search {
+      width: 90vw;
+      height: auto;
+      margin-left: -0.5rem;
+      .inputSearch {
+        .inputBox {
+          .form-control {
+            width: 80vw;
+          }
+        }
+      }
+      .categories {
+        height: auto;
+      }
+    }
+    .main-select {
+      margin-top: 1rem;
+      width: 90vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-left: -70px;
+      .selectProject {
+        width: 90vw;
+        height: auto;
+        .select-header-container {
+          .select-header {
+            p {
+              font-size: 24px;
+            }
+          }
+          .select-header2 {
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+        .select-bottom-container {
+          gap: 8px;
+          .select-bottom {
+            width: 70px;
+            display: flex;
+            height: 16px;
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+        .select-footer-container {
+          display: flex;
+
+          align-items: flex-start;
+          .select-footer-descrition {
+            .p-container {
+              .select-footer-text2 {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .select-footer-proposal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 40px;
+          margin-top: -3.5rem;
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .select {
+    width: 80vw;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .select-footer-proposal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 40px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .main-project {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: auto;
+    width: 100vw;
+    .search {
+      width: 90vw;
+      height: auto;
+      margin-left: -0.5rem;
+      .inputSearch {
+        .inputBox {
+          .form-control {
+            width: 80vw;
+          }
+        }
+      }
+      .categories {
+        height: auto;
+      }
+    }
+    .main-select {
+      margin-top: 1rem;
+      width: 90vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+      margin-left: -70px;
+      .selectProject {
+        width: 90vw;
+        height: auto;
+        .select-header-container {
+          .select-header {
+            p {
+              font-size: 24px;
+            }
+          }
+          .select-header2 {
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+        .select-bottom-container {
+          gap: 8px;
+          .select-bottom {
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 16px;
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+        .select-footer-container {
+          .select-footer-descrition {
+            .p-container {
+              .select-footer-text2 {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .select-footer-proposal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 40px;
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .select {
+    width: 80vw;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .select-footer-proposal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 40px;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .main-project {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: auto;
+    width: 100vw;
+    .search {
+      width: 90vw;
+      height: auto;
+      margin-left: -0.5rem;
+      .inputSearch {
+        .inputBox {
+          .form-control {
+            width: 80vw;
+          }
+        }
+      }
+      .categories {
+        height: auto;
+      }
+    }
+    .main-select {
+      margin-top: 1rem;
+      width: 90vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+      margin-left: -70px;
+      .selectProject {
+        width: 90vw;
+        height: auto;
+        .select-header-container {
+          .select-header {
+            p {
+              font-size: 24px;
+            }
+          }
+          .select-header2 {
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+        .select-bottom-container {
+          gap: 8px;
+          .select-bottom {
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 16px;
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+        .select-footer-container {
+          .select-footer-descrition {
+            .p-container {
+              .select-footer-text2 {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .select-footer-proposal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 40px;
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
 }
