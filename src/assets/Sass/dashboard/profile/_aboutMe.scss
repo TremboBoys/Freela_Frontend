@@ -23,7 +23,7 @@
     }
 }
 @media (max-width: 1920px) {
-    .container {
+    .container-about {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -44,7 +44,7 @@
     }
 }
 @media (max-width: 1440px) {
-    .container {
+    .container-about {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -66,22 +66,52 @@
     }
 }
 @media (max-width: 1024px) {
-    .container {
+    .container-about {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         padding: 0 80px 0 80px;
         font-family: 'Poppins', sans-serif;
         margin-bottom: 16px;
-        width: 35vw;
-        justify-content: center;
+        width: 40vw;
         align-items: center;
         .text {
-            width: 35vw;
+            width: 40vw;
             padding: 6px;
             font-size: 18px;
             font-weight: 400;
             // border: 1px solid #e0e0e0;
+            border-radius: 10px;
+        }
+        .aboutMe {
+            width: 20vw;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+// @media (max-width: 1024px) {
+//     .container-about {
+//         padding: 0 40px 0 40px;
+//         .text {
+//             font-size: 16px;
+//         }
+//     }
+// }
+@media (max-width: 768px) {
+    .container-about {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0 40px 0 40px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 16px;
+        width: 50vw;
+        .text {
+            width: 50vw;
+            padding: 6px;
+            font-size: 18px;
+            font-weight: 400;
             border-radius: 10px;
             .aboutMe {
                 font-size: 20px;
@@ -90,26 +120,8 @@
         }
     }
 }
-// @media (max-width: 1024px) {
-//     .container {
-//         padding: 0 40px 0 40px;
-//         .text {
-//             font-size: 16px;
-//         }
-//     }
-// }
-@media (max-width: 768px) {
-    .container {
-        width: 50vw;
-        padding: 0 40px 0 40px;
-        .text {
-            width: 50vw;
-            font-size: 16px;
-        }
-    }
-}
 @media (max-width: 425px) {
-    .container {
+    .container-about {
         display: flex;
         flex-direction: column;
         width: 85vw;
@@ -130,13 +142,12 @@
     }
 }
 @media (max-width: 320px) {
-    .container {
+    .container-about {
         display: flex;
         flex-direction: column;
-        width: 85vw;
         justify-content: center;
         align-items: center;
-        padding: 0 20px 0 20px;
+        margin-left: -7rem;
         .text {
             width: 85vw;
             padding: 6px;
