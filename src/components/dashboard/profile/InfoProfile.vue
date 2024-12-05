@@ -1,5 +1,8 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import { usePerfilStore } from "@/stores/perfil/perfil";
+
+const usePerfil = usePerfilStore();
 const props = defineProps(['balance', 'projectsProgress', 'pricePerHour']);
 const balanceFormated = ref('');
 const priceFormated = ref('');
@@ -16,7 +19,7 @@ onMounted(() => {
         <div class="info-box">
             <div class="info-item">
                 <p>Saldo atual</p>
-                <h1>{{ balanceFormated }}</h1>
+                <h1>{{ new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(usePerfil.perfil.balance) }}</h1>
                 <div class="note">
                     <span class="blue-star" v-for="(star, index) in 4" :key="index"><img src="@/assets/images/dashboard/blue-star.png" alt=""></span>
                     <span class="black-star" v-for="(star, index) in 1" :key="index"><img src="@/assets/images/dashboard/black-star.png" alt=""></span>
@@ -24,8 +27,8 @@ onMounted(() => {
                 </div>
             </div>
             <div class="info-item">
-                <h2>Preço por hora:</h2>
-                <h1>{{ priceFormated }}</h1>
+                <p>Preço por hora:</p>
+                <h1>{{ new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(usePerfil.perfil.price_per_hour) }}</h1>
             </div>
         </div>
     </div>

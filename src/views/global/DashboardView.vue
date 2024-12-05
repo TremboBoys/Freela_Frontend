@@ -1,15 +1,18 @@
 <script setup>
-import { LogoName, InfoProfile, PublicProfile, MainSkills, FavoriteArea, ReviewsProfile, AboutMe, ShortcutsProfile, ProjectProgress, CompletedProject, ExpandedReviews } from '@/components';
-// import { onMounted } from 'vue';
+import { LogoName, InfoProfile, PublicProfile, MainSkills, ReviewsProfile, AboutMe, ShortcutsProfile, ProjectProgress, CompletedProject, ExpandedReviews } from '@/components';
+import { onMounted } from 'vue';
 import { usePerfilStore } from '@/stores/perfil/perfil';
-    // import PaymentService from '@/services/payment/payment';
+import { useProjectsStore } from '@/stores/project/projects';
 
+const useProject = useProjectsStore();
 const usePerfil = usePerfilStore();
 
-// onMounted(async () => {
-//     const token = await PaymentService.getTokenCard('BRUNA PORTELA', '5201324693388928', 12, 2028, '763', 'portelabruna20@gmail.com', {type: 'CPF', number: '08181698932'});
-//     console.log(token);
-// });
+onMounted(async() => {
+    if (useProject.projects.length == 0) {
+        await useProject.getProjects();
+        useProject.getMyProjects();
+    };
+});
 </script>
 
 <template>
@@ -20,8 +23,7 @@ const usePerfil = usePerfilStore();
                 <InfoProfile :balance="usePerfil.perfil.balance" :price-per-hour="usePerfil.perfil.price_per_hour" />
                 <!-- <PublicProfile :active="usePerfil.perfil.is_public" /> -->
                 <MainSkills />
-                <!-- <FavoriteArea /> -->
-                <AboutMe :about-me="usePerfil.perfil.about_me" />
+                <AboutMe :about="usePerfil.perfil.description" />
                 <ShortcutsProfile />
             </div>
             <div class="reviews-area">

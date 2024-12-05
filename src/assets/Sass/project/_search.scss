@@ -1,6 +1,8 @@
 .main-search {
   margin-top: 1rem;
   margin-left: 20px;
+  min-height: 600px;
+  max-height: 600px;
   
   .searchProject {
     height: 80%;
@@ -70,7 +72,7 @@
         }
 
         .form-control {
-          padding: 10px 0;
+          padding: 10px 10px;
         }
 
         .form-control:focus~.searchlabelInput,

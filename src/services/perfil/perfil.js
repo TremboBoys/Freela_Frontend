@@ -2,24 +2,44 @@ import { apiPerfil } from "@/plugins/axios";
 
 class PerfilService {
     async getNacionalities() {
-        const { data } = await apiPerfil.get('/nacionality/');
-        return data;
+        try {
+            const { data } = await apiPerfil.get('/nacionality/');
+            return data;
+        } catch(error) {
+            console.error('Error in GET nacionality: ', error);
+            return { error };
+        };
     };
 
     async getAreas() {
-        const { data } = await apiPerfil.get('/area/');
-        console.log(data);
-        return data;
+        try {
+            const { data } = await apiPerfil.get('/area/');
+            console.log(data);
+            return data;
+        } catch(error) {
+            console.error('Error in GET areas: ', error);
+            return { error };
+        };
     };
 
     async getSubAreas() {
-        const { data } = await apiPerfil.get('/subArea/');
-        return data;
+        try {
+            const { data } = await apiPerfil.get('/subArea/');
+            return data;
+        } catch(error) {
+            console.error('Error in GET Sub-areas: ', error);
+            return { error };
+        };
     };
 
     async createPerfil(perfil) {
-        const { data } = await apiPerfil.post('/perfil/', perfil);
-        return data;
+        try {
+            const { data } = await apiPerfil.post('/perfil/', perfil);
+            return data;
+        } catch(error) {
+            console.error('Error in POST perfil: ', error);
+            return { error };
+        };
     };
 
     async getCurrentPerfil(type, info = []) {
@@ -36,17 +56,27 @@ class PerfilService {
             }
             const { data } = await apiPerfil.get(URL);
             return data;
-        }
+        };
     }
 
     async getPerfil(id) {
-        const { data } = await apiPerfil.get(`/perfil/${id}/`);
-        return data;
-    }
+        try {
+            const { data } = await apiPerfil.get(`/perfil/${id}/`);
+            return data;
+        } catch(error) {
+            console.error('Error in GET perfil: ', error);
+            return { error };
+        };
+    };
     async getPerfis() {
-        const { data } = await apiPerfil.get('/perfil/');
-        return data;
-    }
+        try {
+            const { data } = await apiPerfil.get('/perfil/');
+            return data;
+        } catch(error) {
+            console.error('Error in GET perfis: ', error);
+            return { error };
+        };
+    };
 };
 
 export default new PerfilService();

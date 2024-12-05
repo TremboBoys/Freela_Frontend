@@ -6,8 +6,10 @@ import { compareDates, formatDate } from '@/utils/compareDates';
 const useProject = useProjectsStore();
 
 onMounted(async() => {
-    useProject.getProjects();
-})
+    if (useProject.projects.length == 0) {
+        useProject.getProjects();
+    }
+});
 // const isPopUpOpen = ref(false);
 // const popUp = () => {
 //     isPopUpOpen.value = !isPopUpOpen.value;
@@ -66,6 +68,10 @@ onMounted(async() => {
                 </router-link>
             </div>
         </div>
+    </div>
+    <div v-if="useProject.projects.length == 0" class="notSearch">
+        <h1>Não encontramos nenhum resultado para a sua busca :(</h1>
+        <img src="@/assets/images/search.gif" alt="">
     </div>
 </template>
 <style scoped>

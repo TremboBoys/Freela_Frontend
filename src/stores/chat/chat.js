@@ -257,7 +257,7 @@ export const useChatStore = defineStore('chat', () => {
     });
     
     socket.on("updateRead", (userSender, idMessage) => {
-        console.log('Mensagem atualizada!', userSender === currentReceiver.value, userSender, currentReceiver.value);
+        console.log('Mensagem atualizada!', userSender === currentReceiver.value, userSender, currentReceiver.value, idMessage, 'aaaaaaaaaaa');
         if (userSender === currentReceiver.value) {
             console.log('O usuário é atual!');
             messagesCurrentUser.value.forEach((message) => {
@@ -273,7 +273,7 @@ export const useChatStore = defineStore('chat', () => {
         });
         allUsers.value.forEach((user) => {
             if (user.user == userSender) {
-                if (user.idMessage == idMessage) {
+                if (user._id == idMessage) {
                     user.read = true;
                 };
             };

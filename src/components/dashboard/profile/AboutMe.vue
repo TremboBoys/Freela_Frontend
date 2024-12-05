@@ -1,10 +1,12 @@
-<script></script>
+<script setup>
+const props = defineProps(['about']);
+</script>
 
 <template>
     <div class="container-about">
         <p class="aboutMe">Sobre mim</p>
         <div class="text">
-            <span>Olá pessoal, me chamo João Victor Portela Rocha, sou estudante/programador Full-Stack no Instituto Federal Catarinense - Araquari</span>
+            <span>{{ props.about }}</span>
         </div>
     </div>
 </template>
