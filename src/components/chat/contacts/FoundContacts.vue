@@ -16,6 +16,10 @@ const useChat = useChatStore();
             <div class="container-username">@{{ perfil.user.username }}</div>
         </div>
     </div>
+    <div class="container-not-found" v-if="useSearchChat.foundContacts.length == 0">
+        <p>Nenhum usuário encontrado</p>
+        <img class="imgNotFound" src="@/assets/images/no-results.png" alt="">
+    </div>
 </template>
 
 

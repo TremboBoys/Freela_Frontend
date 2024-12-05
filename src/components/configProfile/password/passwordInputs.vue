@@ -1,9 +1,13 @@
 <script setup>
 import SendButton from './SendButton.vue';
 import { ref } from 'vue';
+import { usePerfilStore } from '@/stores/perfil/perfil';
+import { useInfoPopUpStore } from '@/stores/perfil/infoPopUpPerfil';
 
 const password = ref('');
 const isPasswordVisible = ref(false);
+const usePerfil = usePerfilStore();7
+const useInfoPopUp = useInfoPopUpStore();
 
 const togglePasswordVisibility = () => {
   isPasswordVisible.value = !isPasswordVisible.value;
@@ -19,9 +23,9 @@ const togglePasswordVisibility = () => {
           type="password"
           disabled
           class="form-control"
-          id="email"
+          id="passwowrd"
           placeholder=" "
-          value="teste"
+          value="TremboBoys-front"
         />
         <label class="email labelInput" for="email">Sua senha</label>
       </div>

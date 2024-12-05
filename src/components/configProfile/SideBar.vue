@@ -1,7 +1,9 @@
 <script setup>
-import { useRoute } from 'vue-router'
+import { useRoute } from 'vue-router';
+import { useAuthStore } from '@/stores/auth/auth';
 
-const route = useRoute()
+const route = useRoute();
+const useAuth = useAuthStore();
 
 const tabs = [
   { route: '/configurations', icon: new URL('@/assets/images/configProfile/person-icon.png', import.meta.url).href, text: 'Informações pessoais' },
@@ -26,9 +28,9 @@ function createURL(path) {
       </RouterLink>
     </div>
 
-    <RouterLink to="/configurations/delete-account" class="logout">
+    <div class="logout" @click="useAuth.signOut()">
       <img src="@/assets/images/configProfile/logout.png" class="icon" alt="">Sair da sua conta
-    </RouterLink>
+    </div>
   </div>
 </template>
 

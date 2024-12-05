@@ -81,6 +81,7 @@ export const useRegisterProjectStore = defineStore('register-project', () => {
     
             if (!("error" in data)) {
                 router.push(`/register-project/complete/${data.id}`);
+                useWarning.activeWarning('sucess', 'Projeto criado com sucesso :)');
             } else {
                 useWarning.activeWarning('failure', 'Erro ao cadastrar seu projeto, reinicie a página e tente novamente!');
             };
