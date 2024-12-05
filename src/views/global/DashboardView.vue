@@ -23,7 +23,7 @@ onMounted(async() => {
                 <InfoProfile :balance="usePerfil.perfil.balance" :price-per-hour="usePerfil.perfil.price_per_hour" />
                 <!-- <PublicProfile :active="usePerfil.perfil.is_public" /> -->
                 <MainSkills />
-                <AboutMe :about="usePerfil.perfil.description" />
+                <AboutMe :about="usePerfil.perfil.about_me" />
                 <ShortcutsProfile />
             </div>
             <div class="reviews-area">

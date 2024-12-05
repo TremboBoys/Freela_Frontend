@@ -25,11 +25,19 @@
           font-family: Poppins;
           font-size: 2rem;
           font-weight: 500;
+
+          a {
+            color: #000;
+            text-decoration: none;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
         }
       }
 
       .select-header2 {
-        width: auto;
+        width: 10vw;
         color: #1B75BF;
         font-family: 'Poppins', sans-serif;
         font-size: 1rem;
@@ -40,6 +48,7 @@
     .select-main-container {
       .select-subTitle {
         padding: 16px;
+        padding-left: 0;
         display: flex;
         gap: 20px;
         color: #000;
@@ -98,10 +107,12 @@
 
     .select-bottom-container {
       padding: 16px;
+      padding-left: 0;
       display: flex;
       gap: 16px;
 
       .select-bottom {
+        width: 7rem;
         border-radius: 15px;
         border: 1px solid #818080;
         background: #E6E6E6;
@@ -331,7 +342,7 @@
             }
 
             .select-header2 {
-              min-width: 128px;
+              width: 10vw;
 
               p {
                 color: #1B75BF;

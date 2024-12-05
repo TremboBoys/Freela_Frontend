@@ -19,6 +19,8 @@ export const useProjectsStore = defineStore('projects', () => {
         const data = await ProjectService.getProjects();
 
         if (!("error" in data)) {
+            console.log(data);
+            console.log(data.reverse());
             projects.value = data.reverse();
             auxiliarProjects = data.reverse();
         } else {

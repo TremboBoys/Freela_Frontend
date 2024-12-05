@@ -1,29 +1,18 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue';
+import { usePerfilStore } from '@/stores/perfil/perfil';
+import { useInfoPopUpStore } from '@/stores/perfil/infoPopUpPerfil';
 
 // default informations for inputs          (ganso, se estiver lendo isso, não foi feito pelo Gepeto)
 const name = ref('Luiz Fernando')
 const atv = ref('TI e Programação')
 const price = ref(20)
+const usePerfil = usePerfilStore()
+const useInfoPopUp = useInfoPopUpStore();
 
-const jobs = ref([
-  { value: 'frontend-developer', label: 'Front-end Developer' },
-  { value: 'backend-developer', label: 'Back-end Developer' },
-  { value: 'fullstack-developer', label: 'Full-stack Developer' },
-  { value: 'designer', label: 'Designer' },
-  { value: 'copywriter', label: 'Copywriter' },
-  { value: 'seo-specialist', label: 'SEO Specialist' },
-  { value: 'translator', label: 'Translator' },
-  { value: 'project-manager', label: 'Project Manager' }
-])
-
-const countries = ref([
-  { value: 'brazil', label: 'Brasil' },
-  { value: 'colombia', label: 'Colômbia' },
-  { value: 'uruguay', label: 'Uruguai' },
-  { value: 'argentina', label: 'Argentina' },
-  { value: 'mexico', label: 'México' }
-])
+onMounted(() => {
+  useInfoPopUp.getAllInfoNeedPopUp();
+})
 
 const paymentMethods = ref([
   { value: 'Pix', label: 'Pix' },
@@ -38,25 +27,25 @@ const paymentMethods = ref([
   <div class="inputs-container">
     <div class="left">
       <label for="">Nome</label>
-      <input v-model="name" type="text" />
+      <input v-model="usePerfil.editPerfil.user.name" type="text" />
       <label for="">Área</label>
-      <select>
-        <option v-for="(job, index) in jobs" :key="index" :value="job.value">
-          {{ job.label }}
+      <select v-model="usePerfil.editPerfil.area.name">
+        <option v-for="(area, index) in useInfoPopUp.areas" :key="index" :value="area.name">
+          {{ area.name }}
         </option>
       </select>
       <label for="">Sub-área</label>
-      <select>
-        <option value="">Emprego</option>
+      <select v-model="usePerfil.editPerfil.sub_area.name">
+        <option v-for="(subarea, index) in useInfoPopUp.subAreas" :key="index" :value="subarea.name">{{ subarea.name }}</option>
       </select>
     </div>
     <div class="right">
       <label for="">Preço por hora</label>
-      <input v-model="price" type="number" />
+      <input v-model="usePerfil.editPerfil.price_per_hour" type="number" />
       <label for="">Nacionalidade</label>
-      <select>
-        <option v-for="(country, index) in countries" :key="index" :value="country.value">
-          {{ country.label }}
+      <select v-model="usePerfil.editPerfil.nacionality.name">
+        <option v-for="(country, index) in useInfoPopUp.nacionalities" :key="index" :value="country.name">
+          {{ country.name }}
         </option>
       </select>
       <label for="">Forma de pagamento</label>
