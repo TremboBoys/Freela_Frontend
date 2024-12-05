@@ -34,3 +34,15 @@
     bottom: 2px;
     color: gray;
 }
+
+.container-not-found {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    row-gap: 30px;
+    height: 100%;
+    .imgNotFound {
+        width: 100px;
+        height: 100px;
+    }
+}

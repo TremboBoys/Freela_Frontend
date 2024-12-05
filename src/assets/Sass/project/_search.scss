@@ -1,122 +1,128 @@
 .main-search {
   margin-top: 1rem;
   margin-left: 20px;
+  min-height: 600px;
+  max-height: 600px;
+  
+  .searchProject {
+    height: 80%;
+  }
 }
 
 .search {
-  display: flex;
-  flex-direction: column;
-  width: 100%; 
-  max-width: 308px;
-  height: auto;
-  max-height: 828px;
-  border-radius: 11px;
-  border: 1px solid #b1adad;
-  background: #fff;
-  padding: 20px;
-  box-sizing: border-box;
-}
+    display: flex;
+    flex-direction: column;
+    display: flexbox;
+    width: 308px;
+    height: 828px;
+    border-radius: 11px;
+    border: 1px solid #b1adad;
+    background: #fff;
 
-.inputSearch {
-  flex-shrink: 0;
-  fill: #fff;
-  stroke-width: 1px;
-  stroke: #d9d9d9;
-  border-radius: 10px;
-  width: 100%;
-}
+    .inputSearch {
+      flex-shrink: 0;
+      fill: #fff;
+      stroke-width: 1px;
+      stroke: #d9d9d9;
+      border-radius: 10px;
 
-.inputBox {
-  position: relative;
-  width: 100%;
-}
+      .inputBox {
+        position: relative;
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
 
-.form-control {
-  width: 100%;
-  height: 51px;
-  border-radius: 10px;
-  border: 2px solid #bfbfbf;
-  background: #ffffff;
-  padding: 10px;
-  outline: none;
-  margin: 15px 0;
-}
+        .form-control {
+          width: 276px;
+          height: 51px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          border: 2px solid #bfbfbf;
+          background: #ffffff;
+          margin: 15px;
+          outline: none;
+        }
 
-.searchlabelInput {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  pointer-events: none;
-  transition: 0.4s;
-  color: #bfbfbf;
-  font-size: 16px;
-  background-color: #ffffff;
-  margin: 20px;
-}
+        .searchlabelInput {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          pointer-events: none;
+          transition: 0.4s;
+          color: #bfbfbf;
+          font-size: 16px;
 
-.searchlabelInput::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  transition: 0.4s;
-  color: #bfbfbf;
-}
+          background-color: #ffffff;
+          margin: 20px;
+        }
 
-.form-control:focus ~ .searchlabelInput,
-.form-control:not(:placeholder-shown) ~ .searchlabelInput {
-  top: -18%;
-  font-size: 16px;
-  color: #bfbfbf;
-}
+        .searchlabelInput::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          transition: 0.4s;
+          color: #bfbfbf;
+        }
 
-.inputBox input {
-  margin-bottom: 10px;
-}
+        .form-control {
+          padding: 10px 10px;
+        }
 
-/* Estilo da categoria */
-.categories {
-  width: 100%;
-  height: auto;
-  margin-left: 0;
-  margin-top: 20px;
-}
+        .form-control:focus~.searchlabelInput,
+        .form-control:not(:placeholder-shown)~.searchlabelInput {
+          top: -18%;
+          font-size: 16px;
+          color: #bfbfbf;
+        }
 
-.category {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 20px;
-  color: #000;
-  font-family: Poppins, sans-serif;
-  font-size: 14px;
-  font-weight: 275;
-  margin: 10px 0;
-}
+        input {
+          margin-bottom: 10px;
+        }
+      }
+    }
 
-.category input {
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-}
+    .categories {
+      flex-grow: 1;
+      width: 100%;
+      height: 400px;
+      margin-left: 20px;
 
-.bottom-search {
-  color: #000;
-  font-family: Poppins, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-  padding: 0px 27px 32px 20px;
+      .category {
+        width: 100%;
+        height: 20px;
+        color: #000;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 275;
+        line-height: normal;
+        margin: 10px;
+
+        input {
+          width: 16px;
+          height: 16px;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .bottom-search {
+      color: #000;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: 265px;
+      padding: 0px 27px 32px 20px;
+    }
 }
 
 @media (min-width: 1920px) {

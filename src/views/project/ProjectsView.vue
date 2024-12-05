@@ -14,12 +14,7 @@ import projectsSelect from '../../components/Projects/projectsSelect.vue'
             </div>
             
             <div class="main-select">
-                <div class="selectProject">
-                    <projectsSelect />   
-                </div>
-                <div class="selectProject">
-                    <projectsSelect />   
-                </div>
+                <projectsSelect />   
             </div>
         </div>
     </div>

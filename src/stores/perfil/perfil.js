@@ -19,6 +19,19 @@ export const usePerfilStore = defineStore('perfil', () => {
         area: 'Selecione sua área',
         sub_area: 'Selecione sua sub-area'
     });
+    const editPerfil = reactive({
+        id: null,
+        balance: 0,
+        is_public: true,
+        user: '',
+        price_per_hour: 0,
+        nacionality: '',
+        photo: null,
+        payment_type: 1,
+        about_me: '',
+        area: 'Selecione sua área',
+        sub_area: 'Selecione sua sub-area'
+    });
     const perfis = ref([]);
     const state = reactive({
         showReviews: false
@@ -56,8 +69,11 @@ export const usePerfilStore = defineStore('perfil', () => {
                 for (let c = 0; c < data.length; c++) {
                     Object.entries(data[c]).forEach(([key, value]) => {
                         perfil[key] = value; // Atribuindo o valor à propriedade do perfil
+                        editPerfil[key] = value;
                     });
-                }
+                
+                console.log(editPerfil.area.name);
+                };
             } catch(error) {
                 console.error('Error in GET perfil current user: ', error);
                 useWarning.activeWarning('failure', 'Erro ao tentar exibir informações do seu perfil!');
@@ -88,5 +104,5 @@ export const usePerfilStore = defineStore('perfil', () => {
         }
     }
 
-    return { perfil, perfis, state, scrollTopShowReviews, createPerfil, getPerfil, getPerfis, filterPerfil };
+    return { perfil, editPerfil, perfis, state, scrollTopShowReviews, createPerfil, getPerfil, getPerfis, filterPerfil };
 });

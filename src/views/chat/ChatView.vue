@@ -11,7 +11,7 @@ const useChat = useChatStore();
 <template>
     <div class="container-chat">
         <div class="aside-contacts">
-            <AsideContacts v-if="useChat.allUsers.length >= 0 && usePerfil.perfil.user !== ''" />
+            <AsideContacts v-if="useChat.allUsers.length >= 0 && usePerfil.perfil.user" />
         </div>
         <div class="chat-message">
             <ChatMessage v-if="useChat.messages.length >= 0" />
