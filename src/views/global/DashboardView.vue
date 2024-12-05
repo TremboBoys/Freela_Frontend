@@ -1,5 +1,5 @@
 <script setup>
-import { LogoName, InfoProfile, PublicProfile, MainSkills, FavoriteArea, ReviewsProfile, AboutMe, ShortcutsProfile, ProjectProgress, CompletedProject, ExpandedReviews } from '@/components';
+import { LogoName, InfoProfile, PublicProfile, MainSkills, ReviewsProfile, AboutMe, ShortcutsProfile, ProjectProgress, CompletedProject, ExpandedReviews } from '@/components';
 // import { onMounted } from 'vue';
 import { usePerfilStore } from '@/stores/perfil/perfil';
     // import PaymentService from '@/services/payment/payment';

@@ -96,3 +96,79 @@
     background: #555;
   }
 }
+@media (max-width: 1920px) {
+    .container-reviews {
+        width: 30vw;
+        .reviews {
+            width: 30vw;
+            height: 400px;
+            padding: 10px;
+            .button-expand {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .container-reviews {
+        width: 30vw;
+        .reviews {
+            width: 30vw;
+            height: 350px;
+            padding: 10px;
+            .button-expand {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .container-reviews {
+        width: 30vw;
+        .reviews {
+            width: 30vw;
+            height: 300px;
+            padding: 10px;
+            .button-expand {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .container-reviews {
+        width: 90vw;
+        .reviews {
+            width: 90vw;
+            height: 250px;
+            padding: 10px;
+            .button-expand {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .container-reviews {
+        .reviews {
+            height: 300px;
+            padding: 10px;
+            .button-expand {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container-reviews {
+        width: 90vw;
+        .reviews {
+            width: 90vw;
+            height: 250px;
+            padding: 10px;
+            .button-expand {
+                padding-right: 10px;
+            }
+        }
+    }
+}
