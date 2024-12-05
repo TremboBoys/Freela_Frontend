@@ -1,6 +1,9 @@
 <script setup>
 import { ref } from 'vue';
+import { useProjectsStore } from '@/stores/project/projects';
 import PopUp from './popUp/PopUp.vue';
+
+const useProject = useProjectsStore();
 
 const categories = ref([
   'TI e Programação',
@@ -40,6 +43,7 @@ const handleAllow = (position) => {
           type="text"
           class="form-control"
           id="search"
+          v-model="useProject.state.search"
           aria-describedby="searchHelp"
           placeholder=" "
         />

@@ -48,7 +48,6 @@ export const useAuthStore = defineStore('auth', () => {
         const result = await logout();
         if (result) {
             router.push('/');
-            location.reload();
         } else {
             useWarning.activeWarning('failure', 'Erro ao tentar se deslogar do sistema!');
         };

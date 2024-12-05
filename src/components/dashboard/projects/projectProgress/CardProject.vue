@@ -1,43 +1,25 @@
+<script setup>
+import { useProjectsStore } from '@/stores/project/projects';
+import { formatDate } from '@/utils/compareDates';
+
+const useProject = useProjectsStore();
+</script>
+
 <template>
-        <div class="card">
+        <div v-for="(project, index) in useProject.myProjects" :key="index" :style="(useProject.myProjects.length == 1) ? 'width: 35vw' : 'width: 25vw'" class="card">
             <div class="title">
-                <h2>Agente de IA</h2>
+                <h2>{{ project.title }}</h2>
             </div>
             <div class="term">
-                <p>Prazo: 10/10/2024</p>
+                <p>Prazo: {{ formatDate(project.delivery) }}</p>
             </div>
             <div class="description">
-                <p>Seria uma empresa que vende mudanças residenciais e comerciais para todo o Brasil principalmente RJ e SP a pessoa teria acesso a um numero de whatsap e iria tentar fechar essa mudança com o cliente mosntrando quais são nossas vantagens e tentando superar a concorrencia. Com bonus de comissão por venda</p>
+                <p>{{ project.description }}</p>
             </div>
             <div class="footer">
                 <div class="pending">
                     <img src="@/assets/images/dashboard/clock-icon.png" class="clock" alt="">
-                    <span>Status: Pendente</span>
-                </div>
-                <div class="right">
-                    <router-link to="finished-project" class="toSend">
-                        <button class="toSendButton">Enviar</button>
-                    </router-link>
-                    <div class="help">
-                        <img src="@/assets/images/dashboard/interrogacao.png" class="helpImg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="title">
-                <h2>Agente de IA</h2>
-            </div>
-            <div class="term">
-                <p>Prazo: 10/10/2024</p>
-            </div>
-            <div class="description">
-                <p>Seria uma empresa que vende mudanças residenciais e comerciais para todo o Brasil principalmente RJ e SP a pessoa teria acesso a um numero de whatsap e iria tentar fechar essa mudança com o cliente mosntrando quais são nossas vantagens e tentando superar a concorrencia. Com bonus de comissão por venda</p>
-            </div>
-            <div class="footer">
-                <div class="pending">
-                    <img src="@/assets/images/dashboard/clock-icon.png" class="clock" alt="">
-                    <span>Status: Pendente</span>
+                    <span>Status: {{ (project.status == 1) ? 'Não iniciado' : 'Pendente' }}</span>
                 </div>
                 <div class="right">
                     <router-link to="finished-project" class="toSend">

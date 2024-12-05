@@ -67,7 +67,6 @@
           .p-container {
             display: flex;
             align-items: center;
-            gap: 18px;
 
             a {
               text-decoration: none;
@@ -176,6 +175,22 @@
   }
 }
 
+  .notSearch {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    h1 {
+      font-size: 1.5rem;
+    }
+    img {
+      width: 200px;
+    }
+  }
+
+/* Estilo para telas com largura mínima de 1920px */
 @media (min-width: 1920px) {
   .selectProject {
     width: 800px;
@@ -190,22 +205,64 @@
       p:hover {
         text-decoration: underline;
       }
-    }
-  }
-
-  .select-header2 {
-    font-size: 1.25rem;
-  }
-}
-
-.select-main-container {
-  .select-bottom-container {
-    .select-bottom {
-      padding: 5px;
-      border-radius: 30px;
-
-      p {
-        font-size: 1.25rem;
+  
+      .select-main-container {
+        display: flex;
+        flex-direction: column;
+  
+        .select-subTitle {
+          display: flex;
+          width: 1000px;
+          padding: 20px 20px 20px 15px;
+          gap: 100px;
+          font-size: 20px;
+        }
+  
+        .select-text {
+          width: 900px;
+          font-size: 24px;
+          margin-bottom: 70px;
+        }
+  
+        .select-bottom-container {
+          padding: 12px;
+          display: flex;
+          gap: 100px;
+          margin-bottom: 80px;
+  
+          .select-bottom {
+            width: 280px;
+            height: 70px;
+  
+            p {
+              font-size: 18px;
+              padding: 6px;
+            }
+          }
+        }
+      }
+  
+      .select-footer-container {
+        display: flex;
+  
+        .p-container {
+          font-size: 18px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+  
+        .select-footer-proposal {
+          width: 300px;
+          height: 60px;
+          align-items: center;
+          margin-left: 0px;
+          
+          p {
+            display: flex;
+            font-size: 18px;
+          }
+        }
       }
     }
   }
